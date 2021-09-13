@@ -10,8 +10,10 @@ public class BarsSystem : FSystem {
     GameObject barsContainer;
     private TimeScale time;
 
+    public static BarsSystem instance;
     public BarsSystem()
     {
+        instance = this;
         GameObject simu = GameObject.Find("SimulationData");
         // Récupération des données de la population
         TerritoryData popData = simu.GetComponent<TerritoryData>();

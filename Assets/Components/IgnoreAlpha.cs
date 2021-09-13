@@ -43,6 +43,9 @@ public class IgnoreAlpha : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
             tooltipContent += "<br>  * Interdiction de sortie entre " + territory.ageDependentMin + " et "+ territory.ageDependentMax + " ans";
         if (territory.GetComponent<Beds>().boostBeds)
             tooltipContent += "<br>  * lits boostés";
+
+        tooltipContent += "<br>(clic: filtrer données)";
+        tooltipContent += "<br>(double clic: ouvrir panneau)";
         tooltip.ShowTooltip(tooltipContent);
         transform.SetAsLastSibling();
         if (MapSystem.territorySelected != territory)

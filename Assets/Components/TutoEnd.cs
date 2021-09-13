@@ -18,6 +18,6 @@ public class TutoEnd : MonoBehaviour
 
         GameObjectManager.addComponent<ChatMessage>(MainLoop.instance.gameObject, new { sender = "Ministre de la santé", timeStamp = "0", messageBody = "Pour l'instant aucun cas n'a été détecté en Europe." });
 
-        GameObjectManager.addComponent<ChatMessage>(MainLoop.instance.gameObject, new { sender = "Premier ministre", timeStamp = "0", messageBody = "L'objectif est d'<b>atteindre l'immunité collective</b>. D'après les premières études internationales elle sera atteinte lorsque <b>" + (virusStats.populationRatioImmunity*100)+"% de la population</b> aura développé des anticorps." });
+        GameObjectManager.addComponent<ChatMessage>(MainLoop.instance.gameObject, new { sender = "Premier ministre", timeStamp = "0", messageBody = "Votre objectif est que <b>" + (virusStats.populationRatioImmunity*100)+"% de la population</b> ait développé des anticorps." });
     }
 }

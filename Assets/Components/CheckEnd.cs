@@ -25,6 +25,8 @@ public class CheckEnd : MonoBehaviour
 
     public Toggle PauseButton;
     public Button ContinueButton;
+    public Button reviewButton;
+    public Button returnToEndScreen;
 
     public TMP_InputField shareInputField;
     public Button shareButton;
@@ -71,12 +73,20 @@ public class CheckEnd : MonoBehaviour
                 transform.GetChild(0).gameObject.SetActive(true);
                 revolutionEnd.gameObject.SetActive(false);
                 immunityEnd.gameObject.SetActive(true);
-                if (!GameObject.Find("CustomizedVirus")) // ne pas partager le score pour un virus personnalisé
+                if (!GameObject.Find("CustomizedVirus"))
                 {
                     shareInputField.interactable = true;
+                    shareInputField.GetComponent<TooltipContent>().enabled = false;
                     shareButton.interactable = true;
+                    shareButton.GetComponent<TooltipContent>().enabled = false;
                 }
-                ContinueButton.interactable = false;
+                else  // ne pas partager le score pour un virus personnalisé
+                {
+                    shareInputField.GetComponent<TooltipContent>().text = "Vous ne pouvez partager votre score<br>pour un virus personnalisé";
+                    shareButton.GetComponent<TooltipContent>().text = "Vous ne pouvez partager votre score<br>pour un virus personnalisé";
+                }
+                ContinueButton.gameObject.SetActive(false);
+                reviewButton.gameObject.SetActive(true);
                 displayEnd();
                 if (music)
                 {
@@ -97,6 +107,16 @@ public class CheckEnd : MonoBehaviour
                     isRevolution = true;
                     shareInputField.interactable = false;
                     shareButton.interactable = false;
+                    if (!GameObject.Find("CustomizedVirus")) // ne pas partager le score pour un virus personnalisé
+                    {
+                        shareInputField.GetComponent<TooltipContent>().text = "Tentez de poursuivre coûte que coûte<br>pour pouvoir partager votre score";
+                        shareButton.GetComponent<TooltipContent>().text = "Tentez de poursuivre coûte que coûte<br>pour pouvoir partager votre score";
+                    }
+                    else
+                    {
+                        shareInputField.GetComponent<TooltipContent>().text = "Vous ne pouvez partager votre score<br>pour un virus personnalisé";
+                        shareButton.GetComponent<TooltipContent>().text = "Vous ne pouvez partager votre score<br>pour un virus personnalisé";
+                    }
                     displayEnd();
                     if (music)
                     {
@@ -140,7 +160,8 @@ public class CheckEnd : MonoBehaviour
 
         // stopper tous les systèmes
         foreach (FSystem sys in FSystemManager.updateSystems())
-            sys.Pause = true;
+            if (sys != BarsSystem.instance && sys != CurvesSystem.instance)
+                sys.Pause = true;
         this.enabled = false;
     }
     public void BackToMainMenu()
@@ -157,7 +178,8 @@ public class CheckEnd : MonoBehaviour
     public void ContinueToPlay()
     {
         disableRevolutionEnd = true;
-        ContinueButton.interactable = false;
+        ContinueButton.gameObject.SetActive(false);
+        reviewButton.gameObject.SetActive(true);
         // restart all systems
         foreach (FSystem sys in FSystemManager.updateSystems())
             sys.Pause = false;

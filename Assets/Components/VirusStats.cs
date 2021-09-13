@@ -6,8 +6,8 @@ public class VirusStats : MonoBehaviour {
     // Viser en moyenne 3 infections par personne sur les X jours de contagiosité. Donc pour un cluster de 10 personnes sur les 10 jours il faut environ contaminer 30 autres personnes.
     [Tooltip("Modélise le R0 courrant du virus")]
     public float contagiosity = 3f;
-    // Taux de population infectée à partir duquel la pandémie se résorbe par elle même
-    [Tooltip("Taux de population infectée à partir duquel la pandémie se résorbe par elle même")]
+    // Taux de population infectée à partir duquel la pandémie se résorbe par elle même sans mesure particulière
+    [Tooltip("Taux de population infectée à partir duquel la pandémie se résorbe par elle même sans mesure particulière")]
     public float populationRatioImmunity = 0.6f;
 
     // Taille de la fenêtre glissante pour stocker le nombre de personnes infectées

@@ -36,7 +36,7 @@ public class LoadGame : MonoBehaviour
         DontDestroyOnLoad(customizedStats);
 
         customizedStats.contagiosity = Contagiosity.value;
-        customizedStats.populationRatioImmunity = PopImmunity.value;
+        customizedStats.populationRatioImmunity = Mathf.Round((1 - (1 / Contagiosity.value)) * 100f) / 100f; // arrondi à deux chiffres après la virgule
         customizedStats.windowSize = (int)WindowSize.value;
         customizedStats.contagiousnessPeak = ContagiousnessPeak.value;
         customizedStats.contagiousnessDeviation = ContagiousnessDeviation.value;
