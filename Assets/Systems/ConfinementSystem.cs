@@ -168,7 +168,7 @@ public class ConfinementSystem : FSystem {
             switch (Random.Range(0, 4))
             {
                 case 0: messageChosen = "Vos changements de politique incessants sont perçues négativement par la population."; break;
-                case 1: messageChosen = "L'opposition questionne votre politique et ça lisibilité."; break;
+                case 1: messageChosen = "L'opposition questionne votre politique et sa lisibilité."; break;
                 case 2: messageChosen = "Il vous faut faire des choix et vous y tenir, les français ne comprennent pas votre politique."; break;
                 case 3: messageChosen = "Les sondages montrent que les français attendent un cap."; break;
             }
