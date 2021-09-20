@@ -91,7 +91,7 @@ public class AdvisorSystem : FSystem
     {
         if (timeFirstNotif != -1 && Time.time - timeFirstNotif > 15 && time.daysGone == 0 && !helpPlay)
         {
-            GameObjectManager.addComponent<ChatMessage>(chatContent, new { sender = "Conseiller au numérique", timeStamp = "0", messageBody = "Pour passer aux jours suivants, cliquez sur le bouton Play." });
+            GameObjectManager.addComponent<ChatMessage>(chatContent, new { sender = "Digital advisor", timeStamp = "0", messageBody = "Pour passer aux jours suivants, cliquez sur le bouton Play." });
             helpPlay = true;
         }
 
