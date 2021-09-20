@@ -26,26 +26,26 @@ public class IgnoreAlpha : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
     {
         string tooltipContent = "<b>"+territory.TerritoryName+"</b>";
         if (territory.closePrimarySchool)
-            tooltipContent += "<br>  * Fermeture des écoles";
+            tooltipContent += "<br>  * Closure of schools";
         if (territory.closeSecondarySchool)
-            tooltipContent += "<br>  * Fermeture des collèges";
+            tooltipContent += "<br>  * Closure of middle schools";
         if (territory.closeHighSchool)
-            tooltipContent += "<br>  * Fermeture des lycées";
+            tooltipContent += "<br>  * Closure of high schools";
         if (territory.closeUniversity)
-            tooltipContent += "<br>  * Fermeture des universités";
+            tooltipContent += "<br>  * Closure of universities";
         if (territory.callCivicism)
-            tooltipContent += "<br>  * Appel civique";
+            tooltipContent += "<br>  * Civic appeal";
         if (territory.closeShop)
-            tooltipContent += "<br>  * Fermeture commerces";
+            tooltipContent += "<br>  * Closure of shops";
         if (territory.certificateRequired)
-            tooltipContent += "<br>  * Certificat requis";
+            tooltipContent += "<br>  * Certificate required";
         if (territory.ageDependent && territory.ageDependentMin != "" && territory.ageDependentMax != "")
-            tooltipContent += "<br>  * Interdiction de sortie entre " + territory.ageDependentMin + " et "+ territory.ageDependentMax + " ans";
+            tooltipContent += "<br>  * Exit ban between " + territory.ageDependentMin + " and "+ territory.ageDependentMax + " years old";
         if (territory.GetComponent<Beds>().boostBeds)
-            tooltipContent += "<br>  * lits boostés";
+            tooltipContent += "<br>  * boosted beds";
 
-        tooltipContent += "<br>(clic: filtrer données)";
-        tooltipContent += "<br>(double clic: ouvrir panneau)";
+        tooltipContent += "<br>(click: filter data)";
+        tooltipContent += "<br>(double click: open panel)";
         tooltip.ShowTooltip(tooltipContent);
         transform.SetAsLastSibling();
         if (MapSystem.territorySelected != territory)

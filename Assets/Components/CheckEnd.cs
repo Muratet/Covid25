@@ -82,8 +82,8 @@ public class CheckEnd : MonoBehaviour
                 }
                 else  // ne pas partager le score pour un virus personnalisé
                 {
-                    shareInputField.GetComponent<TooltipContent>().text = "Vous ne pouvez partager votre score<br>pour un virus personnalisé";
-                    shareButton.GetComponent<TooltipContent>().text = "Vous ne pouvez partager votre score<br>pour un virus personnalisé";
+                    shareInputField.GetComponent<TooltipContent>().text = "You cannot share your score<br>for a custom virus";
+                    shareButton.GetComponent<TooltipContent>().text = "You cannot share your score<br>for a custom virus";
                 }
                 ContinueButton.gameObject.SetActive(false);
                 reviewButton.gameObject.SetActive(true);
@@ -109,13 +109,13 @@ public class CheckEnd : MonoBehaviour
                     shareButton.interactable = false;
                     if (!GameObject.Find("CustomizedVirus")) // ne pas partager le score pour un virus personnalisé
                     {
-                        shareInputField.GetComponent<TooltipContent>().text = "Tentez de poursuivre coûte que coûte<br>pour pouvoir partager votre score";
-                        shareButton.GetComponent<TooltipContent>().text = "Tentez de poursuivre coûte que coûte<br>pour pouvoir partager votre score";
+                        shareInputField.GetComponent<TooltipContent>().text = "Try to continue at all costs<br>to be able to share your score";
+                        shareButton.GetComponent<TooltipContent>().text = "Try to continue at all costs<br>to be able to share your score";
                     }
                     else
                     {
-                        shareInputField.GetComponent<TooltipContent>().text = "Vous ne pouvez partager votre score<br>pour un virus personnalisé";
-                        shareButton.GetComponent<TooltipContent>().text = "Vous ne pouvez partager votre score<br>pour un virus personnalisé";
+                        shareInputField.GetComponent<TooltipContent>().text = "You cannot share your score<br>for a custom virus";
+                        shareButton.GetComponent<TooltipContent>().text = "You cannot share your score<br>for a custom virus";
                     }
                     displayEnd();
                     if (music)
@@ -135,12 +135,12 @@ public class CheckEnd : MonoBehaviour
         float debtValue = finances.historySpent[finances.historySpent.Count - 1];
         int nbMilliards = (int)(debtValue / 1000000000);
         if (nbMilliards > 0)
-            debtText = nbMilliards.ToString("N0", CultureInfo.CreateSpecificCulture("fr-FR")) + " Milliard" + (nbMilliards > 1 ? "s" : "") + " d'euros";
+            debtText = nbMilliards.ToString("N0", CultureInfo.CreateSpecificCulture("fr-FR")) + " billion euros";
         else
         {
             int nbMillions = (int)(debtValue / 1000000);
             if (nbMillions > 0)
-                debtText = nbMillions.ToString("N0", CultureInfo.CreateSpecificCulture("fr-FR")) + " Million" + (nbMillions > 1 ? "s" : "") + " d'euros";
+                debtText = nbMillions.ToString("N0", CultureInfo.CreateSpecificCulture("fr-FR")) + " million euros";
             else
                 debtText = debtValue.ToString("N0", CultureInfo.CreateSpecificCulture("fr-FR")) + " euros";
         }
@@ -151,11 +151,11 @@ public class CheckEnd : MonoBehaviour
         int nbMonths = (time.daysGone % 365) / 30;
         int nbDays = (time.daysGone % 365) % 30;
         if (nbYears > 0)
-            daysText += nbYears.ToString("N0", CultureInfo.CreateSpecificCulture("fr-FR")) + " an" + (nbYears > 1 ? "s " : " ");
+            daysText += nbYears.ToString("N0", CultureInfo.CreateSpecificCulture("fr-FR")) + " year" + (nbYears > 1 ? "s " : " ");
         if (nbMonths > 0)
-            daysText += nbMonths + " mois ";
+            daysText += nbMonths + " month" + (nbMonths > 1 ? "s " : " ");
         if (nbDays > 0)
-            daysText += nbDays + " jour" + (nbDays > 1 ? "s " : " ");
+            daysText += nbDays + " day" + (nbDays > 1 ? "s " : " ");
         days.text = baseDaysText + daysText;
 
         // stopper tous les systèmes

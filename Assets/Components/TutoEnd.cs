@@ -16,8 +16,8 @@ public class TutoEnd : MonoBehaviour
         countryPannel.SetTrigger("Close");
         button.onClick.Invoke();
 
-        GameObjectManager.addComponent<ChatMessage>(MainLoop.instance.gameObject, new { sender = "Ministre de la santé", timeStamp = "0", messageBody = "Pour l'instant aucun cas n'a été détecté en Europe." });
+        GameObjectManager.addComponent<ChatMessage>(MainLoop.instance.gameObject, new { sender = "Health Minister", timeStamp = "0", messageBody = "So far no case has been detected in Europe." });
 
-        GameObjectManager.addComponent<ChatMessage>(MainLoop.instance.gameObject, new { sender = "Premier ministre", timeStamp = "0", messageBody = "Votre objectif est que <b>" + (virusStats.populationRatioImmunity*100)+"% de la population</b> ait développé des anticorps." });
+        GameObjectManager.addComponent<ChatMessage>(MainLoop.instance.gameObject, new { sender = "Prime Minister", timeStamp = "0", messageBody = "Your goal is for <b>" + (virusStats.populationRatioImmunity*100)+ "% of the population</b> to have developed antibodies." });
     }
 }

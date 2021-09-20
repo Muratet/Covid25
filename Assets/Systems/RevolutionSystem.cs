@@ -206,27 +206,27 @@ public class RevolutionSystem : FSystem
             if (revolution.stress > firstNotifStep && !firstNotifStepFlag)
             {
                 firstNotifStepFlag = true;
-                GameObjectManager.addComponent<ChatMessage>(revolution.gameObject, new { sender = "Ministre de l'intérieur", timeStamp = "" + time.daysGone, messageBody = "Une partie de la population est mécontente de votre politique. "+((revolution.nationalInfectionIsCritic || criticRatio > 0.5f) ? "Ils ne comprennent pas pourquoi vous ne tentez pas de mieux contrôler l'épidémie." : "Ils ne comprennent pas pourquoi vous maintenez des mesures aussi dures.") });
+                GameObjectManager.addComponent<ChatMessage>(revolution.gameObject, new { sender = "Minister of the Interior", timeStamp = "" + time.daysGone, messageBody = "Part of the population is unhappy with your policy. " + ((revolution.nationalInfectionIsCritic || criticRatio > 0.5f) ? "They don't understand why you don't try to control the epidemic better." : "They do not understand why you are maintaining such harsh measures.") });
             }
             else if (revolution.stress > secondNotifStep && !secondNotifStepFlag)
             {
                 secondNotifStepFlag = true;
-                GameObjectManager.addComponent<ChatMessage>(revolution.gameObject, new { sender = "Ministre de l'intérieur", timeStamp = "" + time.daysGone, messageBody = "Plus de "+ secondNotifStep.ToString("N0", CultureInfo.CreateSpecificCulture("fr-FR")) + "% de la population critique vos choix. " + ((revolution.nationalInfectionIsCritic || criticRatio > 0.5f) ? "Ils attendent des mesures plus strictes pour contrôler l'épidémie." : "Ils pensent que vous devriez relacher les contraintes.") });
+                GameObjectManager.addComponent<ChatMessage>(revolution.gameObject, new { sender = "Minister of the Interior", timeStamp = "" + time.daysGone, messageBody = "More than " + secondNotifStep.ToString("N0", CultureInfo.CreateSpecificCulture("fr-FR")) + "% of the population criticizes your choices. " + ((revolution.nationalInfectionIsCritic || criticRatio > 0.5f) ? "They are waiting for stricter measures to control the epidemic." : "They think you should release the constraints.") });
             }
             else if (revolution.stress > thirdNotifStep && !thirdNotifStepFlag)
             {
                 thirdNotifStepFlag = true;
-                GameObjectManager.addComponent<ChatMessage>(revolution.gameObject, new { sender = "Ministre de l'intérieur", timeStamp = "" + time.daysGone, messageBody = "Vous devriez adapter vos mesures pour rassurer la population. " + thirdNotifStep.ToString("N0", CultureInfo.CreateSpecificCulture("fr-FR")) + "% des Français sont mécontents. " + ((revolution.nationalInfectionIsCritic || criticRatio > 0.5f) ? "Ils se sentent abandonnés et attendent des mesures plus fortes." : "Ils trouvent que vos choix sont trop stricts.") });
+                GameObjectManager.addComponent<ChatMessage>(revolution.gameObject, new { sender = "Minister of the Interior", timeStamp = "" + time.daysGone, messageBody = "You should adapt your measures to reassure the population. " + thirdNotifStep.ToString("N0", CultureInfo.CreateSpecificCulture("fr-FR")) + "% of French people are dissatisfied. " + ((revolution.nationalInfectionIsCritic || criticRatio > 0.5f) ? "They feel abandoned and expect stronger measures." : "They find your choices too narrow.") });
             }
             else if (revolution.stress > fourthNotifStep && !fourthNotifStepFlag)
             {
                 fourthNotifStepFlag = true;
-                GameObjectManager.addComponent<ChatMessage>(revolution.gameObject, new { sender = "Ministre de l'intérieur", timeStamp = "" + time.daysGone, messageBody = "Des troubles à l'ordre public se manifestent dans plusieurs régions françaises. Si le mécontentement continue à croître nous allons droit à la crise sociale." });
+                GameObjectManager.addComponent<ChatMessage>(revolution.gameObject, new { sender = "Minister of the Interior", timeStamp = "" + time.daysGone, messageBody = "Public order disturbances are evident in several French regions. If the discontent continues to grow we are headed for social crisis." });
             }
             else if (revolution.stress > fifthNotifStep && !fifthNotifStepFlag)
             {
                 fifthNotifStepFlag = true;
-                GameObjectManager.addComponent<ChatMessage>(revolution.gameObject, new { sender = "Ministre de l'intérieur", timeStamp = "" + time.daysGone, messageBody = "Nous avons dépassé le seuil critique. Vous devez rapidement faire redescendre le stress de la population en dessous de "+ fifthNotifStep.ToString("N0", CultureInfo.CreateSpecificCulture("fr-FR")) + "%." });
+                GameObjectManager.addComponent<ChatMessage>(revolution.gameObject, new { sender = "Minister of the Interior", timeStamp = "" + time.daysGone, messageBody = "We have passed the critical threshold. You must quickly bring down the stress of the population below " + fifthNotifStep.ToString("N0", CultureInfo.CreateSpecificCulture("fr-FR")) + "%." });
             }
             if (revolution.stress < firstNotifStep - 5 && firstNotifStepFlag)
                 firstNotifStepFlag = false;

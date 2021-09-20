@@ -123,34 +123,34 @@ public class DeadSystem : FSystem
                 countryPopData.historyDeath.Add(countryPopData.nbDeath);
             if (countryPopData.historyDeath[countryPopData.historyDeath.Count - 1] >= 1 && !firstDead)
             {
-                GameObjectManager.addComponent<ChatMessage>(countryPopData.gameObject, new { sender = "Ministre de la santé", timeStamp = "" + time.daysGone, messageBody = "Un rapport de mon cabinet indique que nous avons eu un premier décès dû à ce nouveau coronavirus." });
+                GameObjectManager.addComponent<ChatMessage>(countryPopData.gameObject, new { sender = "Health Minister", timeStamp = "" + time.daysGone, messageBody = "A report from my office indicates that we had a first death from this new coronavirus." });
                 firstDead = true;
             }
             if (countryPopData.historyDeath[countryPopData.historyDeath.Count - 1] > nextDeathNotification)
             {
-                string msgBody = "Le nombre de morts journalier a dépassé " + nextDeathNotification.ToString("N0", CultureInfo.CreateSpecificCulture("fr-FR")) + ".";
+                string msgBody = "The daily death toll has exceeded " + nextDeathNotification.ToString("N0", CultureInfo.CreateSpecificCulture("fr-FR")) + ".";
                 if (nextDeathNotification > 200000)
-                    msgBody += " Vous rendez-vous compte ??? Plus de 200 000 morts rien qu'aujourd'hui...";
+                    msgBody += " Do you realize ??? More than 200,000 dead today alone...";
                 else if (nextDeathNotification > 100000)
-                    msgBody += " C'est une catastrophe, vous devrez répondre de vos actes, c'est comme si toute la population de Nanterre ou de Nancy était rayé de la carte... en une seule journée !!!";
+                    msgBody += " It's a disaster, you will have to answer for your actions, it is as if the entire population of Nanterre or Nancy were wiped off the map... in a single day!!!";
                 else if (nextDeathNotification > 50000)
-                    msgBody += " Vous êtes en train de sacrifier toute une partie de la population.";
+                    msgBody += " You are sacrificing a whole part of the population.";
                 else if (nextDeathNotification > 24000)
-                    msgBody += " Vous devez absoluement faire quelque chose.";
+                    msgBody += " You absolutely have to do something.";
                 else if (nextDeathNotification > 12000)
-                    msgBody += " La situation est très critique.";
+                    msgBody += " The situation is very critical.";
                 else if (nextDeathNotification > 6000)
-                    msgBody += " La courbe de mortalité continue à croitre.";
+                    msgBody += " The mortality curve continues to increase.";
                 else if (nextDeathNotification > 3000)
-                    msgBody += " Les morts s'accumulent et nos morgues sont pleines.";
+                    msgBody += " The dead are piling up and our morgues are full.";
                 else if (nextDeathNotification > 1500)
-                    msgBody += " Nous avons dépassé le record de la pandémie de 2020.";
+                    msgBody += " We have surpassed the record for the 2020 pandemic.";
                 else if (nextDeathNotification > 750)
-                    msgBody += " Vous devriez prendre des mesures pour contenir la pandémie.";
+                    msgBody += " You should take steps to contain the pandemic.";
                 else if (nextDeathNotification > 325)
-                    msgBody += " Faites attention à ce que le nombre de morts ne s'embale pas.";
+                    msgBody += " Be careful that the death toll does not get carried away.";
 
-                GameObjectManager.addComponent<ChatMessage>(countryPopData.gameObject, new { sender = "Ministre de la santé", timeStamp = "" + time.daysGone, messageBody = msgBody });
+                GameObjectManager.addComponent<ChatMessage>(countryPopData.gameObject, new { sender = "Health Minister", timeStamp = "" + time.daysGone, messageBody = msgBody });
                 nextDeathNotification *= 2;
             }
         }

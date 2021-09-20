@@ -102,7 +102,7 @@ public class FinanceSystem : FSystem
             if (!bedsNotif && beds.intensiveBeds_need > 0)
             {
                 bedsNotif = true;
-                GameObjectManager.addComponent<ChatMessage>(finances.gameObject, new { sender = "Rapport des hopitaux publics", timeStamp = "" + time.daysGone, messageBody = "Une journée de réanimation coûte "+ finances.oneDayReanimationCost.ToString("N0", CultureInfo.CreateSpecificCulture("fr-FR")) + "€ pour chaque patient." });
+                GameObjectManager.addComponent<ChatMessage>(finances.gameObject, new { sender = "Report from public hospitals", timeStamp = "" + time.daysGone, messageBody = "A day in intensive care costs " + finances.oneDayReanimationCost.ToString("N0", CultureInfo.CreateSpecificCulture("fr-FR")) + "€ for each patient." });
             }
 
 
@@ -119,12 +119,12 @@ public class FinanceSystem : FSystem
                 string messageChosen = "";
                 switch(Random.Range(0, 4))
                 {
-                    case 0: messageChosen = "L'opposition s'inquiète de l'accumulation de la dette !!!"; break;
-                    case 1: messageChosen = "La dette du pays dû à la crise atteind " + newDebt.ToString("N0", CultureInfo.CreateSpecificCulture("fr-FR")) + " €. Pour information la dette nationale avant la crise était de 2 500 000 000 €."; break;
-                    case 2: messageChosen = "Pourrons-nous soutenir ce rythme des mesures encore longtemps ?"; break;
-                    case 3: messageChosen = "Avec ce rythme des dépenses, le pays mettra des années à s'en relever."; break;
+                    case 0: messageChosen = "The opposition is worried about the accumulation of debt!!!"; break;
+                    case 1: messageChosen = "The country's debt due to the crisis is reaching " + newDebt.ToString("N0", CultureInfo.CreateSpecificCulture("fr-FR")) + " €. For information, the national debt before the crisis was 2,500,000,000 €."; break;
+                    case 2: messageChosen = "Will we be able to sustain this pace of measures for a long time to come?"; break;
+                    case 3: messageChosen = "With this rate of spending, the country will take years to recover."; break;
                 }
-                GameObjectManager.addComponent<ChatMessage>(finances.gameObject, new { sender = "Ministre de l'économie", timeStamp = "" + time.daysGone, messageBody = messageChosen });
+                GameObjectManager.addComponent<ChatMessage>(finances.gameObject, new { sender = "Economy Minister", timeStamp = "" + time.daysGone, messageBody = messageChosen });
                 nextStepNotif *= 10;
             }
 
@@ -132,7 +132,7 @@ public class FinanceSystem : FSystem
 
             if (!stability && finances.historySpent[finances.historySpent.Count - 1] == finances.historySpent[Mathf.Max(0, finances.historySpent.Count - 10)])
             {
-                GameObjectManager.addComponent<ChatMessage>(finances.gameObject, new { sender = "Ministre de l'économie", timeStamp = "" + time.daysGone, messageBody = "Cela fait plusieurs jours que les dépenses sont maîtrisées, continuons ainsi." });
+                GameObjectManager.addComponent<ChatMessage>(finances.gameObject, new { sender = "Economy Minister", timeStamp = "" + time.daysGone, messageBody = "Expenses have been under control for several days, so let's continue." });
                 stability = true;
             }
         }

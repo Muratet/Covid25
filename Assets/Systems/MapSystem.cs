@@ -28,6 +28,7 @@ public class MapSystem : FSystem {
         foreach (GameObject territory in f_territories)
         {
             TerritoryData territoryData = territory.GetComponent<TerritoryData>();
+            Debug.Log(territoryData.TerritoryName);
             territoryData.popNumber = populationData[territoryData.TerritoryName];
             int total = 0;
             int max = 0;

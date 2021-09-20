@@ -336,12 +336,7 @@ public class InfectionSystem : FSystem
     {
         if (amountOfNewInfections >= 1 && !firstInfection)
         {
-            string location = "";
-            if (territory.TerritoryName == "Mayotte" || territory.TerritoryName == "La Réunion")
-                location += "à " + territory.TerritoryName;
-            else
-                location += "en " + (territory.TerritoryName == "La Corse" ? "Corse" : territory.TerritoryName);
-            GameObjectManager.addComponent<ChatMessage>(countryPopData.gameObject, new { sender = "Ministre de la santé", timeStamp = "" + time.daysGone, messageBody = "Il semblerait qu'un premier cas a été détecté "+location+"." });
+            GameObjectManager.addComponent<ChatMessage>(countryPopData.gameObject, new { sender = "Health Minister", timeStamp = "" + time.daysGone, messageBody = "It seems that a first case has been detected in " + territory.TerritoryName + "." });
             firstInfection = true;
         }
         // Calcul du nombre total de pesonnes non infectées

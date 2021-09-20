@@ -97,20 +97,20 @@ public class MaskSystem : FSystem {
             // afficher une notification si le stock est vide alors qu'on a déjà reçu une commande
             if (lastMasksDelivery != -1 && emptyStock)
             {
-                string msgBody = "Cela fait plus d'une semaine que nous n'avons plus de stock de masques.";
+                string msgBody = "We haven't had any masks for a week.";
                 if (masks.commands == 0)
                 {
-                    msgBody += " Nous devrions passer de nouvelles commandes";
+                    msgBody += " We should place new orders";
                     if (frontierPermeability.currentState >= 2)
-                        msgBody += " et ouvrir les frontières.";
+                        msgBody += " and open frontiers.";
                     else
                         msgBody += ".";
                 }
                 else
                     if (frontierPermeability.currentState >= 2)
-                        msgBody += " Nous devrions ouvrir les frontières.";
+                        msgBody += " We should open the frontiers.";
 
-                GameObjectManager.addComponent<ChatMessage>(masks.gameObject, new { sender = "Ministre de la santé", timeStamp = "" + time.daysGone, messageBody = msgBody });
+                GameObjectManager.addComponent<ChatMessage>(masks.gameObject, new { sender = "Health Minister", timeStamp = "" + time.daysGone, messageBody = msgBody });
                 lastMasksDelivery = -1;
             }
 

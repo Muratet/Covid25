@@ -97,16 +97,16 @@ public class CurvesSystem : FSystem {
                     if ((int)(step/1000000000) > 0)
                     {
                         unit = 1000000000;
-                        UI_Unit.text = "(en Milliards)";
+                        UI_Unit.text = "(in Billions)";
                     } else if ((int)(step / 1000000) > 0)
                     {
                         unit = 1000000;
-                        UI_Unit.text = "(en Millions)";
+                        UI_Unit.text = "(in millions)";
                     }
                     else if((int)(step / 1000) > 0)
                     {
                         unit = 1000;
-                        UI_Unit.text = "(en milliers)";
+                        UI_Unit.text = "(in thousands)";
                     }
 
                     for (int child = 0; child < yAxis.childCount; child++)

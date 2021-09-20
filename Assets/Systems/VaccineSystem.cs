@@ -49,33 +49,33 @@ public class VaccineSystem : FSystem {
                 string continent = "";
                 switch (Random.Range(0, 5))
                 {
-                    case 0: continent = "Européen"; break;
-                    case 1: continent = "d'Amérique du Nord"; break;
-                    case 2: continent = "d'Amérique du Sud"; break;
-                    case 3: continent = "d'Asie"; break;
-                    case 4: continent = "d'Europe de l'Est"; break;
+                    case 0: continent = "An European"; break;
+                    case 1: continent = "A North America"; break;
+                    case 2: continent = "A South America"; break;
+                    case 3: continent = "An Asia"; break;
+                    case 4: continent = "An Eastern Europe"; break;
                 }
 
                 vaccine.UI_researchBar.value = 100 * Mathf.Min(1f, (float)time.daysGone / (virusStats.vaccineMounthDelay * 30f));
                 if (vaccine.UI_researchBar.value > 1 && notifVaccine == 0)
                 {
                     notifVaccine++;
-                    GameObjectManager.addComponent<ChatMessage>(vaccine.gameObject, new { sender = "Ministre des affaires étrangères", timeStamp = "" + time.daysGone, messageBody = "La recherche d'un vaccin commence à s'organiser au niveau mondial." });
+                    GameObjectManager.addComponent<ChatMessage>(vaccine.gameObject, new { sender = "Minister of Foreign Affairs", timeStamp = "" + time.daysGone, messageBody = "Research on the vaccine is beginning to be organized at the international level." });
                 }
                 if (vaccine.UI_researchBar.value > 14 && notifVaccine == 1)
                 {
                     notifVaccine++;
-                    GameObjectManager.addComponent<ChatMessage>(vaccine.gameObject, new { sender = "Ministre des affaires étrangères", timeStamp = "" + time.daysGone, messageBody = "Un laboratoire "+ continent + " déclare avoir commencé à tester l'innocuité d'un vaccin chez l'homme (Phase I)." });
+                    GameObjectManager.addComponent<ChatMessage>(vaccine.gameObject, new { sender = "Minister of Foreign Affairs", timeStamp = "" + time.daysGone, messageBody = continent + "laboratory claims to have started testing the safety of a vaccine in humans (Phase I)." });
                 }
                 if (vaccine.UI_researchBar.value > 28 && notifVaccine == 2)
                 {
                     notifVaccine++;
-                    GameObjectManager.addComponent<ChatMessage>(vaccine.gameObject, new { sender = "Ministre des affaires étrangères", timeStamp = "" + time.daysGone, messageBody = "La course au vaccin entre les laboratoires est rude. Un laboratoire "+ continent + " déclare avoir débuté la phase II d'immunogénicité sur l'homme." });
+                    GameObjectManager.addComponent<ChatMessage>(vaccine.gameObject, new { sender = "Minister of Foreign Affairs", timeStamp = "" + time.daysGone, messageBody = "The race for vaccine between laboratories is tough." + continent + " laboratory declares that he has started phase II of immunogenicity in humans." });
                 }
                 if (vaccine.UI_researchBar.value > 64 && notifVaccine == 3)
                 {
                     notifVaccine++;
-                    GameObjectManager.addComponent<ChatMessage>(vaccine.gameObject, new { sender = "Ministre des affaires étrangères", timeStamp = "" + time.daysGone, messageBody = "Il s'emblerait qu'un laboratoire " + continent + " étudie les bénéfices/risques de leur vaccin (Phase III). La recherche mondiale progresse, nous devrions pouvoir bénéficier d'un vaccin d'ici quelques temps." });
+                    GameObjectManager.addComponent<ChatMessage>(vaccine.gameObject, new { sender = "Minister of Foreign Affairs", timeStamp = "" + time.daysGone, messageBody = continent + " laboratory is studying the benefits / risks of their vaccine (Phase III). Global research is progressing, we should be able to benefit from a vaccine soon." });
                 }
             }
             else if (notifVaccine == 4)
@@ -85,7 +85,7 @@ public class VaccineSystem : FSystem {
                 vaccine.UI_vaccineCommand.GetComponents<TooltipContent>()[0].enabled = false;
                 // Appeler la fonction qui défini si les champs sont intéractifs ou pas
                 OnFrontierChange(frontierPermeability.currentState);
-                GameObjectManager.addComponent<ChatMessage>(vaccine.gameObject, new { sender = "Ministre de l'économie", timeStamp = "" + time.daysGone, messageBody = "Enfin !!! Un laboratoire a développé un vaccin efficace. Nous pouvons commencer à passer des commandes, ne tardez pas." });
+                GameObjectManager.addComponent<ChatMessage>(vaccine.gameObject, new { sender = "Economy Minister", timeStamp = "" + time.daysGone, messageBody = "Hooray!!! A laboratory has developed an effective vaccine. We can start placing orders, don't delay." });
                 // Ajout d'un bonus ponctuel sur le stress
                 revolution.stress -= 5f;
             }
@@ -111,7 +111,7 @@ public class VaccineSystem : FSystem {
                     if (!firstVaccineDelivered)
                     {
                         firstVaccineDelivered = true;
-                        GameObjectManager.addComponent<ChatMessage>(vaccine.gameObject, new { sender = "Ministre de la santé", timeStamp = "" + time.daysGone, messageBody = "Nous avons reçu notre première livraison de " + incomingVaccines.ToString("N0", CultureInfo.CreateSpecificCulture("fr-FR")) + " doses de vaccin. Nous commençons à vacciner la population sur le champs." });
+                        GameObjectManager.addComponent<ChatMessage>(vaccine.gameObject, new { sender = "Health Minister", timeStamp = "" + time.daysGone, messageBody = "We received our first shipment of " + incomingVaccines.ToString("N0", CultureInfo.CreateSpecificCulture("fr-FR")) + " doses of vaccine. We start to vaccinate the population immediately." });
                     }
                     lastVaccineDelivery = time.daysGone;
                 }
@@ -168,20 +168,20 @@ public class VaccineSystem : FSystem {
             // afficher une notification si le stock est vide alors qu'on a déjà reçu une commande
             if (lastVaccineDelivery != -1 && emptyStock)
             {
-                string msgBody = "Cela fait plus d'une semaine que nous ne recevons plus de vaccins.";
+                string msgBody = "It has been over a week since we last received vaccines.";
                 if (vaccine.commands == 0)
                 {
-                    msgBody += " Nous devrions passer de nouvelles commandes";
+                    msgBody += " We should place new orders";
                     if (frontierPermeability.currentState >= 2)
-                        msgBody += " et ouvrir les frontières.";
+                        msgBody += " and open frontiers.";
                     else
                         msgBody += ".";
                 }
                 else
                     if (frontierPermeability.currentState >= 2)
-                        msgBody += " Nous devrions ouvrir les frontières.";
+                        msgBody += " We should open the frontiers.";
 
-                GameObjectManager.addComponent<ChatMessage>(vaccine.gameObject, new { sender = "Ministre de la santé", timeStamp = "" + time.daysGone, messageBody = msgBody });
+                GameObjectManager.addComponent<ChatMessage>(vaccine.gameObject, new { sender = "Health Minister", timeStamp = "" + time.daysGone, messageBody = msgBody });
                 lastVaccineDelivery = -1;
             }
         }

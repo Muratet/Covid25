@@ -2,7 +2,7 @@
 
 public class TimeScale : MonoBehaviour {
     // Advice: FYFY component aims to contain only public members (according to Entity-Component-System paradigm).
-    [Tooltip("Durée d'une journée en seconde")]
+    [Tooltip("Duration of a day in seconds")]
     public float dayVelocity = 1;
     [HideInInspector]
     public float timeElapsed;

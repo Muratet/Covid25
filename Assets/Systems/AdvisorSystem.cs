@@ -91,7 +91,7 @@ public class AdvisorSystem : FSystem
     {
         if (timeFirstNotif != -1 && Time.time - timeFirstNotif > 15 && time.daysGone == 0 && !helpPlay)
         {
-            GameObjectManager.addComponent<ChatMessage>(chatContent, new { sender = "Digital advisor", timeStamp = "0", messageBody = "Pour passer aux jours suivants, cliquez sur le bouton Play." });
+            GameObjectManager.addComponent<ChatMessage>(chatContent, new { sender = "Digital advisor", timeStamp = "0", messageBody = "To move to the next day, click on Play button." });
             helpPlay = true;
         }
 
@@ -117,13 +117,13 @@ public class AdvisorSystem : FSystem
                 GameObject newMessage = Object.Instantiate(playerMessagePrefab);
                 newMessage.transform.GetChild(0).Find("Timestamp").GetComponent<TMP_Text>().text += time.daysGone-1;
                 if (frontierPermeability.currentState == 0)
-                    newMessage.transform.Find("TextContent").GetComponent<TMP_Text>().text = "Vous avez ouvert les frontières";
+                    newMessage.transform.Find("TextContent").GetComponent<TMP_Text>().text = "You opened up the frontiers.";
                 else if (frontierPermeability.currentState == 1)
-                    newMessage.transform.Find("TextContent").GetComponent<TMP_Text>().text = "Vous avez restreint l'ouverture des frontières seulement au fret mondial et européen.";
+                    newMessage.transform.Find("TextContent").GetComponent<TMP_Text>().text = "You restricted the opening of frontiers only to global and European freight.";
                 else if (frontierPermeability.currentState == 2)
-                    newMessage.transform.Find("TextContent").GetComponent<TMP_Text>().text = "Vous avez restreint l'ouverture des frontières seulement au fret européen.";
+                    newMessage.transform.Find("TextContent").GetComponent<TMP_Text>().text = "You restricted the opening of frontiers only to European freight.";
                 else
-                    newMessage.transform.Find("TextContent").GetComponent<TMP_Text>().text = "Vous avez fermé totalement les frontières de la France.";
+                    newMessage.transform.Find("TextContent").GetComponent<TMP_Text>().text = "You closed the frontiers of France.";
                 newMessage.transform.SetParent(chatContent.transform);
                 newMessage.transform.localScale = new Vector3(1, 1, 1);
             }
@@ -134,9 +134,9 @@ public class AdvisorSystem : FSystem
                 GameObject newMessage = Object.Instantiate(playerMessagePrefab);
                 newMessage.transform.GetChild(0).Find("Timestamp").GetComponent<TMP_Text>().text += time.daysGone-1;
                 if (tax.currentState)
-                    newMessage.transform.Find("TextContent").GetComponent<TMP_Text>().text = "Vous annulez les charges des entreprises.";
+                    newMessage.transform.Find("TextContent").GetComponent<TMP_Text>().text = "You cancel the business charges.";
                 else
-                    newMessage.transform.Find("TextContent").GetComponent<TMP_Text>().text = "Vous ne soutenez plus les entreprises.";
+                    newMessage.transform.Find("TextContent").GetComponent<TMP_Text>().text = "You no longer support businesses.";
                 newMessage.transform.SetParent(chatContent.transform);
                 newMessage.transform.localScale = new Vector3(1, 1, 1);
             }
@@ -147,9 +147,9 @@ public class AdvisorSystem : FSystem
                 GameObject newMessage = Object.Instantiate(playerMessagePrefab);
                 newMessage.transform.GetChild(0).Find("Timestamp").GetComponent<TMP_Text>().text += time.daysGone - 1;
                 if (remoteworking.currentState)
-                    newMessage.transform.Find("TextContent").GetComponent<TMP_Text>().text = "Vous incitez les entreprises à mettre en place un télétravail massif.";
+                    newMessage.transform.Find("TextContent").GetComponent<TMP_Text>().text = "You encourage companies to set up massive teleworking.";
                 else
-                    newMessage.transform.Find("TextContent").GetComponent<TMP_Text>().text = "Vous n'incitez plus au télétravail.";
+                    newMessage.transform.Find("TextContent").GetComponent<TMP_Text>().text = "You no longer encourage teleworking.";
                 newMessage.transform.SetParent(chatContent.transform);
                 newMessage.transform.localScale = new Vector3(1, 1, 1);
             }
@@ -160,9 +160,9 @@ public class AdvisorSystem : FSystem
                 GameObject newMessage = Object.Instantiate(playerMessagePrefab);
                 newMessage.transform.GetChild(0).Find("Timestamp").GetComponent<TMP_Text>().text += time.daysGone - 1;
                 if (shortTimeWorking.currentState)
-                    newMessage.transform.Find("TextContent").GetComponent<TMP_Text>().text = "Vous ouvrez les conditions d'accès au chômage partiel.";
+                    newMessage.transform.Find("TextContent").GetComponent<TMP_Text>().text = "You authorize short-time working.";
                 else
-                    newMessage.transform.Find("TextContent").GetComponent<TMP_Text>().text = "Vous restreignez les conditions d'acceptation du chômage partiel.";
+                    newMessage.transform.Find("TextContent").GetComponent<TMP_Text>().text = "You limit short-time working.";
                 newMessage.transform.SetParent(chatContent.transform);
                 newMessage.transform.localScale = new Vector3(1, 1, 1);
             }
@@ -173,9 +173,9 @@ public class AdvisorSystem : FSystem
                 GameObject newMessage = Object.Instantiate(playerMessagePrefab);
                 newMessage.transform.GetChild(0).Find("Timestamp").GetComponent<TMP_Text>().text += time.daysGone - 1;
                 if (masks.requisition)
-                    newMessage.transform.Find("TextContent").GetComponent<TMP_Text>().text = "Vous réquisitionnez les masques pour le corps médical.";
+                    newMessage.transform.Find("TextContent").GetComponent<TMP_Text>().text = "You requisition the masks for the medical profession.";
                 else
-                    newMessage.transform.Find("TextContent").GetComponent<TMP_Text>().text = "Vous ne réquisitionnez plus les masques.";
+                    newMessage.transform.Find("TextContent").GetComponent<TMP_Text>().text = "You no longer requisition masks.";
                 newMessage.transform.SetParent(chatContent.transform);
                 newMessage.transform.localScale = new Vector3(1, 1, 1);
             }
@@ -186,9 +186,9 @@ public class AdvisorSystem : FSystem
                 GameObject newMessage = Object.Instantiate(playerMessagePrefab);
                 newMessage.transform.GetChild(0).Find("Timestamp").GetComponent<TMP_Text>().text += time.daysGone - 1;
                 if (masks.boostProduction)
-                    newMessage.transform.Find("TextContent").GetComponent<TMP_Text>().text = "Vous soutenez toutes les entreprises qui augmentent leur production de masques homologués.";
+                    newMessage.transform.Find("TextContent").GetComponent<TMP_Text>().text = "You support all companies that increase their production of approved masks.";
                 else
-                    newMessage.transform.Find("TextContent").GetComponent<TMP_Text>().text = "Vous n'incitez plus à la production de masques.";
+                    newMessage.transform.Find("TextContent").GetComponent<TMP_Text>().text = "You no longer encourage the production of masks.";
                 newMessage.transform.SetParent(chatContent.transform);
                 newMessage.transform.localScale = new Vector3(1, 1, 1);
             }
@@ -199,9 +199,9 @@ public class AdvisorSystem : FSystem
                 GameObject newMessage = Object.Instantiate(playerMessagePrefab);
                 newMessage.transform.GetChild(0).Find("Timestamp").GetComponent<TMP_Text>().text += time.daysGone - 1;
                 if (masks.selfProtectionPromoted)
-                    newMessage.transform.Find("TextContent").GetComponent<TMP_Text>().text = "Vous incitez la population à se confectionner leurs propres masques.";
+                    newMessage.transform.Find("TextContent").GetComponent<TMP_Text>().text = "You encourage the population to make their own masks.";
                 else
-                    newMessage.transform.Find("TextContent").GetComponent<TMP_Text>().text = "Vous n'incitez plus la population à se confectionner leurs propres masques.";
+                    newMessage.transform.Find("TextContent").GetComponent<TMP_Text>().text = "You no longer encourage the population to make their own masks.";
                 newMessage.transform.SetParent(chatContent.transform);
                 newMessage.transform.localScale = new Vector3(1, 1, 1);
             }
@@ -211,7 +211,7 @@ public class AdvisorSystem : FSystem
             {
                 GameObject newMessage = Object.Instantiate(playerMessagePrefab);
                 newMessage.transform.GetChild(0).Find("Timestamp").GetComponent<TMP_Text>().text += time.daysGone - 1;
-                newMessage.transform.Find("TextContent").GetComponent<TMP_Text>().text = "Vous avez passé une nouvelle commande sur les marchés extérieurs de "+ masks.lastOrderAmount.ToString("N0", CultureInfo.CreateSpecificCulture("fr-FR")) + " masques.";
+                newMessage.transform.Find("TextContent").GetComponent<TMP_Text>().text = "You have ordered " + masks.lastOrderAmount.ToString("N0", CultureInfo.CreateSpecificCulture("fr-FR")) + " masks.";
                 newMessage.transform.SetParent(chatContent.transform);
                 newMessage.transform.localScale = new Vector3(1, 1, 1);
             }
@@ -221,7 +221,7 @@ public class AdvisorSystem : FSystem
             {
                 GameObject newMessage = Object.Instantiate(playerMessagePrefab);
                 newMessage.transform.GetChild(0).Find("Timestamp").GetComponent<TMP_Text>().text += time.daysGone - 1;
-                newMessage.transform.Find("TextContent").GetComponent<TMP_Text>().text = "Vous avez passé une nouvelle commande sur les marchés extérieurs de " + vaccine.lastOrderAmount.ToString("N0", CultureInfo.CreateSpecificCulture("fr-FR")) + " doses de vaccin.";
+                newMessage.transform.Find("TextContent").GetComponent<TMP_Text>().text = "You have ordered " + vaccine.lastOrderAmount.ToString("N0", CultureInfo.CreateSpecificCulture("fr-FR")) + " doses of vaccine.";
                 newMessage.transform.SetParent(chatContent.transform);
                 newMessage.transform.localScale = new Vector3(1, 1, 1);
             }
@@ -238,13 +238,11 @@ public class AdvisorSystem : FSystem
                     GameObject newMessage = Object.Instantiate(playerMessagePrefab);
                     newMessage.transform.GetChild(0).Find("Timestamp").GetComponent<TMP_Text>().text += time.daysGone - 1;
                     TMP_Text msgContent = newMessage.transform.Find("TextContent").GetComponent<TMP_Text>();
-                    msgContent.text = "Vous avez "+(territory.closePrimarySchool ? "fermé" : "ouvert")+" les écoles maternelles et primaires ";
+                    msgContent.text = "You "+(territory.closePrimarySchool ? "closed" : "opened")+ " nursery and primary schools ";
                     if (territory.TerritoryName == "France")
-                        msgContent.text += "sur tout le territoire.";
-                    else if (territory.TerritoryName == "Mayotte" || territory.TerritoryName == "La Réunion")
-                        msgContent.text += "à " + territory.TerritoryName + ".";
+                        msgContent.text += "throughout the country.";
                     else
-                        msgContent.text += "en " + (territory.TerritoryName == "La Corse" ? "Corse" : territory.TerritoryName) + ".";
+                        msgContent.text += "in " + territory.TerritoryName + ".";
                     newMessage.transform.SetParent(chatContent.transform);
                     newMessage.transform.localScale = new Vector3(1, 1, 1);
                 }
@@ -254,13 +252,11 @@ public class AdvisorSystem : FSystem
                     GameObject newMessage = Object.Instantiate(playerMessagePrefab);
                     newMessage.transform.GetChild(0).Find("Timestamp").GetComponent<TMP_Text>().text += time.daysGone - 1;
                     TMP_Text msgContent = newMessage.transform.Find("TextContent").GetComponent<TMP_Text>();
-                    msgContent.text = "Vous avez " + (territory.closeSecondarySchool ? "fermé" : "ouvert") + " les collèges ";
+                    msgContent.text = "You " + (territory.closeSecondarySchool ? "closed" : "opened") + " middle Schools ";
                     if (territory.TerritoryName == "France")
-                        msgContent.text += "sur tout le territoire.";
-                    else if (territory.TerritoryName == "Mayotte" || territory.TerritoryName == "La Réunion")
-                        msgContent.text += "à " + territory.TerritoryName + ".";
+                        msgContent.text += "throughout the country.";
                     else
-                        msgContent.text += "en " + (territory.TerritoryName == "La Corse" ? "Corse" : territory.TerritoryName) + ".";
+                        msgContent.text += "in " + territory.TerritoryName + ".";
                     newMessage.transform.SetParent(chatContent.transform);
                     newMessage.transform.localScale = new Vector3(1, 1, 1);
                 }
@@ -270,13 +266,11 @@ public class AdvisorSystem : FSystem
                     GameObject newMessage = Object.Instantiate(playerMessagePrefab);
                     newMessage.transform.GetChild(0).Find("Timestamp").GetComponent<TMP_Text>().text += time.daysGone - 1;
                     TMP_Text msgContent = newMessage.transform.Find("TextContent").GetComponent<TMP_Text>();
-                    msgContent.text = "Vous avez " + (territory.closeHighSchool ? "fermé" : "ouvert") + " les lycées ";
+                    msgContent.text = "You " + (territory.closeHighSchool ? "closed" : "opened") + " high schools ";
                     if (territory.TerritoryName == "France")
-                        msgContent.text += "sur tout le territoire.";
-                    else if (territory.TerritoryName == "Mayotte" || territory.TerritoryName == "La Réunion")
-                        msgContent.text += "à " + territory.TerritoryName + ".";
+                        msgContent.text += "throughout the country.";
                     else
-                        msgContent.text += "en " + (territory.TerritoryName == "La Corse" ? "Corse" : territory.TerritoryName) + ".";
+                        msgContent.text += "in " + territory.TerritoryName + ".";
                     newMessage.transform.SetParent(chatContent.transform);
                     newMessage.transform.localScale = new Vector3(1, 1, 1);
                 }
@@ -286,13 +280,11 @@ public class AdvisorSystem : FSystem
                     GameObject newMessage = Object.Instantiate(playerMessagePrefab);
                     newMessage.transform.GetChild(0).Find("Timestamp").GetComponent<TMP_Text>().text += time.daysGone - 1;
                     TMP_Text msgContent = newMessage.transform.Find("TextContent").GetComponent<TMP_Text>();
-                    msgContent.text = "Vous avez " + (territory.closeUniversity ? "fermé" : "ouvert") + " les universités ";
+                    msgContent.text = "You " + (territory.closeUniversity ? "closed" : "opened") + " universities ";
                     if (territory.TerritoryName == "France")
-                        msgContent.text += "sur tout le territoire.";
-                    else if (territory.TerritoryName == "Mayotte" || territory.TerritoryName == "La Réunion")
-                        msgContent.text += "à " + territory.TerritoryName + ".";
+                        msgContent.text += "throughout the country.";
                     else
-                        msgContent.text += "en " + (territory.TerritoryName == "La Corse" ? "Corse" : territory.TerritoryName) + ".";
+                        msgContent.text += "in " + territory.TerritoryName + ".";
                     newMessage.transform.SetParent(chatContent.transform);
                     newMessage.transform.localScale = new Vector3(1, 1, 1);
                 }
@@ -303,15 +295,13 @@ public class AdvisorSystem : FSystem
                     newMessage.transform.GetChild(0).Find("Timestamp").GetComponent<TMP_Text>().text += time.daysGone - 1;
                     TMP_Text msgContent = newMessage.transform.Find("TextContent").GetComponent<TMP_Text>();
                     if (territory.callCivicism)
-                        msgContent.text = "Vous avez appelé à la responsabilité civile ";
+                        msgContent.text = "You called for civil liability ";
                     else
-                        msgContent.text = "Vous n'appelez plus à la responsabilité civile ";
+                        msgContent.text = "You no longer call for civil liability ";
                     if (territory.TerritoryName == "France")
-                        msgContent.text += "sur tout le territoire.";
-                    else if (territory.TerritoryName == "Mayotte" || territory.TerritoryName == "La Réunion")
-                        msgContent.text += "à " + territory.TerritoryName + ".";
+                        msgContent.text += "throughout the country.";
                     else
-                        msgContent.text += "en " + (territory.TerritoryName == "La Corse" ? "Corse" : territory.TerritoryName) + ".";
+                        msgContent.text += "in " + territory.TerritoryName + ".";
                     newMessage.transform.SetParent(chatContent.transform);
                     newMessage.transform.localScale = new Vector3(1, 1, 1);
                 }
@@ -322,15 +312,13 @@ public class AdvisorSystem : FSystem
                     newMessage.transform.GetChild(0).Find("Timestamp").GetComponent<TMP_Text>().text += time.daysGone - 1;
                     TMP_Text msgContent = newMessage.transform.Find("TextContent").GetComponent<TMP_Text>();
                     if (territory.closeShop)
-                        msgContent.text = "Vous ordonnez la fermeture des commerces ";
+                        msgContent.text = "You order the shops to be closed ";
                     else
-                        msgContent.text = "Vous autorisez la réouverture des commerces ";
+                        msgContent.text = "You authorize the reopening of shops ";
                     if (territory.TerritoryName == "France")
-                        msgContent.text += "sur tout le territoire.";
-                    else if (territory.TerritoryName == "Mayotte" || territory.TerritoryName == "La Réunion")
-                        msgContent.text += "à " + territory.TerritoryName + ".";
+                        msgContent.text += "throughout the country.";
                     else
-                        msgContent.text += "en " + (territory.TerritoryName == "La Corse" ? "Corse" : territory.TerritoryName) + ".";
+                        msgContent.text += "in " + territory.TerritoryName + ".";
                     newMessage.transform.SetParent(chatContent.transform);
                     newMessage.transform.localScale = new Vector3(1, 1, 1);
                 }
@@ -341,15 +329,13 @@ public class AdvisorSystem : FSystem
                     newMessage.transform.GetChild(0).Find("Timestamp").GetComponent<TMP_Text>().text += time.daysGone - 1;
                     TMP_Text msgContent = newMessage.transform.Find("TextContent").GetComponent<TMP_Text>();
                     if (territory.certificateRequired)
-                        msgContent.text = "Vous limitez le déplacement des citoyens ";
+                        msgContent.text = "You limit the movement of citizens ";
                     else
-                        msgContent.text = "Vous autorisez les citoyens à se déplacer librement ";
+                        msgContent.text = "You allow citizens to move freely ";
                     if (territory.TerritoryName == "France")
-                        msgContent.text += "sur tout le territoire.";
-                    else if (territory.TerritoryName == "Mayotte" || territory.TerritoryName == "La Réunion")
-                        msgContent.text += "à " + territory.TerritoryName + ".";
+                        msgContent.text += "throughout the country.";
                     else
-                        msgContent.text += "en " + (territory.TerritoryName == "La Corse" ? "Corse" : territory.TerritoryName) + ".";
+                        msgContent.text += "in " + territory.TerritoryName + ".";
                     newMessage.transform.SetParent(chatContent.transform);
                     newMessage.transform.localScale = new Vector3(1, 1, 1);
                 }
@@ -360,15 +346,13 @@ public class AdvisorSystem : FSystem
                     newMessage.transform.GetChild(0).Find("Timestamp").GetComponent<TMP_Text>().text += time.daysGone - 1;
                     TMP_Text msgContent = newMessage.transform.Find("TextContent").GetComponent<TMP_Text>();
                     if (territory.ageDependent)
-                        msgContent.text = "Vous interdisez aux citoyens âgés de " + territory.ageDependentMin +" à "+territory.ageDependentMax + " ans de sortir ";
+                        msgContent.text = "You forbid citizens aged " + territory.ageDependentMin +" to "+territory.ageDependentMax + " to go out ";
                     else
-                        msgContent.text = "Vous n'imposez plus d'interdiction de sortie liée à l'âge ";
+                        msgContent.text = "You no longer impose an age-related exit ban ";
                     if (territory.TerritoryName == "France")
-                        msgContent.text += "sur tout le territoire.";
-                    else if (territory.TerritoryName == "Mayotte" || territory.TerritoryName == "La Réunion")
-                        msgContent.text += "à " + territory.TerritoryName + ".";
+                        msgContent.text += "throughout the country.";
                     else
-                        msgContent.text += "en " + (territory.TerritoryName == "La Corse" ? "Corse" : territory.TerritoryName) + ".";
+                        msgContent.text += "in " + territory.TerritoryName + ".";
                     newMessage.transform.SetParent(chatContent.transform);
                     newMessage.transform.localScale = new Vector3(1, 1, 1);
                 }
@@ -380,15 +364,13 @@ public class AdvisorSystem : FSystem
                     newMessage.transform.GetChild(0).Find("Timestamp").GetComponent<TMP_Text>().text += time.daysGone - 1;
                     TMP_Text msgContent = newMessage.transform.Find("TextContent").GetComponent<TMP_Text>();
                     if (beds.boostBeds)
-                        msgContent.text = "Vous augmentez le nombre de lits de réanimation dans les services de soin ";
+                        msgContent.text = "You increase the number of intensive care beds ";
                     else
-                        msgContent.text = "Vous stoppez l'augmentation du nombre de lits de réanimation ";
+                        msgContent.text = "You no longer increase the number of intensive care beds ";
                     if (territory.TerritoryName == "France")
-                        msgContent.text += "sur tout le territoire.";
-                    else if (territory.TerritoryName == "Mayotte" || territory.TerritoryName == "La Réunion")
-                        msgContent.text += "à " + territory.TerritoryName + ".";
+                        msgContent.text += "throughout the country.";
                     else
-                        msgContent.text += "en " + (territory.TerritoryName == "La Corse" ? "Corse" : territory.TerritoryName) + ".";
+                        msgContent.text += "in " + territory.TerritoryName + ".";
                     newMessage.transform.SetParent(chatContent.transform);
                     newMessage.transform.localScale = new Vector3(1, 1, 1);
                 }

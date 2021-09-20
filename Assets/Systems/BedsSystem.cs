@@ -50,14 +50,9 @@ public class BedsSystem : FSystem
 
                 if (beds.intensiveBeds_need > beds.intensiveBeds_current && beds.advisorNotification == -1 && territory.TerritoryName != "France")
                 {
-                    string msgBody = "Attention les hopitaux ";
-                    if (territory.TerritoryName == "Mayotte" || territory.TerritoryName == "La Réunion")
-                        msgBody += "à " + territory.TerritoryName;
-                    else
-                        msgBody += "en " + (territory.TerritoryName == "La Corse" ? "Corse" : territory.TerritoryName);
-                    msgBody += " sont dépassés. Il y a trop de cas malades par rapport au nombre de lits de réanimation.";
+                    string msgBody = "Attention hospitals in " + territory.TerritoryName + " are overloaded. There are too many sick cases compared to the number of intensive care beds.";
 
-                    GameObjectManager.addComponent<ChatMessage>(beds.gameObject, new { sender = "Fédération des hôpitaux", timeStamp = "" + time.daysGone, messageBody = msgBody });
+                    GameObjectManager.addComponent<ChatMessage>(beds.gameObject, new { sender = "Federation of Hospitals", timeStamp = "" + time.daysGone, messageBody = msgBody });
                     beds.advisorNotification = 0;
                 }
                 else if (beds.intensiveBeds_need < beds.intensiveBeds_current && beds.advisorNotification > 10)

@@ -511,7 +511,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55f8de3c04110d04696e673a9b7cc94b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: Fermer le panneau
+  text: Close panel
   audioClip: {fileID: 8300000, guid: fefb67c7bafd8074ba0df5523e77f4df, type: 3}
 --- !u!95 &29690834
 Animator:
@@ -819,7 +819,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55f8de3c04110d04696e673a9b7cc94b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: Nombre de doses de vaccin en stock<br>au niveau national
+  text: Vaccine stock<br>at national level
   audioClip: {fileID: 0}
 --- !u!114 &32377249
 MonoBehaviour:
@@ -1733,7 +1733,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55f8de3c04110d04696e673a9b7cc94b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: <b>Bilan financier</b>
+  text: <b>Balance sheet</b>
   audioClip: {fileID: 8300000, guid: fefb67c7bafd8074ba0df5523e77f4df, type: 3}
 --- !u!95 &51896781
 Animator:
@@ -2292,8 +2292,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "LE PEUPLE SE SOULEVE CONTRE VOTRE POLITIQUE !!!\nAllez-vous d\xE9missionner
-    ?"
+  m_text: 'THE PEOPLE ARE RISING AGAINST YOUR POLICY !!!
+
+    Are you going to resign?'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2662,7 +2663,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55f8de3c04110d04696e673a9b7cc94b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: "<b>Cumul des d\xE9c\xE8s</b>"
+  text: <b>Accumulation of deaths</b>
   audioClip: {fileID: 8300000, guid: fefb67c7bafd8074ba0df5523e77f4df, type: 3}
 --- !u!95 &65277243
 Animator:
@@ -3058,7 +3059,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 299}
-  m_SizeDelta: {x: 886.1, y: 94.5}
+  m_SizeDelta: {x: 1134.2, y: 94.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &77951698
 MonoBehaviour:
@@ -3079,7 +3080,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Vous avez r\xE9ussi \xE0 contr\xF4ler l'\xE9pid\xE9mie"
+  m_text: You have succeeded in controlling the epidemic
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3328,7 +3329,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Suivant
+  m_text: Next
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3888,8 +3889,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "La carte de France vous sera aussi tr\xE8s utile pour mener vos actions.
-    Double-cliquez sur une r\xE9gion pour ouvrir son panneau de configuration."
+  m_text: The map of France will also be very useful to you in carrying out your
+    actions. Double-click on a region to open its control panel.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -4316,7 +4317,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55f8de3c04110d04696e673a9b7cc94b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: "<b>Donn\xE9es par \xE2ge</b>"
+  text: <b>Data by age</b>
   audioClip: {fileID: 8300000, guid: fefb67c7bafd8074ba0df5523e77f4df, type: 3}
 --- !u!95 &115852631
 Animator:
@@ -4516,9 +4517,9 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -103.599976, y: -45}
-  m_SizeDelta: {x: 157.8, y: 30}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -284, y: -45}
+  m_SizeDelta: {x: 280.5, y: 30}
+  m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &117612563
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5480,7 +5481,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Importer des masques homologu\xE9s de l'\xE9tranger :"
+  m_text: 'Import approved masks from abroad:'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -5881,7 +5882,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Jours
+  m_text: Days
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -6250,7 +6251,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 5, y: -46.4}
+  m_AnchoredPosition: {x: 94, y: -46.4}
   m_SizeDelta: {x: 72.51, y: 40.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &146001709
@@ -6432,7 +6433,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -575.30005, y: 68}
+  m_AnchoredPosition: {x: -588.25, y: 68}
   m_SizeDelta: {x: 701.8, y: 43.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &156190948
@@ -7410,8 +7411,8 @@ MonoBehaviour:
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: <b>Stock des masques</b><br><color=#C15C00ff>Seulement
-              disponible en national</color>
+            m_StringArgument: <b>Stock of masks</b><br><color=#C15C00ff>Only available
+              nationally</color>
             m_BoolArgument: 0
           m_CallState: 2
         - m_Target: {fileID: 51896785}
@@ -7422,8 +7423,8 @@ MonoBehaviour:
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: <b>Bilan financier</b><br><color=#C15C00ff>Seulement
-              disponible en national</color>
+            m_StringArgument: <b>Financial report</b><br><color=#C15C00ff>Only available
+              nationally</color>
             m_BoolArgument: 0
           m_CallState: 2
         - m_Target: {fileID: 1562096269}
@@ -7434,9 +7435,9 @@ MonoBehaviour:
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: "<b>Stress de la population</b><br>Si le stress de
-              la population d\xE9passe 80%<br>sur 15 jours cons\xE9cutifs, vous perdez
-              la partie<br><color=#C15C00ff>Seulement disponible en national</color>"
+            m_StringArgument: <b>Population stress</b><br>If the population stress
+              exceeds 80% <br> over 15 consecutive days, you lose the game<br><color=#C15C00ff>Only
+              available nationally</color>
             m_BoolArgument: 0
           m_CallState: 2
         - m_Target: {fileID: 1655765007}
@@ -7469,8 +7470,8 @@ MonoBehaviour:
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: <b>Stock de vaccins</b><br><color=#C15C00ff>Seulement
-              disponible en national</color>
+            m_StringArgument: <b>Vaccine stock</b><br><color=#C15C00ff>Only available
+              nationally</color>
             m_BoolArgument: 0
           m_CallState: 2
 --- !u!114 &186061809
@@ -7577,9 +7578,9 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 206.29997, y: -45.69995}
-  m_SizeDelta: {x: 86, y: 28}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 163.29997, y: -45.69995}
+  m_SizeDelta: {x: 173.6, y: 28}
+  m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &187163060
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7599,7 +7600,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'ans et '
+  m_text: years old and
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -7732,7 +7733,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Dette (\u20AC)\n"
+  m_text: "Debt  (\u20AC)"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -7925,8 +7926,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "R\xE9duction des libert\xE9s de d\xE9placement (Attestation de sortie
-    requise)"
+  m_text: Reduced freedom of movement (exit certificate required)
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -8795,7 +8795,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "D\xE9c\xE8s journaliers"
+  m_text: Daily deaths
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -9480,8 +9480,8 @@ MonoBehaviour:
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: <b>Stock des masques</b><br><color=#C15C00ff>Seulement
-              disponible en national</color>
+            m_StringArgument: <b>Stock of masks</b><br><color=#C15C00ff>Only available
+              nationally</color>
             m_BoolArgument: 0
           m_CallState: 2
         - m_Target: {fileID: 51896785}
@@ -9492,8 +9492,8 @@ MonoBehaviour:
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: <b>Bilan financier</b><br><color=#C15C00ff>Seulement
-              disponible en national</color>
+            m_StringArgument: <b>Financial report</b><br><color=#C15C00ff>Only available
+              nationally</color>
             m_BoolArgument: 0
           m_CallState: 2
         - m_Target: {fileID: 1562096269}
@@ -9504,9 +9504,9 @@ MonoBehaviour:
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: "<b>Stress de la population</b><br>Si le stress de
-              la population d\xE9passe 80%<br>sur 15 jours cons\xE9cutifs, vous perdez
-              la partie<br><color=#C15C00ff>Seulement disponible en national</color>"
+            m_StringArgument: <b>Population stress</b><br>If the population stress
+              exceeds 80% <br> over 15 consecutive days, you lose the game<br><color=#C15C00ff>Only
+              available nationally</color>
             m_BoolArgument: 0
           m_CallState: 2
         - m_Target: {fileID: 1655765007}
@@ -9539,8 +9539,8 @@ MonoBehaviour:
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: <b>Stock de vaccins</b><br><color=#C15C00ff>Seulement
-              disponible en national</color>
+            m_StringArgument: <b>Vaccine stock</b><br><color=#C15C00ff>Only available
+              nationally</color>
             m_BoolArgument: 0
           m_CallState: 2
 --- !u!114 &228842350
@@ -10024,7 +10024,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "R\xE9quisitionner les masques pour les\npersonnels de sant\xE9"
+  m_text: 'Requisition the masks for the
+
+    health workers'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -10157,9 +10159,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Le prix unitaire des masques achet\xE9s \xE0 l'\xE9tranger<br>varie au
-    cours du temps.<br>Les masques sont livr\xE9s par lots de plusieurs millions<br>tous
-    les huit jours en moyenne."
+  m_text: The unit price of masks bought abroad<br>varies over time.<br>Masks are
+    delivered in batches of several millions<br>every eight days on average.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -10366,8 +10367,12 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Contr\xF4lez le R0.\n\nLe R0 d\xE9finit le taux de reproduction du virus.
-    Un taux \xE0 moins de 1 vous permettra de contr\xF4ler l'\xE9pid\xE9mie."
+  m_text: 'Check the R0.
+
+    
+
+    The R0 defines the rate of reproduction of
+    the virus. A rate less than 1 will allow you to control the epidemic.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -10761,9 +10766,9 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 356.9, y: -45.69999}
-  m_SizeDelta: {x: 59.5, y: 28}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 416.15002, y: -45.69999}
+  m_SizeDelta: {x: 118.5, y: 28}
+  m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &252707487
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10783,7 +10788,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: ans
+  m_text: years old
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -11339,7 +11344,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Voir le tableau des scores
+  m_text: View high scores
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -12455,7 +12460,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Entrer votre pseudo...
+  m_text: pseudo...
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -12820,7 +12825,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 630761824}
   m_HandleRect: {fileID: 630761823}
   m_Direction: 0
-  m_Value: 0
+  m_Value: 1
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -14732,9 +14737,13 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "2025...\n\n5 ans apr\xE8s la pand\xE9mie de 2020 un nouveau coronavirus
-    est apparu. Plusieurs pays \xE0 travers le monde semblent d\xE9j\xE0 touch\xE9s.
-    La France est pour l'instant encore \xE9pargn\xE9e."
+  m_text: '2025...
+
+    
+
+    5 years after the 2020 pandemic, a new coronavirus
+    appeared. Several countries around the world already seem to be affected. France
+    is still spared for the moment.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -15047,7 +15056,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Recommencer
+  m_text: Restart
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -15456,7 +15465,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55f8de3c04110d04696e673a9b7cc94b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: "Requiert la d\xE9couverte d'un vaccin"
+  text: Requires discovery of a vaccine
   audioClip: {fileID: 0}
 --- !u!222 &368642622
 CanvasRenderer:
@@ -15498,7 +15507,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55f8de3c04110d04696e673a9b7cc94b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: "Requiert une ouverture des fronti\xE8res au niveau mondial"
+  text: Requires open frontiers at the global level
   audioClip: {fileID: 0}
 --- !u!1 &371120151
 GameObject:
@@ -15690,7 +15699,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Inciter \xE0 la production artisanale de masques"
+  m_text: Encourage artisanal production of masks
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -16034,8 +16043,8 @@ MonoBehaviour:
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: <b>Stock des masques</b><br><color=#C15C00ff>Seulement
-              disponible en national</color>
+            m_StringArgument: <b>Stock of masks</b><br><color=#C15C00ff>Only available
+              nationally</color>
             m_BoolArgument: 0
           m_CallState: 2
         - m_Target: {fileID: 51896785}
@@ -16046,8 +16055,8 @@ MonoBehaviour:
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: <b>Bilan financier</b><br><color=#C15C00ff>Seulement
-              disponible en national</color>
+            m_StringArgument: <b>Financial report</b><br><color=#C15C00ff>Only available
+              nationally</color>
             m_BoolArgument: 0
           m_CallState: 2
         - m_Target: {fileID: 1562096269}
@@ -16058,9 +16067,9 @@ MonoBehaviour:
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: "<b>Stress de la population</b><br>Si le stress de
-              la population d\xE9passe 80%<br>sur 15 jours cons\xE9cutifs, vous perdez
-              la partie<br><color=#C15C00ff>Seulement disponible en national</color>"
+            m_StringArgument: <b>Population stress</b><br>If the population stress
+              exceeds 80% <br> over 15 consecutive days, you lose the game<br><color=#C15C00ff>Only
+              available nationally</color>
             m_BoolArgument: 0
           m_CallState: 2
         - m_Target: {fileID: 1655765007}
@@ -16093,8 +16102,8 @@ MonoBehaviour:
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: <b>Stock de vaccins</b><br><color=#C15C00ff>Seulement
-              disponible en national</color>
+            m_StringArgument: <b>Vaccine stock</b><br><color=#C15C00ff>Only available
+              nationally</color>
             m_BoolArgument: 0
           m_CallState: 2
 --- !u!114 &376523645
@@ -16698,10 +16707,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Bienvenue au centre de gestion de crise !\n\nSuite \xE0 la pand\xE9mie
-    de la Covid 19 de 2020 nos \xE9quipes ont d\xE9velopp\xE9 de nouveaux outils
-    vous permettant de suivre, au jour le jour, la progression de l'\xE9pid\xE9mie.\n\nJe
-    vais vous pr\xE9senter les principales fonctionalit\xE9s.\n\nAllons-y..."
+  m_text: "\rWelcome to the crisis management center!\r\n\r\nFollowing the 2020 Covid
+    19 pandemic, our teams have developed new tools allowing you to monitor the progress
+    of the epidemic on a day-to-day basis.\r\n\r\nI will present the main features
+    to you.\r\n\r\nLet's go ..."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -17075,7 +17084,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55f8de3c04110d04696e673a9b7cc94b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: "Occupation en lit de r\xE9animation"
+  text: Intensive care bed occupancy
   audioClip: {fileID: 0}
 --- !u!114 &420308535
 MonoBehaviour:
@@ -17170,7 +17179,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Partagez vos scores :'
+  m_text: "Share your scores:\r"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -17303,7 +17312,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Jours
+  m_text: Days
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -17724,7 +17733,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Passer le tutoriel
+  m_text: Skip the tutorial
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -17857,7 +17866,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Passer le tutoriel
+  m_text: Skip the tutorial
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -18074,7 +18083,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Contamin\xE9s"
+  m_text: Contaminated
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -18548,7 +18557,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Jours
+  m_text: Days
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -18953,7 +18962,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Dette due \xE0 la crise : "
+  m_text: 'Debt due to the crisis: '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -20034,9 +20043,12 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Contr\xF4lez le temps...\n\nN'h\xE9sitez pas \xE0 mettre en pause la simulation
-    pour analyser les diff\xE9rents param\xE8tres et faire les bons choix pour notre
-    pays."
+  m_text: 'Control the time...
+
+    
+
+    Do not hesitate to pause the simulation
+    to analyze the different parameters and make the right choices for the country.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -22135,7 +22147,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 10 mois
+  m_text: 10 mounth
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -22162,8 +22174,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24
-  m_fontSizeBase: 24
+  m_fontSize: 19
+  m_fontSizeBase: 19
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -22544,7 +22556,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Jours
+  m_text: Days
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -22677,9 +22689,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Nombre de citoyens
+  m_text: 'Number of citizens
 
-    (en milliers)'
+    (in thousands)'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -24373,7 +24385,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '- Nouveau(x) message(s) -'
+  m_text: '- New message -'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -25042,7 +25054,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55f8de3c04110d04696e673a9b7cc94b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: "Occupation lit de r\xE9animation"
+  text: Intensive care bed occupancy
   audioClip: {fileID: 0}
 --- !u!114 &610062308
 MonoBehaviour:
@@ -25332,7 +25344,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "universit\xE9s"
+  m_text: universities
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -25619,8 +25631,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55f8de3c04110d04696e673a9b7cc94b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: "R0 du territoire s\xE9lectionn\xE9<br>R0 d\xE9finit le taux de reproduction
-    du virus<br>Un taux \xE0 moins de 1 vous permettra de contr\xF4ler l'\xE9pid\xE9mie"
+  text: R0 of the selected territory<br>R0 defines the reproduction rate of the virus<br>A
+    rate less than 1 will allow you to control the epidemic
   audioClip: {fileID: 0}
 --- !u!114 &621870802
 MonoBehaviour:
@@ -25985,8 +25997,8 @@ MonoBehaviour:
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: <b>Stock des masques</b><br><color=#C15C00ff>Seulement
-              disponible en national</color>
+            m_StringArgument: <b>Stock of masks</b><br><color=#C15C00ff>Only available
+              nationally</color>
             m_BoolArgument: 0
           m_CallState: 2
         - m_Target: {fileID: 51896785}
@@ -25997,8 +26009,8 @@ MonoBehaviour:
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: <b>Bilan financier</b><br><color=#C15C00ff>Seulement
-              disponible en national</color>
+            m_StringArgument: <b>Financial report</b><br><color=#C15C00ff>Only available
+              nationally</color>
             m_BoolArgument: 0
           m_CallState: 2
         - m_Target: {fileID: 1562096269}
@@ -26009,9 +26021,9 @@ MonoBehaviour:
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: "<b>Stress de la population</b><br>Si le stress de
-              la population d\xE9passe 80%<br>sur 15 jours cons\xE9cutifs, vous perdez
-              la partie<br><color=#C15C00ff>Seulement disponible en national</color>"
+            m_StringArgument: <b>Population stress</b><br>If the population stress
+              exceeds 80% <br> over 15 consecutive days, you lose the game<br><color=#C15C00ff>Only
+              available nationally</color>
             m_BoolArgument: 0
           m_CallState: 2
         - m_Target: {fileID: 1655765007}
@@ -26044,8 +26056,8 @@ MonoBehaviour:
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: <b>Stock de vaccins</b><br><color=#C15C00ff>Seulement
-              disponible en national</color>
+            m_StringArgument: <b>Vaccine stock</b><br><color=#C15C00ff>Only available
+              nationally</color>
             m_BoolArgument: 0
           m_CallState: 2
 --- !u!114 &622570506
@@ -26986,7 +26998,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Commander
+  m_text: Order
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -27476,7 +27488,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55f8de3c04110d04696e673a9b7cc94b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: "<b>Historique des d\xE9c\xE8s</b>"
+  text: <b>Death History</b>
   audioClip: {fileID: 8300000, guid: fefb67c7bafd8074ba0df5523e77f4df, type: 3}
 --- !u!95 &663785205
 Animator:
@@ -27681,7 +27693,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "D\xE9c\xE8s cumul\xE9s"
+  m_text: Cumulative deaths
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -28408,7 +28420,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55f8de3c04110d04696e673a9b7cc94b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: "Nombre de jours pass\xE9s depuis le d\xE9but de la simulation"
+  text: Number of days passed since the start of the simulation
   audioClip: {fileID: 0}
 --- !u!1 &694624329
 GameObject:
@@ -28912,7 +28924,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Comment g\xE9rerez-vous ce nouveau risque ?"
+  m_text: How will you manage this new risk?
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -29119,7 +29131,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Passer le tutoriel
+  m_text: Skip the tutorial
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -29933,7 +29945,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: (en Millions)
+  m_text: (in millions)
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -30543,8 +30555,8 @@ MonoBehaviour:
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: <b>Stock des masques</b><br><color=#C15C00ff>Seulement
-              disponible en national</color>
+            m_StringArgument: <b>Stock of masks</b><br><color=#C15C00ff>Only available
+              nationally</color>
             m_BoolArgument: 0
           m_CallState: 2
         - m_Target: {fileID: 51896785}
@@ -30555,8 +30567,8 @@ MonoBehaviour:
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: <b>Bilan financier</b><br><color=#C15C00ff>Seulement
-              disponible en national</color>
+            m_StringArgument: <b>Financial report</b><br><color=#C15C00ff>Only available
+              nationally</color>
             m_BoolArgument: 0
           m_CallState: 2
         - m_Target: {fileID: 1562096269}
@@ -30567,9 +30579,9 @@ MonoBehaviour:
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: "<b>Stress de la population</b><br>Si le stress de
-              la population d\xE9passe 80%<br>sur 15 jours cons\xE9cutifs, vous perdez
-              la partie<br><color=#C15C00ff>Seulement disponible en national</color>"
+            m_StringArgument: <b>Population stress</b><br>If the population stress
+              exceeds 80% <br> over 15 consecutive days, you lose the game<br><color=#C15C00ff>Only
+              available nationally</color>
             m_BoolArgument: 0
           m_CallState: 2
         - m_Target: {fileID: 1655765007}
@@ -30602,8 +30614,8 @@ MonoBehaviour:
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: <b>Stock de vaccins</b><br><color=#C15C00ff>Seulement
-              disponible en national</color>
+            m_StringArgument: <b>Vaccine stock</b><br><color=#C15C00ff>Only available
+              nationally</color>
             m_BoolArgument: 0
           m_CallState: 2
 --- !u!114 &776476493
@@ -31058,7 +31070,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Passer le tutoriel
+  m_text: Skip the tutorial
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -31854,7 +31866,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 10 sem.
+  m_text: 10 weeks
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -31881,8 +31893,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24
-  m_fontSizeBase: 24
+  m_fontSize: 19
+  m_fontSizeBase: 19
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -32820,7 +32832,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Consultez vos conseillers.
+  m_text: Consult your advisors.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -33220,7 +33232,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Gu\xE9ris"
+  m_text: Healed
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -33544,7 +33556,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55f8de3c04110d04696e673a9b7cc94b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: "% de personnes m\xE9contentes au niveau national"
+  text: '% of dissatisfied people nationally'
   audioClip: {fileID: 0}
 --- !u!1 &841424425
 GameObject:
@@ -34013,10 +34025,17 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Aidez la France \xE0 stabiliser l'\xE9pid\xE9mie, atteignez l'immunit\xE9
-    collective.\n\nMais surtout, \xE9vitez la crise sociale : 15 jours \xE0 plus
-    de 80% de stress et vous devrez certainement d\xE9missioner de vos fonctions.\n\nA
-    vous de jouer..."
+  m_text: 'Help France stabilize the epidemic, achieve collective immunity.
+
+    
+
+    But
+    above all, avoid the social crisis: 15 days at more than 80% stress and you will
+    certainly have to resign from your functions.
+
+    
+
+    It''s your turn...'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -34337,9 +34356,9 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -781, y: -54}
-  m_SizeDelta: {x: 288.7, y: 31.4}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -938.3, y: -54}
+  m_SizeDelta: {x: 329.9, y: 31.4}
+  m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &849791417
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34868,7 +34887,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Stock de vaccins
+  m_text: "Vaccine stock\r"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -36030,7 +36049,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Suivant
+  m_text: Next
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -36374,8 +36393,8 @@ MonoBehaviour:
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: <b>Stock des masques</b><br><color=#C15C00ff>Seulement
-              disponible en national</color>
+            m_StringArgument: <b>Stock of masks</b><br><color=#C15C00ff>Only available
+              nationally</color>
             m_BoolArgument: 0
           m_CallState: 2
         - m_Target: {fileID: 51896785}
@@ -36386,8 +36405,8 @@ MonoBehaviour:
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: <b>Bilan financier</b><br><color=#C15C00ff>Seulement
-              disponible en national</color>
+            m_StringArgument: <b>Financial report</b><br><color=#C15C00ff>Only available
+              nationally</color>
             m_BoolArgument: 0
           m_CallState: 2
         - m_Target: {fileID: 1562096269}
@@ -36398,9 +36417,9 @@ MonoBehaviour:
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: "<b>Stress de la population</b><br>Si le stress de
-              la population d\xE9passe 80%<br>sur 15 jours cons\xE9cutifs, vous perdez
-              la partie<br><color=#C15C00ff>Seulement disponible en national</color>"
+            m_StringArgument: <b>Population stress</b><br>If the population stress
+              exceeds 80% <br> over 15 consecutive days, you lose the game<br><color=#C15C00ff>Only
+              available nationally</color>
             m_BoolArgument: 0
           m_CallState: 2
         - m_Target: {fileID: 1655765007}
@@ -36433,8 +36452,8 @@ MonoBehaviour:
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: <b>Stock de vaccins</b><br><color=#C15C00ff>Seulement
-              disponible en national</color>
+            m_StringArgument: <b>Vaccine stock</b><br><color=#C15C00ff>Only available
+              nationally</color>
             m_BoolArgument: 0
           m_CallState: 2
 --- !u!114 &892540581
@@ -36774,8 +36793,8 @@ MonoBehaviour:
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: <b>Stock des masques</b><br><color=#C15C00ff>Seulement
-              disponible en national</color>
+            m_StringArgument: <b>Stock of masks</b><br><color=#C15C00ff>Only available
+              nationally</color>
             m_BoolArgument: 0
           m_CallState: 2
         - m_Target: {fileID: 51896785}
@@ -36786,8 +36805,8 @@ MonoBehaviour:
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: <b>Bilan financier</b><br><color=#C15C00ff>Seulement
-              disponible en national</color>
+            m_StringArgument: <b>Financial report</b><br><color=#C15C00ff>Only available
+              nationally</color>
             m_BoolArgument: 0
           m_CallState: 2
         - m_Target: {fileID: 1562096269}
@@ -36798,9 +36817,9 @@ MonoBehaviour:
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: "<b>Stress de la population</b><br>Si le stress de
-              la population d\xE9passe 80%<br>sur 15 jours cons\xE9cutifs, vous perdez
-              la partie<br><color=#C15C00ff>Seulement disponible en national</color>"
+            m_StringArgument: <b>Population stress</b><br>If the population stress
+              exceeds 80% <br> over 15 consecutive days, you lose the game<br><color=#C15C00ff>Only
+              available nationally</color>
             m_BoolArgument: 0
           m_CallState: 2
         - m_Target: {fileID: 1655765007}
@@ -36833,8 +36852,8 @@ MonoBehaviour:
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: <b>Stock de vaccins</b><br><color=#C15C00ff>Seulement
-              disponible en national</color>
+            m_StringArgument: <b>Vaccine stock</b><br><color=#C15C00ff>Only available
+              nationally</color>
             m_BoolArgument: 0
           m_CallState: 2
 --- !u!114 &892693199
@@ -37037,7 +37056,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Suivant
+  m_text: Next
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -37562,8 +37581,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55f8de3c04110d04696e673a9b7cc94b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: "Nombre de personnes d\xE9c\xE9d\xE9es aujourd'hui<br>pour le territoire
-    s\xE9lectionn\xE9"
+  text: Number of people deceased today<br>for the selected territory
   audioClip: {fileID: 0}
 --- !u!1 &905907879
 GameObject:
@@ -38105,7 +38123,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Arr\xEAt des enseignements :"
+  m_text: 'End of teaching:'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -38139,7 +38157,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 2
+  m_HorizontalAlignment: 1
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -38845,7 +38863,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Doses en attente de livraison :'
+  m_text: 'Doses pending delivery:'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -38978,9 +38996,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Stress de la population (%)
-
-'
+  m_text: Population stress (%)
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -39202,7 +39218,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Suivant
+  m_text: Next
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -39829,8 +39845,8 @@ MonoBehaviour:
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: <b>Stock des masques</b><br><color=#C15C00ff>Seulement
-              disponible en national</color>
+            m_StringArgument: <b>Stock of masks</b><br><color=#C15C00ff>Only available
+              nationally</color>
             m_BoolArgument: 0
           m_CallState: 2
         - m_Target: {fileID: 51896785}
@@ -39841,8 +39857,8 @@ MonoBehaviour:
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: <b>Bilan financier</b><br><color=#C15C00ff>Seulement
-              disponible en national</color>
+            m_StringArgument: <b>Financial report</b><br><color=#C15C00ff>Only available
+              nationally</color>
             m_BoolArgument: 0
           m_CallState: 2
         - m_Target: {fileID: 1562096269}
@@ -39853,9 +39869,9 @@ MonoBehaviour:
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: "<b>Stress de la population</b><br>Si le stress de
-              la population d\xE9passe 80%<br>sur 15 jours cons\xE9cutifs, vous perdez
-              la partie<br><color=#C15C00ff>Seulement disponible en national</color>"
+            m_StringArgument: <b>Population stress</b><br>If the population stress
+              exceeds 80% <br> over 15 consecutive days, you lose the game<br><color=#C15C00ff>Only
+              available nationally</color>
             m_BoolArgument: 0
           m_CallState: 2
         - m_Target: {fileID: 1655765007}
@@ -39888,8 +39904,8 @@ MonoBehaviour:
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: <b>Stock de vaccins</b><br><color=#C15C00ff>Seulement
-              disponible en national</color>
+            m_StringArgument: <b>Vaccine stock</b><br><color=#C15C00ff>Only available
+              nationally</color>
             m_BoolArgument: 0
           m_CallState: 2
 --- !u!114 &961565155
@@ -40071,9 +40087,9 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 125, y: 10.799999}
-  m_SizeDelta: {x: 200, y: 30}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 5, y: 10.799988}
+  m_SizeDelta: {x: 216.7, y: 30}
+  m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &969030193
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40365,7 +40381,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 10 jours
+  m_text: 10 days
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -40392,8 +40408,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24
-  m_fontSizeBase: 24
+  m_fontSize: 19
+  m_fontSizeBase: 19
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -40615,7 +40631,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55f8de3c04110d04696e673a9b7cc94b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: "Cumul des personnes d\xE9c\xE9d\xE9es<br>pour le territoire s\xE9lectionn\xE9"
+  text: Total number of deceased persons<br>for the selected territory
   audioClip: {fileID: 0}
 --- !u!1 &978530910
 GameObject:
@@ -42037,7 +42053,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Poursuivre co\xFBte que co\xFBte..."
+  m_text: Continue at all costs...
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -42480,8 +42496,8 @@ MonoBehaviour:
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: <b>Stock des masques</b><br><color=#C15C00ff>Seulement
-              disponible en national</color>
+            m_StringArgument: <b>Stock of masks</b><br><color=#C15C00ff>Only available
+              nationally</color>
             m_BoolArgument: 0
           m_CallState: 2
         - m_Target: {fileID: 51896785}
@@ -42492,8 +42508,8 @@ MonoBehaviour:
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: <b>Bilan financier</b><br><color=#C15C00ff>Seulement
-              disponible en national</color>
+            m_StringArgument: <b>Financial report</b><br><color=#C15C00ff>Only available
+              nationally</color>
             m_BoolArgument: 0
           m_CallState: 2
         - m_Target: {fileID: 1562096269}
@@ -42504,9 +42520,9 @@ MonoBehaviour:
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: "<b>Stress de la population</b><br>Si le stress de
-              la population d\xE9passe 80%<br>sur 15 jours cons\xE9cutifs, vous perdez
-              la partie<br><color=#C15C00ff>Seulement disponible en national</color>"
+            m_StringArgument: <b>Population stress</b><br>If the population stress
+              exceeds 80% <br> over 15 consecutive days, you lose the game<br><color=#C15C00ff>Only
+              available nationally</color>
             m_BoolArgument: 0
           m_CallState: 2
         - m_Target: {fileID: 1655765007}
@@ -42539,8 +42555,8 @@ MonoBehaviour:
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: <b>Stock de vaccins</b><br><color=#C15C00ff>Seulement
-              disponible en national</color>
+            m_StringArgument: <b>Vaccine stock</b><br><color=#C15C00ff>Only available
+              nationally</color>
             m_BoolArgument: 0
           m_CallState: 2
 --- !u!114 &1010918186
@@ -43345,7 +43361,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Passer le tutoriel
+  m_text: Skip the tutorial
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -43701,7 +43717,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Stock de masques
+  m_text: "Mask stock\r"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -43834,7 +43850,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Revoir l'\xE9tat du pays"
+  m_text: Review the state of the country
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -43967,7 +43983,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Prix unitaire :'
+  m_text: 'Unit price :'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -44271,7 +44287,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Prix unitaire :'
+  m_text: 'Unit price:'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -44744,7 +44760,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40c9734e999c159478db222fa18c8cc6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TerritoryName: "La R\xE9union"
+  TerritoryName: "R\xE9union"
   populationRatio: 0.012823017
   nbPopulation: 0
   popNumber: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
@@ -44937,8 +44953,8 @@ MonoBehaviour:
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: <b>Stock des masques</b><br><color=#C15C00ff>Seulement
-              disponible en national</color>
+            m_StringArgument: <b>Stock of masks</b><br><color=#C15C00ff>Only available
+              nationally</color>
             m_BoolArgument: 0
           m_CallState: 2
         - m_Target: {fileID: 51896785}
@@ -44949,8 +44965,8 @@ MonoBehaviour:
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: <b>Bilan financier</b><br><color=#C15C00ff>Seulement
-              disponible en national</color>
+            m_StringArgument: <b>Financial report</b><br><color=#C15C00ff>Only available
+              nationally</color>
             m_BoolArgument: 0
           m_CallState: 2
         - m_Target: {fileID: 1562096269}
@@ -44961,9 +44977,9 @@ MonoBehaviour:
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: "<b>Stress de la population</b><br>Si le stress de
-              la population d\xE9passe 80%<br>sur 15 jours cons\xE9cutifs, vous perdez
-              la partie<br><color=#C15C00ff>Seulement disponible en national</color>"
+            m_StringArgument: <b>Population stress</b><br>If the population stress
+              exceeds 80% <br> over 15 consecutive days, you lose the game<br><color=#C15C00ff>Only
+              available nationally</color>
             m_BoolArgument: 0
           m_CallState: 2
         - m_Target: {fileID: 1655765007}
@@ -44996,8 +45012,8 @@ MonoBehaviour:
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: <b>Stock de vaccins</b><br><color=#C15C00ff>Seulement
-              disponible en national</color>
+            m_StringArgument: <b>Vaccine stock</b><br><color=#C15C00ff>Only available
+              nationally</color>
             m_BoolArgument: 0
           m_CallState: 2
 --- !u!114 &1058415742
@@ -46027,7 +46043,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55f8de3c04110d04696e673a9b7cc94b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: "Requiert une ouverture des fronti\xE8res au niveau mondial"
+  text: 'Requires open borders at the global level '
   audioClip: {fileID: 0}
 --- !u!222 &1071818774
 CanvasRenderer:
@@ -47239,7 +47255,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Suivant
+  m_text: Next
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -47481,7 +47497,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Envoyer
+  m_text: Send
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -48194,9 +48210,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Vous noterez que certains indicateurs comme l'\xE9volution des stocks
-    de masques, des stocks de vaccins, du co\xFBt des actions et du stress de la
-    population ne sont pas accessibles au niveau r\xE9gional. "
+  m_text: You will note that certain indicators such as the evolution of stocks of
+    masks, stocks of vaccines, the cost of actions and the stress of the population
+    are not accessible at the regional level.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -48503,7 +48519,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55f8de3c04110d04696e673a9b7cc94b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: Fermer le panneau
+  text: Close panel
   audioClip: {fileID: 8300000, guid: fefb67c7bafd8074ba0df5523e77f4df, type: 3}
 --- !u!95 &1157169372
 Animator:
@@ -48967,7 +48983,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55f8de3c04110d04696e673a9b7cc94b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: Jouer la simulation
+  text: Play simulation
   audioClip: {fileID: 8300000, guid: fefb67c7bafd8074ba0df5523e77f4df, type: 3}
 --- !u!95 &1161940475
 Animator:
@@ -50157,8 +50173,8 @@ MonoBehaviour:
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: <b>Stock des masques</b><br><color=#C15C00ff>Seulement
-              disponible en national</color>
+            m_StringArgument: <b>Stock of masks</b><br><color=#C15C00ff>Only available
+              nationally</color>
             m_BoolArgument: 0
           m_CallState: 2
         - m_Target: {fileID: 51896785}
@@ -50169,8 +50185,8 @@ MonoBehaviour:
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: <b>Bilan financier</b><br><color=#C15C00ff>Seulement
-              disponible en national</color>
+            m_StringArgument: <b>Financial report</b><br><color=#C15C00ff>Only available
+              nationally</color>
             m_BoolArgument: 0
           m_CallState: 2
         - m_Target: {fileID: 1562096269}
@@ -50181,9 +50197,9 @@ MonoBehaviour:
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: "<b>Stress de la population</b><br>Si le stress de
-              la population d\xE9passe 80%<br>sur 15 jours cons\xE9cutifs, vous perdez
-              la partie<br><color=#C15C00ff>Seulement disponible en national</color>"
+            m_StringArgument: <b>Population stress</b><br>If the population stress
+              exceeds 80% <br> over 15 consecutive days, you lose the game<br><color=#C15C00ff>Only
+              available nationally</color>
             m_BoolArgument: 0
           m_CallState: 2
         - m_Target: {fileID: 1655765007}
@@ -50216,8 +50232,8 @@ MonoBehaviour:
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: <b>Stock de vaccins</b><br><color=#C15C00ff>Seulement
-              disponible en national</color>
+            m_StringArgument: <b>Vaccine stock</b><br><color=#C15C00ff>Only available
+              nationally</color>
             m_BoolArgument: 0
           m_CallState: 2
 --- !u!114 &1185250284
@@ -51103,7 +51119,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Appeler \xE0 la responsabilit\xE9 civique"
+  m_text: Call for civic responsibility
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -51350,7 +51366,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -675.80005, y: 7.2}
+  m_AnchoredPosition: {x: -688.75, y: 7.2}
   m_SizeDelta: {x: 500.3, y: 31.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1236196444
@@ -51601,7 +51617,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Booster la production nationale de masques
+  m_text: Boost national production of masks
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -52091,7 +52107,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Commander des vaccins aux laboratoires :'
+  m_text: 'Order vaccines from laboratories:'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -52298,7 +52314,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "D\xE9c\xE9d\xE9s"
+  m_text: Deceased
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -52446,7 +52462,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55f8de3c04110d04696e673a9b7cc94b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: <b>Stock des masques</b>
+  text: <b>Mask stock</b>
   audioClip: {fileID: 8300000, guid: fefb67c7bafd8074ba0df5523e77f4df, type: 3}
 --- !u!95 &1274697297
 Animator:
@@ -52798,7 +52814,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Fermer les commerces grands publics (except\xE9s alimentaires)"
+  m_text: 'Close general public stores
+
+    (except food)'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -53852,7 +53870,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55f8de3c04110d04696e673a9b7cc94b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: Nombre de masques en stock<br>au niveau national
+  text: Stock of masks<br>at national level
   audioClip: {fileID: 0}
 --- !u!1 &1296196660
 GameObject:
@@ -54377,7 +54395,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55f8de3c04110d04696e673a9b7cc94b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: Consulter les conseillers
+  text: Consult advisors
   audioClip: {fileID: 8300000, guid: fefb67c7bafd8074ba0df5523e77f4df, type: 3}
 --- !u!1 &1303175164
 GameObject:
@@ -54990,7 +55008,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 125.00002, y: -45.000023}
+  m_AnchoredPosition: {x: 105.00004, y: -45.000023}
   m_SizeDelta: {x: 200, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1322122010
@@ -55292,9 +55310,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Le prix unitaire d'une dose de vaccin varie au cours du temps.\nLes vaccins
-    sont livr\xE9s par lots de plusieurs centaines de miliers d'unit\xE9s tous les
-    huit jours en moyenne en fonction de la demande mondiale."
+  m_text: 'The unit price of a vaccine dose varies over time.
+
+    Vaccines are
+    delivered in batches of several hundred thousand units every eight days on average
+    depending on global demand.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -56062,8 +56082,8 @@ MonoBehaviour:
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: <b>Stock des masques</b><br><color=#C15C00ff>Seulement
-              disponible en national</color>
+            m_StringArgument: <b>Stock of masks</b><br><color=#C15C00ff>Only available
+              nationally</color>
             m_BoolArgument: 0
           m_CallState: 2
         - m_Target: {fileID: 51896785}
@@ -56074,8 +56094,8 @@ MonoBehaviour:
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: <b>Bilan financier</b><br><color=#C15C00ff>Seulement
-              disponible en national</color>
+            m_StringArgument: <b>Financial report</b><br><color=#C15C00ff>Only available
+              nationally</color>
             m_BoolArgument: 0
           m_CallState: 2
         - m_Target: {fileID: 1562096269}
@@ -56086,9 +56106,9 @@ MonoBehaviour:
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: "<b>Stress de la population</b><br>Si le stress de
-              la population d\xE9passe 80%<br>sur 15 jours cons\xE9cutifs, vous perdez
-              la partie<br><color=#C15C00ff>Seulement disponible en national</color>"
+            m_StringArgument: <b>Population stress</b><br>If the population stress
+              exceeds 80% <br> over 15 consecutive days, you lose the game<br><color=#C15C00ff>Only
+              available nationally</color>
             m_BoolArgument: 0
           m_CallState: 2
         - m_Target: {fileID: 1655765007}
@@ -56121,8 +56141,8 @@ MonoBehaviour:
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: <b>Stock de vaccins</b><br><color=#C15C00ff>Seulement
-              disponible en national</color>
+            m_StringArgument: <b>Vaccine stock</b><br><color=#C15C00ff>Only available
+              nationally</color>
             m_BoolArgument: 0
           m_CallState: 2
 --- !u!114 &1337848536
@@ -56251,7 +56271,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Passer le tutoriel
+  m_text: Skip the tutorial
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -58321,7 +58341,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Passer le tutoriel
+  m_text: Skip the tutorial
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -59326,9 +59346,12 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Proc\xE9dez de m\xEAme avec le bouton \"National\" pour acc\xE9der \xE0
-    plus d'actions.\n\nDouble-cliquez \xE0 nouveau sur un \xE9l\xE9ment int\xE9ractif
-    de la carte pour fermer les panneaux d'actions."
+  m_text: 'Do the same with the "National" button to access more actions.
+
+    
+
+    Double-click
+    again on an interactive element of the map to close the action panels.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -59461,7 +59484,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Aucune
+  m_text: None
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -59925,8 +59948,8 @@ MonoBehaviour:
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: <b>Stock des masques</b><br><color=#C15C00ff>Seulement
-              disponible en national</color>
+            m_StringArgument: <b>Stock of masks</b><br><color=#C15C00ff>Only available
+              nationally</color>
             m_BoolArgument: 0
           m_CallState: 2
         - m_Target: {fileID: 51896785}
@@ -59937,8 +59960,8 @@ MonoBehaviour:
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: <b>Bilan financier</b><br><color=#C15C00ff>Seulement
-              disponible en national</color>
+            m_StringArgument: <b>Financial report</b><br><color=#C15C00ff>Only available
+              nationally</color>
             m_BoolArgument: 0
           m_CallState: 2
         - m_Target: {fileID: 1562096269}
@@ -59949,9 +59972,9 @@ MonoBehaviour:
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: "<b>Stress de la population</b><br>Si le stress de
-              la population d\xE9passe 80%<br>sur 15 jours cons\xE9cutifs, vous perdez
-              la partie<br><color=#C15C00ff>Seulement disponible en national</color>"
+            m_StringArgument: <b>Population stress</b><br>If the population stress
+              exceeds 80% <br> over 15 consecutive days, you lose the game<br><color=#C15C00ff>Only
+              available nationally</color>
             m_BoolArgument: 0
           m_CallState: 2
         - m_Target: {fileID: 1655765007}
@@ -59984,8 +60007,8 @@ MonoBehaviour:
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: <b>Stock de vaccins</b><br><color=#C15C00ff>Seulement
-              disponible en national</color>
+            m_StringArgument: <b>Vaccine stock</b><br><color=#C15C00ff>Only available
+              nationally</color>
             m_BoolArgument: 0
           m_CallState: 2
 --- !u!114 &1457371569
@@ -60652,7 +60675,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55f8de3c04110d04696e673a9b7cc94b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: "Occupation en lit de r\xE9animation"
+  text: Intensive care bed occupancy
   audioClip: {fileID: 0}
 --- !u!114 &1488540966
 MonoBehaviour:
@@ -60881,7 +60904,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Passer le tutoriel
+  m_text: Skip the tutorial
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -61193,7 +61216,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Suivant
+  m_text: Next
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -61519,7 +61542,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Booster le nombre de lits de r\xE9animation"
+  m_text: Boost the number of intensive care beds
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -61785,7 +61808,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Jours
+  m_text: Days
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -62226,7 +62249,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Passer le tutoriel
+  m_text: Skip the tutorial
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -62419,7 +62442,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Interdiction de sortie entre :'
+  m_text: 'Exit ban between:'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -62907,8 +62930,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55f8de3c04110d04696e673a9b7cc94b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: "<b>Stress de la population</b><br>Si le stress de la population d\xE9passe
-    80%<br>sur 15 jours cons\xE9cutifs, vous perdez la partie"
+  text: <b>Population stress</b><br>If the stress of the population exceeds 80%<br>over
+    15 consecutive days, you lose the game
   audioClip: {fileID: 8300000, guid: fefb67c7bafd8074ba0df5523e77f4df, type: 3}
 --- !u!95 &1562096265
 Animator:
@@ -63126,7 +63149,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Terminer
+  m_text: Close
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -63862,7 +63885,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Autoriser le ch\xF4mage partiel"
+  m_text: "\rAllow partial unemployment"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -64091,7 +64114,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1570712551
 RectTransform:
   m_ObjectHideFlags: 0
@@ -64702,14 +64725,22 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Dans la partie sup\xE9rieure vous pourrez consulter de nombreuses informations
-    comme la progression de l'infection par \xE2ge, la triste \xE9volution des d\xE9c\xE8s...
-    malheureusement comme en 2020 une nouvelle catastrophe s'annonce.\n\nBref, vous
-    aurez aussi des informations sur l'\xE9volution du stock des masques, des vaccins
-    et une estimation du co\xFBt financier de vos actions.\n\nEnfin portez une attention
-    toute particuli\xE8re au stress des citoyens. Il ne doit pas concerner plus de
-    80% de la population auquel cas votre strat\xE9gie de gestion de la crise pourrait
-    \xEAtre remise en cause..."
+  m_text: 'In the upper part you will be able to consult a lot of information such
+    as the progression of the infection by age, the sad evolution of the deaths ...
+    unfortunately as in 2020 a new catastrophe is announced.
+
+    
+
+    In short,
+    you will also have information on the evolution of the stock of masks, vaccines
+    and an estimate of the financial cost of your actions.
+
+    
+
+    Finally,
+    pay special attention to the stress of citizens. It should not concern more than
+    80% of the population in which case your crisis management strategy could be
+    called into question ...'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -65186,8 +65217,8 @@ MonoBehaviour:
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: <b>Stock des masques</b><br><color=#C15C00ff>Seulement
-              disponible en national</color>
+            m_StringArgument: <b>Stock of masks</b><br><color=#C15C00ff>Only available
+              nationally</color>
             m_BoolArgument: 0
           m_CallState: 2
         - m_Target: {fileID: 51896785}
@@ -65198,8 +65229,8 @@ MonoBehaviour:
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: <b>Bilan financier</b><br><color=#C15C00ff>Seulement
-              disponible en national</color>
+            m_StringArgument: <b>Financial report</b><br><color=#C15C00ff>Only available
+              nationally</color>
             m_BoolArgument: 0
           m_CallState: 2
         - m_Target: {fileID: 1562096269}
@@ -65210,9 +65241,9 @@ MonoBehaviour:
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: "<b>Stress de la population</b><br>Si le stress de
-              la population d\xE9passe 80%<br>sur 15 jours cons\xE9cutifs, vous perdez
-              la partie<br><color=#C15C00ff>Seulement disponible en national</color>"
+            m_StringArgument: <b>Population stress</b><br>If the population stress
+              exceeds 80% <br> over 15 consecutive days, you lose the game<br><color=#C15C00ff>Only
+              available nationally</color>
             m_BoolArgument: 0
           m_CallState: 2
         - m_Target: {fileID: 1655765007}
@@ -65245,8 +65276,8 @@ MonoBehaviour:
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: <b>Stock de vaccins</b><br><color=#C15C00ff>Seulement
-              disponible en national</color>
+            m_StringArgument: <b>Vaccine stock</b><br><color=#C15C00ff>Only available
+              nationally</color>
             m_BoolArgument: 0
           m_CallState: 2
 --- !u!114 &1585276009
@@ -65734,8 +65765,8 @@ MonoBehaviour:
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: <b>Stock des masques</b><br><color=#C15C00ff>Seulement
-              disponible en national</color>
+            m_StringArgument: <b>Stock of masks</b><br><color=#C15C00ff>Only available
+              nationally</color>
             m_BoolArgument: 0
           m_CallState: 2
         - m_Target: {fileID: 51896785}
@@ -65746,8 +65777,8 @@ MonoBehaviour:
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: <b>Bilan financier</b><br><color=#C15C00ff>Seulement
-              disponible en national</color>
+            m_StringArgument: <b>Financial report</b><br><color=#C15C00ff>Only available
+              nationally</color>
             m_BoolArgument: 0
           m_CallState: 2
         - m_Target: {fileID: 1562096269}
@@ -65758,9 +65789,9 @@ MonoBehaviour:
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: "<b>Stress de la population</b><br>Si le stress de
-              la population d\xE9passe 80%<br>sur 15 jours cons\xE9cutifs, vous perdez
-              la partie<br><color=#C15C00ff>Seulement disponible en national</color>"
+            m_StringArgument: <b>Population stress</b><br>If the population stress
+              exceeds 80% <br> over 15 consecutive days, you lose the game<br><color=#C15C00ff>Only
+              available nationally</color>
             m_BoolArgument: 0
           m_CallState: 2
         - m_Target: {fileID: 1655765007}
@@ -65793,8 +65824,8 @@ MonoBehaviour:
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: <b>Stock de vaccins</b><br><color=#C15C00ff>Seulement
-              disponible en national</color>
+            m_StringArgument: <b>Vaccine stock</b><br><color=#C15C00ff>Only available
+              nationally</color>
             m_BoolArgument: 0
           m_CallState: 2
 --- !u!114 &1590117380
@@ -66241,7 +66272,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Age r\xE9volu"
+  m_text: Bygone age
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -66742,7 +66773,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55f8de3c04110d04696e673a9b7cc94b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: Fermer le panneau
+  text: Close panel
   audioClip: {fileID: 8300000, guid: fefb67c7bafd8074ba0df5523e77f4df, type: 3}
 --- !u!95 &1631132076
 Animator:
@@ -66894,7 +66925,7 @@ GameObject:
   - component: {fileID: 1633640470}
   - component: {fileID: 1633640464}
   m_Layer: 5
-  m_Name: Guyane
+  m_Name: Guyana
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -66951,7 +66982,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40c9734e999c159478db222fa18c8cc6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TerritoryName: Guyane
+  TerritoryName: Guyana
   populationRatio: 0.00433455
   nbPopulation: 0
   popNumber: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
@@ -67144,8 +67175,8 @@ MonoBehaviour:
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: <b>Stock des masques</b><br><color=#C15C00ff>Seulement
-              disponible en national</color>
+            m_StringArgument: <b>Stock of masks</b><br><color=#C15C00ff>Only available
+              nationally</color>
             m_BoolArgument: 0
           m_CallState: 2
         - m_Target: {fileID: 51896785}
@@ -67156,8 +67187,8 @@ MonoBehaviour:
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: <b>Bilan financier</b><br><color=#C15C00ff>Seulement
-              disponible en national</color>
+            m_StringArgument: <b>Financial report</b><br><color=#C15C00ff>Only available
+              nationally</color>
             m_BoolArgument: 0
           m_CallState: 2
         - m_Target: {fileID: 1562096269}
@@ -67168,9 +67199,9 @@ MonoBehaviour:
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: "<b>Stress de la population</b><br>Si le stress de
-              la population d\xE9passe 80%<br>sur 15 jours cons\xE9cutifs, vous perdez
-              la partie<br><color=#C15C00ff>Seulement disponible en national</color>"
+            m_StringArgument: <b>Population stress</b><br>If the population stress
+              exceeds 80% <br> over 15 consecutive days, you lose the game<br><color=#C15C00ff>Only
+              available nationally</color>
             m_BoolArgument: 0
           m_CallState: 2
         - m_Target: {fileID: 1655765007}
@@ -67203,8 +67234,8 @@ MonoBehaviour:
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: <b>Stock de vaccins</b><br><color=#C15C00ff>Seulement
-              disponible en national</color>
+            m_StringArgument: <b>Vaccine stock</b><br><color=#C15C00ff>Only available
+              nationally</color>
             m_BoolArgument: 0
           m_CallState: 2
 --- !u!114 &1633640467
@@ -67917,9 +67948,9 @@ RectTransform:
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
-  m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 100.999954, y: 0}
-  m_SizeDelta: {x: 112.7, y: 31.5}
+  m_AnchorMax: {x: 1, y: 0.5}
+  m_AnchoredPosition: {x: 21.999954, y: 0}
+  m_SizeDelta: {x: -45.300003, y: 31.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1646712527
 MonoBehaviour:
@@ -67998,7 +68029,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "coll\xE8ges"
+  m_text: secondary schools
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -68253,7 +68284,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Progression de la recherche mondiale d'un vaccin
+  m_text: Global vaccine research progress
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -68634,7 +68665,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55f8de3c04110d04696e673a9b7cc94b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: "Dette nationale due \xE0 la crise"
+  text: National debt due to the crisis
   audioClip: {fileID: 0}
 --- !u!1 &1655764988
 GameObject:
@@ -69501,7 +69532,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Suivant
+  m_text: Next
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -70243,7 +70274,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Fermeture des fronti\xE8res :"
+  m_text: "\rClosure of borders"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -70610,7 +70641,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55f8de3c04110d04696e673a9b7cc94b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: "% de personnes infect\xE9es<br>pour le territoire s\xE9lectionn\xE9"
+  text: '% of infected people<br>for the selected territory'
   audioClip: {fileID: 0}
 --- !u!1 &1700381217
 GameObject:
@@ -71176,7 +71207,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Suivant
+  m_text: Next
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -71387,7 +71418,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: <b>Stock des masques</b>
+          m_StringArgument: <b>Mask stock</b>
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 51896785}
@@ -71398,7 +71429,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: <b>Bilan financier</b>
+          m_StringArgument: <b>Balance sheet</b>
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 1562096269}
@@ -71409,9 +71440,8 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: "<b>Stress de la population</b><br>Si le stress de la
-            population d\xE9passe 80%<br>sur 15 jours cons\xE9cutifs, vous perdez
-            la partie"
+          m_StringArgument: <b>Population stress</b><br>If the population stress
+            exceeds 80% <br> over 15 consecutive days, you lose the game
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 1655765007}
@@ -71444,7 +71474,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: <b>Stock de vaccins</b>
+          m_StringArgument: <b>Vaccine stock</b>
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1715029512
@@ -71496,7 +71526,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55f8de3c04110d04696e673a9b7cc94b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: "Vue nationale<br>(clic: donn\xE9es nationales)<br>(Double clic: ouvrir panneau)"
+  text: 'National view<br>(click: national data)<br>(Double click: open panel)'
   audioClip: {fileID: 8300000, guid: fefb67c7bafd8074ba0df5523e77f4df, type: 3}
 --- !u!1 &1715828903
 GameObject:
@@ -72402,7 +72432,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Commander
+  m_text: Order
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -74377,7 +74407,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Quantit\xE9..."
+  m_text: Amount...
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -74796,7 +74826,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Annuler les charges des entreprises
+  m_text: Cancel corporate charges
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -75547,7 +75577,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55f8de3c04110d04696e673a9b7cc94b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: "Requiert la d\xE9couverte d'un vaccin"
+  text: Requires discovery of a vaccine
   audioClip: {fileID: 0}
 --- !u!114 &1839512472
 MonoBehaviour:
@@ -75664,7 +75694,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55f8de3c04110d04696e673a9b7cc94b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: "Requiert une ouverture des fronti\xE8res au niveau mondial"
+  text: Requires open borders at the global level
   audioClip: {fileID: 0}
 --- !u!1 &1841124636
 GameObject:
@@ -76714,7 +76744,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 848226101}
   m_HandleRect: {fileID: 848226100}
   m_Direction: 2
-  m_Value: 1
+  m_Value: 0
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -76946,7 +76976,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Tout
+  m_text: All
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -78337,7 +78367,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Nombre de morts : '
+  m_text: "\rNumber of deaths: "
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -78449,9 +78479,9 @@ RectTransform:
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
-  m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 101, y: 0}
-  m_SizeDelta: {x: 112.7, y: 31.5}
+  m_AnchorMax: {x: 1, y: 0.5}
+  m_AnchoredPosition: {x: 22, y: 0}
+  m_SizeDelta: {x: -45.300003, y: 31.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1927365116
 MonoBehaviour:
@@ -78530,7 +78560,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\xE9coles"
+  m_text: primary schools
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -79816,7 +79846,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Quantit\xE9..."
+  m_text: Amount...
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -79947,9 +79977,9 @@ RectTransform:
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
-  m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 121.4, y: 0}
-  m_SizeDelta: {x: 144, y: 31.5}
+  m_AnchorMax: {x: 1, y: 0.5}
+  m_AnchoredPosition: {x: 21.400002, y: 0}
+  m_SizeDelta: {x: -56, y: 31.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1981434941
 MonoBehaviour:
@@ -80028,7 +80058,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "lyc\xE9es"
+  m_text: high schools
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -80294,7 +80324,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Non contamin\xE9s"
+  m_text: Not contaminated
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -80515,7 +80545,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Jours pass\xE9s : "
+  m_text: 'Days Gone: '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -80845,7 +80875,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55f8de3c04110d04696e673a9b7cc94b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: <b>Stock de vaccins</b>
+  text: <b>Vaccine stock</b>
   audioClip: {fileID: 8300000, guid: fefb67c7bafd8074ba0df5523e77f4df, type: 3}
 --- !u!95 &1997692146
 Animator:
@@ -81169,7 +81199,7 @@ GameObject:
   - component: {fileID: 2019930823}
   - component: {fileID: 2019930817}
   m_Layer: 5
-  m_Name: Corse
+  m_Name: Corsica
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -81226,7 +81256,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40c9734e999c159478db222fa18c8cc6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TerritoryName: La Corse
+  TerritoryName: Corsica
   populationRatio: 0.005139576
   nbPopulation: 0
   popNumber: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
@@ -81419,8 +81449,8 @@ MonoBehaviour:
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: <b>Stock des masques</b><br><color=#C15C00ff>Seulement
-              disponible en national</color>
+            m_StringArgument: <b>Stock of masks</b><br><color=#C15C00ff>Only available
+              nationally</color>
             m_BoolArgument: 0
           m_CallState: 2
         - m_Target: {fileID: 51896785}
@@ -81431,8 +81461,8 @@ MonoBehaviour:
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: <b>Bilan financier</b><br><color=#C15C00ff>Seulement
-              disponible en national</color>
+            m_StringArgument: <b>Financial report</b><br><color=#C15C00ff>Only available
+              nationally</color>
             m_BoolArgument: 0
           m_CallState: 2
         - m_Target: {fileID: 1562096269}
@@ -81443,9 +81473,9 @@ MonoBehaviour:
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: "<b>Stress de la population</b><br>Si le stress de
-              la population d\xE9passe 80%<br>sur 15 jours cons\xE9cutifs, vous perdez
-              la partie<br><color=#C15C00ff>Seulement disponible en national</color>"
+            m_StringArgument: <b>Population stress</b><br>If the population stress
+              exceeds 80% <br> over 15 consecutive days, you lose the game<br><color=#C15C00ff>Only
+              available nationally</color>
             m_BoolArgument: 0
           m_CallState: 2
         - m_Target: {fileID: 1655765007}
@@ -81478,8 +81508,8 @@ MonoBehaviour:
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: <b>Stock de vaccins</b><br><color=#C15C00ff>Seulement
-              disponible en national</color>
+            m_StringArgument: <b>Vaccine stock</b><br><color=#C15C00ff>Only available
+              nationally</color>
             m_BoolArgument: 0
           m_CallState: 2
 --- !u!114 &2019930820
@@ -82122,7 +82152,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Suivant
+  m_text: Next
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -82884,13 +82914,13 @@ MonoBehaviour:
   m_Value: 0
   m_Options:
     m_Options:
-    - m_Text: Aucune
+    - m_Text: None
       m_Image: {fileID: 0}
-    - m_Text: "Seul fret mondial/europ\xE9en"
+    - m_Text: Only global / European freight
       m_Image: {fileID: 0}
-    - m_Text: "Seul fret europ\xE9en"
+    - m_Text: Only European freight
       m_Image: {fileID: 0}
-    - m_Text: Total (fret et civil)
+    - m_Text: Total (freight and civil)
       m_Image: {fileID: 0}
   m_OnValueChanged:
     m_PersistentCalls:
@@ -83022,7 +83052,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Faire mieux
+  m_text: "\rDo better"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -83155,7 +83185,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Jours
+  m_text: Days
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -83532,7 +83562,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55f8de3c04110d04696e673a9b7cc94b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: Fermer le panneau
+  text: Close panel
   audioClip: {fileID: 8300000, guid: fefb67c7bafd8074ba0df5523e77f4df, type: 3}
 --- !u!95 &2077475522
 Animator:
@@ -84284,8 +84314,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Dans la carte de France int\xE9ractive, cliquez sur une r\xE9gion pour
-    filtrer les donn\xE9es."
+  m_text: In the interactive map of France, click on a region to filter the data.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -84690,9 +84719,9 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -103.6, y: 10.799999}
-  m_SizeDelta: {x: 157.8, y: 30}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -284, y: 10.799988}
+  m_SizeDelta: {x: 250.8, y: 30}
+  m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &2102016933
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -84993,10 +85022,10 @@ RectTransform:
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
-  m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 163.3, y: 0}
-  m_SizeDelta: {x: 245.2, y: 22.4}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 1, y: 0.5}
+  m_AnchoredPosition: {x: 40.700104, y: 0}
+  m_SizeDelta: {x: -43.800003, y: 22.4}
+  m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &2111041807
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -85074,7 +85103,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Inciter au t\xE9l\xE9travail"
+  m_text: Encourage teleworking
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -85203,7 +85232,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55f8de3c04110d04696e673a9b7cc94b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: "Requiert une ouverture des fronti\xE8res au niveau mondial"
+  text: Requires open borders at the global level
   audioClip: {fileID: 0}
 --- !u!114 &2113047528
 MonoBehaviour:
@@ -85575,8 +85604,8 @@ MonoBehaviour:
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: <b>Stock des masques</b><br><color=#C15C00ff>Seulement
-              disponible en national</color>
+            m_StringArgument: <b>Stock of masks</b><br><color=#C15C00ff>Only available
+              nationally</color>
             m_BoolArgument: 0
           m_CallState: 2
         - m_Target: {fileID: 51896785}
@@ -85587,8 +85616,8 @@ MonoBehaviour:
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: <b>Bilan financier</b><br><color=#C15C00ff>Seulement
-              disponible en national</color>
+            m_StringArgument: <b>Financial report</b><br><color=#C15C00ff>Only available
+              nationally</color>
             m_BoolArgument: 0
           m_CallState: 2
         - m_Target: {fileID: 1562096269}
@@ -85599,9 +85628,9 @@ MonoBehaviour:
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: "<b>Stress de la population</b><br>Si le stress de
-              la population d\xE9passe 80%<br>sur 15 jours cons\xE9cutifs, vous perdez
-              la partie<br><color=#C15C00ff>Seulement disponible en national</color>"
+            m_StringArgument: <b>Population stress</b><br>If the population stress
+              exceeds 80% <br> over 15 consecutive days, you lose the game<br><color=#C15C00ff>Only
+              available nationally</color>
             m_BoolArgument: 0
           m_CallState: 2
         - m_Target: {fileID: 1655765007}
@@ -85634,8 +85663,8 @@ MonoBehaviour:
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: <b>Stock de vaccins</b><br><color=#C15C00ff>Seulement
-              disponible en national</color>
+            m_StringArgument: <b>Vaccine stock</b><br><color=#C15C00ff>Only available
+              nationally</color>
             m_BoolArgument: 0
           m_CallState: 2
 --- !u!114 &2113334117
@@ -86317,7 +86346,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Masques en attente de livraison :'
+  m_text: "\rMasks awaiting delivery:"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -86450,7 +86479,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 1 an
+  m_text: 1 year
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

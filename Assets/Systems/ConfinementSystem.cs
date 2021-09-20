@@ -167,12 +167,12 @@ public class ConfinementSystem : FSystem {
             string messageChosen = "";
             switch (Random.Range(0, 4))
             {
-                case 0: messageChosen = "Vos changements de politique incessants sont perçues négativement par la population."; break;
-                case 1: messageChosen = "L'opposition questionne votre politique et ça lisibilité."; break;
-                case 2: messageChosen = "Il vous faut faire des choix et vous y tenir, les français ne comprennent pas votre politique."; break;
-                case 3: messageChosen = "Les sondages montrent que les français attendent un cap."; break;
+                case 0: messageChosen = "Your incessant policy changes are viewed negatively by population."; break;
+                case 1: messageChosen = "The opposition questions your policy and its readability."; break;
+                case 2: messageChosen = "You have to make choices and stick to them, the French do not understand your policy."; break;
+                case 3: messageChosen = "Polls show that the French are waiting for a course."; break;
             }
-            GameObjectManager.addComponent<ChatMessage>(countryData.gameObject, new { sender = "Ministre de l'intérieur", timeStamp = "" + time.daysGone, messageBody = messageChosen });
+            GameObjectManager.addComponent<ChatMessage>(countryData.gameObject, new { sender = "Minister of the Interior", timeStamp = "" + time.daysGone, messageBody = messageChosen });
             noVision = 0;
         }
     }

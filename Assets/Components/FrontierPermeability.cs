@@ -13,10 +13,10 @@ public class FrontierPermeability : MonoBehaviour {
     public int lastUpdate = -1;
 
     // 70% du traffic aérien concerne les voyages privés de civil
-    [Tooltip("Taux du traffic aérien concernant les vols de voyageurs")]
+    [Tooltip("Air traffic rate for passenger flights")]
     public float travellerRatio = 0.7f;
     // 59% du traffic de marchandise est inter-européen
-    [Tooltip("Taux du traffic de marchandise inter-européen")]
+    [Tooltip("Inter-European merchandise traffic rate")]
     public float europeanFreight = 0.59f;
 
     private TimeScale time;

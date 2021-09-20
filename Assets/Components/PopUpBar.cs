@@ -22,7 +22,7 @@ public class PopUpBar : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 
     private void UpdateTooltipText()
     {
-        string tooltipContent = ageRef + " ans : ";
+        string tooltipContent = ageRef + " years : ";
         if (GetComponent<PopulationBar>())
             tooltipContent += MapSystem.territorySelected.popNumber[ageRef].ToString("N0", CultureInfo.CreateSpecificCulture("fr-FR"));
         if (GetComponent<DeathBar>())

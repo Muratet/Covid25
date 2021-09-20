@@ -6,7 +6,7 @@ public class Finances : MonoBehaviour {
     [HideInInspector]
     public float dailySpending = 0;
 
-    [Tooltip("Prix d'une journée de réanimation")]
+    [Tooltip("Price of a day of intensive care")]
     public int oneDayReanimationCost = 4628; // Prix d'une journée de réanimation
 
     public List<float> historySpent = new List<float>();
