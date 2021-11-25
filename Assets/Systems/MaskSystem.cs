@@ -10,7 +10,6 @@ public class MaskSystem : FSystem {
     private TerritoryData countryPopData;
     private Masks masks;
     private VirusStats virusStats;
-    private Beds beds;
     private Revolution revolution;
     private Finances finances;
     private FrontierPermeability frontierPermeability;
@@ -36,8 +35,6 @@ public class MaskSystem : FSystem {
         revolution = simu.GetComponent<Revolution>();
         // Récupération des finances
         finances = simu.GetComponent<Finances>();
-        // Récupération des lits
-        beds = simu.GetComponent<Beds>();
         // Récupération de données de la frontière
         frontierPermeability = simu.GetComponent<FrontierPermeability>();
 
@@ -63,7 +60,7 @@ public class MaskSystem : FSystem {
             // nombre de personne actuellement infectées
             int currentlyInfected = Mathf.Max(0, countryPopData.nbInfected - countryPopData.nbTreated - countryPopData.nbDeath);
             // On considère que le nombre de masque requis correspond au nombre de cas sérieux * 5. En gros chaque patient mobilise également des soignants qui doivent changer réguliairement leur masque donc un malade sérieux génère l'utilisation de 5 masques par jours. Avec ce paramètre le stock de masques de la réserve d'état est mangé en 1 mois
-            masks.medicalRequirementPerDay_current = Mathf.Max(masks.medicalRequirementPerDay_low, currentlyInfected * virusStats.criticRatio * 5);
+            masks.medicalRequirementPerDay_current = Mathf.Max(masks.medicalRequirementPerDay_low, currentlyInfected * virusStats.seriousRatio * 5);
 
             // Prise en compte du non réquisitionnement, le stress augmente la consommation, les masques artisanaux réduisent la consommation
             if (!masks.requisition)

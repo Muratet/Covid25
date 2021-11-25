@@ -23,7 +23,6 @@ public class LoadCustomizedVirus : MonoBehaviour
             localVirus.maxDeadlinessRatio = newVirus.maxDeadlinessRatio;
             localVirus.curveStrenght = newVirus.curveStrenght;
             localVirus.seriousRatio = newVirus.seriousRatio;
-            localVirus.criticRatio = newVirus.criticRatio;
         }
     }
 }

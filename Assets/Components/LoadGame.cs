@@ -43,7 +43,6 @@ public class LoadGame : MonoBehaviour
         customizedStats.deadlinessPeak = DeadlinessPeak.value;
         customizedStats.deadlinessDeviation = DeadlinessDeviation.value;
         customizedStats.seriousRatio = SeriousRatio.value;
-        customizedStats.criticRatio = SeriousCritic.value;
         customizedStats.firstSensitiveAge = (int)FirstSensitiveAge.value;
         customizedStats.curveStrenght = (int)CurveStrength.value;
         customizedStats.maxDeadlinessRatio = MaxDeadlinessRatio.value;

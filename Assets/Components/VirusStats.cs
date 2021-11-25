@@ -8,7 +8,7 @@ public class VirusStats : MonoBehaviour {
     public float contagiosity = 3f;
     // Taux de population infectée à partir duquel la pandémie se résorbe par elle même sans mesure particulière
     [Tooltip("Taux de population infectée à partir duquel la pandémie se résorbe par elle même sans mesure particulière")]
-    public float populationRatioImmunity = 0.6f;
+    public float populationRatioImmunity = 0.67f;
 
     // Taille de la fenêtre glissante pour stocker le nombre de personnes infectées
     [Tooltip("Taille de la fenêtre glissante pour stocker le nombre de personnes infectées")]
@@ -25,23 +25,21 @@ public class VirusStats : MonoBehaviour {
     [Tooltip("Ecart type de mortalité")]
     public float deadlinessDeviation = 1.8f;
 
+    [Tooltip("Taux de cas sérieux")]
+    public float seriousRatio = 0.138f; // 13.8% des cas sont sérieux
+
     // Indique l'age à partir duquel on peut commencer à avoir des morts
     [Tooltip("Age à partir duquel on peut commencer à avoir des morts")]
     public int firstSensitiveAge = 30;
-    // Taux de mortalité maximum pour la tranche d'age la plus agée
-    [Tooltip("Taux de mortalité maximum pour la tranche d'age la plus agée")]
-    public float maxDeadlinessRatio = 0.148f;
     // Permet de contrôler la courbure de l'exponentielle
     // 1 => exponentielle classique
     // < 1 => accelération plus rapide
     // > 1 => accelération plus lente
     [Tooltip("Contrôle de la courbure de l'exponentielle, 1 => exponentielle classique, < 1 => accelération plus rapide, > 1 => accelération plus lente")]
     public int curveStrenght = 12;
-
-    [Tooltip("Taux de cas sérieux")]
-    public float seriousRatio = 0.138f; // 13.8% des car sont sérieux
-    [Tooltip("Taux de cas critiques")]
-    public float criticRatio = 0.047f; // 4.7% des cas sont critiques et requiert une hospitatlisation
+    // Taux de mortalité maximum pour la tranche d'age la plus agée
+    [Tooltip("Taux de mortalité maximum pour la tranche d'age la plus agée")]
+    public float maxDeadlinessRatio = 0.148f;
 
     [Tooltip("Nombre de mois requis pour découvrir le vaccin")]
     public int vaccineMounthDelay = 18; // 18 mois
