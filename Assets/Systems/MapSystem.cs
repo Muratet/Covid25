@@ -11,17 +11,15 @@ public class MapSystem : FSystem {
 
     public static TerritoryData territorySelected;
 
-    private TMP_Text territoryName;
-    private TimeScale time;
+    public TMP_Text territoryName;
+    public TimeScale time;
+    public TextAsset rawContent;
 
-    public MapSystem()
+    protected override void onStart()
     {
-        GameObject simu = GameObject.Find("SimulationData");
-        TerritoryData countryData = simu.GetComponent<TerritoryData>();
-        // Récupération de l'échelle de temps
-        time = simu.GetComponent<TimeScale>();
+        TerritoryData countryData = time.GetComponent<TerritoryData>();
         //Load game content from the file
-        Dictionary<string, int[]> populationData = JsonConvert.DeserializeObject<Dictionary<string, int[]> >(simu.GetComponent<RawPopData>().rawContent.text);
+        Dictionary<string, int[]> populationData = JsonConvert.DeserializeObject<Dictionary<string, int[]>>(rawContent.text);
         // Réinitialiser les données de la nation pour être sûr de les synchroniser avec les données accumulées des régions
         for (int age = 0; age < countryData.popNumber.Length; age++)
             countryData.popNumber[age] = 0;
@@ -49,10 +47,9 @@ public class MapSystem : FSystem {
                 reste = max % 10;
             }
             multipleOfThousand++;
-            territoryData.maxNumber = Mathf.Max(10000, multipleOfThousand*1000);
+            territoryData.maxNumber = Mathf.Max(10000, multipleOfThousand * 1000);
         }
         territorySelected = countryData;
-        territoryName = GameObject.Find("TerritoryName").GetComponent<TMP_Text>();
         territoryName.text = territorySelected.TerritoryName;
     }
 

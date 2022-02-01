@@ -7,6 +7,7 @@ public class DeadSystem : FSystem
 {
     private Family f_territories = FamilyManager.getFamily(new AllOfComponents(typeof(TerritoryData), typeof(Beds), typeof(Image)));
 
+    public GameObject countrySimData;
     private VirusStats virusStats;
     private TerritoryData countryPopData;
     private TimeScale time;
@@ -24,13 +25,17 @@ public class DeadSystem : FSystem
 
     public DeadSystem()
     {
-        GameObject simu = GameObject.Find("SimulationData");
+        instance = this;
+    }
+
+    protected override void onStart()
+    {
         // Récupération des stats du virus
-        virusStats = simu.GetComponent<VirusStats>();
+        virusStats = countrySimData.GetComponent<VirusStats>();
         // Récupération des données de la population
-        countryPopData = simu.GetComponent<TerritoryData>();
+        countryPopData = countrySimData.GetComponent<TerritoryData>();
         // Récupération de l'échelle de temps
-        time = simu.GetComponent<TimeScale>();
+        time = countrySimData.GetComponent<TimeScale>();
 
         // calcul de la courbe de mortalité pour une fenêtre de jours
         deadlinessPerDays = new float[virusStats.windowSize];
@@ -48,12 +53,10 @@ public class DeadSystem : FSystem
         // lissage de la mortalité pour quelle soit à 0 au premier age sensible et à sa valeur maximale pour l'age le plus avancé
         for (int age = 0; age < deadlinessPerAges.Length; age++)
             deadlinessPerAges[age] = Mathf.Max(0f, (Mathf.Exp(virusStats.curveStrenght * ((float)age / 100 - 1)) - minAgeExpo) / maxExpo);
-
-        instance = this;
     }
 
-	// Use to process your families.
-	protected override void onProcess(int familiesUpdateCount) {
+    // Use to process your families.
+    protected override void onProcess(int familiesUpdateCount) {
         // Vérifier s'il faut générer une nouvelle journée
         if (time.newDay)
         {

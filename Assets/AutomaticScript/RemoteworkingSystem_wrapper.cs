@@ -11,7 +11,7 @@ public class RemoteworkingSystem_wrapper : MonoBehaviour
 
 	public void OnHomeworkingChange(System.Boolean newState)
 	{
-		MainLoop.callAppropriateSystemMethod ("RemoteworkingSystem", "OnHomeworkingChange", newState);
+		MainLoop.callAppropriateSystemMethod (null, "OnHomeworkingChange", newState);
 	}
 
 }

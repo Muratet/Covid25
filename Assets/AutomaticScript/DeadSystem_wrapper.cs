@@ -1,22 +1,23 @@
 using UnityEngine;
 using FYFY;
 
-[ExecuteInEditMode]
-public class DeadSystem_wrapper : MonoBehaviour
+public class DeadSystem_wrapper : BaseWrapper
 {
+	public UnityEngine.GameObject countrySimData;
 	private void Start()
 	{
-		this.hideFlags = HideFlags.HideInInspector; // Hide this component in Inspector
+		this.hideFlags = HideFlags.NotEditable;
+		MainLoop.initAppropriateSystemField (system, "countrySimData", countrySimData);
 	}
 
 	public void UpdateDailyDeadUI(TMPro.TMP_Text textUI)
 	{
-		MainLoop.callAppropriateSystemMethod ("DeadSystem", "UpdateDailyDeadUI", textUI);
+		MainLoop.callAppropriateSystemMethod (system, "UpdateDailyDeadUI", textUI);
 	}
 
 	public void UpdateCumulDeadUI(TMPro.TMP_Text textUI)
 	{
-		MainLoop.callAppropriateSystemMethod ("DeadSystem", "UpdateCumulDeadUI", textUI);
+		MainLoop.callAppropriateSystemMethod (system, "UpdateCumulDeadUI", textUI);
 	}
 
 }

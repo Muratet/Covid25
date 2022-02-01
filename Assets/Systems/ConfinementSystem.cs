@@ -6,10 +6,12 @@ public class ConfinementSystem : FSystem {
 
     private Family f_territories = FamilyManager.getFamily(new AllOfComponents(typeof(TerritoryData), typeof(Beds), typeof(Image)));
 
+    public GameObject countrySimData;
     private TerritoryData countryData;
     private Beds countryBeds;
     private TimeScale time;
-    private CustomCheckMarks customMarks;
+    public Sprite defaultMark;
+    public Sprite customMark;
     private Sprite ageMark;
 
     private int noVision = 0;
@@ -18,16 +20,17 @@ public class ConfinementSystem : FSystem {
 
     public ConfinementSystem()
     {
-        GameObject simu = GameObject.Find("SimulationData");
-        // Récupération des données de la population
-        countryData = simu.GetComponent<TerritoryData>();
-        countryBeds = simu.GetComponent<Beds>();
-        // Récupération de l'échelle de temps
-        time = simu.GetComponent<TimeScale>();
-
-        customMarks = GameObject.Find("CountryOptions_UI").GetComponent<CustomCheckMarks>();
-
         instance = this;
+    }
+
+    protected override void onStart()
+    {
+        // Récupération des données de la population
+        countryData = countrySimData.GetComponent<TerritoryData>();
+        // Récupération des données de lits de réa
+        countryBeds = countrySimData.GetComponent<Beds>();
+        // Récupération de l'échelle de temps
+        time = countrySimData.GetComponent<TimeScale>();
     }
 
     public void updateCountryUI()
@@ -36,29 +39,29 @@ public class ConfinementSystem : FSystem {
         TerritoryData territory = f_territories.First().GetComponent<TerritoryData>();
         Beds territoryBeds = f_territories.First().GetComponent<Beds>();
         countryData.closePrimarySchool = territory.closePrimarySchool;
-        countryData.closePrimarySchool_UIMaps.GetComponentsInChildren<Image>()[1].sprite = customMarks.defaultMark;
+        countryData.closePrimarySchool_UIMaps.GetComponentsInChildren<Image>()[1].sprite = defaultMark;
         countryData.closeSecondarySchool = territory.closeSecondarySchool;
-        countryData.closeSecondarySchool_UIMaps.GetComponentsInChildren<Image>()[1].sprite = customMarks.defaultMark;
+        countryData.closeSecondarySchool_UIMaps.GetComponentsInChildren<Image>()[1].sprite = defaultMark;
         countryData.closeHighSchool = territory.closeHighSchool;
-        countryData.closeHighSchool_UIMaps.GetComponentsInChildren<Image>()[1].sprite = customMarks.defaultMark;
+        countryData.closeHighSchool_UIMaps.GetComponentsInChildren<Image>()[1].sprite = defaultMark;
         countryData.closeUniversity = territory.closeUniversity;
-        countryData.closeUniversity_UIMaps.GetComponentsInChildren<Image>()[1].sprite = customMarks.defaultMark;
+        countryData.closeUniversity_UIMaps.GetComponentsInChildren<Image>()[1].sprite = defaultMark;
         countryData.callCivicism = territory.callCivicism;
-        countryData.callCivicism_UIMaps.GetComponentsInChildren<Image>()[1].sprite = customMarks.defaultMark;
+        countryData.callCivicism_UIMaps.GetComponentsInChildren<Image>()[1].sprite = defaultMark;
         countryData.closeShop = territory.closeShop;
-        countryData.closeShop_UIMaps.GetComponentsInChildren<Image>()[1].sprite = customMarks.defaultMark;
+        countryData.closeShop_UIMaps.GetComponentsInChildren<Image>()[1].sprite = defaultMark;
         countryData.certificateRequired = territory.certificateRequired;
-        countryData.certificateRequired_UIMaps.GetComponentsInChildren<Image>()[1].sprite = customMarks.defaultMark;
+        countryData.certificateRequired_UIMaps.GetComponentsInChildren<Image>()[1].sprite = defaultMark;
         countryData.ageDependent = territory.ageDependent;
-        countryData.ageDependent_UIMaps.GetComponentsInChildren<Image>()[1].sprite = customMarks.defaultMark;
+        countryData.ageDependent_UIMaps.GetComponentsInChildren<Image>()[1].sprite = defaultMark;
         countryData.ageDependent_UIMaps.interactable = true;
-        ageMark = customMarks.defaultMark;
+        ageMark = defaultMark;
         countryData.ageDependentMin = territory.ageDependentMin;
         countryData.ageDependentMin_UIMaps.text = territory.ageDependentMin;
         countryData.ageDependentMax = territory.ageDependentMax;
         countryData.ageDependentMax_UIMaps.text = territory.ageDependentMax;
         countryBeds.boostBeds = territoryBeds.boostBeds;
-        countryBeds.beds_UIMaps.GetComponentsInChildren<Image>()[1].sprite = customMarks.defaultMark;
+        countryBeds.beds_UIMaps.GetComponentsInChildren<Image>()[1].sprite = defaultMark;
         // On fusionne avec les autres territoires
         for (int i = 1; i < f_territories.Count; i++)
         {
@@ -67,42 +70,42 @@ public class ConfinementSystem : FSystem {
             if (countryData.closePrimarySchool != territory.closePrimarySchool)
             {
                 countryData.closePrimarySchool = true;
-                setToggleUI(countryData.closePrimarySchool_UIMaps, true, customMarks.customMark);
+                setToggleUI(countryData.closePrimarySchool_UIMaps, true, customMark);
             }
             if (countryData.closeSecondarySchool != territory.closeSecondarySchool)
             {
                 countryData.closeSecondarySchool = true;
-                setToggleUI(countryData.closeSecondarySchool_UIMaps, true, customMarks.customMark);
+                setToggleUI(countryData.closeSecondarySchool_UIMaps, true, customMark);
             }
             if (countryData.closeHighSchool != territory.closeHighSchool)
             {
                 countryData.closeHighSchool = true;
-                setToggleUI(countryData.closeHighSchool_UIMaps, true, customMarks.customMark);
+                setToggleUI(countryData.closeHighSchool_UIMaps, true, customMark);
             }
             if (countryData.closeUniversity != territory.closeUniversity)
             {
                 countryData.closeUniversity = true;
-                setToggleUI(countryData.closeUniversity_UIMaps, true, customMarks.customMark);
+                setToggleUI(countryData.closeUniversity_UIMaps, true, customMark);
             }
             if (countryData.callCivicism != territory.callCivicism)
             {
                 countryData.callCivicism = true;
-                setToggleUI(countryData.callCivicism_UIMaps, true, customMarks.customMark);
+                setToggleUI(countryData.callCivicism_UIMaps, true, customMark);
             }
             if (countryData.closeShop != territory.closeShop)
             {
                 countryData.closeShop = true;
-                setToggleUI(countryData.closeShop_UIMaps, true, customMarks.customMark);
+                setToggleUI(countryData.closeShop_UIMaps, true, customMark);
             }
             if (countryData.certificateRequired != territory.certificateRequired)
             {
                 countryData.certificateRequired = true;
-                setToggleUI(countryData.certificateRequired_UIMaps, true, customMarks.customMark);
+                setToggleUI(countryData.certificateRequired_UIMaps, true, customMark);
             }
             if (countryData.ageDependent != territory.ageDependent)
             {
                 countryData.ageDependent = true;
-                ageMark = customMarks.customMark;
+                ageMark = customMark;
             }
             if (countryData.ageDependentMin != territory.ageDependentMin)
             {
@@ -117,7 +120,7 @@ public class ConfinementSystem : FSystem {
             if (countryBeds.boostBeds != territoryBeds.boostBeds)
             {
                 countryBeds.boostBeds = true;
-                setToggleUI(countryBeds.beds_UIMaps, true, customMarks.customMark);
+                setToggleUI(countryBeds.beds_UIMaps, true, customMark);
             }
         }
         if (countryData.ageDependentMin != "" && countryData.ageDependentMin != "--" && countryData.ageDependentMax != "" && countryData.ageDependentMax != "--")
@@ -128,7 +131,7 @@ public class ConfinementSystem : FSystem {
         else
         {
             countryData.ageDependent = false;
-            setToggleUI(countryData.ageDependent_UIMaps, false, customMarks.defaultMark);
+            setToggleUI(countryData.ageDependent_UIMaps, false, defaultMark);
             countryData.ageDependent_UIMaps.interactable = false;
         }
         SyncUISystem.needUpdate = true;
@@ -142,21 +145,21 @@ public class ConfinementSystem : FSystem {
 
     public void updateUI (TerritoryData territoryData, Beds territoryBeds)
     {
-        setToggleUI(territoryData.closePrimarySchool_UIMaps, territoryData.closePrimarySchool, customMarks.defaultMark);
-        setToggleUI(territoryData.closeSecondarySchool_UIMaps, territoryData.closeSecondarySchool, customMarks.defaultMark);
-        setToggleUI(territoryData.closeHighSchool_UIMaps, territoryData.closeHighSchool, customMarks.defaultMark);
-        setToggleUI(territoryData.closeUniversity_UIMaps, territoryData.closeUniversity, customMarks.defaultMark);
-        setToggleUI(territoryData.callCivicism_UIMaps, territoryData.callCivicism, customMarks.defaultMark);
-        setToggleUI(territoryData.closeShop_UIMaps, territoryData.closeShop, customMarks.defaultMark);
-        setToggleUI(territoryData.certificateRequired_UIMaps, territoryData.certificateRequired, customMarks.defaultMark);
-        setToggleUI(territoryData.ageDependent_UIMaps, territoryData.ageDependent, customMarks.defaultMark);
+        setToggleUI(territoryData.closePrimarySchool_UIMaps, territoryData.closePrimarySchool, defaultMark);
+        setToggleUI(territoryData.closeSecondarySchool_UIMaps, territoryData.closeSecondarySchool, defaultMark);
+        setToggleUI(territoryData.closeHighSchool_UIMaps, territoryData.closeHighSchool, defaultMark);
+        setToggleUI(territoryData.closeUniversity_UIMaps, territoryData.closeUniversity, defaultMark);
+        setToggleUI(territoryData.callCivicism_UIMaps, territoryData.callCivicism, defaultMark);
+        setToggleUI(territoryData.closeShop_UIMaps, territoryData.closeShop, defaultMark);
+        setToggleUI(territoryData.certificateRequired_UIMaps, territoryData.certificateRequired, defaultMark);
+        setToggleUI(territoryData.ageDependent_UIMaps, territoryData.ageDependent, defaultMark);
         territoryData.ageDependentMin_UIMaps.text = territoryData.ageDependentMin;
         territoryData.ageDependentMax_UIMaps.text = territoryData.ageDependentMax;
         if (territoryData.ageDependentMin != "" && territoryData.ageDependentMax != "")
             territoryData.ageDependent_UIMaps.interactable = true;
         else
             territoryData.ageDependent_UIMaps.interactable = false;
-        setToggleUI(territoryBeds.beds_UIMaps, territoryBeds.boostBeds, customMarks.defaultMark);
+        setToggleUI(territoryBeds.beds_UIMaps, territoryBeds.boostBeds, defaultMark);
         SyncUISystem.needUpdate = true;
     }
 

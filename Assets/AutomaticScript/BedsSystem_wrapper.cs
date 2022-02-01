@@ -1,17 +1,18 @@
 using UnityEngine;
 using FYFY;
 
-[ExecuteInEditMode]
-public class BedsSystem_wrapper : MonoBehaviour
+public class BedsSystem_wrapper : BaseWrapper
 {
+	public UnityEngine.GameObject countrySimData;
 	private void Start()
 	{
-		this.hideFlags = HideFlags.HideInInspector; // Hide this component in Inspector
+		this.hideFlags = HideFlags.NotEditable;
+		MainLoop.initAppropriateSystemField (system, "countrySimData", countrySimData);
 	}
 
 	public void UpdateBedsUI(TMPro.TMP_Text textUI)
 	{
-		MainLoop.callAppropriateSystemMethod ("BedsSystem", "UpdateBedsUI", textUI);
+		MainLoop.callAppropriateSystemMethod (system, "UpdateBedsUI", textUI);
 	}
 
 }

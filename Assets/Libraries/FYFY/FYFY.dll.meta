@@ -4,8 +4,7 @@ PluginImporter:
   externalObjects: {}
   serializedVersion: 2
   iconMap: {}
-  executionOrder:
-    FYFY.MainLoop: -10
+  executionOrder: {}
   defineConstraints: []
   isPreloaded: 0
   isOverridable: 0

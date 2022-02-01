@@ -1,72 +1,82 @@
 using UnityEngine;
 using FYFY;
 
-[ExecuteInEditMode]
-public class ConfinementSystem_wrapper : MonoBehaviour
+public class ConfinementSystem_wrapper : BaseWrapper
 {
+	public UnityEngine.GameObject countrySimData;
+	public UnityEngine.Sprite defaultMark;
+	public UnityEngine.Sprite customMark;
 	private void Start()
 	{
-		this.hideFlags = HideFlags.HideInInspector; // Hide this component in Inspector
+		this.hideFlags = HideFlags.NotEditable;
+		MainLoop.initAppropriateSystemField (system, "countrySimData", countrySimData);
+		MainLoop.initAppropriateSystemField (system, "defaultMark", defaultMark);
+		MainLoop.initAppropriateSystemField (system, "customMark", customMark);
 	}
 
 	public void updateCountryUI()
 	{
-		MainLoop.callAppropriateSystemMethod ("ConfinementSystem", "updateCountryUI", null);
+		MainLoop.callAppropriateSystemMethod (system, "updateCountryUI", null);
+	}
+
+	public void updateUI()
+	{
+		MainLoop.callAppropriateSystemMethod (system, "updateUI", null);
 	}
 
 	public void OnPrimarySchoolChange(System.Boolean newState)
 	{
-		MainLoop.callAppropriateSystemMethod ("ConfinementSystem", "OnPrimarySchoolChange", newState);
+		MainLoop.callAppropriateSystemMethod (system, "OnPrimarySchoolChange", newState);
 	}
 
 	public void OnSecondarySchoolChange(System.Boolean newState)
 	{
-		MainLoop.callAppropriateSystemMethod ("ConfinementSystem", "OnSecondarySchoolChange", newState);
+		MainLoop.callAppropriateSystemMethod (system, "OnSecondarySchoolChange", newState);
 	}
 
 	public void OnHighSchoolChange(System.Boolean newState)
 	{
-		MainLoop.callAppropriateSystemMethod ("ConfinementSystem", "OnHighSchoolChange", newState);
+		MainLoop.callAppropriateSystemMethod (system, "OnHighSchoolChange", newState);
 	}
 
 	public void OnUniversityChange(System.Boolean newState)
 	{
-		MainLoop.callAppropriateSystemMethod ("ConfinementSystem", "OnUniversityChange", newState);
+		MainLoop.callAppropriateSystemMethod (system, "OnUniversityChange", newState);
 	}
 
 	public void OnCivicismChange(System.Boolean newState)
 	{
-		MainLoop.callAppropriateSystemMethod ("ConfinementSystem", "OnCivicismChange", newState);
+		MainLoop.callAppropriateSystemMethod (system, "OnCivicismChange", newState);
 	}
 
 	public void OnShopChange(System.Boolean newState)
 	{
-		MainLoop.callAppropriateSystemMethod ("ConfinementSystem", "OnShopChange", newState);
+		MainLoop.callAppropriateSystemMethod (system, "OnShopChange", newState);
 	}
 
 	public void OnCertificateChange(System.Boolean newState)
 	{
-		MainLoop.callAppropriateSystemMethod ("ConfinementSystem", "OnCertificateChange", newState);
+		MainLoop.callAppropriateSystemMethod (system, "OnCertificateChange", newState);
 	}
 
 	public void OnAgeDependentChange(System.Boolean newState)
 	{
-		MainLoop.callAppropriateSystemMethod ("ConfinementSystem", "OnAgeDependentChange", newState);
+		MainLoop.callAppropriateSystemMethod (system, "OnAgeDependentChange", newState);
 	}
 
 	public void OnAgeMinEndEdit(System.String newAge)
 	{
-		MainLoop.callAppropriateSystemMethod ("ConfinementSystem", "OnAgeMinEndEdit", newAge);
+		MainLoop.callAppropriateSystemMethod (system, "OnAgeMinEndEdit", newAge);
 	}
 
 	public void OnAgeMaxEndEdit(System.String newAge)
 	{
-		MainLoop.callAppropriateSystemMethod ("ConfinementSystem", "OnAgeMaxEndEdit", newAge);
+		MainLoop.callAppropriateSystemMethod (system, "OnAgeMaxEndEdit", newAge);
 	}
 
 	public void OnBedsChange(System.Boolean newState)
 	{
-		MainLoop.callAppropriateSystemMethod ("ConfinementSystem", "OnBedsChange", newState);
+		MainLoop.callAppropriateSystemMethod (system, "OnBedsChange", newState);
 	}
 
 }

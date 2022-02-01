@@ -5,7 +5,7 @@ using FYFY;
 using TMPro;
 
 public class MaskSystem : FSystem {
-
+    public GameObject countrySimData;
     private TimeScale time;
     private TerritoryData countryPopData;
     private Masks masks;
@@ -14,35 +14,28 @@ public class MaskSystem : FSystem {
     private Finances finances;
     private FrontierPermeability frontierPermeability;
 
-    private TMP_InputField UI_InputFieldCommand;
-    private Button UI_ButtonCommand;
-    private TMP_Text UI_UnitPriceValue;
-    private TMP_Text UI_PendingCommand;
+    public TMP_InputField UI_InputFieldCommand;
+    public Button UI_ButtonCommand;
+    public TMP_Text UI_UnitPriceValue;
+    public TMP_Text UI_PendingCommand;
     private int lastMasksDelivery = 0;
 
-    public MaskSystem()
+    protected override void onStart()
     {
-        GameObject simu = GameObject.Find("SimulationData");
         // Récupération de l'échelle de temps
-        time = simu.GetComponent<TimeScale>();
+        time = countrySimData.GetComponent<TimeScale>();
         // Récupération des données de la population
-        countryPopData = simu.GetComponent<TerritoryData>();
+        countryPopData = countrySimData.GetComponent<TerritoryData>();
         // Récupération des stats du virus
-        virusStats = simu.GetComponent<VirusStats>();
+        virusStats = countrySimData.GetComponent<VirusStats>();
         // Récupération des masques
-        masks = simu.GetComponent<Masks>();
+        masks = countrySimData.GetComponent<Masks>();
         // Récupération de risque de révolution
-        revolution = simu.GetComponent<Revolution>();
+        revolution = countrySimData.GetComponent<Revolution>();
         // Récupération des finances
-        finances = simu.GetComponent<Finances>();
+        finances = countrySimData.GetComponent<Finances>();
         // Récupération de données de la frontière
-        frontierPermeability = simu.GetComponent<FrontierPermeability>();
-
-        UI_InputFieldCommand = GameObject.Find("MaskCommand_InputField").GetComponent<TMP_InputField>();
-        UI_ButtonCommand = GameObject.Find("MaskCommand_Button").GetComponent<Button>();
-
-        UI_UnitPriceValue = GameObject.Find("MaskUnitPriceValue_Text").GetComponent<TMP_Text>();
-        UI_PendingCommand = GameObject.Find("MaskPendingCommandValue_Text").GetComponent<TMP_Text>();
+        frontierPermeability = countrySimData.GetComponent<FrontierPermeability>();
     }
 
     // Use to process your families.

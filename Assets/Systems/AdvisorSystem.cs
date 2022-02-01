@@ -9,17 +9,14 @@ public class AdvisorSystem : FSystem
     private Family f_territories = FamilyManager.getFamily(new AllOfComponents(typeof(TerritoryData)));
     private Family f_chatMessage = FamilyManager.getFamily(new AllOfComponents(typeof(ChatMessage)));
 
-    private GameObject chatContent;
+    public GameObject chatContent;
     private Transform unreadMessages;
     private GameObject playerMessagePrefab;
     private GameObject advisorMessagePrefab;
     private Animator panelAnimator;
     private ScrollRect scrollRect;
 
-    private AudioSource audioEffect;
-
-    private TMP_Text newNotif;
-
+    public GameObject simulationData;
     private TimeScale time;
     private FrontierPermeability frontierPermeability;
     private Tax tax;
@@ -27,6 +24,10 @@ public class AdvisorSystem : FSystem
     private ShortTimeWorking shortTimeWorking;
     private Masks masks;
     private Vaccine vaccine;
+
+    public TMP_Text newChatNotif;
+
+    public AudioSource audioEffect;
 
     private bool isOpen = false;
     private bool helpPlay = false;
@@ -36,34 +37,28 @@ public class AdvisorSystem : FSystem
     private float clickTime = 0;
     private float clickDelay = 0.5f;
 
-    public AdvisorSystem()
+    protected override void onStart()
     {
-        chatContent = GameObject.Find("ChatContent");
         unreadMessages = chatContent.transform.GetChild(0);
         playerMessagePrefab = chatContent.GetComponent<ChatPrefabs>().PlayerMessage;
         advisorMessagePrefab = chatContent.GetComponent<ChatPrefabs>().AdvisorMessage;
         panelAnimator = chatContent.GetComponentInParent<Animator>();
         scrollRect = chatContent.GetComponentInParent<ScrollRect>();
 
-        GameObject simu = GameObject.Find("SimulationData");
         // Récupération de l'échelle de temps
-        time = simu.GetComponent<TimeScale>();
+        time = simulationData.GetComponent<TimeScale>();
         // Récupération de données de la frontière
-        frontierPermeability = simu.GetComponent<FrontierPermeability>();
+        frontierPermeability = simulationData.GetComponent<FrontierPermeability>();
         // Récupération de données des impôts de entreprises
-        tax = simu.GetComponent<Tax>();
+        tax = simulationData.GetComponent<Tax>();
         // Récupération de données du télétravail
-        remoteworking = simu.GetComponent<Remoteworking>();
+        remoteworking = simulationData.GetComponent<Remoteworking>();
         // Récupération de données du chômage partiel
-        shortTimeWorking = simu.GetComponent<ShortTimeWorking>();
+        shortTimeWorking = simulationData.GetComponent<ShortTimeWorking>();
         // Récupération des masques
-        masks = simu.GetComponent<Masks>();
+        masks = simulationData.GetComponent<Masks>();
         // Récupération des données du vaccin
-        vaccine = simu.GetComponent<Vaccine>();
-
-        newNotif = GameObject.Find("ChatNotification").transform.GetChild(0).GetChild(0).GetComponent<TMP_Text>();
-
-        audioEffect = GameObject.Find("AudioEffects").GetComponent<AudioSource>();
+        vaccine = simulationData.GetComponent<Vaccine>();
 
         f_chatMessage.addEntryCallback(OnNewMessage);
     }
@@ -98,13 +93,13 @@ public class AdvisorSystem : FSystem
         if (newMessages > 0)
         {
             if (newMessages < 100)
-                newNotif.text = ""+ newMessages;
+                newChatNotif.text = ""+ newMessages;
             else
-                newNotif.text = "+99";
+                newChatNotif.text = "+99";
 
-            newNotif.transform.parent.gameObject.SetActive(true);
+            newChatNotif.transform.parent.gameObject.SetActive(true);
         } else
-            newNotif.transform.parent.gameObject.SetActive(false);
+            newChatNotif.transform.parent.gameObject.SetActive(false);
 
         if (time.newDay)
         {

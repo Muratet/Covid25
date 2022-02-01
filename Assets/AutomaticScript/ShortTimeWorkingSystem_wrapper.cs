@@ -11,7 +11,7 @@ public class ShortTimeWorkingSystem_wrapper : MonoBehaviour
 
 	public void OnShortTimeWorkingChange(System.Boolean newState)
 	{
-		MainLoop.callAppropriateSystemMethod ("ShortTimeWorkingSystem", "OnShortTimeWorkingChange", newState);
+		MainLoop.callAppropriateSystemMethod (null, "OnShortTimeWorkingChange", newState);
 	}
 
 }

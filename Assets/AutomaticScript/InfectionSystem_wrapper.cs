@@ -1,22 +1,23 @@
 using UnityEngine;
 using FYFY;
 
-[ExecuteInEditMode]
-public class InfectionSystem_wrapper : MonoBehaviour
+public class InfectionSystem_wrapper : BaseWrapper
 {
+	public UnityEngine.GameObject countrySimData;
 	private void Start()
 	{
-		this.hideFlags = HideFlags.HideInInspector; // Hide this component in Inspector
+		this.hideFlags = HideFlags.NotEditable;
+		MainLoop.initAppropriateSystemField (system, "countrySimData", countrySimData);
 	}
 
 	public void UpdatePopRatioInfectedUI(TMPro.TMP_Text textUI)
 	{
-		MainLoop.callAppropriateSystemMethod ("InfectionSystem", "UpdatePopRatioInfectedUI", textUI);
+		MainLoop.callAppropriateSystemMethod (system, "UpdatePopRatioInfectedUI", textUI);
 	}
 
 	public void UpdateR0UI(TMPro.TMP_Text textUI)
 	{
-		MainLoop.callAppropriateSystemMethod ("InfectionSystem", "UpdateR0UI", textUI);
+		MainLoop.callAppropriateSystemMethod (system, "UpdateR0UI", textUI);
 	}
 
 }

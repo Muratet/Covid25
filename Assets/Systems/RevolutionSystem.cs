@@ -6,6 +6,8 @@ using System.Globalization;
 public class RevolutionSystem : FSystem
 {
     private Family f_territories = FamilyManager.getFamily(new AllOfComponents(typeof(TerritoryData), typeof(Image)));
+    
+    public GameObject countrySimData;
     private FrontierPermeability frontierPermeability;
     private TimeScale time;
     private Revolution revolution;
@@ -15,36 +17,35 @@ public class RevolutionSystem : FSystem
     private Tax tax;
     private Masks masks;
 
-    private int firstNotifStep = 10;
+    public int firstNotifStep;
     private bool firstNotifStepFlag = false;
-    private int secondNotifStep = 25;
+    public int secondNotifStep;
     private bool secondNotifStepFlag = false;
-    private int thirdNotifStep = 50;
+    public int thirdNotifStep;
     private bool thirdNotifStepFlag = false;
-    private int fourthNotifStep = 70;
+    public int fourthNotifStep;
     private bool fourthNotifStepFlag = false;
-    private int fifthNotifStep = 80;
+    public int fifthNotifStep;
     private bool fifthNotifStepFlag = false;
 
-    public RevolutionSystem()
+    protected override void onStart()
     {
-        GameObject simu = GameObject.Find("SimulationData");
         // Récupération de l'échelle de temps
-        time = simu.GetComponent<TimeScale>();
+        time = countrySimData.GetComponent<TimeScale>();
         // Récupération de données de la frontière
-        frontierPermeability = simu.GetComponent<FrontierPermeability>();
+        frontierPermeability = countrySimData.GetComponent<FrontierPermeability>();
         // Récupération du stress de la population
-        revolution = simu.GetComponent<Revolution>();
+        revolution = countrySimData.GetComponent<Revolution>();
         // Récupération des données de la population
-        countryPopData = simu.GetComponent<TerritoryData>();
+        countryPopData = countrySimData.GetComponent<TerritoryData>();
         // Récupération des données du télétravail
-        remoteworking = simu.GetComponent<Remoteworking>();
+        remoteworking = countrySimData.GetComponent<Remoteworking>();
         // Récupération des données du chômage partiel
-        shortTimeWorking = simu.GetComponent<ShortTimeWorking>();
+        shortTimeWorking = countrySimData.GetComponent<ShortTimeWorking>();
         // Récupération des données du soutien aux entreprises
-        tax = simu.GetComponent<Tax>();
+        tax = countrySimData.GetComponent<Tax>();
         // Récupération des données des masques
-        masks = simu.GetComponent<Masks>();
+        masks = countrySimData.GetComponent<Masks>();
     }
 
     // Use to process your families.

@@ -7,31 +7,35 @@ public class BarsSystem : FSystem {
     private Family f_updateBars = FamilyManager.getFamily(new AllOfComponents(typeof(PopUpBar)), new AnyOfComponents(typeof(DeathBar), typeof(InfectedBar), typeof(TreatedBar), typeof(PopulationBar)), new AnyOfProperties(PropertyMatcher.PROPERTY.ACTIVE_IN_HIERARCHY));
     private PopUpBar tmpBar;
     private int[] data;
-    GameObject barsContainer;
+    public GameObject barsContainer;
+    public GameObject barPrefab;
+    public Transform xAxis;
+
+    public GameObject countrySimData;
     private TimeScale time;
+    private TerritoryData countryPopData;
 
     public static BarsSystem instance;
     public BarsSystem()
     {
         instance = this;
-        GameObject simu = GameObject.Find("SimulationData");
-        // Récupération des données de la population
-        TerritoryData popData = simu.GetComponent<TerritoryData>();
+    }
+
+    protected override void onStart()
+    {
         // Récupération de l'échelle de temps
-        time = simu.GetComponent<TimeScale>();
-        // Récupération du graphique
-        barsContainer = GameObject.Find("Bars");
-        // Récupération du préfab de barres
-        BarPrefab barPrefab = barsContainer.GetComponent<BarPrefab>();
+        time = countrySimData.GetComponent<TimeScale>();
+        // Récupération des données de la population
+        countryPopData = countrySimData.GetComponent<TerritoryData>();
 
         // Create bars
         float yPos = -220f;
-        for (int i = 0; i < popData.popNumber.Length; i++)
+        for (int i = 0; i < countryPopData.popNumber.Length; i++)
         {
-            buildBar("initPop", i, barPrefab.prefab, barsContainer.transform, popData.popNumber[i], typeof(PopulationBar), new Color(0.34f, 0.47f, 0.81f), popData.maxNumber, yPos);
-            buildBar("infected", i, barPrefab.prefab, barsContainer.transform, popData.popInfected[i], typeof(InfectedBar), new Color(0.86f, 0.39f, 0.22f), popData.maxNumber, yPos);
-            buildBar("treated", i, barPrefab.prefab, barsContainer.transform, popData.popTreated[i], typeof(TreatedBar), new Color(0.36f, 0.81f, 0.34f), popData.maxNumber, yPos);
-            buildBar("death", i, barPrefab.prefab, barsContainer.transform, popData.popDeath[i], typeof(DeathBar), new Color(0f, 0f, 0f), popData.maxNumber, yPos);
+            buildBar("initPop", i, barPrefab, barsContainer.transform, countryPopData.popNumber[i], typeof(PopulationBar), new Color(0.34f, 0.47f, 0.81f), countryPopData.maxNumber, yPos);
+            buildBar("infected", i, barPrefab, barsContainer.transform, countryPopData.popInfected[i], typeof(InfectedBar), new Color(0.86f, 0.39f, 0.22f), countryPopData.maxNumber, yPos);
+            buildBar("treated", i, barPrefab, barsContainer.transform, countryPopData.popTreated[i], typeof(TreatedBar), new Color(0.36f, 0.81f, 0.34f), countryPopData.maxNumber, yPos);
+            buildBar("death", i, barPrefab, barsContainer.transform, countryPopData.popDeath[i], typeof(DeathBar), new Color(0f, 0f, 0f), countryPopData.maxNumber, yPos);
             yPos += 5f;
         }
     }
@@ -78,7 +82,6 @@ public class BarsSystem : FSystem {
                 go.transform.localScale = new Vector3(barWidth * 10, 1, 1);
             }
             // mise à jour de l'abscisse
-            Transform xAxis = barsContainer.transform.parent.GetChild(0).GetChild(0);
             int unit = 0;
             for (int child = 0; child < xAxis.childCount; child++)
             {

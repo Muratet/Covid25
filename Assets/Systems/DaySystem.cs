@@ -7,7 +7,7 @@ public class DaySystem : FSystem
 {
     private Family f_territories = FamilyManager.getFamily(new AllOfComponents(typeof(TerritoryData)));
 
-    private TimeScale time;
+    public TimeScale time;
 
     public static DaySystem instance;
 
@@ -15,10 +15,11 @@ public class DaySystem : FSystem
 
     public DaySystem()
     {
-        GameObject simu = GameObject.Find("SimulationData");
-        // Récupération de l'échelle de temps
-        time = simu.GetComponent<TimeScale>();
         instance = this;
+    }
+
+    protected override void onStart()
+    {
         date = new DateTime(2025, 1, 1);
     }
 

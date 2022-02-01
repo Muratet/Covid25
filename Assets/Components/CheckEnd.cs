@@ -53,7 +53,7 @@ public class CheckEnd : MonoBehaviour
         baseNbDeadText = nbDead.text;
         baseDebtText = debt.text;
         baseDaysText = days.text;
-        GameObject go_music = GameObject.Find("Music");
+        GameObject go_music = GameObject.Find("Music"); // Not available in scene (come from Intro scene - DontDestroyOnLoad)
         if (go_music)
         {
             music = go_music.GetComponent<AudioSource>();

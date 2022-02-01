@@ -8,6 +8,7 @@ using System.Collections.Generic;
 public class VaccineSystem : FSystem {
     private Family f_territories = FamilyManager.getFamily(new AllOfComponents(typeof(TerritoryData), typeof(Beds), typeof(Image)));
 
+    public GameObject countrySimData;
     private VirusStats virusStats;
     private TimeScale time;
     private Vaccine vaccine;
@@ -20,27 +21,26 @@ public class VaccineSystem : FSystem {
     private bool firstVaccineDelivered = false;
     private int lastVaccineDelivery = -1;
 
-    public VaccineSystem()
+    protected override void onStart()
     {
-        GameObject simu = GameObject.Find("SimulationData");
         // Récupération de l'échelle de temps
-        time = simu.GetComponent<TimeScale>();
+        time = countrySimData.GetComponent<TimeScale>();
         // Récupération des stats du virus
-        virusStats = simu.GetComponent<VirusStats>();
+        virusStats = countrySimData.GetComponent<VirusStats>();
         // Récupération des données du vaccin
-        vaccine = simu.GetComponent<Vaccine>();
+        vaccine = countrySimData.GetComponent<Vaccine>();
         // Récupération des finances
-        finances = simu.GetComponent<Finances>();
+        finances = countrySimData.GetComponent<Finances>();
         // Récupération de données de la frontière
-        frontierPermeability = simu.GetComponent<FrontierPermeability>();
+        frontierPermeability = countrySimData.GetComponent<FrontierPermeability>();
         // Récupération du stress de la population
-        revolution = simu.GetComponent<Revolution>();
+        revolution = countrySimData.GetComponent<Revolution>();
         // Récupération des données de la population
-        countryPopData = simu.GetComponent<TerritoryData>();
+        countryPopData = countrySimData.GetComponent<TerritoryData>();
     }
 
-	// Use to process your families.
-	protected override void onProcess(int familiesUpdateCount) {
+    // Use to process your families.
+    protected override void onProcess(int familiesUpdateCount) {
         if (time.newDay)
         {
             // Progress research

@@ -37,7 +37,7 @@ public class CheckDoubleClick : MonoBehaviour
             firstClick = true;
             clickTime = Time.time;
             lastTerritorySelected = territoryId;
-            if (territoryId == -1 && animatorTerritoryPopUp.GetCurrentAnimatorClipInfo(0)[0].clip.name == "TerritoryPopUp_in" && !animatorCountryPopUp.GetBool("Close"))
+            if (territoryId == -1 && animatorTerritoryPopUp.GetCurrentAnimatorClipInfo(0).Length > 0 && animatorTerritoryPopUp.GetCurrentAnimatorClipInfo(0)[0].clip.name == "TerritoryPopUp_in" && !animatorCountryPopUp.GetBool("Close"))
                 animatorCountryPopUp.SetTrigger("Open");
             else
                 animatorCountryPopUp.SetTrigger("Close");

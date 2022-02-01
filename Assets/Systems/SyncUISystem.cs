@@ -6,18 +6,15 @@ public class SyncUISystem : FSystem {
 
     private Family f_syncUI = FamilyManager.getFamily(new AllOfComponents(typeof(SyncUI)));
 
-    private TimeScale time;
+    public TimeScale time;
     public static bool needUpdate;
 
-    public SyncUISystem()
+    protected override void onStart()
     {
-        GameObject simu = GameObject.Find("SimulationData");
-        // Récupération de l'échelle de temps
-        time = simu.GetComponent<TimeScale>();
     }
 
-	// Use to process your families.
-	protected override void onProcess(int familiesUpdateCount) {
+    // Use to process your families.
+    protected override void onProcess(int familiesUpdateCount) {
         if (time.newDay || needUpdate)
         {
             needUpdate = false;

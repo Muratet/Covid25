@@ -1,17 +1,22 @@
 using UnityEngine;
 using FYFY;
 
-[ExecuteInEditMode]
-public class MapSystem_wrapper : MonoBehaviour
+public class MapSystem_wrapper : BaseWrapper
 {
+	public TMPro.TMP_Text territoryName;
+	public TimeScale time;
+	public UnityEngine.TextAsset rawContent;
 	private void Start()
 	{
-		this.hideFlags = HideFlags.HideInInspector; // Hide this component in Inspector
+		this.hideFlags = HideFlags.NotEditable;
+		MainLoop.initAppropriateSystemField (system, "territoryName", territoryName);
+		MainLoop.initAppropriateSystemField (system, "time", time);
+		MainLoop.initAppropriateSystemField (system, "rawContent", rawContent);
 	}
 
 	public void selectTerritory(TerritoryData newTerritory)
 	{
-		MainLoop.callAppropriateSystemMethod ("MapSystem", "selectTerritory", newTerritory);
+		MainLoop.callAppropriateSystemMethod (system, "selectTerritory", newTerritory);
 	}
 
 }

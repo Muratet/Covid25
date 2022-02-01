@@ -11,7 +11,7 @@ public class CampaignHospitalSystem_wrapper : MonoBehaviour
 
 	public void BuyCampaignHospital()
 	{
-		MainLoop.callAppropriateSystemMethod ("CampaignHospitalSystem", "BuyCampaignHospital", null);
+		MainLoop.callAppropriateSystemMethod (null, "BuyCampaignHospital", null);
 	}
 
 }

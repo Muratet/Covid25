@@ -9,6 +9,7 @@ public class InfectionSystem : FSystem
     private Family f_territoriesAndCountry = FamilyManager.getFamily(new AllOfComponents(typeof(TerritoryData)));
     private Family f_territories = FamilyManager.getFamily(new AllOfComponents(typeof(TerritoryData), typeof(Image)));
 
+    public GameObject countrySimData;
     private VirusStats virusStats;
     private TerritoryData countryPopData;
     private TimeScale time;
@@ -16,7 +17,6 @@ public class InfectionSystem : FSystem
     private Remoteworking remoteworking;
     private Masks masks;
     private InfectionImpact confinementImpact;
-    private ShortTimeWorking shortTimeWorking;
 
     // model contagiousness during X days
     private float[] contagiousnessProbabilityPerDays;
@@ -31,23 +31,25 @@ public class InfectionSystem : FSystem
 
     public InfectionSystem()
     {
-        GameObject simu = GameObject.Find("SimulationData");
+        instance = this;
+    }
+
+    protected override void onStart()
+    {
         // Récupération des stats du virus
-        virusStats = simu.GetComponent<VirusStats>();
+        virusStats = countrySimData.GetComponent<VirusStats>();
         // Récupération des données de la population
-        countryPopData = simu.GetComponent<TerritoryData>();
+        countryPopData = countrySimData.GetComponent<TerritoryData>();
         // Récupération de l'échelle de temps
-        time = simu.GetComponent<TimeScale>();
+        time = countrySimData.GetComponent<TimeScale>();
         // Récupération des masques
-        masks = simu.GetComponent<Masks>();
+        masks = countrySimData.GetComponent<Masks>();
         // Récupération de l'impact du confinement
-        confinementImpact = simu.GetComponent<InfectionImpact>();
+        confinementImpact = countrySimData.GetComponent<InfectionImpact>();
         // Récupération de données de la frontière
-        frontierPermeability = simu.GetComponent<FrontierPermeability>();
+        frontierPermeability = countrySimData.GetComponent<FrontierPermeability>();
         // Récupération de données du télétravail
-        remoteworking = simu.GetComponent<Remoteworking>();
-        // Récupération de données du chômage partiel
-        shortTimeWorking = simu.GetComponent<ShortTimeWorking>();
+        remoteworking = countrySimData.GetComponent<Remoteworking>();
 
         // calcul de la courbe de contagiosité pour une fenêtre de jours
         contagiousnessProbabilityPerDays = new float[virusStats.windowSize];
@@ -144,8 +146,6 @@ public class InfectionSystem : FSystem
             polyA = (1 + (virusStats.populationRatioImmunity - 1) * virusStats.contagiosity) / (virusStats.populationRatioImmunity * virusStats.populationRatioImmunity - virusStats.populationRatioImmunity);
             polyB = -polyC - polyA;
         }
-
-        instance = this;
     }
 
     // Use to process your families.

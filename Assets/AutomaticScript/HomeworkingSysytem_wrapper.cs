@@ -11,7 +11,7 @@ public class HomeworkingSysytem_wrapper : MonoBehaviour
 
 	public void OnHomeworkingChange(System.Boolean newState)
 	{
-		MainLoop.callAppropriateSystemMethod ("HomeworkingSysytem", "OnHomeworkingChange", newState);
+		MainLoop.callAppropriateSystemMethod (null, "OnHomeworkingChange", newState);
 	}
 
 }

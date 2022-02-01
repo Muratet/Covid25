@@ -11,7 +11,7 @@ public class UpdateMap_wrapper : MonoBehaviour
 
 	public void selectTerritory(TerritoryData newTerritory)
 	{
-		MainLoop.callAppropriateSystemMethod ("UpdateMap", "selectTerritory", newTerritory);
+		MainLoop.callAppropriateSystemMethod (null, "selectTerritory", newTerritory);
 	}
 
 }

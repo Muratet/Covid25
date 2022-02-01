@@ -7,6 +7,7 @@ using System.Globalization;
 public class CurvesSystem : FSystem {
     private Family f_displayedCurves = FamilyManager.getFamily(new AllOfComponents(typeof(LineRenderer)), new AnyOfProperties(PropertyMatcher.PROPERTY.ACTIVE_IN_HIERARCHY), new AnyOfTags("CumulativeDeathCurve", "HistoryDeathCurve", "MaskCurve", "VaccineCurve", "FinanceCurve", "StressCurve"));
 
+    public GameObject countrySimData;
     private TimeScale time;
     private Masks masks;
     private Vaccine vaccine;
@@ -19,18 +20,21 @@ public class CurvesSystem : FSystem {
 
     public CurvesSystem()
     {
-        GameObject simu = GameObject.Find("SimulationData");
-        // Récupération de l'échelle de temps
-        time = simu.GetComponent<TimeScale>();
-        // Récupération des données sur les masques
-        masks = simu.GetComponent<Masks>();
-        // Récupération des données du vaccin
-        vaccine = simu.GetComponent<Vaccine>();
-        // Récupération des finances
-        finances = simu.GetComponent<Finances>();
-        // Récupération des données de révolution
-        revolution = simu.GetComponent<Revolution>();
         instance = this;
+    }
+
+    protected override void onStart()
+    {
+        // Récupération de l'échelle de temps
+        time = countrySimData.GetComponent<TimeScale>();
+        // Récupération des masques
+        masks = countrySimData.GetComponent<Masks>();
+        // Récupération des stats du vaccin
+        vaccine = countrySimData.GetComponent<Vaccine>();
+        // Récupération des données financières
+        finances = countrySimData.GetComponent<Finances>();
+        // Récupération des données de révolution
+        revolution = countrySimData.GetComponent<Revolution>();
     }
 
     public void SetWindowView(int newWindowSize)

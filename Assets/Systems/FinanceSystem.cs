@@ -7,6 +7,7 @@ public class FinanceSystem : FSystem
 {
     private Family f_territories = FamilyManager.getFamily(new AllOfComponents(typeof(TerritoryData), typeof(Image)));
 
+    public GameObject countrySimData;
     private TimeScale time;
     private FrontierPermeability frontierPermeability;
     private Finances finances;
@@ -22,25 +23,24 @@ public class FinanceSystem : FSystem
     private bool stability = true;
     private bool bedsNotif = false;
 
-    public FinanceSystem()
+    protected override void onStart()
     {
-        GameObject simu = GameObject.Find("SimulationData");
         // Récupération de l'échelle de temps
-        time = simu.GetComponent<TimeScale>();
+        time = countrySimData.GetComponent<TimeScale>();
         // Récupération des données de la population
-        countryPopData = simu.GetComponent<TerritoryData>();
+        countryPopData = countrySimData.GetComponent<TerritoryData>();
         // Récupération de données de la frontière
-        frontierPermeability = simu.GetComponent<FrontierPermeability>();
+        frontierPermeability = countrySimData.GetComponent<FrontierPermeability>();
         // Récupération des finances
-        finances = simu.GetComponent<Finances>();
+        finances = countrySimData.GetComponent<Finances>();
         // Récupération de données du télétravail
-        remoteworking = simu.GetComponent<Remoteworking>();
+        remoteworking = countrySimData.GetComponent<Remoteworking>();
         // Récupération de données du chômage partiel
-        shortTimeWorking = simu.GetComponent<ShortTimeWorking>();
+        shortTimeWorking = countrySimData.GetComponent<ShortTimeWorking>();
         // Récupération de données des impôts de entreprises
-        tax = simu.GetComponent<Tax>();
+        tax = countrySimData.GetComponent<Tax>();
         // Récupération de données des lits de réanimation
-        beds = simu.GetComponent<Beds>();
+        beds = countrySimData.GetComponent<Beds>();
         finances.historySpent.Add(0);
     }
 

@@ -7,27 +7,27 @@ public class BedsSystem : FSystem
 {
     private Family f_beds = FamilyManager.getFamily(new AllOfComponents(typeof(TerritoryData), typeof(Beds)));
 
+    public GameObject countrySimData;
     private TimeScale time;
-    private Finances finances;
     private VirusStats virusStats;
 
     public static BedsSystem instance;
 
     public BedsSystem()
     {
-        GameObject simu = GameObject.Find("SimulationData");
-        // Récupération de l'échelle de temps
-        time = simu.GetComponent<TimeScale>();
-        // Récupération des finances
-        finances = simu.GetComponent<Finances>();
-        // Récupération des stats du virus
-        virusStats = simu.GetComponent<VirusStats>();
-
         instance = this;
     }
 
-	// Use to process your families.
-	protected override void onProcess(int familiesUpdateCount) {
+    protected override void onStart()
+    {
+        // Récupération de l'échelle de temps
+        time = countrySimData.GetComponent<TimeScale>();
+        // Récupération des stats du virus
+        virusStats = countrySimData.GetComponent<VirusStats>();
+    }
+
+    // Use to process your families.
+    protected override void onProcess(int familiesUpdateCount) {
         if (time.newDay)
         {
             foreach (GameObject bedsGO in f_beds)
