@@ -93,10 +93,11 @@ public class VaccineSystem : FSystem {
             
             if (vaccine.UI_researchBar.value >= 100)
             {
+                CultureInfo cultureInfo = UnityEngine.Localization.Settings.LocalizationSettings.Instance.GetSelectedLocale().Identifier.CultureInfo;
                 // Simulation de la fluctuation des prix des vaccins
                 int newPrice = vaccine.vaccinePrice + Random.Range(-1, 2) * Random.Range(0, 4);
                 vaccine.vaccinePrice = Mathf.Max(vaccine.vaccineMinPrice, Mathf.Min(vaccine.vaccineMaxPrice, newPrice));
-                vaccine.UI_vaccineUnitPrice.text = vaccine.vaccinePrice.ToString("C0", CultureInfo.CreateSpecificCulture("fr-FR")); // style monétaire
+                vaccine.UI_vaccineUnitPrice.text = vaccine.vaccinePrice.ToString("C0", cultureInfo); // style monétaire
 
                 // Simulation de la livraison des vaccins
                 vaccine.nextDelivery--;
@@ -107,11 +108,11 @@ public class VaccineSystem : FSystem {
                     vaccine.nationalStock += incomingVaccines;
                     vaccine.commands -= incomingVaccines;
                     // Update UI
-                    vaccine.UI_vaccinePendingCommand.text = vaccine.commands.ToString("N0", CultureInfo.CreateSpecificCulture("fr-FR"));
+                    vaccine.UI_vaccinePendingCommand.text = vaccine.commands.ToString("N0", cultureInfo);
                     if (!firstVaccineDelivered)
                     {
                         firstVaccineDelivered = true;
-                        GameObjectManager.addComponent<ChatMessage>(vaccine.gameObject, new { sender = "Ministre de la santé", timeStamp = "" + time.daysGone, messageBody = "Nous avons reçu notre première livraison de " + incomingVaccines.ToString("N0", CultureInfo.CreateSpecificCulture("fr-FR")) + " doses de vaccin. Nous commençons à vacciner la population sur le champs." });
+                        GameObjectManager.addComponent<ChatMessage>(vaccine.gameObject, new { sender = "Ministre de la santé", timeStamp = "" + time.daysGone, messageBody = "Nous avons reçu notre première livraison de " + incomingVaccines.ToString("N0", cultureInfo) + " doses de vaccin. Nous commençons à vacciner la population sur le champs." });
                     }
                     lastVaccineDelivery = time.daysGone;
                 }
@@ -197,7 +198,7 @@ public class VaccineSystem : FSystem {
             input.text = "";
             finances.dailySpending += newCommand * vaccine.vaccinePrice;
             vaccine.commands += newCommand;
-            vaccine.UI_vaccinePendingCommand.text = vaccine.commands.ToString("N0", CultureInfo.CreateSpecificCulture("fr-FR"));
+            vaccine.UI_vaccinePendingCommand.text = vaccine.commands.ToString("N0", UnityEngine.Localization.Settings.LocalizationSettings.Instance.GetSelectedLocale().Identifier.CultureInfo);
             vaccine.lastOrderPlaced = time.daysGone;
             vaccine.lastOrderAmount = newCommand;
         }

@@ -115,7 +115,7 @@ public class CurvesSystem : FSystem {
 
                     for (int child = 0; child < yAxis.childCount; child++)
                     {
-                        yAxis.GetChild(child).gameObject.name = ((int)((max / (yAxis.childCount - 1)) * (yAxis.childCount - 1 - child) / unit)).ToString("N0", CultureInfo.CreateSpecificCulture("fr-FR"));
+                        yAxis.GetChild(child).gameObject.name = ((int)((max / (yAxis.childCount - 1)) * (yAxis.childCount - 1 - child) / unit)).ToString("N0", UnityEngine.Localization.Settings.LocalizationSettings.Instance.GetSelectedLocale().Identifier.CultureInfo);
                         yAxis.GetChild(child).gameObject.GetComponent<TextMeshProUGUI>().text = yAxis.GetChild(child).gameObject.name;
                     }
                 }
@@ -130,7 +130,7 @@ public class CurvesSystem : FSystem {
                     else
                         xValue = (int)(((float)time.daysGone / (xAxis.childCount - 1)) * child);
 
-                    xAxis.GetChild(child).gameObject.name = xValue.ToString("N0", CultureInfo.CreateSpecificCulture("fr-FR")); // pour avoir un affichage du type 100 000 au lieu de 100000
+                    xAxis.GetChild(child).gameObject.name = xValue.ToString("N0", UnityEngine.Localization.Settings.LocalizationSettings.Instance.GetSelectedLocale().Identifier.CultureInfo); // pour avoir un affichage du type 100 000 au lieu de 100000
                     xAxis.GetChild(child).gameObject.GetComponent<TextMeshProUGUI>().text = xAxis.GetChild(child).gameObject.name;
                 }
             }

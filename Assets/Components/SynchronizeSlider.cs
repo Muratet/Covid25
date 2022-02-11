@@ -18,6 +18,6 @@ public class SynchronizeSlider : MonoBehaviour
 
     public void synchronizeText(float newValue)
     {
-        text.text = (newValue*UI_multiplier).ToString("N"+decimalPlaces, CultureInfo.CreateSpecificCulture("fr-FR"));
+        text.text = (newValue*UI_multiplier).ToString("N"+decimalPlaces, UnityEngine.Localization.Settings.LocalizationSettings.Instance.GetSelectedLocale().Identifier.CultureInfo);
     }
 }

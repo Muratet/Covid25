@@ -4,10 +4,12 @@ using FYFY;
 public class DaySystem_wrapper : BaseWrapper
 {
 	public TimeScale time;
+	public Localization localization;
 	private void Start()
 	{
 		this.hideFlags = HideFlags.NotEditable;
 		MainLoop.initAppropriateSystemField (system, "time", time);
+		MainLoop.initAppropriateSystemField (system, "localization", localization);
 	}
 
 	public void setPause(System.Boolean newState)

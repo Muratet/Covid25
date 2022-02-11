@@ -130,19 +130,20 @@ public class CheckEnd : MonoBehaviour
 
     private void displayEnd()
     {
-        nbDeadText = countryPopData.nbDeath.ToString("N0", CultureInfo.CreateSpecificCulture("fr-FR"));
+        CultureInfo cultureInfo = UnityEngine.Localization.Settings.LocalizationSettings.Instance.GetSelectedLocale().Identifier.CultureInfo;
+        nbDeadText = countryPopData.nbDeath.ToString("N0", cultureInfo);
         nbDead.text = baseNbDeadText + nbDeadText;
         float debtValue = finances.historySpent[finances.historySpent.Count - 1];
         int nbMilliards = (int)(debtValue / 1000000000);
         if (nbMilliards > 0)
-            debtText = nbMilliards.ToString("N0", CultureInfo.CreateSpecificCulture("fr-FR")) + " Milliard" + (nbMilliards > 1 ? "s" : "") + " d'euros";
+            debtText = nbMilliards.ToString("N0", cultureInfo) + " Milliard" + (nbMilliards > 1 ? "s" : "") + " d'euros";
         else
         {
             int nbMillions = (int)(debtValue / 1000000);
             if (nbMillions > 0)
-                debtText = nbMillions.ToString("N0", CultureInfo.CreateSpecificCulture("fr-FR")) + " Million" + (nbMillions > 1 ? "s" : "") + " d'euros";
+                debtText = nbMillions.ToString("N0", cultureInfo) + " Million" + (nbMillions > 1 ? "s" : "") + " d'euros";
             else
-                debtText = debtValue.ToString("N0", CultureInfo.CreateSpecificCulture("fr-FR")) + " euros";
+                debtText = debtValue.ToString("N0", cultureInfo) + " euros";
         }
         debt.text = baseDebtText + debtText;
 
@@ -151,7 +152,7 @@ public class CheckEnd : MonoBehaviour
         int nbMonths = (time.daysGone % 365) / 30;
         int nbDays = (time.daysGone % 365) % 30;
         if (nbYears > 0)
-            daysText += nbYears.ToString("N0", CultureInfo.CreateSpecificCulture("fr-FR")) + " an" + (nbYears > 1 ? "s " : " ");
+            daysText += nbYears.ToString("N0", cultureInfo) + " an" + (nbYears > 1 ? "s " : " ");
         if (nbMonths > 0)
             daysText += nbMonths + " mois ";
         if (nbDays > 0)
@@ -231,7 +232,8 @@ public class CheckEnd : MonoBehaviour
 
     private IEnumerator Upload()
     {
-        UnityWebRequest www = UnityWebRequest.Get("http://www-ia.lip6.fr/~muratetm/covid25/addScore.php?pseudo=" + shareInputField.text + "&death=" + countryPopData.nbDeath.ToString("N0", CultureInfo.CreateSpecificCulture("fr-FR")) + "&debt=" + finances.historySpent[finances.historySpent.Count - 1].ToString("N0", CultureInfo.CreateSpecificCulture("fr-FR")) + "&days=" + time.daysGone.ToString("N0", CultureInfo.CreateSpecificCulture("fr-FR")) + "&revolution=" + isRevolution);
+        CultureInfo cultureInfo = UnityEngine.Localization.Settings.LocalizationSettings.Instance.GetSelectedLocale().Identifier.CultureInfo;
+        UnityWebRequest www = UnityWebRequest.Get("http://www-ia.lip6.fr/~muratetm/covid25/addScore.php?pseudo=" + shareInputField.text + "&death=" + countryPopData.nbDeath.ToString("N0", cultureInfo) + "&debt=" + finances.historySpent[finances.historySpent.Count - 1].ToString("N0", cultureInfo) + "&days=" + time.daysGone.ToString("N0", cultureInfo) + "&revolution=" + isRevolution);
 
         yield return www.SendWebRequest();
     }

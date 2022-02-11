@@ -166,12 +166,12 @@ public class RevolutionSystem : FSystem
             else if (revolution.stress > secondNotifStep && !secondNotifStepFlag)
             {
                 secondNotifStepFlag = true;
-                GameObjectManager.addComponent<ChatMessage>(revolution.gameObject, new { sender = "Ministre de l'intérieur", timeStamp = "" + time.daysGone, messageBody = "Plus de "+ secondNotifStep.ToString("N0", CultureInfo.CreateSpecificCulture("fr-FR")) + "% de la population critique vos choix. " + ((revolution.nationalInfectionIsCritic || criticRatio > 0.5f) ? "Ils attendent des mesures plus strictes pour contrôler l'épidémie." : "Ils pensent que vous devriez relacher les contraintes.") });
+                GameObjectManager.addComponent<ChatMessage>(revolution.gameObject, new { sender = "Ministre de l'intérieur", timeStamp = "" + time.daysGone, messageBody = "Plus de "+ secondNotifStep.ToString("N0", UnityEngine.Localization.Settings.LocalizationSettings.Instance.GetSelectedLocale().Identifier.CultureInfo) + "% de la population critique vos choix. " + ((revolution.nationalInfectionIsCritic || criticRatio > 0.5f) ? "Ils attendent des mesures plus strictes pour contrôler l'épidémie." : "Ils pensent que vous devriez relacher les contraintes.") });
             }
             else if (revolution.stress > thirdNotifStep && !thirdNotifStepFlag)
             {
                 thirdNotifStepFlag = true;
-                GameObjectManager.addComponent<ChatMessage>(revolution.gameObject, new { sender = "Ministre de l'intérieur", timeStamp = "" + time.daysGone, messageBody = "Vous devriez adapter vos mesures pour rassurer la population. " + thirdNotifStep.ToString("N0", CultureInfo.CreateSpecificCulture("fr-FR")) + "% des Français sont mécontents. " + ((revolution.nationalInfectionIsCritic || criticRatio > 0.5f) ? "Ils se sentent abandonnés et attendent des mesures plus fortes." : "Ils trouvent que vos choix sont trop stricts.") });
+                GameObjectManager.addComponent<ChatMessage>(revolution.gameObject, new { sender = "Ministre de l'intérieur", timeStamp = "" + time.daysGone, messageBody = "Vous devriez adapter vos mesures pour rassurer la population. " + thirdNotifStep.ToString("N0", UnityEngine.Localization.Settings.LocalizationSettings.Instance.GetSelectedLocale().Identifier.CultureInfo) + "% des Français sont mécontents. " + ((revolution.nationalInfectionIsCritic || criticRatio > 0.5f) ? "Ils se sentent abandonnés et attendent des mesures plus fortes." : "Ils trouvent que vos choix sont trop stricts.") });
             }
             else if (revolution.stress > fourthNotifStep && !fourthNotifStepFlag)
             {
@@ -181,7 +181,7 @@ public class RevolutionSystem : FSystem
             else if (revolution.stress > fifthNotifStep && !fifthNotifStepFlag)
             {
                 fifthNotifStepFlag = true;
-                GameObjectManager.addComponent<ChatMessage>(revolution.gameObject, new { sender = "Ministre de l'intérieur", timeStamp = "" + time.daysGone, messageBody = "Nous avons dépassé le seuil critique. Vous devez rapidement faire redescendre le stress de la population en dessous de "+ fifthNotifStep.ToString("N0", CultureInfo.CreateSpecificCulture("fr-FR")) + "%." });
+                GameObjectManager.addComponent<ChatMessage>(revolution.gameObject, new { sender = "Ministre de l'intérieur", timeStamp = "" + time.daysGone, messageBody = "Nous avons dépassé le seuil critique. Vous devez rapidement faire redescendre le stress de la population en dessous de "+ fifthNotifStep.ToString("N0", UnityEngine.Localization.Settings.LocalizationSettings.Instance.GetSelectedLocale().Identifier.CultureInfo) + "%." });
             }
             if (revolution.stress < firstNotifStep - 5 && firstNotifStepFlag)
                 firstNotifStepFlag = false;
@@ -200,7 +200,7 @@ public class RevolutionSystem : FSystem
 
     public void UpdateRevolutionUI(TMPro.TMP_Text textUI)
     {
-        textUI.text = revolution.stress.ToString("N0", CultureInfo.CreateSpecificCulture("fr-FR")) + "%";
+        textUI.text = revolution.stress.ToString("N0", UnityEngine.Localization.Settings.LocalizationSettings.Instance.GetSelectedLocale().Identifier.CultureInfo) + "%";
         textUI.color = new Color(1f, 1f - revolution.stress/80, 1f - revolution.stress/80);
     }
 }

@@ -131,7 +131,7 @@ public class DeadSystem : FSystem
             }
             if (countryPopData.historyDeath[countryPopData.historyDeath.Count - 1] > nextDeathNotification)
             {
-                string msgBody = "Le nombre de morts journalier a dépassé " + nextDeathNotification.ToString("N0", CultureInfo.CreateSpecificCulture("fr-FR")) + ".";
+                string msgBody = "Le nombre de morts journalier a dépassé " + nextDeathNotification.ToString("N0", UnityEngine.Localization.Settings.LocalizationSettings.Instance.GetSelectedLocale().Identifier.CultureInfo) + ".";
                 if (nextDeathNotification > 200000)
                     msgBody += " Vous rendez-vous compte ??? Plus de 200 000 morts rien qu'aujourd'hui...";
                 else if (nextDeathNotification > 100000)

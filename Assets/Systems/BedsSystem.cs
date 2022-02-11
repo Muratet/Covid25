@@ -74,7 +74,7 @@ public class BedsSystem : FSystem
         Beds beds = MapSystem.territorySelected.GetComponent<Beds>();
 
         // Mise à jour du texte et de la couleur de l'utilisation des lits
-        textUI.text = beds.intensiveBeds_need.ToString("N0", CultureInfo.CreateSpecificCulture("fr-FR")) + " / " + beds.intensiveBeds_current.ToString("N0", CultureInfo.CreateSpecificCulture("fr-FR"));
+        textUI.text = beds.intensiveBeds_need.ToString("N0", UnityEngine.Localization.Settings.LocalizationSettings.Instance.GetSelectedLocale().Identifier.CultureInfo) + " / " + beds.intensiveBeds_current.ToString("N0", UnityEngine.Localization.Settings.LocalizationSettings.Instance.GetSelectedLocale().Identifier.CultureInfo);
         textUI.color = new Color(2 * (float)beds.intensiveBeds_need / beds.intensiveBeds_current, 2 * (1f - (float)beds.intensiveBeds_need / beds.intensiveBeds_current), 0f);
     }
 }

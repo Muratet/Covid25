@@ -28,15 +28,16 @@ public class SyncUISystem : FSystem {
 
     public static void formatStringUI(TMPro.TMP_Text textUI, float amount)
     {
+        CultureInfo cultureInfo = UnityEngine.Localization.Settings.LocalizationSettings.Instance.GetSelectedLocale().Identifier.CultureInfo;
         if (amount >= 999000000000)
             textUI.text = "+999Md";
         else if ((int)(amount / 1000000000) > 0)
-            textUI.text = (amount / 1000000000).ToString("N0", CultureInfo.CreateSpecificCulture("fr-FR")) + "Md";
+            textUI.text = (amount / 1000000000).ToString("N0", cultureInfo) + "Md";
         else if ((int)(amount / 1000000) > 0)
-            textUI.text = (amount / 1000000).ToString("N0", CultureInfo.CreateSpecificCulture("fr-FR")) + "M";
+            textUI.text = (amount / 1000000).ToString("N0", cultureInfo) + "M";
         else if ((int)amount / 1000 > 0)
-            textUI.text = (amount / 1000).ToString("N0", CultureInfo.CreateSpecificCulture("fr-FR")) + "k";
+            textUI.text = (amount / 1000).ToString("N0", cultureInfo) + "k";
         else
-            textUI.text = amount.ToString("N0", CultureInfo.CreateSpecificCulture("fr-FR")) + "";
+            textUI.text = amount.ToString("N0", cultureInfo) + "";
     }
 }

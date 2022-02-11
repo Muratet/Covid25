@@ -22,15 +22,16 @@ public class PopUpBar : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 
     private void UpdateTooltipText()
     {
+        CultureInfo cultureInfo = UnityEngine.Localization.Settings.LocalizationSettings.Instance.GetSelectedLocale().Identifier.CultureInfo;
         string tooltipContent = ageRef + " ans : ";
         if (GetComponent<PopulationBar>())
-            tooltipContent += MapSystem.territorySelected.popNumber[ageRef].ToString("N0", CultureInfo.CreateSpecificCulture("fr-FR"));
+            tooltipContent += MapSystem.territorySelected.popNumber[ageRef].ToString("N0", cultureInfo);
         if (GetComponent<DeathBar>())
-            tooltipContent += MapSystem.territorySelected.popDeath[ageRef].ToString("N0", CultureInfo.CreateSpecificCulture("fr-FR"));
+            tooltipContent += MapSystem.territorySelected.popDeath[ageRef].ToString("N0", cultureInfo);
         if (GetComponent<InfectedBar>())
-            tooltipContent += MapSystem.territorySelected.popInfected[ageRef].ToString("N0", CultureInfo.CreateSpecificCulture("fr-FR"));
+            tooltipContent += MapSystem.territorySelected.popInfected[ageRef].ToString("N0", cultureInfo);
         if (GetComponent<TreatedBar>())
-            tooltipContent += MapSystem.territorySelected.popTreated[ageRef].ToString("N0", CultureInfo.CreateSpecificCulture("fr-FR"));
+            tooltipContent += MapSystem.territorySelected.popTreated[ageRef].ToString("N0", cultureInfo);
         tooltip.ShowTooltip(tooltipContent);
     } 
 

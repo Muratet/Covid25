@@ -1,0 +1,1331 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: TextTable_en
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: en
+  m_SharedData: {fileID: 11400000, guid: 99e640af2988d7e449b5329219e50244, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 1190635159552
+    m_Localized: Play
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1396852310016
+    m_Localized: Customize
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1557146025984
+    m_Localized: yr.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10655317016576
+    m_Localized: Contagiousness (R0)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10961840947200
+    m_Localized: Contagion standard deviation
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11239268990976
+    m_Localized: Contagion peak
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11349772124160
+    m_Localized: Mortality curve
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11430462144512
+    m_Localized: d.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11461789401088
+    m_Localized: d.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11484363145216
+    m_Localized: d.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11578193920000
+    m_Localized: Mortality standard deviation
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11681528987648
+    m_Localized: Mortality peak
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11901356654592
+    m_Localized: Minimum lethal age
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12270690287616
+    m_Localized: Maximum death rate
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12326445170688
+    m_Localized: mth.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12929791606784
+    m_Localized: Herd immunity rate
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13016085217280
+    m_Localized: Serious case rate
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13074767724544
+    m_Localized: Play
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13097513435136
+    m_Localized: Back
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13196515786752
+    m_Localized: Contagiousness per day
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13523893796864
+    m_Localized: Mortality by age
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13601484226560
+    m_Localized: Mortality per day
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13800499757056
+    m_Localized: Search for a vaccine
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13893751717888
+    m_Localized: Contagion window
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19994681458688
+    m_Localized: '2025...
+
+
+      5 years after the 2020 pandemic a new coronavirus
+      appeared. Several countries around the world already seem to be affected. France
+      is for the moment still spared.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20074712973312
+    m_Localized: How will you manage this new risk?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20647071891456
+    m_Localized: 'Welcome to the Crisis Management Center!
+
+
+
+      Following the
+      2020 Covid 19 pandemic, our teams have developed new tools allowing you to
+      monitor the progression of the epidemic on a day-to-day basis.
+
+
+
+      I will
+      introduce you to the main features.
+
+
+
+      Let''s go...'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20690155782144
+    m_Localized: Next
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20733067706368
+    m_Localized: Close tutorial
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21325316014080
+    m_Localized: 'In the upper part you will be able to consult a lot of information
+      such as the progression of the infection by age, the sad evolution of deaths...
+      unfortunately, as in 2020, a new disaster is on the way.
+
+
+
+      In short,
+      you will also have information on the evolution of the stock of masks, vaccines
+      and an estimate of the financial cost of your actions.
+
+
+
+      Finally, pay
+      particular attention to the dissatisfaction of the citizens. It must not concern
+      more than 80% of the population, in which case your crisis management strategy
+      could be called into question...'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21501829103616
+    m_Localized: Next
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21535270289408
+    m_Localized: Close tutorial
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21789755490304
+    m_Localized: "In the interactive map, click on a region to filter the data.\r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22046480449536
+    m_Localized: Next
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22069616230400
+    m_Localized: Close tutorial
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22412043403264
+    m_Localized: "You will note that certain indicators such as the evolution of
+      mask stocks, vaccine stocks, the cost of actions and the dissatisfaction of
+      the population are not accessible at the regional level.\r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22524262006784
+    m_Localized: Next
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22555933196288
+    m_Localized: Close tutorial
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22872611536896
+    m_Localized: 'The map will also be very useful for you to carry out your actions.
+      Double-click a region to open its configuration panel.
+
+'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23445540880384
+    m_Localized: "Do the same with the \"National\" button to access more actions.\r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23810801844224
+    m_Localized: Next
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23837750247424
+    m_Localized: Close tutorial
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24511464521728
+    m_Localized: 'Manage the time...
+
+
+
+      Do not hesitate to pause the simulation
+      to analyze the different parameters and make the right choices for our country.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24594939559936
+    m_Localized: Next
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24616938684416
+    m_Localized: Close tutorial
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24728955961344
+    m_Localized: Consult your advisors.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24777370812416
+    m_Localized: Next
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24799130861568
+    m_Localized: Close tutorial
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24982459695104
+    m_Localized: "\rCheck the R0.\r\n\r\nThe R0 defines the reproduction rate of
+      the virus. A rate less than 1 will allow you to control the epidemic."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25087715753984
+    m_Localized: Next
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25108842463232
+    m_Localized: Close tutorial
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25727556829184
+    m_Localized: 'Help the country stabilize the epidemic and achieve herd immunity.
+
+
+
+      But
+      above all, avoid the social crisis: 15 days with more than 80% dissatisfaction
+      and you will certainly have to resign from your duties.
+
+
+
+      It''s your
+      turn...'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25774868578304
+    m_Localized: Restart
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25836067667968
+    m_Localized: Close
+    m_Metadata:
+      m_Items: []
+  - m_Id: 27052701040640
+    m_Localized: 10 days
+    m_Metadata:
+      m_Items: []
+  - m_Id: 27098607697920
+    m_Localized: 10 wk.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 27321321046016
+    m_Localized: 10 mth
+    m_Metadata:
+      m_Items: []
+  - m_Id: 27451692597248
+    m_Localized: 1 year
+    m_Metadata:
+      m_Items: []
+  - m_Id: 27482482982912
+    m_Localized: All
+    m_Metadata:
+      m_Items: []
+  - m_Id: 28143824060416
+    m_Localized: '- New message(s) -'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 28333171720192
+    m_Localized: Return to the end screen
+    m_Metadata:
+      m_Items: []
+  - m_Id: 29085868933120
+    m_Localized: 'You have successfully controlled the epidemic
+
+'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 29496239636480
+    m_Localized: "\rTHE PEOPLE RISE AGAINST YOUR POLITICS!!!\r\nAre you going to
+      quit?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 29583950921728
+    m_Localized: 'Number of dead: '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 29641412886528
+    m_Localized: 'Debt due to the crisis: '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 29695158697984
+    m_Localized: 'Number of days: '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 30257640030208
+    m_Localized: Try again
+    m_Metadata:
+      m_Items: []
+  - m_Id: 30362413744128
+    m_Localized: Review the state of the country
+    m_Metadata:
+      m_Items: []
+  - m_Id: 30424514609152
+    m_Localized: Pursue at all costs...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 30485373960192
+    m_Localized: 'Share your scores:'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 30557465657344
+    m_Localized: Enter your nickname...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 30691410755584
+    m_Localized: Send
+    m_Metadata:
+      m_Items: []
+  - m_Id: 30844154724352
+    m_Localized: See high scores
+    m_Metadata:
+      m_Items: []
+  - m_Id: 31576794775552
+    m_Localized: 'Progress in the global search for a vaccine
+
+'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 31659821023232
+    m_Localized: "Unit price :\r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 31737193349120
+    m_Localized: 'Order vaccines from laboratories:'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 31915212193792
+    m_Localized: "\rThe unit price of a vaccine dose varies over time.\r\nVaccines
+      are delivered in batches of several hundred thousand units every eight days
+      on average based on global demand."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 32048100327424
+    m_Localized: "Quantity...\r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 32118308782080
+    m_Localized: Order
+    m_Metadata:
+      m_Items: []
+  - m_Id: 32169181495296
+    m_Localized: 'Doses awaiting delivery:'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 32361683271680
+    m_Localized: "Border closure:\r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 32510476206080
+    m_Localized: '<color=#008000ff>+ Reduces population stress if perceived as helpful</color>
+
+      <color=#C15C00ff>-
+      Increases population discontent if perceived as unnecessary
+
+      - Economic
+      impact</color>'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 33186379907072
+    m_Localized: None
+    m_Metadata:
+      m_Items: []
+  - m_Id: 33338905772032
+    m_Localized: None
+    m_Metadata:
+      m_Items: []
+  - m_Id: 33420480790528
+    m_Localized: Only global/European freight
+    m_Metadata:
+      m_Items: []
+  - m_Id: 33470653054976
+    m_Localized: Only European freight
+    m_Metadata:
+      m_Items: []
+  - m_Id: 33516496797696
+    m_Localized: All (freight and civil)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 33653361131520
+    m_Localized: Cancel business charges
+    m_Metadata:
+      m_Items: []
+  - m_Id: 33890423193600
+    m_Localized: "<color=#008000ff>+ Reduces population discontent if seen as helpful\r</color>\n<color=#C15C00ff>-
+      Increases population discontent if perceived as unnecessary\n- Financial impact\r</color>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 34117142102016
+    m_Localized: Encourage home working
+    m_Metadata:
+      m_Items: []
+  - m_Id: 34659432054784
+    m_Localized: '<color=#008000ff>+ Reduces the spread of the virus
+
+      + In
+      the event of confinement, reduces the financial impact</color>
+
+      <color=#C15C00ff>-
+      Increases population discontent if combined with primary or middle schools
+      closures</color>'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 35584871677952
+    m_Localized: Authorize partial unemployment
+    m_Metadata:
+      m_Items: []
+  - m_Id: 37086407344128
+    m_Localized: "<color=#008000ff>+ Reduces population discontent</color>\n<color=#C15C00ff>-
+      Financial impact\r</color>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 37583545614336
+    m_Localized: 'Requisition the masks for the
+
+      health personnel'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 38029131694080
+    m_Localized: '<color=#008000ff>+ Reduces the consumption of approved masks</color>
+
+      <color=#C15C00ff>-
+      Increases public discontent</color>'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 38293028913152
+    m_Localized: Boost the national production of masks
+    m_Metadata:
+      m_Items: []
+  - m_Id: 38764263161856
+    m_Localized: '<color=#008000ff>+ Increases the production of approved masks
+
+      +
+      Reduces population discontent</color>
+
+      <color=#C15C00ff>- Financial impact</color>'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 39545318064128
+    m_Localized: "Encourage the artisanal production of masks\r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 39894296739840
+    m_Localized: '<color=#008000ff>+ Reduces the spread of the virus
+
+      + Reduces
+      the consumption of approved masks</color>
+
+      <color=#C15C00ff>- Increases
+      population discontent if perceived as unnecessary</color>'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 40122865336320
+    m_Localized: "Unit price:\r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 40211532922880
+    m_Localized: 'Import approved masks from abroad:'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 40718708162560
+    m_Localized: The unit price of masks purchased abroad varies over time.<br>Masks
+      are delivered in batches of several million every eight days on average.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 40795589754880
+    m_Localized: "Quantity...\r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 40842557571072
+    m_Localized: Order
+    m_Metadata:
+      m_Items: []
+  - m_Id: 40899688185856
+    m_Localized: 'Masks awaiting delivery:'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 353320487272448
+    m_Localized: 'Stopping classes:'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 353540918919168
+    m_Localized: primary schools
+    m_Metadata:
+      m_Items: []
+  - m_Id: 354224187817984
+    m_Localized: '<color=#008000ff>+ Reduces the spread of the virus</color>
+
+      <color=#C15C00ff>-
+      Increases population dissatisfaction if perceived as unnecessary
+
+      - Increases
+      population dissatisfaction if combined with home working</color>'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 356502596665344
+    m_Localized: middle schools
+    m_Metadata:
+      m_Items: []
+  - m_Id: 357249509933056
+    m_Localized: '<color=#008000ff>+ Reduces the spread of the virus</color>
+
+      <color=#C15C00ff>-
+      Increases population dissatisfaction if perceived as unnecessary
+
+      - Increases
+      population dissatisfaction if combined with home working</color>'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 357622224175104
+    m_Localized: high schools
+    m_Metadata:
+      m_Items: []
+  - m_Id: 358272139968512
+    m_Localized: '<color=#008000ff>+ Reduces the spread of the virus</color>
+
+      <color=#C15C00ff>-
+      Increases population dissatisfaction if perceived as unnecessary</color>'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 358462833999872
+    m_Localized: universities
+    m_Metadata:
+      m_Items: []
+  - m_Id: 358785476640768
+    m_Localized: '<color=#008000ff>+ Reduces the spread of the virus</color>
+
+      <color=#C15C00ff>-
+      Increases population dissatisfaction if perceived as unnecessary</color>'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 358924207439872
+    m_Localized: Call for civic responsibility
+    m_Metadata:
+      m_Items: []
+  - m_Id: 359077370839040
+    m_Localized: '<color=#008000ff>+ Reduces the spread of the virus</color>
+
+      <color=#C15C00ff>-
+      Increases population dissatisfaction if perceived as unnecessary</color>'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 359210774872064
+    m_Localized: 'Close general public shops
+
+      (except food)'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 359342769618944
+    m_Localized: '<color=#008000ff>+ Reduces the spread of the virus</color>
+
+      <color=#C15C00ff>-
+      Financial impact
+
+      - Increases population dissatisfaction if perceived
+      as unnecessary</color>'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 360231446167552
+    m_Localized: 'Reduced freedom of movement
+
+      (Exit certificate required)'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 360455627522048
+    m_Localized: '<color=#008000ff>+ Reduces the spread of the virus
+
+      + Reduces
+      inter-region travel</color>
+
+      <color=#C15C00ff>- Increases population
+      dissatisfaction if perceived as unnecessary</color>'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 362086289031168
+    m_Localized: Boost the number of intensive care beds
+    m_Metadata:
+      m_Items: []
+  - m_Id: 362175430574080
+    m_Localized: '<color=#008000ff>+ Increases the number of patients and reduces
+      mortality</color>
+
+      <color=#C15C00ff>- Financial impact</color>'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 362330376552448
+    m_Localized: 'Exit ban between:'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 362609243242496
+    m_Localized: '<color=#008000ff>+ Reduces the spread of the virus
+
+      + Reduces
+      inter-region travel</color>
+
+      <color=#C15C00ff>- Financial impact if it
+      concerns workers
+
+      - Increases population dissatisfaction if perceived
+      as unnecessary</color>'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 363179123326976
+    m_Localized: yo and
+    m_Metadata:
+      m_Items: []
+  - m_Id: 363234244870144
+    m_Localized: yo
+    m_Metadata:
+      m_Items: []
+  - m_Id: 363473831903232
+    m_Localized: 'Activate:'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 367173145116672
+    m_Localized: <b> Data by age</b>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 367576951734272
+    m_Localized: <b>History of deaths</b>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 367662544896000
+    m_Localized: <b>Accumulated deaths</b>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 367718463356928
+    m_Localized: <b>Stock of masks</b>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 367786297835520
+    m_Localized: <b>Stock of vaccines</b>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 367884541018112
+    m_Localized: <b>Balance sheet</b>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 368063126093824
+    m_Localized: <b>Public dissatisfaction</b><br>If the population's dissatisfaction
+      exceeds 80%<br>for 15 consecutive days, you lose the game
+    m_Metadata:
+      m_Items: []
+  - m_Id: 370590454300672
+    m_Localized: <b>Stock of masks</b><br><color=#C15C00ff>Only available nationally</color>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 370629067063296
+    m_Localized: <b>Stock of masks</b><br><color=#C15C00ff>Only available nationally</color>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 370646616031232
+    m_Localized: <b>Stock of masks</b><br><color=#C15C00ff>Only available nationally</color>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 370666207625216
+    m_Localized: <b>Stock of masks</b><br><color=#C15C00ff>Only available nationally</color>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 370686201872384
+    m_Localized: <b>Stock of masks</b><br><color=#C15C00ff>Only available nationally</color>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 370706724601856
+    m_Localized: <b>Stock of masks</b><br><color=#C15C00ff>Only available nationallyl</color>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 370726572048384
+    m_Localized: <b>Stock of masks</b><br><color=#C15C00ff>Only available nationally</color>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 370743777083392
+    m_Localized: <b>Stock of masks</b><br><color=#C15C00ff>Only available nationally</color>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 370759958708224
+    m_Localized: <b>Stock of masks</b><br><color=#C15C00ff>Only available nationally</color>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 370776119361536
+    m_Localized: <b>Stock of masks</b><br><color=#C15C00ff>Only available nationally</color>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 370799297085440
+    m_Localized: <b>Stock of masks</b><br><color=#C15C00ff>Only available nationally</color>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 370815982026752
+    m_Localized: <b>Stock of masks</b><br><color=#C15C00ff>Only available nationally</color>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 370837456863232
+    m_Localized: <b>Stock of masks</b><br><color=#C15C00ff>Only available nationally</color>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 370855454621696
+    m_Localized: <b>Stock of masks</b><br><color=#C15C00ff>Only available nationally</color>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 370874765197312
+    m_Localized: <b>Stock of masks</b><br><color=#C15C00ff>Only available nationally</color>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 370895220817920
+    m_Localized: <b>Stock of masks</b><br><color=#C15C00ff>Only available nationally</color>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 370919577141248
+    m_Localized: <b>Stock of masks</b><br><color=#C15C00ff>Only available nationally</color>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 370936362745856
+    m_Localized: <b>Stock of masks</b><br><color=#C15C00ff>Only available nationally</color>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 370956130500608
+    m_Localized: <b>Stock of masks</b>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 371025328128000
+    m_Localized: <b>Balance sheet</b><br><color=#C15C00ff>Only available nationally</color>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 371077706596352
+    m_Localized: <b>Public dissatisfaction</b><br>If the population's dissatisfaction
+      exceeds 80%<br>over 15 consecutive days, you lose the game<br><color=#C15C00ff>Only
+      available nationally</color>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 371100070625280
+    m_Localized: <b>Stock of vaccines</b><br><color=#C15C00ff>Only available nationally</color>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 371171352821760
+    m_Localized: <b>Balance sheet</b><br><color=#C15C00ff>Only available nationally</color>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 371208384331776
+    m_Localized: <b>Public dissatisfaction</b><br>If the population's dissatisfaction
+      exceeds 80%<br>over 15 consecutive days, you lose the game<br><color=#C15C00ff>Only
+      available nationally</color>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 371222061957120
+    m_Localized: <b>Stock of vaccines</b><br><color=#C15C00ff>Only available nationally</color>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 371272515239936
+    m_Localized: <b>Balance sheet</b><br><color=#C15C00ff>Only available nationally</color>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 371294082351104
+    m_Localized: <b>Public dissatisfaction</b><br>If the population's dissatisfaction
+      exceeds 80%<br>over 15 consecutive days, you lose the game<br><color=#C15C00ff>Only
+      available nationally</color>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 371309173456896
+    m_Localized: <b>Stock of vaccines</b><br><color=#C15C00ff>Only available nationally</color>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 371352878104576
+    m_Localized: <b>Balance sheet</b><br><color=#C15C00ff>Only available nationally</color>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 371373690241024
+    m_Localized: <b>Public dissatisfaction</b><br>If the population's dissatisfaction
+      exceeds 80%<br>over 15 consecutive days, you lose the game<br><color=#C15C00ff>Only
+      available nationally</color>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 371389221748736
+    m_Localized: <b>Stock of vaccines</b><br><color=#C15C00ff>Only available nationally</color>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 371437993115648
+    m_Localized: <b>Balance sheet</b><br><color=#C15C00ff>Only available nationally</color>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 371461548326912
+    m_Localized: <b>Public dissatisfaction</b><br>If the population's dissatisfaction
+      exceeds 80%<br>over 15 consecutive days, you lose the game<br><color=#C15C00ff>Only
+      available nationally</color>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 371473439178752
+    m_Localized: <b>Stock of vaccines</b><br><color=#C15C00ff>Only available nationally</color>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 371507475955712
+    m_Localized: <b>Balance sheet</b><br><color=#C15C00ff>Only available nationallyl</color>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 371527721861120
+    m_Localized: <b>Public dissatisfaction</b><br>If the population's dissatisfaction
+      exceeds 80%<br>over 15 consecutive days, you lose the game<br><color=#C15C00ff>Only
+      available nationally</color>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 371540145389568
+    m_Localized: <b>Stock of vaccines</b><br><color=#C15C00ff>Only available nationally</color>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 371577822822400
+    m_Localized: <b>Balance sheet</b><br><color=#C15C00ff>Only available nationally</color>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 371598676901888
+    m_Localized: <b>Public dissatisfaction</b><br>If the population's dissatisfaction
+      exceeds 80%<br>over 15 consecutive days, you lose the game<br><color=#C15C00ff>Only
+      available nationally</color>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 371609762447360
+    m_Localized: <b>Stock of vaccines</b><br><color=#C15C00ff>Only available nationally</color>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 371640053710848
+    m_Localized: <b>Balance sheet</b><br><color=#C15C00ff>Only available nationally</color>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 371660308004864
+    m_Localized: <b>Public dissatisfaction</b><br>If the population's dissatisfaction
+      exceeds 80%<br>over 15 consecutive days, you lose the game<br><color=#C15C00ff>Only
+      available nationally</color>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 371671414521856
+    m_Localized: <b>Stock of vaccines</b><br><color=#C15C00ff>Only available nationally</color>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 371705170280448
+    m_Localized: <b>Balance sheet</b><br><color=#C15C00ff>Only available nationally</color>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 371726095663104
+    m_Localized: <b>Public dissatisfaction</b><br>If the population's dissatisfaction
+      exceeds 80%<br>over 15 consecutive days, you lose the game<br><color=#C15C00ff>Only
+      available nationally</color>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 371740008169472
+    m_Localized: <b>Stock of vaccines</b><br><color=#C15C00ff>Only available nationally</color>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 371767820599296
+    m_Localized: <b>Balance sheet</b><br><color=#C15C00ff>Only available nationally</color>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 371793728815104
+    m_Localized: <b>Public dissatisfaction</b><br>If the population's dissatisfaction
+      exceeds 80%<br>over 15 consecutive days, you lose the game<br><color=#C15C00ff>Only
+      available nationally</color>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 371806114594816
+    m_Localized: <b>Stock of vaccines</b><br><color=#C15C00ff>Only available nationally</color>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 371836141617152
+    m_Localized: <b>Balance sheet</b><br><color=#C15C00ff>Only available nationally</color>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 371857570316288
+    m_Localized: <b>Public dissatisfaction</b><br>If the population's dissatisfaction
+      exceeds 80%<br>over 15 consecutive days, you lose the game<br><color=#C15C00ff>Only
+      available nationally</color>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 371868194488320
+    m_Localized: <b>Stock of vaccines</b><br><color=#C15C00ff>Only available nationally</color>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 371904433274880
+    m_Localized: <b>Balance sheet</b><br><color=#C15C00ff>Only available nationally</color>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 371926453370880
+    m_Localized: <b>Public dissatisfaction</b><br>If the population's dissatisfaction
+      exceeds 80%<br>over 15 consecutive days, you lose the game<br><color=#C15C00ff>Only
+      available nationally</color>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 371940256825344
+    m_Localized: <b>Stock of vaccines</b><br><color=#C15C00ff>Only available nationally</color>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 371975178600448
+    m_Localized: <b>Balance sheet</b><br><color=#C15C00ff>Only available nationally</color>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 371993402851328
+    m_Localized: <b>Public dissatisfaction</b><br>If the population's dissatisfaction
+      exceeds 80%<br>over 15 consecutive days, you lose the game<br><color=#C15C00ff>Only
+      available nationally</color>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 372008003223552
+    m_Localized: <b>Stock of vaccines</b><br><color=#C15C00ff>Only available nationally</color>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 372047387738112
+    m_Localized: <b>Balance sheet</b><br><color=#C15C00ff>Only available nationally</color>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 372066283077632
+    m_Localized: <b>Public dissatisfaction</b><br>If the population's dissatisfaction
+      exceeds 80%<br>over 15 consecutive days, you lose the game<br><color=#C15C00ff>Only
+      available nationally</color>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 372085111308288
+    m_Localized: <b>Stock of vaccines</b><br><color=#C15C00ff>Only available nationally</color>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 372140287377408
+    m_Localized: <b>Balance sheet</b><br><color=#C15C00ff>Only available nationally</color>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 372161506361344
+    m_Localized: <b>Public dissatisfaction</b><br>If the population's dissatisfaction
+      exceeds 80%<br>over 15 consecutive days, you lose the game<br><color=#C15C00ff>Only
+      available nationally</color>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 372175288844288
+    m_Localized: <b>Stock of vaccines</b><br><color=#C15C00ff>Only available nationally</color>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 372208352542720
+    m_Localized: <b>Balance sheet</b><br><color=#C15C00ff>Only available nationally</color>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 372228929798144
+    m_Localized: <b>Public dissatisfaction</b><br>If the population's dissatisfaction
+      exceeds 80%<br>over 15 consecutive days, you lose the game<br><color=#C15C00ff>Only
+      available nationally</color>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 372245425995776
+    m_Localized: <b>Stock of vaccines</b><br><color=#C15C00ff>Only available nationally</color>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 372277415952384
+    m_Localized: <b>Balance sheet</b><br><color=#C15C00ff>Only available nationally</color>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 372297695412224
+    m_Localized: <b>Public dissatisfaction</b><br>If the population's dissatisfaction
+      exceeds 80%<br>over 15 consecutive days, you lose the game<br><color=#C15C00ff>Only
+      available nationally</color>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 372310337044480
+    m_Localized: <b>Stock of vaccines</b><br><color=#C15C00ff>Only available nationally</color>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 372342427664384
+    m_Localized: <b>Balance sheet</b><br><color=#C15C00ff>Only available nationally</color>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 372362640015360
+    m_Localized: <b>Public dissatisfaction</b><br>If the population's dissatisfaction
+      exceeds 80%<br>over 15 consecutive days, you lose the game<br><color=#C15C00ff>Only
+      available nationally</color>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 372373016723456
+    m_Localized: <b>Stock of vaccines</b><br><color=#C15C00ff>Only available nationally</color>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 372835132555264
+    m_Localized: <b>Balance sheet</b>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 373401384566784
+    m_Localized: <b>Public dissatisfaction</b><br>If the population's dissatisfaction
+      exceeds 80%<br>over 15 consecutive days, you lose the game
+    m_Metadata:
+      m_Items: []
+  - m_Id: 374559033442304
+    m_Localized: <b>Stock of vaccines</b>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 375172160995328
+    m_Localized: Consult the advisors
+    m_Metadata:
+      m_Items: []
+  - m_Id: 375584448495616
+    m_Localized: Play the simulation
+    m_Metadata:
+      m_Items: []
+  - m_Id: 375806666915840
+    m_Localized: Number of days passed since the start of the simulation
+    m_Metadata:
+      m_Items: []
+  - m_Id: 375906415853568
+    m_Localized: R0 of the selected territory<br>R0 defines the reproduction rate
+      of the virus<br>A rate less than 1 will allow you to control the epidemic
+    m_Metadata:
+      m_Items: []
+  - m_Id: 376725005582336
+    m_Localized: Close panel
+    m_Metadata:
+      m_Items: []
+  - m_Id: 376780143902720
+    m_Localized: Close panel
+    m_Metadata:
+      m_Items: []
+  - m_Id: 376797596401664
+    m_Localized: Close panel
+    m_Metadata:
+      m_Items: []
+  - m_Id: 376811693457408
+    m_Localized: Close panel
+    m_Metadata:
+      m_Items: []
+  - m_Id: 377528558731264
+    m_Localized: 'Number of citizens
+
+      (in thousands)'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 377725028319232
+    m_Localized: Completed age
+    m_Metadata:
+      m_Items: []
+  - m_Id: 377794070757376
+    m_Localized: Not contaminated
+    m_Metadata:
+      m_Items: []
+  - m_Id: 377827927179264
+    m_Localized: Contaminated
+    m_Metadata:
+      m_Items: []
+  - m_Id: 377875519946752
+    m_Localized: Deceased
+    m_Metadata:
+      m_Items: []
+  - m_Id: 377922559066112
+    m_Localized: Heal
+    m_Metadata:
+      m_Items: []
+  - m_Id: 378129883512832
+    m_Localized: Emergency bed occupancy
+    m_Metadata:
+      m_Items: []
+  - m_Id: 378187370643456
+    m_Localized: Emergency bed occupancy
+    m_Metadata:
+      m_Items: []
+  - m_Id: 378228420296704
+    m_Localized: Emergency bed occupancy
+    m_Metadata:
+      m_Items: []
+  - m_Id: 378430615109632
+    m_Localized: Days
+    m_Metadata:
+      m_Items: []
+  - m_Id: 378460973481984
+    m_Localized: Daily deaths
+    m_Metadata:
+      m_Items: []
+  - m_Id: 378598747979776
+    m_Localized: Days
+    m_Metadata:
+      m_Items: []
+  - m_Id: 378638988132352
+    m_Localized: Accumulated deaths
+    m_Metadata:
+      m_Items: []
+  - m_Id: 378736790913024
+    m_Localized: Days
+    m_Metadata:
+      m_Items: []
+  - m_Id: 378771037405184
+    m_Localized: Stock of masks
+    m_Metadata:
+      m_Items: []
+  - m_Id: 378819003465728
+    m_Localized: (in millions)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 378883444752384
+    m_Localized: Day
+    m_Metadata:
+      m_Items: []
+  - m_Id: 378920388182016
+    m_Localized: Stock of vaccines
+    m_Metadata:
+      m_Items: []
+  - m_Id: 378988159746048
+    m_Localized: Days
+    m_Metadata:
+      m_Items: []
+  - m_Id: 379047756611584
+    m_Localized: "Debt (\u20AC)\n"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 379112604745728
+    m_Localized: Day
+    m_Metadata:
+      m_Items: []
+  - m_Id: 386877788176384
+    m_Localized: D+0
+    m_Metadata:
+      m_Items: []
+  - m_Id: 719629918060544
+    m_Localized: '#0# (D+#1#)'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 722245527977984
+    m_Localized: Digital advisor
+    m_Metadata:
+      m_Items: []
+  - m_Id: 723318531604480
+    m_Localized: To move on to the following days, click on the Play button.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 729274988544000
+    m_Localized: D+
+    m_Metadata:
+      m_Items: []
+  - m_Id: 729371570782208
+    m_Localized: D+
+    m_Metadata:
+      m_Items: []
+  - m_Id: 729396514308096
+    m_Localized: You
+    m_Metadata:
+      m_Items: []
+  - m_Id: 730389612249088
+    m_Localized: You opened the borders
+    m_Metadata:
+      m_Items: []
+  - m_Id: 730480431513600
+    m_Localized: You have restricted the opening of borders only to world and European
+      freight
+    m_Metadata:
+      m_Items: []
+  - m_Id: 730560970539008
+    m_Localized: You have restricted the opening of borders only to European freight
+    m_Metadata:
+      m_Items: []
+  - m_Id: 730641928994816
+    m_Localized: You have completely closed the borders
+    m_Metadata:
+      m_Items: []
+  - m_Id: 739484943695872
+    m_Localized: You no longer support businesses
+    m_Metadata:
+      m_Items: []
+  - m_Id: 739437422231552
+    m_Localized: You cancel business charges
+    m_Metadata:
+      m_Items: []
+  - m_Id: 740701077946368
+    m_Localized: You encourage companies to set up massive home working
+    m_Metadata:
+      m_Items: []
+  - m_Id: 740798629068800
+    m_Localized: You no longer encourage home working
+    m_Metadata:
+      m_Items: []
+  - m_Id: 741749775581184
+    m_Localized: You open the conditions for access to partial unemployment
+    m_Metadata:
+      m_Items: []
+  - m_Id: 741790909120512
+    m_Localized: You restrict the conditions for accepting partial unemployment
+    m_Metadata:
+      m_Items: []
+  - m_Id: 743131073134592
+    m_Localized: You requisition masks for the medical profession
+    m_Metadata:
+      m_Items: []
+  - m_Id: 743173389467648
+    m_Localized: You no longer requisition masks
+    m_Metadata:
+      m_Items: []
+  - m_Id: 743454017765376
+    m_Localized: You support all companies that increase their production of approved
+      masks
+    m_Metadata:
+      m_Items: []
+  - m_Id: 743532090540032
+    m_Localized: You no longer encourage the production of masks
+    m_Metadata:
+      m_Items: []
+  - m_Id: 743580618637312
+    m_Localized: You encourage the population to make their own masks
+    m_Metadata:
+      m_Items: []
+  - m_Id: 743619977986048
+    m_Localized: You no longer encourage people to make their own masks
+    m_Metadata:
+      m_Items: []
+  - m_Id: 746216520597504
+    m_Localized: You have placed a new order in external markets for #0# masks
+    m_Metadata:
+      m_Items: []
+  - m_Id: 747329764376576
+    m_Localized: You placed a new order in external markets for #0# doses of vaccine
+    m_Metadata:
+      m_Items: []
+  - m_Id: 752614096683008
+    m_Localized: You have #0# primary schools
+    m_Metadata:
+      m_Items: []
+  - m_Id: 752963549315072
+    m_Localized: opened
+    m_Metadata:
+      m_Items: []
+  - m_Id: 752977348575232
+    m_Localized: closed
+    m_Metadata:
+      m_Items: []
+  - m_Id: 754714486685696
+    m_Localized: You have #0# secondary schools
+    m_Metadata:
+      m_Items: []
+  - m_Id: 754717007462400
+    m_Localized: You have #0# high schools
+    m_Metadata:
+      m_Items: []
+  - m_Id: 754722086764544
+    m_Localized: You have #0# universities
+    m_Metadata:
+      m_Items: []
+  - m_Id: 757613669302272
+    m_Localized: You called for civil liability
+    m_Metadata:
+      m_Items: []
+  - m_Id: 757653049622528
+    m_Localized: You no longer call for civil liability
+    m_Metadata:
+      m_Items: []
+  - m_Id: 757718350741504
+    m_Localized: You order the closure of businesses
+    m_Metadata:
+      m_Items: []
+  - m_Id: 757760948092928
+    m_Localized: You authorize the reopening of businesses
+    m_Metadata:
+      m_Items: []
+  - m_Id: 757798336118784
+    m_Localized: You limit the movement of citizens
+    m_Metadata:
+      m_Items: []
+  - m_Id: 757835883528192
+    m_Localized: You allow citizens to move freely
+    m_Metadata:
+      m_Items: []
+  - m_Id: 758171113275392
+    m_Localized: You increase the number of emergency beds in the care services
+    m_Metadata:
+      m_Items: []
+  - m_Id: 758261999648768
+    m_Localized: You stop the increase in the number of emergency beds
+    m_Metadata:
+      m_Items: []
+  - m_Id: 761356439699456
+    m_Localized: You prohibit citizens between #0# and #1# years old to leave their
+      homes
+    m_Metadata:
+      m_Items: []
+  - m_Id: 761521141628928
+    m_Localized: You no longer impose an age-related exit ban
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 1

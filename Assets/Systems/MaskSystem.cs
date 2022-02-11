@@ -74,7 +74,7 @@ public class MaskSystem : FSystem {
                 masks.nationalStock += incomingMasks;
                 masks.commands -= incomingMasks;
                 // Update UI
-                UI_PendingCommand.text = masks.commands.ToString("N0", CultureInfo.CreateSpecificCulture("fr-FR"));
+                UI_PendingCommand.text = masks.commands.ToString("N0", UnityEngine.Localization.Settings.LocalizationSettings.Instance.GetSelectedLocale().Identifier.CultureInfo);
                 lastMasksDelivery = time.daysGone;
             }
 
@@ -107,7 +107,7 @@ public class MaskSystem : FSystem {
             // Simulation la fluctuation des prix des masques
             float newPrice = masks.maskPrice + Random.Range(-1, 2) * Random.Range(0f, 0.1f);
             masks.maskPrice = Mathf.Max(masks.maskMinPrice, Mathf.Min(masks.maskMaxPrice, newPrice));
-            UI_UnitPriceValue.text = masks.maskPrice.ToString("C", CultureInfo.CreateSpecificCulture("fr-FR")); // style monétaire
+            UI_UnitPriceValue.text = masks.maskPrice.ToString("C", UnityEngine.Localization.Settings.LocalizationSettings.Instance.GetSelectedLocale().Identifier.CultureInfo); // style monétaire
 
         }
     }
@@ -134,7 +134,7 @@ public class MaskSystem : FSystem {
             input.text = "";
             finances.dailySpending += newCommand * masks.maskPrice;
             masks.commands += newCommand;
-            UI_PendingCommand.text = masks.commands.ToString("N0", CultureInfo.CreateSpecificCulture("fr-FR"));
+            UI_PendingCommand.text = masks.commands.ToString("N0", UnityEngine.Localization.Settings.LocalizationSettings.Instance.GetSelectedLocale().Identifier.CultureInfo);
             masks.lastOrderPlaced = time.daysGone;
             masks.lastOrderAmount = newCommand;
         }

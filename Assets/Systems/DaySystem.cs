@@ -1,13 +1,13 @@
 ﻿using UnityEngine;
 using FYFY;
 using System;
-using System.Globalization;
 
 public class DaySystem : FSystem
 {
     private Family f_territories = FamilyManager.getFamily(new AllOfComponents(typeof(TerritoryData)));
 
     public TimeScale time;
+    public Localization localization;
 
     public static DaySystem instance;
 
@@ -71,6 +71,6 @@ public class DaySystem : FSystem
 
     public void UpdateTimeUI(TMPro.TMP_Text textUI)
     {
-        textUI.text = date.ToString("d", CultureInfo.CreateSpecificCulture("fr-FR")) + " (J+" + time.daysGone + ")" ;
+        textUI.text = localization.getFormatedText(localization.date, date.ToString("d", UnityEngine.Localization.Settings.LocalizationSettings.Instance.GetSelectedLocale().Identifier.CultureInfo), time.daysGone);
     }
 }

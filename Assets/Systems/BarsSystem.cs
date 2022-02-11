@@ -85,7 +85,7 @@ public class BarsSystem : FSystem {
             int unit = 0;
             for (int child = 0; child < xAxis.childCount; child++)
             {
-                xAxis.GetChild(child).gameObject.name = (unit / 1000).ToString("N0", CultureInfo.CreateSpecificCulture("fr-FR"));
+                xAxis.GetChild(child).gameObject.name = (unit / 1000).ToString("N0", UnityEngine.Localization.Settings.LocalizationSettings.Instance.GetSelectedLocale().Identifier.CultureInfo);
                 xAxis.GetChild(child).gameObject.GetComponent<TMPro.TextMeshProUGUI>().text = xAxis.GetChild(child).gameObject.name;
                 unit += MapSystem.territorySelected.maxNumber / 10;
             }

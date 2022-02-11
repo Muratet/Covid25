@@ -102,7 +102,7 @@ public class FinanceSystem : FSystem
             if (!bedsNotif && beds.intensiveBeds_need > 0)
             {
                 bedsNotif = true;
-                GameObjectManager.addComponent<ChatMessage>(finances.gameObject, new { sender = "Rapport des hopitaux publics", timeStamp = "" + time.daysGone, messageBody = "Une journée de réanimation coûte "+ finances.oneDayReanimationCost.ToString("N0", CultureInfo.CreateSpecificCulture("fr-FR")) + "€ pour chaque patient." });
+                GameObjectManager.addComponent<ChatMessage>(finances.gameObject, new { sender = "Rapport des hopitaux publics", timeStamp = "" + time.daysGone, messageBody = "Une journée de réanimation coûte "+ finances.oneDayReanimationCost.ToString("N0", UnityEngine.Localization.Settings.LocalizationSettings.Instance.GetSelectedLocale().Identifier.CultureInfo) + "€ pour chaque patient." });
             }
 
 
@@ -120,7 +120,7 @@ public class FinanceSystem : FSystem
                 switch(Random.Range(0, 4))
                 {
                     case 0: messageChosen = "L'opposition s'inquiète de l'accumulation de la dette !!!"; break;
-                    case 1: messageChosen = "La dette du pays dû à la crise atteind " + newDebt.ToString("N0", CultureInfo.CreateSpecificCulture("fr-FR")) + " €. Pour information la dette nationale avant la crise était de 2 500 Md€."; break;
+                    case 1: messageChosen = "La dette du pays dû à la crise atteind " + newDebt.ToString("N0", UnityEngine.Localization.Settings.LocalizationSettings.Instance.GetSelectedLocale().Identifier.CultureInfo) + " €. Pour information la dette nationale avant la crise était de 2 500 Md€."; break;
                     case 2: messageChosen = "Pourrons-nous soutenir ce rythme des mesures encore longtemps ?"; break;
                     case 3: messageChosen = "Avec ce rythme des dépenses, le pays mettra des années à s'en relever."; break;
                 }

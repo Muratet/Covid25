@@ -1,0 +1,1309 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: TextTable_fr
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: fr
+  m_SharedData: {fileID: 11400000, guid: 99e640af2988d7e449b5329219e50244, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 1190635159552
+    m_Localized: Jouer
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1396852310016
+    m_Localized: Personnaliser
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1557146025984
+    m_Localized: 'ans '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10655317016576
+    m_Localized: "Contagiosit\xE9 (R0)"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10961840947200
+    m_Localized: Ecart type de contagion
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11239268990976
+    m_Localized: Pic de contagion
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11349772124160
+    m_Localized: "Courbure de mortalit\xE9"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11430462144512
+    m_Localized: j.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11461789401088
+    m_Localized: j.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11484363145216
+    m_Localized: j.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11578193920000
+    m_Localized: "Ecart type de mortalit\xE9"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11681528987648
+    m_Localized: "Pic de mortalit\xE9"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11901356654592
+    m_Localized: "Age l\xE9tal minimal\n"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12270690287616
+    m_Localized: "Taux de mortalit\xE9 maximum"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12326445170688
+    m_Localized: mois
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12929791606784
+    m_Localized: "Taux d'immunit\xE9 collective"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13016085217280
+    m_Localized: "Taux de cas s\xE9rieux"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13074767724544
+    m_Localized: Jouer
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13097513435136
+    m_Localized: Retour
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13196515786752
+    m_Localized: "Contagiosit\xE9 par jour"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13523893796864
+    m_Localized: "Mortalit\xE9 par age"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13601484226560
+    m_Localized: "Mortalit\xE9 par jour"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13800499757056
+    m_Localized: 'Recherche d''un vaccin
+
+'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13893751717888
+    m_Localized: "Fen\xEAtre de contagion"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19994681458688
+    m_Localized: "2025...\n\n5 ans apr\xE8s la pand\xE9mie de 2020 un nouveau coronavirus
+      est apparu. Plusieurs pays \xE0 travers le monde semblent d\xE9j\xE0 touch\xE9s.
+      La France est pour l'instant encore \xE9pargn\xE9e."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20074712973312
+    m_Localized: "Comment g\xE9rerez-vous ce nouveau risque ?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20647071891456
+    m_Localized: "Bienvenue au centre de gestion de crise !\n\nSuite \xE0 la pand\xE9mie
+      de la Covid 19 de 2020 nos \xE9quipes ont d\xE9velopp\xE9 de nouveaux outils
+      vous permettant de suivre, au jour le jour, la progression de l'\xE9pid\xE9mie.\n\nJe
+      vais vous pr\xE9senter les principales fonctionalit\xE9s.\n\nAllons-y..."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20690155782144
+    m_Localized: Suivant
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20733067706368
+    m_Localized: Passer le tutoriel
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21325316014080
+    m_Localized: "Dans la partie sup\xE9rieure vous pourrez consulter de nombreuses
+      informations comme la progression de l'infection par \xE2ge, la triste \xE9volution
+      des d\xE9c\xE8s... malheureusement comme en 2020 une nouvelle catastrophe s'annonce.\n\nBref,
+      vous aurez aussi des informations sur l'\xE9volution du stock des masques,
+      des vaccins et une estimation du co\xFBt financier de vos actions.\n\nEnfin
+      portez une attention toute particuli\xE8re au m\xE9contentement des citoyens.
+      Il ne doit pas concerner plus de 80% de la population auquel cas votre strat\xE9gie
+      de gestion de la crise pourrait \xEAtre remise en cause..."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21501829103616
+    m_Localized: Suivant
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21535270289408
+    m_Localized: Passer le tutoriel
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21789755490304
+    m_Localized: "Dans la carte int\xE9ractive, cliquez sur une r\xE9gion pour filtrer
+      les donn\xE9es."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22046480449536
+    m_Localized: Suivant
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22069616230400
+    m_Localized: Passer le tutoriel
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22412043403264
+    m_Localized: "Vous noterez que certains indicateurs comme l'\xE9volution des
+      stocks de masques, des stocks de vaccins, du co\xFBt des actions et le m\xE9contentement
+      de la population ne sont pas accessibles au niveau r\xE9gional. "
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22524262006784
+    m_Localized: Suivant
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22555933196288
+    m_Localized: Passer le tutoriel
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22872611536896
+    m_Localized: "La carte vous sera aussi tr\xE8s utile pour mener vos actions.
+      Double-cliquez sur une r\xE9gion pour ouvrir son panneau de configuration."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23445540880384
+    m_Localized: "Proc\xE9dez de m\xEAme avec le bouton \"National\" pour acc\xE9der
+      \xE0 plus d'actions."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23810801844224
+    m_Localized: Suivant
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23837750247424
+    m_Localized: Passer le tutoriel
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24511464521728
+    m_Localized: "Contr\xF4lez le temps...\n\nN'h\xE9sitez pas \xE0 mettre en pause
+      la simulation pour analyser les diff\xE9rents param\xE8tres et faire les bons
+      choix pour notre pays."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24594939559936
+    m_Localized: Suivant
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24616938684416
+    m_Localized: Passer le tutoriel
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24728955961344
+    m_Localized: Consultez vos conseillers.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24777370812416
+    m_Localized: Suivant
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24799130861568
+    m_Localized: Passer le tutoriel
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24982459695104
+    m_Localized: "Contr\xF4lez le R0.\n\nLe R0 d\xE9finit le taux de reproduction
+      du virus. Un taux \xE0 moins de 1 vous permettra de contr\xF4ler l'\xE9pid\xE9mie."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25087715753984
+    m_Localized: Suivant
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25108842463232
+    m_Localized: Passer le tutoriel
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25727556829184
+    m_Localized: "Aidez le pays \xE0 stabiliser l'\xE9pid\xE9mie et atteignez l'immunit\xE9
+      collective.\r\n\r\nMais surtout, \xE9vitez la crise sociale : 15 jours \xE0
+      plus de 80% de m\xE9contentement et vous devrez certainement d\xE9missioner
+      de vos fonctions.\r\n\r\nA vous de jouer..."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25774868578304
+    m_Localized: Recommencer
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25836067667968
+    m_Localized: Terminer
+    m_Metadata:
+      m_Items: []
+  - m_Id: 27052701040640
+    m_Localized: 10 jours
+    m_Metadata:
+      m_Items: []
+  - m_Id: 27098607697920
+    m_Localized: 10 sem.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 27321321046016
+    m_Localized: 10 mois
+    m_Metadata:
+      m_Items: []
+  - m_Id: 27451692597248
+    m_Localized: 1 an
+    m_Metadata:
+      m_Items: []
+  - m_Id: 27482482982912
+    m_Localized: Tout
+    m_Metadata:
+      m_Items: []
+  - m_Id: 28143824060416
+    m_Localized: '- Nouveau(x) message(s) -'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 28333171720192
+    m_Localized: "Retourner \xE0 l'\xE9cran de fin"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 29085868933120
+    m_Localized: "Vous avez r\xE9ussi \xE0 contr\xF4ler l'\xE9pid\xE9mie"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 29496239636480
+    m_Localized: "LE PEUPLE SE SOULEVE CONTRE VOTRE POLITIQUE !!!\nAllez-vous d\xE9missionner
+      ?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 29583950921728
+    m_Localized: 'Nombre de morts : '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 29641412886528
+    m_Localized: "Dette due \xE0 la crise : "
+    m_Metadata:
+      m_Items: []
+  - m_Id: 29695158697984
+    m_Localized: "Jours pass\xE9s : "
+    m_Metadata:
+      m_Items: []
+  - m_Id: 30257640030208
+    m_Localized: Faire mieux
+    m_Metadata:
+      m_Items: []
+  - m_Id: 30362413744128
+    m_Localized: "Revoir l'\xE9tat du pays"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 30424514609152
+    m_Localized: "Poursuivre co\xFBte que co\xFBte..."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 30485373960192
+    m_Localized: 'Partagez vos scores :'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 30557465657344
+    m_Localized: Entrer votre pseudo...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 30691410755584
+    m_Localized: Envoyer
+    m_Metadata:
+      m_Items: []
+  - m_Id: 30844154724352
+    m_Localized: Voir le tableau des scores
+    m_Metadata:
+      m_Items: []
+  - m_Id: 31576794775552
+    m_Localized: Progression de la recherche mondiale d'un vaccin
+    m_Metadata:
+      m_Items: []
+  - m_Id: 31659821023232
+    m_Localized: 'Prix unitaire :'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 31737193349120
+    m_Localized: 'Commander des vaccins aux laboratoires :'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 31915212193792
+    m_Localized: "Le prix unitaire d'une dose de vaccin varie au cours du temps.\nLes
+      vaccins sont livr\xE9s par lots de plusieurs centaines de miliers d'unit\xE9s
+      tous les huit jours en moyenne en fonction de la demande mondiale."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 32048100327424
+    m_Localized: "Quantit\xE9..."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 32118308782080
+    m_Localized: Commander
+    m_Metadata:
+      m_Items: []
+  - m_Id: 32169181495296
+    m_Localized: 'Doses en attente de livraison :'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 32361683271680
+    m_Localized: "Fermeture des fronti\xE8res :"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 32510476206080
+    m_Localized: "<color=#008000ff>+ R\xE9duit le stress de la population si per\xE7u
+      comme utile</color>\n<color=#C15C00ff>- Augmente le m\xE9contentement de la
+      population si per\xE7u comme inutile\n- Impact \xE9conomique</color>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 33186379907072
+    m_Localized: Aucune
+    m_Metadata:
+      m_Items: []
+  - m_Id: 33338905772032
+    m_Localized: Aucune
+    m_Metadata:
+      m_Items: []
+  - m_Id: 33420480790528
+    m_Localized: "Seul fret mondial/europ\xE9en"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 33470653054976
+    m_Localized: "Seul fret europ\xE9en"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 33516496797696
+    m_Localized: Total (fret et civil)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 33653361131520
+    m_Localized: Annuler les charges des entreprises
+    m_Metadata:
+      m_Items: []
+  - m_Id: 33890423193600
+    m_Localized: "<color=#008000ff>+ R\xE9duit le m\xE9contentement de la population
+      si per\xE7u comme utile</color>\n<color=#C15C00ff>- Augmente le m\xE9contentement
+      de la population si per\xE7u comme inutile\n- Impact financier</color>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 34117142102016
+    m_Localized: "Inciter au t\xE9l\xE9travail"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 34659432054784
+    m_Localized: "<color=#008000ff>+ R\xE9duit la propagation du virus\n+ En cas
+      de confinement, r\xE9duit  l'impact financier</color>\n<color=#C15C00ff>- Augmente
+      le m\xE9contentement de la population si combin\xE9 avec la fermeture des \xE9coles
+      ou des coll\xE8ges</color>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 35584871677952
+    m_Localized: "Autoriser le ch\xF4mage partiel"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 37086407344128
+    m_Localized: "<color=#008000ff>+ R\xE9duit le m\xE9contentement de la population</color>\n<color=#C15C00ff>-
+      Impact financier</color>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 37583545614336
+    m_Localized: "R\xE9quisitionner les masques pour les\npersonnels de sant\xE9"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 38029131694080
+    m_Localized: "<color=#008000ff>+ R\xE9duit la consommation de masques homologu\xE9s</color>\n<color=#C15C00ff>-
+      Augmente le m\xE9contentement de la population</color>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 38293028913152
+    m_Localized: Booster la production nationale de masques
+    m_Metadata:
+      m_Items: []
+  - m_Id: 38764263161856
+    m_Localized: "<color=#008000ff>+ Augmente la production de masques homologu\xE9s\n+
+      R\xE9duit le m\xE9contentement de la population</color>\n<color=#C15C00ff>-
+      Impact financier</color>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 39545318064128
+    m_Localized: "Inciter \xE0 la production artisanale de masques"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 39894296739840
+    m_Localized: "<color=#008000ff>+ R\xE9duit la propagation du virus\n+ R\xE9duit
+      la consommation de masques homologu\xE9s</color>\n<color=#C15C00ff>- Augmente
+      le m\xE9contentement de la population si per\xE7u comme inutile</color>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 40122865336320
+    m_Localized: 'Prix unitaire :'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 40211532922880
+    m_Localized: "Importer des masques homologu\xE9s de l'\xE9tranger :"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 40718708162560
+    m_Localized: "Le prix unitaire des masques achet\xE9s \xE0 l'\xE9tranger varie
+      au cours du temps.<br>Les masques sont livr\xE9s par lots de plusieurs millions
+      tous les huit jours en moyenne."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 40795589754880
+    m_Localized: "Quantit\xE9..."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 40842557571072
+    m_Localized: Commander
+    m_Metadata:
+      m_Items: []
+  - m_Id: 40899688185856
+    m_Localized: 'Masques en attente de livraison :'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 353320487272448
+    m_Localized: "Arr\xEAt des enseignements :"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 353540918919168
+    m_Localized: "\xE9coles"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 354224187817984
+    m_Localized: "<color=#008000ff>+ R\xE9duit la propagation du virus</color>\n<color=#C15C00ff>-
+      Augmente le m\xE9contentement de la population si per\xE7u comme inutile\n-
+      Augmente le m\xE9contentement de la population si combin\xE9 avec le t\xE9l\xE9travail</color>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 356502596665344
+    m_Localized: "coll\xE8ges"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 357249509933056
+    m_Localized: "<color=#008000ff>+ R\xE9duit la propagation du virus</color>\n<color=#C15C00ff>-
+      Augmente le m\xE9contentement de la population si per\xE7u comme inutile\n-
+      Augmente le m\xE9contentement de la population si combin\xE9 avec le t\xE9l\xE9travail</color>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 357622224175104
+    m_Localized: "lyc\xE9es"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 358272139968512
+    m_Localized: "<color=#008000ff>+ R\xE9duit la propagation du virus</color>\n<color=#C15C00ff>-
+      Augmente le m\xE9contentement de la population si per\xE7u comme inutile</color>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 358462833999872
+    m_Localized: "universit\xE9s"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 358785476640768
+    m_Localized: "<color=#008000ff>+ R\xE9duit la propagation du virus</color>\n<color=#C15C00ff>-
+      Augmente le m\xE9contentement de la population si per\xE7u comme inutile</color>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 358924207439872
+    m_Localized: "Appeler \xE0 la responsabilit\xE9 civique"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 359077370839040
+    m_Localized: "<color=#008000ff>+ R\xE9duit la propagation du virus</color>\n<color=#C15C00ff>-
+      Augmente le m\xE9contentement de la population si per\xE7u comme inutile</color>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 359210774872064
+    m_Localized: "Fermer les commerces grands publics (except\xE9s alimentaires)"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 359342769618944
+    m_Localized: "<color=#008000ff>+ R\xE9duit la propagation du virus</color>\n<color=#C15C00ff>-
+      Impact financier\n- Augmente le m\xE9contentement de la population si per\xE7u
+      comme inutile</color>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 360231446167552
+    m_Localized: "R\xE9duction des libert\xE9s de d\xE9placement (Attestation de
+      sortie requise)"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 360455627522048
+    m_Localized: "<color=#008000ff>+ R\xE9duit la propagation du virus\n+ R\xE9duit
+      les d\xE9placements inter-r\xE9gions</color>\n<color=#C15C00ff>- Augmente le
+      m\xE9contentement de la population si per\xE7u comme inutile</color>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 362086289031168
+    m_Localized: "Booster le nombre de lits de r\xE9animation"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 362175430574080
+    m_Localized: "<color=#008000ff>+ Augmente le nombre de patient et r\xE9duit la
+      mortalit\xE9</color>\n<color=#C15C00ff>- Impact financier</color>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 362330376552448
+    m_Localized: 'Interdiction de sortie entre :'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 362609243242496
+    m_Localized: "<color=#008000ff>+ R\xE9duit la propagation du virus\n+ R\xE9duit
+      les d\xE9placements inter-r\xE9gions</color>\n<color=#C15C00ff>- Impact financier
+      si concerne des travailleurs\n- Augmente le m\xE9contentement de la population
+      si per\xE7u comme inutile</color>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 363179123326976
+    m_Localized: 'ans et '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 363234244870144
+    m_Localized: ans
+    m_Metadata:
+      m_Items: []
+  - m_Id: 363473831903232
+    m_Localized: 'Activer :'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 367173145116672
+    m_Localized: "<b>Donn\xE9es par \xE2ge</b>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 367576951734272
+    m_Localized: "<b>Historique des d\xE9c\xE8s</b>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 367662544896000
+    m_Localized: "<b>Cumul des d\xE9c\xE8s</b>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 367718463356928
+    m_Localized: <b>Stock des masques</b>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 367786297835520
+    m_Localized: <b>Stock de vaccins</b>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 367884541018112
+    m_Localized: <b>Bilan financier</b>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 368063126093824
+    m_Localized: "<b>M\xE9contentement de la population</b><br>Si le m\xE9contentement
+      de la population d\xE9passe 80%<br>sur 15 jours cons\xE9cutifs, vous perdez
+      la partie"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 370590454300672
+    m_Localized: <b>Stock des masques</b><br><color=#C15C00ff>Seulement disponible
+      en national</color>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 370629067063296
+    m_Localized: <b>Stock des masques</b><br><color=#C15C00ff>Seulement disponible
+      en national</color>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 370646616031232
+    m_Localized: <b>Stock des masques</b><br><color=#C15C00ff>Seulement disponible
+      en national</color>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 370666207625216
+    m_Localized: <b>Stock des masques</b><br><color=#C15C00ff>Seulement disponible
+      en national</color>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 370686201872384
+    m_Localized: <b>Stock des masques</b><br><color=#C15C00ff>Seulement disponible
+      en national</color>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 370706724601856
+    m_Localized: <b>Stock des masques</b><br><color=#C15C00ff>Seulement disponible
+      en national</color>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 370726572048384
+    m_Localized: <b>Stock des masques</b><br><color=#C15C00ff>Seulement disponible
+      en national</color>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 370743777083392
+    m_Localized: <b>Stock des masques</b><br><color=#C15C00ff>Seulement disponible
+      en national</color>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 370759958708224
+    m_Localized: <b>Stock des masques</b><br><color=#C15C00ff>Seulement disponible
+      en national</color>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 370776119361536
+    m_Localized: <b>Stock des masques</b><br><color=#C15C00ff>Seulement disponible
+      en national</color>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 370799297085440
+    m_Localized: <b>Stock des masques</b><br><color=#C15C00ff>Seulement disponible
+      en national</color>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 370815982026752
+    m_Localized: <b>Stock des masques</b><br><color=#C15C00ff>Seulement disponible
+      en national</color>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 370837456863232
+    m_Localized: <b>Stock des masques</b><br><color=#C15C00ff>Seulement disponible
+      en national</color>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 370855454621696
+    m_Localized: <b>Stock des masques</b><br><color=#C15C00ff>Seulement disponible
+      en national</color>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 370874765197312
+    m_Localized: <b>Stock des masques</b><br><color=#C15C00ff>Seulement disponible
+      en national</color>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 370895220817920
+    m_Localized: <b>Stock des masques</b><br><color=#C15C00ff>Seulement disponible
+      en national</color>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 370919577141248
+    m_Localized: <b>Stock des masques</b><br><color=#C15C00ff>Seulement disponible
+      en national</color>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 370936362745856
+    m_Localized: <b>Stock des masques</b><br><color=#C15C00ff>Seulement disponible
+      en national</color>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 370956130500608
+    m_Localized: <b>Stock des masques</b>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 371025328128000
+    m_Localized: <b>Bilan financier</b><br><color=#C15C00ff>Seulement disponible
+      en national</color>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 371077706596352
+    m_Localized: "<b>M\xE9contentement de la population</b><br>Si le m\xE9contentement
+      de la population d\xE9passe 80%<br>sur 15 jours cons\xE9cutifs, vous perdez
+      la partie<br><color=#C15C00ff>Seulement disponible en national</color>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 371100070625280
+    m_Localized: <b>Stock de vaccins</b><br><color=#C15C00ff>Seulement disponible
+      en national</color>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 371171352821760
+    m_Localized: <b>Bilan financier</b><br><color=#C15C00ff>Seulement disponible
+      en national</color>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 371208384331776
+    m_Localized: "<b>M\xE9contentement de la population</b><br>Si le m\xE9contentement
+      de la population d\xE9passe 80%<br>sur 15 jours cons\xE9cutifs, vous perdez
+      la partie<br><color=#C15C00ff>Seulement disponible en national</color>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 371222061957120
+    m_Localized: <b>Stock de vaccins</b><br><color=#C15C00ff>Seulement disponible
+      en national</color>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 371272515239936
+    m_Localized: <b>Bilan financier</b><br><color=#C15C00ff>Seulement disponible
+      en national</color>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 371294082351104
+    m_Localized: "<b>M\xE9contentement de la population</b><br>Si le m\xE9contentement
+      de la population d\xE9passe 80%<br>sur 15 jours cons\xE9cutifs, vous perdez
+      la partie<br><color=#C15C00ff>Seulement disponible en national</color>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 371309173456896
+    m_Localized: <b>Stock de vaccins</b><br><color=#C15C00ff>Seulement disponible
+      en national</color>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 371352878104576
+    m_Localized: <b>Bilan financier</b><br><color=#C15C00ff>Seulement disponible
+      en national</color>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 371373690241024
+    m_Localized: "<b>M\xE9contentement de la population</b><br>Si le m\xE9contentement
+      de la population d\xE9passe 80%<br>sur 15 jours cons\xE9cutifs, vous perdez
+      la partie<br><color=#C15C00ff>Seulement disponible en national</color>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 371389221748736
+    m_Localized: <b>Stock de vaccins</b><br><color=#C15C00ff>Seulement disponible
+      en national</color>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 371437993115648
+    m_Localized: <b>Bilan financier</b><br><color=#C15C00ff>Seulement disponible
+      en national</color>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 371461548326912
+    m_Localized: "<b>M\xE9contentement de la population</b><br>Si le m\xE9contentement
+      de la population d\xE9passe 80%<br>sur 15 jours cons\xE9cutifs, vous perdez
+      la partie<br><color=#C15C00ff>Seulement disponible en national</color>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 371473439178752
+    m_Localized: <b>Stock de vaccins</b><br><color=#C15C00ff>Seulement disponible
+      en national</color>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 371507475955712
+    m_Localized: <b>Bilan financier</b><br><color=#C15C00ff>Seulement disponible
+      en national</color>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 371527721861120
+    m_Localized: "<b>M\xE9contentement de la population</b><br>Si le m\xE9contentement
+      de la population d\xE9passe 80%<br>sur 15 jours cons\xE9cutifs, vous perdez
+      la partie<br><color=#C15C00ff>Seulement disponible en national</color>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 371540145389568
+    m_Localized: <b>Stock de vaccins</b><br><color=#C15C00ff>Seulement disponible
+      en national</color>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 371577822822400
+    m_Localized: <b>Bilan financier</b><br><color=#C15C00ff>Seulement disponible
+      en national</color>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 371598676901888
+    m_Localized: "<b>M\xE9contentement de la population</b><br>Si le m\xE9contentement
+      de la population d\xE9passe 80%<br>sur 15 jours cons\xE9cutifs, vous perdez
+      la partie<br><color=#C15C00ff>Seulement disponible en national</color>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 371609762447360
+    m_Localized: <b>Stock de vaccins</b><br><color=#C15C00ff>Seulement disponible
+      en national</color>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 371640053710848
+    m_Localized: <b>Bilan financier</b><br><color=#C15C00ff>Seulement disponible
+      en national</color>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 371660308004864
+    m_Localized: "<b>M\xE9contentement de la population</b><br>Si le m\xE9contentement
+      de la population d\xE9passe 80%<br>sur 15 jours cons\xE9cutifs, vous perdez
+      la partie<br><color=#C15C00ff>Seulement disponible en national</color>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 371671414521856
+    m_Localized: <b>Stock de vaccins</b><br><color=#C15C00ff>Seulement disponible
+      en national</color>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 371705170280448
+    m_Localized: <b>Bilan financier</b><br><color=#C15C00ff>Seulement disponible
+      en national</color>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 371726095663104
+    m_Localized: "<b>M\xE9contentement de la population</b><br>Si le m\xE9contentement
+      de la population d\xE9passe 80%<br>sur 15 jours cons\xE9cutifs, vous perdez
+      la partie<br><color=#C15C00ff>Seulement disponible en national</color>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 371740008169472
+    m_Localized: <b>Stock de vaccins</b><br><color=#C15C00ff>Seulement disponible
+      en national</color>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 371767820599296
+    m_Localized: <b>Bilan financier</b><br><color=#C15C00ff>Seulement disponible
+      en national</color>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 371793728815104
+    m_Localized: "<b>M\xE9contentement de la population</b><br>Si le m\xE9contentement
+      de la population d\xE9passe 80%<br>sur 15 jours cons\xE9cutifs, vous perdez
+      la partie<br><color=#C15C00ff>Seulement disponible en national</color>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 371806114594816
+    m_Localized: <b>Stock de vaccins</b><br><color=#C15C00ff>Seulement disponible
+      en national</color>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 371836141617152
+    m_Localized: <b>Bilan financier</b><br><color=#C15C00ff>Seulement disponible
+      en national</color>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 371857570316288
+    m_Localized: "<b>M\xE9contentement de la population</b><br>Si le m\xE9contentement
+      de la population d\xE9passe 80%<br>sur 15 jours cons\xE9cutifs, vous perdez
+      la partie<br><color=#C15C00ff>Seulement disponible en national</color>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 371868194488320
+    m_Localized: <b>Stock de vaccins</b><br><color=#C15C00ff>Seulement disponible
+      en national</color>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 371904433274880
+    m_Localized: <b>Bilan financier</b><br><color=#C15C00ff>Seulement disponible
+      en national</color>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 371926453370880
+    m_Localized: "<b>M\xE9contentement de la population</b><br>Si le m\xE9contentement
+      de la population d\xE9passe 80%<br>sur 15 jours cons\xE9cutifs, vous perdez
+      la partie<br><color=#C15C00ff>Seulement disponible en national</color>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 371940256825344
+    m_Localized: <b>Stock de vaccins</b><br><color=#C15C00ff>Seulement disponible
+      en national</color>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 371975178600448
+    m_Localized: <b>Bilan financier</b><br><color=#C15C00ff>Seulement disponible
+      en national</color>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 371993402851328
+    m_Localized: "<b>M\xE9contentement de la population</b><br>Si le m\xE9contentement
+      de la population d\xE9passe 80%<br>sur 15 jours cons\xE9cutifs, vous perdez
+      la partie<br><color=#C15C00ff>Seulement disponible en national</color>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 372008003223552
+    m_Localized: <b>Stock de vaccins</b><br><color=#C15C00ff>Seulement disponible
+      en national</color>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 372047387738112
+    m_Localized: <b>Bilan financier</b><br><color=#C15C00ff>Seulement disponible
+      en national</color>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 372066283077632
+    m_Localized: "<b>M\xE9contentement de la population</b><br>Si le m\xE9contentement
+      de la population d\xE9passe 80%<br>sur 15 jours cons\xE9cutifs, vous perdez
+      la partie<br><color=#C15C00ff>Seulement disponible en national</color>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 372085111308288
+    m_Localized: <b>Stock de vaccins</b><br><color=#C15C00ff>Seulement disponible
+      en national</color>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 372140287377408
+    m_Localized: <b>Bilan financier</b><br><color=#C15C00ff>Seulement disponible
+      en national</color>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 372161506361344
+    m_Localized: "<b>M\xE9contentement de la population</b><br>Si le m\xE9contentement
+      de la population d\xE9passe 80%<br>sur 15 jours cons\xE9cutifs, vous perdez
+      la partie<br><color=#C15C00ff>Seulement disponible en national</color>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 372175288844288
+    m_Localized: <b>Stock de vaccins</b><br><color=#C15C00ff>Seulement disponible
+      en national</color>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 372208352542720
+    m_Localized: <b>Bilan financier</b><br><color=#C15C00ff>Seulement disponible
+      en national</color>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 372228929798144
+    m_Localized: "<b>M\xE9contentement de la population</b><br>Si le m\xE9contentement
+      de la population d\xE9passe 80%<br>sur 15 jours cons\xE9cutifs, vous perdez
+      la partie<br><color=#C15C00ff>Seulement disponible en national</color>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 372245425995776
+    m_Localized: <b>Stock de vaccins</b><br><color=#C15C00ff>Seulement disponible
+      en national</color>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 372277415952384
+    m_Localized: <b>Bilan financier</b><br><color=#C15C00ff>Seulement disponible
+      en national</color>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 372297695412224
+    m_Localized: "<b>M\xE9contentement de la population</b><br>Si le m\xE9contentement
+      de la population d\xE9passe 80%<br>sur 15 jours cons\xE9cutifs, vous perdez
+      la partie<br><color=#C15C00ff>Seulement disponible en national</color>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 372310337044480
+    m_Localized: <b>Stock de vaccins</b><br><color=#C15C00ff>Seulement disponible
+      en national</color>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 372342427664384
+    m_Localized: <b>Bilan financier</b><br><color=#C15C00ff>Seulement disponible
+      en national</color>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 372362640015360
+    m_Localized: "<b>M\xE9contentement de la population</b><br>Si le m\xE9contentement
+      de la population d\xE9passe 80%<br>sur 15 jours cons\xE9cutifs, vous perdez
+      la partie<br><color=#C15C00ff>Seulement disponible en national</color>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 372373016723456
+    m_Localized: <b>Stock de vaccins</b><br><color=#C15C00ff>Seulement disponible
+      en national</color>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 372835132555264
+    m_Localized: <b>Bilan financier</b>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 373401384566784
+    m_Localized: "<b>M\xE9contentement de la population</b><br>Si le m\xE9contentement
+      de la population d\xE9passe 80%<br>sur 15 jours cons\xE9cutifs, vous perdez
+      la partie"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 374559033442304
+    m_Localized: <b>Stock de vaccins</b>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 375172160995328
+    m_Localized: Consulter les conseillers
+    m_Metadata:
+      m_Items: []
+  - m_Id: 375584448495616
+    m_Localized: Jouer la simulation
+    m_Metadata:
+      m_Items: []
+  - m_Id: 375806666915840
+    m_Localized: "Nombre de jours pass\xE9s depuis le d\xE9but de la simulation"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 375906415853568
+    m_Localized: "R0 du territoire s\xE9lectionn\xE9<br>R0 d\xE9finit le taux de
+      reproduction du virus<br>Un taux \xE0 moins de 1 vous permettra de contr\xF4ler
+      l'\xE9pid\xE9mie"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 376725005582336
+    m_Localized: Fermer le panneau
+    m_Metadata:
+      m_Items: []
+  - m_Id: 376780143902720
+    m_Localized: Fermer le panneau
+    m_Metadata:
+      m_Items: []
+  - m_Id: 376797596401664
+    m_Localized: Fermer le panneau
+    m_Metadata:
+      m_Items: []
+  - m_Id: 376811693457408
+    m_Localized: Fermer le panneau
+    m_Metadata:
+      m_Items: []
+  - m_Id: 377528558731264
+    m_Localized: 'Nombre de citoyens
+
+      (en milliers)'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 377725028319232
+    m_Localized: "Age r\xE9volu"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 377794070757376
+    m_Localized: "Non contamin\xE9s"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 377827927179264
+    m_Localized: "Contamin\xE9s"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 377875519946752
+    m_Localized: "D\xE9c\xE9d\xE9s"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 377922559066112
+    m_Localized: "Gu\xE9ris"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 378129883512832
+    m_Localized: "Occupation lit de r\xE9animation"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 378187370643456
+    m_Localized: "Occupation en lit de r\xE9animation"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 378228420296704
+    m_Localized: "Occupation en lit de r\xE9animation"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 378430615109632
+    m_Localized: Jours
+    m_Metadata:
+      m_Items: []
+  - m_Id: 378460973481984
+    m_Localized: "D\xE9c\xE8s journaliers"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 378598747979776
+    m_Localized: Jours
+    m_Metadata:
+      m_Items: []
+  - m_Id: 378638988132352
+    m_Localized: "D\xE9c\xE8s cumul\xE9s"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 378736790913024
+    m_Localized: Jours
+    m_Metadata:
+      m_Items: []
+  - m_Id: 378771037405184
+    m_Localized: Stock de masques
+    m_Metadata:
+      m_Items: []
+  - m_Id: 378819003465728
+    m_Localized: (en Millions)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 378883444752384
+    m_Localized: Jours
+    m_Metadata:
+      m_Items: []
+  - m_Id: 378920388182016
+    m_Localized: Stock de vaccins
+    m_Metadata:
+      m_Items: []
+  - m_Id: 378988159746048
+    m_Localized: Jours
+    m_Metadata:
+      m_Items: []
+  - m_Id: 379047756611584
+    m_Localized: "Dette (\u20AC)\n"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 379112604745728
+    m_Localized: Jours
+    m_Metadata:
+      m_Items: []
+  - m_Id: 386877788176384
+    m_Localized: J+0
+    m_Metadata:
+      m_Items: []
+  - m_Id: 719629918060544
+    m_Localized: '#0# (J+#1#)'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 722245527977984
+    m_Localized: "Conseiller au num\xE9rique"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 723318531604480
+    m_Localized: Pour passer aux jours suivants, cliquez sur le bouton Play.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 729274988544000
+    m_Localized: J+
+    m_Metadata:
+      m_Items: []
+  - m_Id: 729371570782208
+    m_Localized: J+
+    m_Metadata:
+      m_Items: []
+  - m_Id: 729396514308096
+    m_Localized: Vous
+    m_Metadata:
+      m_Items: []
+  - m_Id: 730389612249088
+    m_Localized: "Vous avez ouvert les fronti\xE8res"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 730480431513600
+    m_Localized: "Vous avez restreint l'ouverture des fronti\xE8res seulement au
+      fret mondial et europ\xE9en"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 730560970539008
+    m_Localized: "Vous avez restreint l'ouverture des fronti\xE8res seulement au
+      fret europ\xE9en"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 730641928994816
+    m_Localized: "Vous avez ferm\xE9 totalement les fronti\xE8res"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 739484943695872
+    m_Localized: Vous ne soutenez plus les entreprises
+    m_Metadata:
+      m_Items: []
+  - m_Id: 739437422231552
+    m_Localized: Vous annulez les charges des entreprises
+    m_Metadata:
+      m_Items: []
+  - m_Id: 740701077946368
+    m_Localized: "Vous incitez les entreprises \xE0 mettre en place un t\xE9l\xE9travail
+      massif"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 740798629068800
+    m_Localized: "Vous n'incitez plus au t\xE9l\xE9travail"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 741749775581184
+    m_Localized: "Vous ouvrez les conditions d'acc\xE8s au ch\xF4mage partiel"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 741790909120512
+    m_Localized: "Vous restreignez les conditions d'acceptation du ch\xF4mage partiel"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 743131073134592
+    m_Localized: "Vous r\xE9quisitionnez les masques pour le corps m\xE9dical"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 743173389467648
+    m_Localized: "Vous ne r\xE9quisitionnez plus les masques"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 743454017765376
+    m_Localized: "Vous soutenez toutes les entreprises qui augmentent leur production
+      de masques homologu\xE9s"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 743532090540032
+    m_Localized: "Vous n'incitez plus \xE0 la production de masques"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 743580618637312
+    m_Localized: "Vous incitez la population \xE0 se confectionner leurs propres
+      masques"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 743619977986048
+    m_Localized: "Vous n'incitez plus la population \xE0 se confectionner leurs propres
+      masques"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 746216520597504
+    m_Localized: "Vous avez pass\xE9 une nouvelle commande sur les march\xE9s ext\xE9rieurs
+      de #0# masques"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 747329764376576
+    m_Localized: "Vous avez pass\xE9 une nouvelle commande sur les march\xE9s ext\xE9rieurs
+      de #0# doses de vaccin"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 752614096683008
+    m_Localized: "Vous avez #0# les \xE9coles maternelles et primaires"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 752963549315072
+    m_Localized: ouvert
+    m_Metadata:
+      m_Items: []
+  - m_Id: 752977348575232
+    m_Localized: "ferm\xE9"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 754714486685696
+    m_Localized: "Vous avez #0# les coll\xE8ges"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 754717007462400
+    m_Localized: "Vous avez #0# les lyc\xE9es"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 754722086764544
+    m_Localized: "Vous avez #0# les universit\xE9s"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 757613669302272
+    m_Localized: "Vous avez appel\xE9 \xE0 la responsabilit\xE9 civile"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 757653049622528
+    m_Localized: "Vous n'appelez plus \xE0 la responsabilit\xE9 civile"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 757718350741504
+    m_Localized: Vous ordonnez la fermeture des commerces
+    m_Metadata:
+      m_Items: []
+  - m_Id: 757760948092928
+    m_Localized: "Vous autorisez la r\xE9ouverture des commerces"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 757798336118784
+    m_Localized: "Vous limitez le d\xE9placement des citoyens"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 757835883528192
+    m_Localized: "Vous autorisez les citoyens \xE0 se d\xE9placer librement"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 758171113275392
+    m_Localized: "Vous augmentez le nombre de lits de r\xE9animation dans les services
+      de soin"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 758261999648768
+    m_Localized: "Vous stoppez l'augmentation du nombre de lits de r\xE9animation"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 761356439699456
+    m_Localized: "Vous interdisez aux citoyens \xE2g\xE9s de #0# \xE0 #1# ans de
+      sortir de leur domicile"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 761521141628928
+    m_Localized: "Vous n'imposez plus d'interdiction de sortie li\xE9e \xE0 l'\xE2ge"
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 1

@@ -434,6 +434,6 @@ public class InfectionSystem : FSystem
         }
         else
             R0 = ComputeR0(MapSystem.territorySelected);
-        textUI.text = "R0 : "+R0.ToString("N2", CultureInfo.CreateSpecificCulture("fr-FR"));
+        textUI.text = "R0 : "+R0.ToString("N2", UnityEngine.Localization.Settings.LocalizationSettings.Instance.GetSelectedLocale().Identifier.CultureInfo);
     }
 }
