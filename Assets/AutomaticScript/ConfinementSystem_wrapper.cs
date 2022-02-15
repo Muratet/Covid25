@@ -6,12 +6,14 @@ public class ConfinementSystem_wrapper : BaseWrapper
 	public UnityEngine.GameObject countrySimData;
 	public UnityEngine.Sprite defaultMark;
 	public UnityEngine.Sprite customMark;
+	public Localization localization;
 	private void Start()
 	{
 		this.hideFlags = HideFlags.NotEditable;
 		MainLoop.initAppropriateSystemField (system, "countrySimData", countrySimData);
 		MainLoop.initAppropriateSystemField (system, "defaultMark", defaultMark);
 		MainLoop.initAppropriateSystemField (system, "customMark", customMark);
+		MainLoop.initAppropriateSystemField (system, "localization", localization);
 	}
 
 	public void updateCountryUI()

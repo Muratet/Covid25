@@ -11,6 +11,8 @@ public class BedsSystem : FSystem
     private TimeScale time;
     private VirusStats virusStats;
 
+    public Localization localization;
+
     public static BedsSystem instance;
 
     public BedsSystem()
@@ -50,14 +52,7 @@ public class BedsSystem : FSystem
 
                 if (beds.intensiveBeds_need > beds.intensiveBeds_current && beds.advisorNotification == -1 && territory.TerritoryName != "France")
                 {
-                    string msgBody = "Attention les hopitaux ";
-                    if (territory.TerritoryName == "Mayotte" || territory.TerritoryName == "La Réunion")
-                        msgBody += "à " + territory.TerritoryName;
-                    else
-                        msgBody += "en " + (territory.TerritoryName == "La Corse" ? "Corse" : territory.TerritoryName);
-                    msgBody += " sont dépassés. Il y a trop de cas malades par rapport au nombre de lits de réanimation.";
-
-                    GameObjectManager.addComponent<ChatMessage>(beds.gameObject, new { sender = "Fédération des hôpitaux", timeStamp = "" + time.daysGone, messageBody = msgBody });
+                    GameObjectManager.addComponent<ChatMessage>(beds.gameObject, new { sender = localization.advisorTitleHospital, timeStamp = "" + time.daysGone, messageBody = localization.getFormatedText(localization.advisorHospitalTexts[0], territory.TerritoryName) });
                     beds.advisorNotification = 0;
                 }
                 else if (beds.intensiveBeds_need < beds.intensiveBeds_current && beds.advisorNotification > 10)

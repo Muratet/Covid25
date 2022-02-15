@@ -12,6 +12,7 @@ public class IgnoreAlpha : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
 
     private AudioSource audioSource;
     public AudioClip audioClip;
+    private Localization localization;
 
     void Start()
     {
@@ -20,32 +21,33 @@ public class IgnoreAlpha : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
         animator = GetComponent<Animator>();
         tooltip = GameObject.Find("TooltipUI").GetComponent<Tooltip>();
         audioSource = GameObject.Find("AudioEffects").GetComponentInParent<AudioSource>();
+        localization = GameObject.Find("Localization").GetComponent<Localization>();
     }
 
     public void OnPointerEnter(PointerEventData eventData)
     {
         string tooltipContent = "<b>"+territory.TerritoryName+"</b>";
         if (territory.closePrimarySchool)
-            tooltipContent += "<br>  * Fermeture des écoles";
+            tooltipContent += "<br>  * "+localization.territoriesTooltip[0];
         if (territory.closeSecondarySchool)
-            tooltipContent += "<br>  * Fermeture des collèges";
+            tooltipContent += "<br>  * " + localization.territoriesTooltip[1];
         if (territory.closeHighSchool)
-            tooltipContent += "<br>  * Fermeture des lycées";
+            tooltipContent += "<br>  * " + localization.territoriesTooltip[2];
         if (territory.closeUniversity)
-            tooltipContent += "<br>  * Fermeture des universités";
+            tooltipContent += "<br>  * " + localization.territoriesTooltip[3];
         if (territory.callCivicism)
-            tooltipContent += "<br>  * Appel civique";
+            tooltipContent += "<br>  * " + localization.territoriesTooltip[4];
         if (territory.closeShop)
-            tooltipContent += "<br>  * Fermeture commerces";
+            tooltipContent += "<br>  * " + localization.territoriesTooltip[5];
         if (territory.certificateRequired)
-            tooltipContent += "<br>  * Certificat requis";
+            tooltipContent += "<br>  * " + localization.territoriesTooltip[6];
         if (territory.ageDependent && territory.ageDependentMin != "" && territory.ageDependentMax != "")
-            tooltipContent += "<br>  * Interdiction de sortie entre " + territory.ageDependentMin + " et "+ territory.ageDependentMax + " ans";
+            tooltipContent += "<br>  * " + localization.getFormatedText(localization.territoriesTooltip[7], territory.ageDependentMin, territory.ageDependentMax);
         if (territory.GetComponent<Beds>().boostBeds)
-            tooltipContent += "<br>  * lits boostés";
+            tooltipContent += "<br>  * " + localization.territoriesTooltip[8];
 
-        tooltipContent += "<br>(clic: filtrer données)";
-        tooltipContent += "<br>(double clic: ouvrir panneau)";
+        tooltipContent += "<br>" + localization.territoriesTooltip[9];
+        tooltipContent += "<br>" + localization.territoriesTooltip[10];
         tooltip.ShowTooltip(tooltipContent);
         transform.SetAsLastSibling();
         if (MapSystem.territorySelected != territory)

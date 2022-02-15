@@ -18,6 +18,8 @@ public class InfectionSystem : FSystem
     private Masks masks;
     private InfectionImpact confinementImpact;
 
+    public Localization localization;
+
     // model contagiousness during X days
     private float[] contagiousnessProbabilityPerDays;
 
@@ -336,12 +338,7 @@ public class InfectionSystem : FSystem
     {
         if (amountOfNewInfections >= 1 && !firstInfection)
         {
-            string location = "";
-            if (territory.TerritoryName == "Mayotte" || territory.TerritoryName == "La Réunion")
-                location += "à " + territory.TerritoryName;
-            else
-                location += "en " + (territory.TerritoryName == "La Corse" ? "Corse" : territory.TerritoryName);
-            GameObjectManager.addComponent<ChatMessage>(countryPopData.gameObject, new { sender = "Ministre de la santé", timeStamp = "" + time.daysGone, messageBody = "Il semblerait qu'un premier cas a été détecté "+location+"." });
+            GameObjectManager.addComponent<ChatMessage>(countryPopData.gameObject, new { sender = localization.advisorTitleHealth, timeStamp = "" + time.daysGone, messageBody = localization.getFormatedText(localization.advisorHealthTexts[13], territory.TerritoryName) });
             firstInfection = true;
         }
         // Calcul du nombre total de pesonnes non infectées

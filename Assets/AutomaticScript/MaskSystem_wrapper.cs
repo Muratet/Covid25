@@ -8,6 +8,7 @@ public class MaskSystem_wrapper : BaseWrapper
 	public UnityEngine.UI.Button UI_ButtonCommand;
 	public TMPro.TMP_Text UI_UnitPriceValue;
 	public TMPro.TMP_Text UI_PendingCommand;
+	public Localization localization;
 	private void Start()
 	{
 		this.hideFlags = HideFlags.NotEditable;
@@ -16,6 +17,7 @@ public class MaskSystem_wrapper : BaseWrapper
 		MainLoop.initAppropriateSystemField (system, "UI_ButtonCommand", UI_ButtonCommand);
 		MainLoop.initAppropriateSystemField (system, "UI_UnitPriceValue", UI_UnitPriceValue);
 		MainLoop.initAppropriateSystemField (system, "UI_PendingCommand", UI_PendingCommand);
+		MainLoop.initAppropriateSystemField (system, "localization", localization);
 	}
 
 	public void OnMaskRequisitionChange(System.Boolean newState)

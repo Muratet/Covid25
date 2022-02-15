@@ -9,6 +9,7 @@ public class RevolutionSystem_wrapper : BaseWrapper
 	public System.Int32 thirdNotifStep;
 	public System.Int32 fourthNotifStep;
 	public System.Int32 fifthNotifStep;
+	public Localization localization;
 	private void Start()
 	{
 		this.hideFlags = HideFlags.NotEditable;
@@ -18,6 +19,7 @@ public class RevolutionSystem_wrapper : BaseWrapper
 		MainLoop.initAppropriateSystemField (system, "thirdNotifStep", thirdNotifStep);
 		MainLoop.initAppropriateSystemField (system, "fourthNotifStep", fourthNotifStep);
 		MainLoop.initAppropriateSystemField (system, "fifthNotifStep", fifthNotifStep);
+		MainLoop.initAppropriateSystemField (system, "localization", localization);
 	}
 
 	public void UpdateRevolutionUI(TMPro.TMP_Text textUI)

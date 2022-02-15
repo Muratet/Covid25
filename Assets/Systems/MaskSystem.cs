@@ -1,6 +1,5 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
-using System.Globalization;
 using FYFY;
 using TMPro;
 
@@ -19,6 +18,8 @@ public class MaskSystem : FSystem {
     public TMP_Text UI_UnitPriceValue;
     public TMP_Text UI_PendingCommand;
     private int lastMasksDelivery = 0;
+
+    public Localization localization;
 
     protected override void onStart()
     {
@@ -87,20 +88,18 @@ public class MaskSystem : FSystem {
             // afficher une notification si le stock est vide alors qu'on a déjà reçu une commande
             if (lastMasksDelivery != -1 && emptyStock)
             {
-                string msgBody = "Cela fait plus d'une semaine que nous n'avons plus de stock de masques.";
+                string msgBody = localization.advisorHealthTexts[14];
                 if (masks.commands == 0)
                 {
-                    msgBody += " Nous devrions passer de nouvelles commandes";
+                    msgBody += localization.advisorHealthTexts[15];
                     if (frontierPermeability.currentState >= 2)
-                        msgBody += " et ouvrir les frontières.";
-                    else
-                        msgBody += ".";
+                        msgBody += localization.advisorHealthTexts[16];
                 }
                 else
                     if (frontierPermeability.currentState >= 2)
-                        msgBody += " Nous devrions ouvrir les frontières.";
+                        msgBody += localization.advisorHealthTexts[17];
 
-                GameObjectManager.addComponent<ChatMessage>(masks.gameObject, new { sender = "Ministre de la santé", timeStamp = "" + time.daysGone, messageBody = msgBody });
+                GameObjectManager.addComponent<ChatMessage>(masks.gameObject, new { sender = localization.advisorTitleHealth, timeStamp = "" + time.daysGone, messageBody = msgBody });
                 lastMasksDelivery = -1;
             }
 

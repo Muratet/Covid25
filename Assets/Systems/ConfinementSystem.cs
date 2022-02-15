@@ -14,6 +14,8 @@ public class ConfinementSystem : FSystem {
     public Sprite customMark;
     private Sprite ageMark;
 
+    public Localization localization;
+
     private int noVision = 0;
 
     public static ConfinementSystem instance;
@@ -170,12 +172,12 @@ public class ConfinementSystem : FSystem {
             string messageChosen = "";
             switch (Random.Range(0, 4))
             {
-                case 0: messageChosen = "Vos changements de politique incessants sont perçues négativement par la population."; break;
-                case 1: messageChosen = "L'opposition questionne votre politique et sa lisibilité."; break;
-                case 2: messageChosen = "Il vous faut faire des choix et vous y tenir, les français ne comprennent pas votre politique."; break;
-                case 3: messageChosen = "Les sondages montrent que les français attendent un cap."; break;
+                case 0: messageChosen = localization.advisorInteriorTexts[0]; break;
+                case 1: messageChosen = localization.advisorInteriorTexts[1]; break;
+                case 2: messageChosen = localization.advisorInteriorTexts[2]; break;
+                case 3: messageChosen = localization.advisorInteriorTexts[3]; break;
             }
-            GameObjectManager.addComponent<ChatMessage>(countryData.gameObject, new { sender = "Ministre de l'intérieur", timeStamp = "" + time.daysGone, messageBody = messageChosen });
+            GameObjectManager.addComponent<ChatMessage>(countryData.gameObject, new { sender = localization.advisorTitleInterior, timeStamp = "" + time.daysGone, messageBody = messageChosen });
             noVision = 0;
         }
     }

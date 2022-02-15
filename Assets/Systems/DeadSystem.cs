@@ -23,6 +23,8 @@ public class DeadSystem : FSystem
     private bool firstDead = false;
     private int nextDeathNotification = 100;
 
+    public Localization localization;
+
     public DeadSystem()
     {
         instance = this;
@@ -126,34 +128,34 @@ public class DeadSystem : FSystem
                 countryPopData.historyDeath.Add(countryPopData.nbDeath);
             if (countryPopData.historyDeath[countryPopData.historyDeath.Count - 1] >= 1 && !firstDead)
             {
-                GameObjectManager.addComponent<ChatMessage>(countryPopData.gameObject, new { sender = "Ministre de la santé", timeStamp = "" + time.daysGone, messageBody = "Un rapport de mon cabinet indique que nous avons eu un premier décès dû à ce nouveau coronavirus." });
+                GameObjectManager.addComponent<ChatMessage>(countryPopData.gameObject, new { sender = localization.advisorTitleHealth, timeStamp = "" + time.daysGone, messageBody = localization.advisorHealthTexts[1] });
                 firstDead = true;
             }
             if (countryPopData.historyDeath[countryPopData.historyDeath.Count - 1] > nextDeathNotification)
             {
-                string msgBody = "Le nombre de morts journalier a dépassé " + nextDeathNotification.ToString("N0", UnityEngine.Localization.Settings.LocalizationSettings.Instance.GetSelectedLocale().Identifier.CultureInfo) + ".";
+                string msgBody = localization.getFormatedText(localization.advisorHealthTexts[2], nextDeathNotification.ToString("N0", UnityEngine.Localization.Settings.LocalizationSettings.Instance.GetSelectedLocale().Identifier.CultureInfo));
                 if (nextDeathNotification > 200000)
-                    msgBody += " Vous rendez-vous compte ??? Plus de 200 000 morts rien qu'aujourd'hui...";
+                    msgBody += localization.advisorHealthTexts[3];
                 else if (nextDeathNotification > 100000)
-                    msgBody += " C'est une catastrophe, vous devrez répondre de vos actes, c'est comme si toute la population de Nanterre ou de Nancy était rayé de la carte... en une seule journée !!!";
+                    msgBody += localization.advisorHealthTexts[4];
                 else if (nextDeathNotification > 50000)
-                    msgBody += " Vous êtes en train de sacrifier toute une partie de la population.";
+                    msgBody += localization.advisorHealthTexts[5];
                 else if (nextDeathNotification > 24000)
-                    msgBody += " Vous devez absoluement faire quelque chose.";
+                    msgBody += localization.advisorHealthTexts[6];
                 else if (nextDeathNotification > 12000)
-                    msgBody += " La situation est très critique.";
+                    msgBody += localization.advisorHealthTexts[7];
                 else if (nextDeathNotification > 6000)
-                    msgBody += " La courbe de mortalité continue à croitre.";
+                    msgBody += localization.advisorHealthTexts[8];
                 else if (nextDeathNotification > 3000)
-                    msgBody += " Les morts s'accumulent et nos morgues sont pleines.";
+                    msgBody += localization.advisorHealthTexts[9];
                 else if (nextDeathNotification > 1500)
-                    msgBody += " Nous avons dépassé le record de la pandémie de 2020.";
+                    msgBody += localization.advisorHealthTexts[10];
                 else if (nextDeathNotification > 750)
-                    msgBody += " Vous devriez prendre des mesures pour contenir la pandémie.";
+                    msgBody += localization.advisorHealthTexts[11];
                 else if (nextDeathNotification > 325)
-                    msgBody += " Faites attention à ce que le nombre de morts ne s'embale pas.";
+                    msgBody += localization.advisorHealthTexts[12];
 
-                GameObjectManager.addComponent<ChatMessage>(countryPopData.gameObject, new { sender = "Ministre de la santé", timeStamp = "" + time.daysGone, messageBody = msgBody });
+                GameObjectManager.addComponent<ChatMessage>(countryPopData.gameObject, new { sender = localization.advisorTitleHealth, timeStamp = "" + time.daysGone, messageBody = msgBody });
                 nextDeathNotification *= 2;
             }
         }

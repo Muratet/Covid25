@@ -131,16 +131,13 @@ MonoBehaviour:
     m_Localized: 'Welcome to the Crisis Management Center!
 
 
-
       Following the
       2020 Covid 19 pandemic, our teams have developed new tools allowing you to
       monitor the progression of the epidemic on a day-to-day basis.
 
 
-
       I will
       introduce you to the main features.
-
 
 
       Let''s go...'
@@ -160,11 +157,9 @@ MonoBehaviour:
       unfortunately, as in 2020, a new disaster is on the way.
 
 
-
       In short,
       you will also have information on the evolution of the stock of masks, vaccines
       and an estimate of the financial cost of your actions.
-
 
 
       Finally, pay
@@ -230,7 +225,6 @@ MonoBehaviour:
     m_Localized: 'Manage the time...
 
 
-
       Do not hesitate to pause the simulation
       to analyze the different parameters and make the right choices for our country.'
     m_Metadata:
@@ -272,11 +266,9 @@ MonoBehaviour:
     m_Localized: 'Help the country stabilize the epidemic and achieve herd immunity.
 
 
-
       But
       above all, avoid the social crisis: 15 days with more than 80% dissatisfaction
       and you will certainly have to resign from your duties.
-
 
 
       It''s your
@@ -1325,6 +1317,302 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 761521141628928
     m_Localized: You no longer impose an age-related exit ban
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1806894203322368
+    m_Localized: Health Minister
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1809327595896832
+    m_Localized: So far, no cases have been detected in Europe
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1809769964945408
+    m_Localized: A report from my office indicates that we have the first death due
+      to this new coronavirus
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1810882000764928
+    m_Localized: 'The daily death count has exceeded #0#. '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1811428560519168
+    m_Localized: Do you realize??? More than 200,000 dead today alone...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1811649982021632
+    m_Localized: It's a disaster, you will have to answer for your actions, it's
+      as if the entire population of Nanterre or Nancy was wiped off the map... in
+      a single day!!!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1811826759352320
+    m_Localized: You are sacrificing a whole part of the population
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1811966119297024
+    m_Localized: You absolutely have to do something
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1812759169908736
+    m_Localized: The situation is very critical
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1812790341976064
+    m_Localized: The mortality curve continues to rise
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1812823917379584
+    m_Localized: The dead are piling up and our morgues are full
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1812860374269952
+    m_Localized: We have surpassed the 2020 pandemic record
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1812886852911104
+    m_Localized: You should take measures to contain the pandemic
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1812929546731520
+    m_Localized: Be careful the death count doesn't get out of hand
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1813635003498496
+    m_Localized: (#0#) It seems that a first case has been detected
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1814461642096640
+    m_Localized: 'It''s been over a week since we''ve had any stock of masks. '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1814500594597888
+    m_Localized: We should place new orders
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1814535684145152
+    m_Localized: ' and open borders'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1814606945370112
+    m_Localized: We should open the borders
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1815262456365056
+    m_Localized: We have received our first delivery of #0# doses of vaccine. We
+      begin to vaccinate the population immediately
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1816087605985280
+    m_Localized: 'It has been more than a week since we received any more vaccines. '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1816799060606976
+    m_Localized: Your goal is that <b>#0#% of the population</b> has developed antibodies
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1816838046662656
+    m_Localized: Prime Minister
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1817837255704576
+    m_Localized: Federation of hospitals
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1818128537534464
+    m_Localized: (#0#) Attention, hospitals are overwhelmed. There are too many sick
+      cases compared to the number of emergency beds
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1820649775611904
+    m_Localized: Minister of the Interior
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1820702628036608
+    m_Localized: Your incessant policy changes are perceived negatively by the population
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1820744675934208
+    m_Localized: The opposition questions your policy and its readability
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1820790049914880
+    m_Localized: You have to make choices and stick to them, the French don't understand
+      your politics
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1820838951305216
+    m_Localized: Polls show that the French are waiting for a course
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1822180625268736
+    m_Localized: 'Part of the population is unhappy with your policy. '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1822234618544128
+    m_Localized: They don't understand why you don't try to better control the epidemic
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1822278499352576
+    m_Localized: They don't understand why you maintain such harsh measures
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1822945905393664
+    m_Localized: 'More than #0#% of the population criticizes your choices. '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1822994211192832
+    m_Localized: They expect stricter measures to control the epidemic
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1823026113069056
+    m_Localized: They think you should loosen the restraints
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1824452860100608
+    m_Localized: 'You should adapt your measures to reassure the population. #0#%
+      of French people are unhappy. '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1824508879224832
+    m_Localized: They feel abandoned and expect stronger measures
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1824545675853824
+    m_Localized: They think your choices are too strict
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1825298805080064
+    m_Localized: Disturbances to public order are evident in several French regions.
+      If the discontent continues to grow we are going straight to the social crisis
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1825369827229696
+    m_Localized: We have passed the critical threshold. You must quickly bring the
+      stress of the population back below #0#%
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1826400782958592
+    m_Localized: "An emergency day costs #0#\u20AC for each patient"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1827402332422144
+    m_Localized: Economy Minister
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1828143382052864
+    m_Localized: The opposition is worried about the accumulation of debt!!!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1828201154396160
+    m_Localized: "The country's debt due to the crisis reaches #0#\u20AC. For information,
+      the national debt before the crisis was \u20AC2,500 billion."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1828250517159936
+    m_Localized: Will we be able to sustain this pace of measurements for much longer?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1828287414452224
+    m_Localized: With this rate of spending, the country will take years to recover
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1828327172259840
+    m_Localized: Expenses have been under control for several days, let's continue
+      like this
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1828386119008256
+    m_Localized: Finally!!! A laboratory has developed an effective vaccine. We can
+      start placing orders, don't delay
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1829842905645056
+    m_Localized: Minister of Foreign Affairs
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1830880932970496
+    m_Localized: The search for a vaccine begins to be organized at the global level
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1830990261698560
+    m_Localized: (#0#) A laboratory says it has started testing vaccine safety in
+      humans (Phase I)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1831094527901696
+    m_Localized: The race for the vaccine between the laboratories is tough. (#0#)
+      A laboratory declares having started phase II immunogenicity in humans
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1831191487627264
+    m_Localized: (#0#) It seems that a laboratory is studying the benefits/risks
+      of their vaccine (Phase III). Global research is progressing, we should be
+      able to benefit from a vaccine in some time
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1832253653172224
+    m_Localized: Western Europe
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1832275010568192
+    m_Localized: North America
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1832297643032576
+    m_Localized: South America
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1832323031154688
+    m_Localized: Asia
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1832345864945664
+    m_Localized: Eastern Europe
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1857625199394816
+    m_Localized: Closure of primary schools
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1857673882681344
+    m_Localized: Closure of secondary schools
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1857711476228096
+    m_Localized: Closure of high schools
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1857750831382528
+    m_Localized: Closure of universities
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1857808213655552
+    m_Localized: Civic appeal
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1857964879298560
+    m_Localized: Closing shops
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1857995057315840
+    m_Localized: Certificate required
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1858047783911424
+    m_Localized: Exit ban between #0# and #1# years old
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1858105594003456
+    m_Localized: Boost beds
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1858164129710080
+    m_Localized: '(click: filter data)'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1858191774367744
+    m_Localized: '(double click: open panel)'
     m_Metadata:
       m_Items: []
   references:

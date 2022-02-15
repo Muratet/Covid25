@@ -28,6 +28,8 @@ public class RevolutionSystem : FSystem
     public int fifthNotifStep;
     private bool fifthNotifStepFlag = false;
 
+    public Localization localization;
+
     protected override void onStart()
     {
         // Récupération de l'échelle de temps
@@ -161,27 +163,27 @@ public class RevolutionSystem : FSystem
             if (revolution.stress > firstNotifStep && !firstNotifStepFlag)
             {
                 firstNotifStepFlag = true;
-                GameObjectManager.addComponent<ChatMessage>(revolution.gameObject, new { sender = "Ministre de l'intérieur", timeStamp = "" + time.daysGone, messageBody = "Une partie de la population est mécontente de votre politique. "+((revolution.nationalInfectionIsCritic || criticRatio > 0.5f) ? "Ils ne comprennent pas pourquoi vous ne tentez pas de mieux contrôler l'épidémie." : "Ils ne comprennent pas pourquoi vous maintenez des mesures aussi dures.") });
+                GameObjectManager.addComponent<ChatMessage>(revolution.gameObject, new { sender = localization.advisorTitleInterior, timeStamp = "" + time.daysGone, messageBody = localization.advisorInteriorTexts[4]+((revolution.nationalInfectionIsCritic || criticRatio > 0.5f) ? localization.advisorInteriorTexts[5] : localization.advisorInteriorTexts[6]) });
             }
             else if (revolution.stress > secondNotifStep && !secondNotifStepFlag)
             {
                 secondNotifStepFlag = true;
-                GameObjectManager.addComponent<ChatMessage>(revolution.gameObject, new { sender = "Ministre de l'intérieur", timeStamp = "" + time.daysGone, messageBody = "Plus de "+ secondNotifStep.ToString("N0", UnityEngine.Localization.Settings.LocalizationSettings.Instance.GetSelectedLocale().Identifier.CultureInfo) + "% de la population critique vos choix. " + ((revolution.nationalInfectionIsCritic || criticRatio > 0.5f) ? "Ils attendent des mesures plus strictes pour contrôler l'épidémie." : "Ils pensent que vous devriez relacher les contraintes.") });
+                GameObjectManager.addComponent<ChatMessage>(revolution.gameObject, new { sender = localization.advisorTitleInterior, timeStamp = "" + time.daysGone, messageBody = localization.getFormatedText(localization.advisorInteriorTexts[7], thirdNotifStep.ToString("N0", UnityEngine.Localization.Settings.LocalizationSettings.Instance.GetSelectedLocale().Identifier.CultureInfo)) + ((revolution.nationalInfectionIsCritic || criticRatio > 0.5f) ? localization.advisorInteriorTexts[8] : localization.advisorInteriorTexts[9]) });
             }
             else if (revolution.stress > thirdNotifStep && !thirdNotifStepFlag)
             {
                 thirdNotifStepFlag = true;
-                GameObjectManager.addComponent<ChatMessage>(revolution.gameObject, new { sender = "Ministre de l'intérieur", timeStamp = "" + time.daysGone, messageBody = "Vous devriez adapter vos mesures pour rassurer la population. " + thirdNotifStep.ToString("N0", UnityEngine.Localization.Settings.LocalizationSettings.Instance.GetSelectedLocale().Identifier.CultureInfo) + "% des Français sont mécontents. " + ((revolution.nationalInfectionIsCritic || criticRatio > 0.5f) ? "Ils se sentent abandonnés et attendent des mesures plus fortes." : "Ils trouvent que vos choix sont trop stricts.") });
+                GameObjectManager.addComponent<ChatMessage>(revolution.gameObject, new { sender = localization.advisorTitleInterior, timeStamp = "" + time.daysGone, messageBody = localization.getFormatedText(localization.advisorInteriorTexts[10], thirdNotifStep.ToString("N0", UnityEngine.Localization.Settings.LocalizationSettings.Instance.GetSelectedLocale().Identifier.CultureInfo)) + ((revolution.nationalInfectionIsCritic || criticRatio > 0.5f) ? localization.advisorInteriorTexts[11] : localization.advisorInteriorTexts[12]) });
             }
             else if (revolution.stress > fourthNotifStep && !fourthNotifStepFlag)
             {
                 fourthNotifStepFlag = true;
-                GameObjectManager.addComponent<ChatMessage>(revolution.gameObject, new { sender = "Ministre de l'intérieur", timeStamp = "" + time.daysGone, messageBody = "Des troubles à l'ordre public se manifestent dans plusieurs régions françaises. Si le mécontentement continue à croître nous allons droit à la crise sociale." });
+                GameObjectManager.addComponent<ChatMessage>(revolution.gameObject, new { sender = localization.advisorTitleInterior, timeStamp = "" + time.daysGone, messageBody = localization.advisorInteriorTexts[13] });
             }
             else if (revolution.stress > fifthNotifStep && !fifthNotifStepFlag)
             {
                 fifthNotifStepFlag = true;
-                GameObjectManager.addComponent<ChatMessage>(revolution.gameObject, new { sender = "Ministre de l'intérieur", timeStamp = "" + time.daysGone, messageBody = "Nous avons dépassé le seuil critique. Vous devez rapidement faire redescendre le stress de la population en dessous de "+ fifthNotifStep.ToString("N0", UnityEngine.Localization.Settings.LocalizationSettings.Instance.GetSelectedLocale().Identifier.CultureInfo) + "%." });
+                GameObjectManager.addComponent<ChatMessage>(revolution.gameObject, new { sender = localization.advisorTitleInterior, timeStamp = "" + time.daysGone, messageBody = localization.getFormatedText(localization.advisorInteriorTexts[14], fifthNotifStep.ToString("N0", UnityEngine.Localization.Settings.LocalizationSettings.Instance.GetSelectedLocale().Identifier.CultureInfo)) });
             }
             if (revolution.stress < firstNotifStep - 5 && firstNotifStepFlag)
                 firstNotifStepFlag = false;

@@ -1305,5 +1305,309 @@ MonoBehaviour:
     m_Localized: "Vous n'imposez plus d'interdiction de sortie li\xE9e \xE0 l'\xE2ge"
     m_Metadata:
       m_Items: []
+  - m_Id: 1806894203322368
+    m_Localized: "Ministre de la sant\xE9"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1809327595896832
+    m_Localized: "Pour l'instant aucun cas n'a \xE9t\xE9 d\xE9tect\xE9 en Europe"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1809769964945408
+    m_Localized: "Un rapport de mon cabinet indique que nous avons eu un premier
+      d\xE9c\xE8s d\xFB \xE0 ce nouveau coronavirus"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1810882000764928
+    m_Localized: "Le nombre de morts journalier a d\xE9pass\xE9 #0#. "
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1811428560519168
+    m_Localized: Vous rendez-vous compte ??? Plus de 200 000 morts rien qu'aujourd'hui...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1811649982021632
+    m_Localized: "C'est une catastrophe, vous devrez r\xE9pondre de vos actes, c'est
+      comme si toute la population de Nanterre ou de Nancy \xE9tait ray\xE9 de la
+      carte... en une seule journ\xE9e !!!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1811826759352320
+    m_Localized: "Vous \xEAtes en train de sacrifier toute une partie de la population"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1811966119297024
+    m_Localized: Vous devez absoluement faire quelque chose
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1812759169908736
+    m_Localized: "La situation est tr\xE8s critique"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1812790341976064
+    m_Localized: "La courbe de mortalit\xE9 continue \xE0 croitre"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1812823917379584
+    m_Localized: Les morts s'accumulent et nos morgues sont pleines
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1812860374269952
+    m_Localized: "Nous avons d\xE9pass\xE9 le record de la pand\xE9mie de 2020"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1812886852911104
+    m_Localized: "Vous devriez prendre des mesures pour contenir la pand\xE9mie"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1812929546731520
+    m_Localized: "Faites attention \xE0 ce que le nombre de morts ne s'embale pas"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1813635003498496
+    m_Localized: "(#0#) Il semblerait qu'un premier cas a \xE9t\xE9 d\xE9tect\xE9"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1814461642096640
+    m_Localized: 'Cela fait plus d''une semaine que nous n''avons plus de stock de
+      masques. '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1814500594597888
+    m_Localized: Nous devrions passer de nouvelles commandes
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1814535684145152
+    m_Localized: "et ouvrir les fronti\xE8res"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1814606945370112
+    m_Localized: "Nous devrions ouvrir les fronti\xE8res"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1815262456365056
+    m_Localized: "Nous avons re\xE7u notre premi\xE8re livraison de #0# doses de
+      vaccin. Nous commen\xE7ons \xE0 vacciner la population sur le champs"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1816087605985280
+    m_Localized: 'Cela fait plus d''une semaine que nous ne recevons plus de vaccins. '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1816799060606976
+    m_Localized: "Votre objectif est que <b>#0#% de la population</b> ait d\xE9velopp\xE9
+      des anticorps"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1816838046662656
+    m_Localized: Premier ministre
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1817837255704576
+    m_Localized: "F\xE9d\xE9ration des h\xF4pitaux"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1818128537534464
+    m_Localized: "(#0#) Attention, les hopitaux sont d\xE9pass\xE9s. Il y a trop
+      de cas malades par rapport au nombre de lits de r\xE9animation"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1820649775611904
+    m_Localized: "Ministre de l'int\xE9rieur"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1820702628036608
+    m_Localized: "Vos changements de politique incessants sont per\xE7ues n\xE9gativement
+      par la population"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1820744675934208
+    m_Localized: "L'opposition questionne votre politique et sa lisibilit\xE9"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1820790049914880
+    m_Localized: "Il vous faut faire des choix et vous y tenir, les fran\xE7ais ne
+      comprennent pas votre politique"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1820838951305216
+    m_Localized: "Les sondages montrent que les fran\xE7ais attendent un cap"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1822180625268736
+    m_Localized: "Une partie de la population est m\xE9contente de votre politique. "
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1822234618544128
+    m_Localized: "Ils ne comprennent pas pourquoi vous ne tentez pas de mieux contr\xF4ler
+      l'\xE9pid\xE9mie"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1822278499352576
+    m_Localized: Ils ne comprennent pas pourquoi vous maintenez des mesures aussi
+      dures
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1822945905393664
+    m_Localized: 'Plus de #0#% de la population critique vos choix. '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1822994211192832
+    m_Localized: "Ils attendent des mesures plus strictes pour contr\xF4ler l'\xE9pid\xE9mie"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1823026113069056
+    m_Localized: Ils pensent que vous devriez relacher les contraintes
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1824452860100608
+    m_Localized: "Vous devriez adapter vos mesures pour rassurer la population. #0#%
+      des Fran\xE7ais sont m\xE9contents. "
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1824508879224832
+    m_Localized: "Ils se sentent abandonn\xE9s et attendent des mesures plus fortes"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1824545675853824
+    m_Localized: Ils trouvent que vos choix sont trop stricts
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1825298805080064
+    m_Localized: "Des troubles \xE0 l'ordre public se manifestent dans plusieurs
+      r\xE9gions fran\xE7aises. Si le m\xE9contentement continue \xE0 cro\xEEtre
+      nous allons droit \xE0 la crise sociale"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1825369827229696
+    m_Localized: "Nous avons d\xE9pass\xE9 le seuil critique. Vous devez rapidement
+      faire redescendre le stress de la population en dessous de #0#%"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1826400782958592
+    m_Localized: "Une journ\xE9e de r\xE9animation co\xFBte #0#\u20AC pour chaque
+      patient"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1827402332422144
+    m_Localized: "Ministre de l'\xE9conomie"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1828143382052864
+    m_Localized: "L'opposition s'inqui\xE8te de l'accumulation de la dette !!!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1828201154396160
+    m_Localized: "La dette du pays d\xFB \xE0 la crise atteind #0#\u20AC. Pour information
+      la dette nationale avant la crise \xE9tait de 2 500 Md\u20AC."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1828250517159936
+    m_Localized: Pourrons-nous soutenir ce rythme des mesures encore longtemps ?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1828287414452224
+    m_Localized: "Avec ce rythme des d\xE9penses, le pays mettra des ann\xE9es \xE0
+      s'en relever"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1828327172259840
+    m_Localized: "Cela fait plusieurs jours que les d\xE9penses sont ma\xEEtris\xE9es,
+      continuons ainsi"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1828386119008256
+    m_Localized: "Enfin !!! Un laboratoire a d\xE9velopp\xE9 un vaccin efficace.
+      Nous pouvons commencer \xE0 passer des commandes, ne tardez pas"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1829842905645056
+    m_Localized: "Ministre des affaires \xE9trang\xE8res"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1830880932970496
+    m_Localized: "La recherche d'un vaccin commence \xE0 s'organiser au niveau mondial"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1830990261698560
+    m_Localized: "(#0#) Un laboratoire d\xE9clare avoir commenc\xE9 \xE0 tester l'innocuit\xE9
+      d'un vaccin chez l'homme (Phase I)"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1831094527901696
+    m_Localized: "La course au vaccin entre les laboratoires est rude. (#0#) Un laboratoire
+      d\xE9clare avoir d\xE9but\xE9 la phase II d'immunog\xE9nicit\xE9 sur l'homme"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1831191487627264
+    m_Localized: "(#0#) Il s'emblerait qu'un laboratoire \xE9tudie les b\xE9n\xE9fices/risques
+      de leur vaccin (Phase III). La recherche mondiale progresse, nous devrions
+      pouvoir b\xE9n\xE9ficier d'un vaccin d'ici quelques temps"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1832253653172224
+    m_Localized: Europe de l'ouest
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1832275010568192
+    m_Localized: "Am\xE9rique du Nord"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1832297643032576
+    m_Localized: "Am\xE9rique du Sud"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1832323031154688
+    m_Localized: Asie
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1832345864945664
+    m_Localized: Europe de l'Est
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1857625199394816
+    m_Localized: "Fermeture des \xE9coles"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1857673882681344
+    m_Localized: "Fermeture des coll\xE8ges"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1857711476228096
+    m_Localized: "Fermeture des lyc\xE9es"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1857750831382528
+    m_Localized: "Fermeture des universit\xE9s"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1857808213655552
+    m_Localized: Appel civique
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1857964879298560
+    m_Localized: Fermeture commerces
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1857995057315840
+    m_Localized: Certificat requis
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1858047783911424
+    m_Localized: Interdiction de sortie entre #0# et #1# ans
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1858105594003456
+    m_Localized: "lits boost\xE9s"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1858164129710080
+    m_Localized: "(clic: filtrer donn\xE9es)"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1858191774367744
+    m_Localized: '(double clic: ouvrir panneau)'
+    m_Metadata:
+      m_Items: []
   references:
     version: 1

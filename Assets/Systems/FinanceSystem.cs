@@ -17,6 +17,8 @@ public class FinanceSystem : FSystem
     private Tax tax;
     private Beds beds;
 
+    public Localization localization;
+
     private float taxProgress = 0f;
 
     private float nextStepNotif = 10000000f;
@@ -102,7 +104,7 @@ public class FinanceSystem : FSystem
             if (!bedsNotif && beds.intensiveBeds_need > 0)
             {
                 bedsNotif = true;
-                GameObjectManager.addComponent<ChatMessage>(finances.gameObject, new { sender = "Rapport des hopitaux publics", timeStamp = "" + time.daysGone, messageBody = "Une journée de réanimation coûte "+ finances.oneDayReanimationCost.ToString("N0", UnityEngine.Localization.Settings.LocalizationSettings.Instance.GetSelectedLocale().Identifier.CultureInfo) + "€ pour chaque patient." });
+                GameObjectManager.addComponent<ChatMessage>(finances.gameObject, new { sender = localization.advisorTitleHospital, timeStamp = "" + time.daysGone, messageBody = localization.getFormatedText(localization.advisorHospitalTexts[1], finances.oneDayReanimationCost.ToString("N0", UnityEngine.Localization.Settings.LocalizationSettings.Instance.GetSelectedLocale().Identifier.CultureInfo)) });
             }
 
 
@@ -119,12 +121,12 @@ public class FinanceSystem : FSystem
                 string messageChosen = "";
                 switch(Random.Range(0, 4))
                 {
-                    case 0: messageChosen = "L'opposition s'inquiète de l'accumulation de la dette !!!"; break;
-                    case 1: messageChosen = "La dette du pays dû à la crise atteind " + newDebt.ToString("N0", UnityEngine.Localization.Settings.LocalizationSettings.Instance.GetSelectedLocale().Identifier.CultureInfo) + " €. Pour information la dette nationale avant la crise était de 2 500 Md€."; break;
-                    case 2: messageChosen = "Pourrons-nous soutenir ce rythme des mesures encore longtemps ?"; break;
-                    case 3: messageChosen = "Avec ce rythme des dépenses, le pays mettra des années à s'en relever."; break;
+                    case 0: messageChosen = localization.advisorEconomyTexts[0]; break;
+                    case 1: messageChosen = localization.getFormatedText(localization.advisorEconomyTexts[1], newDebt.ToString("N0", UnityEngine.Localization.Settings.LocalizationSettings.Instance.GetSelectedLocale().Identifier.CultureInfo)); break;
+                    case 2: messageChosen = localization.advisorEconomyTexts[2]; break;
+                    case 3: messageChosen = localization.advisorEconomyTexts[3]; break;
                 }
-                GameObjectManager.addComponent<ChatMessage>(finances.gameObject, new { sender = "Ministre de l'économie", timeStamp = "" + time.daysGone, messageBody = messageChosen });
+                GameObjectManager.addComponent<ChatMessage>(finances.gameObject, new { sender = localization.advisorTitleEconomy, timeStamp = "" + time.daysGone, messageBody = messageChosen });
                 nextStepNotif *= 10;
             }
 
@@ -132,7 +134,7 @@ public class FinanceSystem : FSystem
 
             if (!stability && finances.historySpent[finances.historySpent.Count - 1] == finances.historySpent[Mathf.Max(0, finances.historySpent.Count - 10)])
             {
-                GameObjectManager.addComponent<ChatMessage>(finances.gameObject, new { sender = "Ministre de l'économie", timeStamp = "" + time.daysGone, messageBody = "Cela fait plusieurs jours que les dépenses sont maîtrisées, continuons ainsi." });
+                GameObjectManager.addComponent<ChatMessage>(finances.gameObject, new { sender = localization.advisorTitleEconomy, timeStamp = "" + time.daysGone, messageBody = localization.advisorEconomyTexts[4] });
                 stability = true;
             }
         }

@@ -85,7 +85,7 @@ public class AdvisorSystem : FSystem
     // Use to process your families.
     protected override void onProcess(int familiesUpdateCount)
     {
-        if (timeFirstNotif == -1 && Time.time - timeFirstNotif > 15 && time.daysGone == 0 && !helpPlay)
+        if (timeFirstNotif != -1 && Time.time - timeFirstNotif > 15 && time.daysGone == 0 && !helpPlay)
         {
             GameObjectManager.addComponent<ChatMessage>(chatContent, new { sender = localization.advisorTitleDigital, timeStamp = "0", messageBody = localization.advisorDigitalTexts[0] });
             helpPlay = true;
