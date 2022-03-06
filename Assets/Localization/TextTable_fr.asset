@@ -1935,5 +1935,29 @@ MonoBehaviour:
     m_Localized: euros
     m_Metadata:
       m_Items: []
+  - m_Id: 9029424936828928
+    m_Localized: Aucune
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9029479425032192
+    m_Localized: "Seul fret mondial/europ\xE9en"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9029519673573376
+    m_Localized: "Seul fret europ\xE9en"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9029559867588608
+    m_Localized: Total (fret et civil)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9034128509026304
+    m_Localized: "Requiert une ouverture des fronti\xE8res au niveau mondial"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9034167000154112
+    m_Localized: "Requiert une ouverture des fronti\xE8res au niveau mondial"
+    m_Metadata:
+      m_Items: []
   references:
     version: 1

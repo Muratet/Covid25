@@ -1846,5 +1846,29 @@ MonoBehaviour:
     m_Localized: euros
     m_Metadata:
       m_Items: []
+  - m_Id: 9029424936828928
+    m_Localized: None
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9029479425032192
+    m_Localized: Only global/European freight
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9029519673573376
+    m_Localized: Only European freight
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9029559867588608
+    m_Localized: All (freight and civil)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9034128509026304
+    m_Localized: Requires open borders globally
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9034167000154112
+    m_Localized: Requires open borders globally
+    m_Metadata:
+      m_Items: []
   references:
     version: 1

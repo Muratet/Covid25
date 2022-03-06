@@ -78,7 +78,7 @@ public class VaccineSystem : FSystem {
                 vaccine.UI_vaccineQuantity.GetComponents<TooltipContent>()[0].enabled = false;
                 vaccine.UI_vaccineCommand.GetComponents<TooltipContent>()[0].enabled = false;
                 // Appeler la fonction qui défini si les champs sont intéractifs ou pas
-                OnFrontierChange(frontierPermeability.currentState);
+                _OnFrontierChange(frontierPermeability.currentState);
                 GameObjectManager.addComponent<ChatMessage>(vaccine.gameObject, new { sender = localization.advisorTitleEconomy, timeStamp = "" + time.daysGone, messageBody = localization.advisorEconomyTexts[5] });
                 // Ajout d'un bonus ponctuel sur le stress
                 revolution.stress -= 5f;
@@ -196,7 +196,11 @@ public class VaccineSystem : FSystem {
         }
     }
 
-    public void OnFrontierChange(int newValue)
+    public void OnFrontierChange(ItemSelector newValue)
+    {
+        _OnFrontierChange(newValue.currentItem);
+    }
+    public void _OnFrontierChange(int newValue)
     {
         vaccine.UI_vaccineQuantity.interactable = (newValue == 0 || newValue == 1) && vaccine.UI_researchBar.value >= 100 && notifVaccine >= 4;
         vaccine.UI_vaccineCommand.interactable = vaccine.UI_vaccineQuantity.interactable;

@@ -1771,6 +1771,33 @@ MonoBehaviour:
     m_Key: Game/CanvasUINavigator/EndScreen 10
     m_Metadata:
       m_Items: []
+  - m_Id: 9029424936828928
+    m_Key: Game/CanvasUINavigator/MapMenu/CountryOptions_UI/Frontier/LanguageSelector
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9029479425032192
+    m_Key: Game/CanvasUINavigator/MapMenu/CountryOptions_UI/Frontier/LanguageSelector
+      1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9029519673573376
+    m_Key: Game/CanvasUINavigator/MapMenu/CountryOptions_UI/Frontier/LanguageSelector
+      2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9029559867588608
+    m_Key: Game/CanvasUINavigator/MapMenu/CountryOptions_UI/Frontier/LanguageSelector
+      3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9034128509026304
+    m_Key: Game/CanvasUINavigator/MapMenu/CountryOptions_UI/MaskCommand/MaskCommand_Button
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9034167000154112
+    m_Key: Game/CanvasUINavigator/MapMenu/CountryOptions_UI/MaskCommand/MaskCommand_InputField
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

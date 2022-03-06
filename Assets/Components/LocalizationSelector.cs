@@ -1,16 +1,16 @@
-using System.Collections;
-using System.Collections.Generic;
+
+using TMPro;
 using UnityEngine;
 using UnityEngine.Localization.Settings;
 
 public class LocalizationSelector : MonoBehaviour
 {
     private bool notInit = true;
+    public ItemSelector itemSelector;
 
     // Start is called before the first frame update
     void Start()
     {
-        
     }
 
     private void Update()
@@ -22,11 +22,11 @@ public class LocalizationSelector : MonoBehaviour
         }
     }
 
-    public void changeLocale(int select)
+    public void changeLocale()
     {
-        if (select == 0)
+        if (itemSelector.currentItem == 0)
             LocalizationSettings.Instance.SetSelectedLocale(LocalizationSettings.Instance.GetAvailableLocales().GetLocale("en"));
-        if (select == 1)
+        if (itemSelector.currentItem == 1)
             LocalizationSettings.Instance.SetSelectedLocale(LocalizationSettings.Instance.GetAvailableLocales().GetLocale("fr"));
     }
 }

@@ -17,9 +17,14 @@ public class VaccineSystem_wrapper : BaseWrapper
 		MainLoop.callAppropriateSystemMethod (system, "NewCommand", input);
 	}
 
-	public void OnFrontierChange(System.Int32 newValue)
+	public void OnFrontierChange(ItemSelector newValue)
 	{
 		MainLoop.callAppropriateSystemMethod (system, "OnFrontierChange", newValue);
+	}
+
+	public void _OnFrontierChange(System.Int32 newValue)
+	{
+		MainLoop.callAppropriateSystemMethod (system, "_OnFrontierChange", newValue);
 	}
 
 	public void UpdateMasksUI(TMPro.TMP_Text textUI)

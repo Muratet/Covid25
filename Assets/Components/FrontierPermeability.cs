@@ -23,18 +23,18 @@ public class FrontierPermeability : MonoBehaviour {
         time = GetComponent<TimeScale>();
     }
 
-    public void OnFrontierChange(int newValue)
+    public void OnFrontierChange(ItemSelector newValue)
     {
-        currentState = newValue;
+        currentState = newValue.currentItem;
         // 0 => Aucune fermeture
         // 1 => Fermeture des frontières à titre privé / commercial autorisé (niveau mondial)
         // 2 => Fermeture des frontières à titre privé / commercial autorisé (niveau européen)
         // 3 => Fermeture des frontières total (privé et commercial)
-        if (newValue == 0)
+        if (currentState == 0)
             permeability = 1f;
-        else if (newValue == 1)
+        else if (currentState == 1)
             permeability = 1f - travellerRatio;
-        else if (newValue == 2)
+        else if (currentState == 2)
             permeability = (1f - travellerRatio) * europeanFreight;
         else
             permeability = 0.1f;

@@ -151,9 +151,9 @@ public class MaskSystem : FSystem {
         SyncUISystem.formatStringUI(textUI, masks.nationalStock);
     }
 
-    public void OnFrontierChange(int newValue)
+    public void OnFrontierChange(ItemSelector newValue)
     {
-        UI_InputFieldCommand.interactable = newValue == 0 || newValue == 1;
+        UI_InputFieldCommand.interactable = newValue.currentItem == 0 || newValue.currentItem == 1;
         UI_ButtonCommand.interactable = UI_InputFieldCommand.interactable;
         UI_InputFieldCommand.GetComponent<TooltipContent>().enabled = !UI_InputFieldCommand.interactable;
         UI_ButtonCommand.GetComponent<TooltipContent>().enabled = !UI_InputFieldCommand.interactable;

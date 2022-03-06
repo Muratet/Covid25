@@ -45,7 +45,7 @@ public class MaskSystem_wrapper : BaseWrapper
 		MainLoop.callAppropriateSystemMethod (system, "UpdateMasksUI", textUI);
 	}
 
-	public void OnFrontierChange(System.Int32 newValue)
+	public void OnFrontierChange(ItemSelector newValue)
 	{
 		MainLoop.callAppropriateSystemMethod (system, "OnFrontierChange", newValue);
 	}
