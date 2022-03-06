@@ -1460,6 +1460,317 @@ MonoBehaviour:
     m_Key: Game/Localization 106
     m_Metadata:
       m_Items: []
+  - m_Id: 1806894203322360
+    m_Key: Game/Localization 37
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1809327595896830
+    m_Key: Game/Localization 38
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1809769964945400
+    m_Key: Game/Localization 39
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1810882000764920
+    m_Key: Game/Localization 40
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1811428560519160
+    m_Key: Game/Localization 41
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1811649982021630
+    m_Key: Game/Localization 42
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1811966119297020
+    m_Key: Game/Localization 44
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1812759169908730
+    m_Key: Game/Localization 45
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1812790341976060
+    m_Key: Game/Localization 46
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1812823917379580
+    m_Key: Game/Localization 47
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1812860374269950
+    m_Key: Game/Localization 48
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1812886852911100
+    m_Key: Game/Localization 49
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1813635003498490
+    m_Key: Game/Localization 51
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1814500594597880
+    m_Key: Game/Localization 53
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1814535684145150
+    m_Key: Game/Localization 54
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1814606945370110
+    m_Key: Game/Localization 55
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1815262456365050
+    m_Key: Game/Localization 56
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1816799060606970
+    m_Key: Game/Localization 58
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1816838046662650
+    m_Key: Game/Localization 59
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1817837255704570
+    m_Key: Game/Localization 60
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1818128537534460
+    m_Key: Game/Localization 61
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1820649775611900
+    m_Key: Game/Localization 62
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1820702628036600
+    m_Key: Game/Localization 63
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1820744675934200
+    m_Key: Game/Localization 64
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1820838951305210
+    m_Key: Game/Localization 66
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1822180625268730
+    m_Key: Game/Localization 67
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1822234618544120
+    m_Key: Game/Localization 68
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1822278499352570
+    m_Key: Game/Localization 69
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1822945905393660
+    m_Key: Game/Localization 70
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1822994211192830
+    m_Key: Game/Localization 71
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1823026113069050
+    m_Key: Game/Localization 72
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1824452860100600
+    m_Key: Game/Localization 73
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1824508879224830
+    m_Key: Game/Localization 74
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1824545675853820
+    m_Key: Game/Localization 75
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1825298805080060
+    m_Key: Game/Localization 76
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1825369827229690
+    m_Key: Game/Localization 77
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1826400782958590
+    m_Key: Game/Localization 78
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1827402332422140
+    m_Key: Game/Localization 79
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1828143382052860
+    m_Key: Game/Localization 80
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1828250517159930
+    m_Key: Game/Localization 82
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1828287414452220
+    m_Key: Game/Localization 83
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1828386119008250
+    m_Key: Game/Localization 85
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1829842905645050
+    m_Key: Game/Localization 86
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1830880932970490
+    m_Key: Game/Localization 87
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1831094527901690
+    m_Key: Game/Localization 89
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1831191487627260
+    m_Key: Game/Localization 90
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1832253653172220
+    m_Key: Game/Localization 91
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1832275010568190
+    m_Key: Game/Localization 92
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1832297643032570
+    m_Key: Game/Localization 93
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1832323031154680
+    m_Key: Game/Localization 94
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1832345864945660
+    m_Key: Game/Localization 95
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1857625199394810
+    m_Key: Game/Localization 96
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1857673882681340
+    m_Key: Game/Localization 97
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1857711476228090
+    m_Key: Game/Localization 98
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1857750831382520
+    m_Key: Game/Localization 99
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1857808213655550
+    m_Key: Game/Localization 100
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1858047783911420
+    m_Key: Game/Localization 103
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1858105594003450
+    m_Key: Game/Localization 104
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1858191774367740
+    m_Key: Game/Localization 106
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8892239281569792
+    m_Key: Game/CanvasUINavigator/MapMenu/CountryOptions_UI/Vaccine_UI/Research/Research_Text/PopUp/Text
+      (TMP)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8893461795356672
+    m_Key: Game/CanvasUINavigator/MapMenu/CountryOptions_UI/Vaccine_UI/VaccineCommand/VaccineCommand_InputField
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8893780075921408
+    m_Key: Game/CanvasUINavigator/MapMenu/CountryOptions_UI/Vaccine_UI/VaccineCommand/VaccineCommand_InputField
+      1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8896232384806912
+    m_Key: Game/Localization 107
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8897104800038912
+    m_Key: Game/CanvasUINavigator/MapMenu/CountryOptions_UI/Vaccine_UI/VaccineCommand/VaccineCommand_Button
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8897137964400640
+    m_Key: Game/CanvasUINavigator/MapMenu/CountryOptions_UI/Vaccine_UI/VaccineCommand/VaccineCommand_Button
+      1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8898319374008320
+    m_Key: Game/CanvasUINavigator/MapMenu/NationView 4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8902974967562240
+    m_Key: Game/CanvasUINavigator/EndScreen
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8903883898404864
+    m_Key: Game/CanvasUINavigator/EndScreen 1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8907468719702016
+    m_Key: Game/CanvasUINavigator/EndScreen 2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8907514739605504
+    m_Key: Game/CanvasUINavigator/EndScreen 3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8907547312570368
+    m_Key: Game/CanvasUINavigator/EndScreen 4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8910974352539648
+    m_Key: Game/CanvasUINavigator/EndScreen 5
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8911041553678336
+    m_Key: Game/CanvasUINavigator/EndScreen 6
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8911086281736192
+    m_Key: Game/CanvasUINavigator/EndScreen 7
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8911975042170880
+    m_Key: Game/CanvasUINavigator/EndScreen 8
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8912049650450432
+    m_Key: Game/CanvasUINavigator/EndScreen 9
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8912186812579840
+    m_Key: Game/CanvasUINavigator/EndScreen 10
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

@@ -5,6 +5,7 @@ using TMPro;
 using System.IO;
 using System.Collections.Generic;
 using Newtonsoft.Json;
+using UnityEngine.EventSystems;
 
 public class MapSystem : FSystem {
     private Family f_territories = FamilyManager.getFamily(new AllOfComponents(typeof(TerritoryData), typeof(Image)));
@@ -78,5 +79,9 @@ public class MapSystem : FSystem {
         territorySelected = newTerritory;
         territoryName.text = territorySelected.TerritoryName;
         SyncUISystem.needUpdate = true;
+    }
+
+    public void onScroll(Vector2 pos){
+
     }
 }

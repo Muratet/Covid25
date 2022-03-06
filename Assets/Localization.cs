@@ -49,6 +49,7 @@ public class Localization : MonoBehaviour
     public string[] certificateActions;
     public string[] boostBedActions;
     public string[] ageDependentActions;
+    public string barYears;
 
     public string getFormatedText(string expression, params object [] data)
     {

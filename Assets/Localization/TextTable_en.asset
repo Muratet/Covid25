@@ -27,7 +27,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 1557146025984
-    m_Localized: yr.
+    m_Localized: 'yr. '
     m_Metadata:
       m_Items: []
   - m_Id: 10655317016576
@@ -107,20 +107,17 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 13800499757056
-    m_Localized: Search for a vaccine
+    m_Localized: Research for a vaccine
     m_Metadata:
       m_Items: []
   - m_Id: 13893751717888
-    m_Localized: Contagion window
+    m_Localized: Infection window
     m_Metadata:
       m_Items: []
   - m_Id: 19994681458688
-    m_Localized: '2025...
-
-
-      5 years after the 2020 pandemic a new coronavirus
+    m_Localized: 2025...<br><br>5 years after the 2020 pandemic a new coronavirus
       appeared. Several countries around the world already seem to be affected. France
-      is for the moment still spared.'
+      is still spared for the moment.
     m_Metadata:
       m_Items: []
   - m_Id: 20074712973312
@@ -128,19 +125,10 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 20647071891456
-    m_Localized: 'Welcome to the Crisis Management Center!
-
-
-      Following the
-      2020 Covid 19 pandemic, our teams have developed new tools allowing you to
-      monitor the progression of the epidemic on a day-to-day basis.
-
-
-      I will
-      introduce you to the main features.
-
-
-      Let''s go...'
+    m_Localized: Welcome to the Crisis Management Center!<br><br>Following the 2020
+      Covid 19 pandemic, our teams have developed new tools allowing you to monitor
+      the progression of the outbreak on a day-to-day basis.<br><br>I will introduce
+      you to the main features.<br><br>Let's go...
     m_Metadata:
       m_Items: []
   - m_Id: 20690155782144
@@ -152,20 +140,14 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 21325316014080
-    m_Localized: 'In the upper part you will be able to consult a lot of information
+    m_Localized: In the upper part you will be able to consult a lot of information
       such as the progression of the infection by age, the sad evolution of deaths...
-      unfortunately, as in 2020, a new disaster is on the way.
-
-
-      In short,
-      you will also have information on the evolution of the stock of masks, vaccines
-      and an estimate of the financial cost of your actions.
-
-
-      Finally, pay
+      unfortunately, as in 2020, a new disaster is on the way.<br><br>In short, you
+      will also have information on the evolution of the stock of masks, vaccines
+      and an estimate of the financial cost of your actions.<br><br>Finally, pay
       particular attention to the dissatisfaction of the citizens. It must not concern
       more than 80% of the population, in which case your crisis management strategy
-      could be called into question...'
+      could be called into question...
     m_Metadata:
       m_Items: []
   - m_Id: 21501829103616
@@ -177,7 +159,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 21789755490304
-    m_Localized: "In the interactive map, click on a region to filter the data.\r"
+    m_Localized: In the interactive map, click on a region to filter the data.
     m_Metadata:
       m_Items: []
   - m_Id: 22046480449536
@@ -189,9 +171,9 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 22412043403264
-    m_Localized: "You will note that certain indicators such as the evolution of
-      mask stocks, vaccine stocks, the cost of actions and the dissatisfaction of
-      the population are not accessible at the regional level.\r"
+    m_Localized: You will note that certain indicators such as the evolution of mask
+      stocks, vaccine stocks, the cost of actions and the population's dissatisfaction
+      are not accessible at the regional level.
     m_Metadata:
       m_Items: []
   - m_Id: 22524262006784
@@ -203,14 +185,12 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 22872611536896
-    m_Localized: 'The map will also be very useful for you to carry out your actions.
-      Double-click a region to open its configuration panel.
-
-'
+    m_Localized: The map will also be very useful as you mitigate the outbreak. Double-click
+      a region to open its configuration panel.
     m_Metadata:
       m_Items: []
   - m_Id: 23445540880384
-    m_Localized: "Do the same with the \"National\" button to access more actions.\r"
+    m_Localized: Do the same with the "National" button to access more actions.
     m_Metadata:
       m_Items: []
   - m_Id: 23810801844224
@@ -222,11 +202,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 24511464521728
-    m_Localized: 'Manage the time...
-
-
-      Do not hesitate to pause the simulation
-      to analyze the different parameters and make the right choices for our country.'
+    m_Localized: Control the pace...<br><br>Don't hesitate to pause the simulation
+      to analyze the different parameters and make the right choices for our country.
     m_Metadata:
       m_Items: []
   - m_Id: 24594939559936
@@ -250,8 +227,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 24982459695104
-    m_Localized: "\rCheck the R0.\r\n\r\nThe R0 defines the reproduction rate of
-      the virus. A rate less than 1 will allow you to control the epidemic."
+    m_Localized: Check the R0.<br><br>The R0 defines the reproduction rate of the
+      virus. A rate less than 1 will allow you to control the outbreak.
     m_Metadata:
       m_Items: []
   - m_Id: 25087715753984
@@ -263,16 +240,9 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 25727556829184
-    m_Localized: 'Help the country stabilize the epidemic and achieve herd immunity.
-
-
-      But
+    m_Localized: 'Help the country stabilize the outbreak and achieve herd immunity.<br><br>But
       above all, avoid the social crisis: 15 days with more than 80% dissatisfaction
-      and you will certainly have to resign from your duties.
-
-
-      It''s your
-      turn...'
+      and you will certainly have to resign from your duties.<br><br>It''s your turn...'
     m_Metadata:
       m_Items: []
   - m_Id: 25774868578304
@@ -288,11 +258,11 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 27098607697920
-    m_Localized: 10 wk.
+    m_Localized: 10 wks.
     m_Metadata:
       m_Items: []
   - m_Id: 27321321046016
-    m_Localized: 10 mth
+    m_Localized: 10 mths.
     m_Metadata:
       m_Items: []
   - m_Id: 27451692597248
@@ -312,14 +282,11 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 29085868933120
-    m_Localized: 'You have successfully controlled the epidemic
-
-'
+    m_Localized: You have successfully controlled the outbreak
     m_Metadata:
       m_Items: []
   - m_Id: 29496239636480
-    m_Localized: "\rTHE PEOPLE RISE AGAINST YOUR POLITICS!!!\r\nAre you going to
-      quit?"
+    m_Localized: THE PEOPLE REBEL AGAINST YOUR POLITICS!!!<br>Are you going to quit?
     m_Metadata:
       m_Items: []
   - m_Id: 29583950921728
@@ -343,7 +310,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 30424514609152
-    m_Localized: Pursue at all costs...
+    m_Localized: Carry on at all costs...
     m_Metadata:
       m_Items: []
   - m_Id: 30485373960192
@@ -363,13 +330,11 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 31576794775552
-    m_Localized: 'Progress in the global search for a vaccine
-
-'
+    m_Localized: Progress in the global search for a vaccine
     m_Metadata:
       m_Items: []
   - m_Id: 31659821023232
-    m_Localized: "Unit price :\r"
+    m_Localized: 'Unit price :'
     m_Metadata:
       m_Items: []
   - m_Id: 31737193349120
@@ -377,13 +342,13 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 31915212193792
-    m_Localized: "\rThe unit price of a vaccine dose varies over time.\r\nVaccines
-      are delivered in batches of several hundred thousand units every eight days
-      on average based on global demand."
+    m_Localized: The unit price of a vaccine dose varies over time.<br>Vaccines are
+      delivered in batches of several hundred thousand units every eight days on
+      average based on global demand.
     m_Metadata:
       m_Items: []
   - m_Id: 32048100327424
-    m_Localized: "Quantity...\r"
+    m_Localized: Quantity...
     m_Metadata:
       m_Items: []
   - m_Id: 32118308782080
@@ -395,17 +360,13 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 32361683271680
-    m_Localized: "Border closure:\r"
+    m_Localized: 'Border closure:'
     m_Metadata:
       m_Items: []
   - m_Id: 32510476206080
-    m_Localized: '<color=#008000ff>+ Reduces population stress if perceived as helpful</color>
-
-      <color=#C15C00ff>-
-      Increases population discontent if perceived as unnecessary
-
-      - Economic
-      impact</color>'
+    m_Localized: <color=#008000ff>+ Reduces population stress if perceived as helpful</color><br><color=#C15C00ff>-
+      Increases population discontentment if perceived as unnecessary<br>- Economic
+      impact</color>
     m_Metadata:
       m_Items: []
   - m_Id: 33186379907072
@@ -433,23 +394,20 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 33890423193600
-    m_Localized: "<color=#008000ff>+ Reduces population discontent if seen as helpful\r</color>\n<color=#C15C00ff>-
-      Increases population discontent if perceived as unnecessary\n- Financial impact\r</color>"
+    m_Localized: <color=#008000ff>+ Reduces population discontentment if seen as
+      helpful</color><br><color=#C15C00ff>- Increases population discontentment if
+      perceived as unnecessary<br>- Financial impact<br></color>
     m_Metadata:
       m_Items: []
   - m_Id: 34117142102016
-    m_Localized: Encourage home working
+    m_Localized: Encourage working from home
     m_Metadata:
       m_Items: []
   - m_Id: 34659432054784
-    m_Localized: '<color=#008000ff>+ Reduces the spread of the virus
-
-      + In
-      the event of confinement, reduces the financial impact</color>
-
-      <color=#C15C00ff>-
-      Increases population discontent if combined with primary or middle schools
-      closures</color>'
+    m_Localized: <color=#008000ff>+ Reduces the spread of the virus<br>+ In the event
+      of a quarantine, reduces the financial impact</color><br><color=#C15C00ff>-
+      Increases population discontentment if combined with primary or middle schools
+      closures</color>
     m_Metadata:
       m_Items: []
   - m_Id: 35584871677952
@@ -457,21 +415,17 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 37086407344128
-    m_Localized: "<color=#008000ff>+ Reduces population discontent</color>\n<color=#C15C00ff>-
-      Financial impact\r</color>"
+    m_Localized: <color=#008000ff>+ Reduces population discontentmentment</color><br><color=#C15C00ff>-
+      Financial impact</color>
     m_Metadata:
       m_Items: []
   - m_Id: 37583545614336
-    m_Localized: 'Requisition the masks for the
-
-      health personnel'
+    m_Localized: Requisition the masks for the<br>health personnel
     m_Metadata:
       m_Items: []
   - m_Id: 38029131694080
-    m_Localized: '<color=#008000ff>+ Reduces the consumption of approved masks</color>
-
-      <color=#C15C00ff>-
-      Increases public discontent</color>'
+    m_Localized: <color=#008000ff>+ Reduces the consumption of approved masks</color><br><color=#C15C00ff>-
+      Increases public discontentment</color>
     m_Metadata:
       m_Items: []
   - m_Id: 38293028913152
@@ -479,30 +433,22 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 38764263161856
-    m_Localized: '<color=#008000ff>+ Increases the production of approved masks
-
-      +
-      Reduces population discontent</color>
-
-      <color=#C15C00ff>- Financial impact</color>'
+    m_Localized: <color=#008000ff>+ Increases the production of approved masks<br>+
+      Reduces population discontentment</color><br><color=#C15C00ff>- Financial impact</color>
     m_Metadata:
       m_Items: []
   - m_Id: 39545318064128
-    m_Localized: "Encourage the artisanal production of masks\r"
+    m_Localized: Encourage the homemade production of masks
     m_Metadata:
       m_Items: []
   - m_Id: 39894296739840
-    m_Localized: '<color=#008000ff>+ Reduces the spread of the virus
-
-      + Reduces
-      the consumption of approved masks</color>
-
-      <color=#C15C00ff>- Increases
-      population discontent if perceived as unnecessary</color>'
+    m_Localized: <color=#008000ff>+ Reduces the spread of the virus<br>+ Reduces
+      the consumption of approved masks</color><br><color=#C15C00ff>- Increases population
+      discontentment if perceived as unnecessary</color>
     m_Metadata:
       m_Items: []
   - m_Id: 40122865336320
-    m_Localized: "Unit price:\r"
+    m_Localized: 'Unit price:'
     m_Metadata:
       m_Items: []
   - m_Id: 40211532922880
@@ -515,7 +461,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 40795589754880
-    m_Localized: "Quantity...\r"
+    m_Localized: Quantity...
     m_Metadata:
       m_Items: []
   - m_Id: 40842557571072
@@ -527,7 +473,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 353320487272448
-    m_Localized: 'Stopping classes:'
+    m_Localized: 'Stop classes:'
     m_Metadata:
       m_Items: []
   - m_Id: 353540918919168
@@ -535,13 +481,9 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 354224187817984
-    m_Localized: '<color=#008000ff>+ Reduces the spread of the virus</color>
-
-      <color=#C15C00ff>-
-      Increases population dissatisfaction if perceived as unnecessary
-
-      - Increases
-      population dissatisfaction if combined with home working</color>'
+    m_Localized: <color=#008000ff>+ Reduces the spread of the virus</color><br><color=#C15C00ff>-
+      Increases population dissatisfaction if perceived as unnecessary<br>- Increases
+      population dissatisfaction if combined with working from home</color>
     m_Metadata:
       m_Items: []
   - m_Id: 356502596665344
@@ -549,13 +491,9 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 357249509933056
-    m_Localized: '<color=#008000ff>+ Reduces the spread of the virus</color>
-
-      <color=#C15C00ff>-
-      Increases population dissatisfaction if perceived as unnecessary
-
-      - Increases
-      population dissatisfaction if combined with home working</color>'
+    m_Localized: <color=#008000ff>+ Reduces the spread of the virus</color><br><color=#C15C00ff>-
+      Increases population dissatisfaction if perceived as unnecessary<br>- Increases
+      population dissatisfaction if combined with working from home</color>
     m_Metadata:
       m_Items: []
   - m_Id: 357622224175104
@@ -563,10 +501,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 358272139968512
-    m_Localized: '<color=#008000ff>+ Reduces the spread of the virus</color>
-
-      <color=#C15C00ff>-
-      Increases population dissatisfaction if perceived as unnecessary</color>'
+    m_Localized: <color=#008000ff>+ Reduces the spread of the virus</color><br><color=#C15C00ff>-
+      Increases population dissatisfaction if perceived as unnecessary</color>
     m_Metadata:
       m_Items: []
   - m_Id: 358462833999872
@@ -574,10 +510,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 358785476640768
-    m_Localized: '<color=#008000ff>+ Reduces the spread of the virus</color>
-
-      <color=#C15C00ff>-
-      Increases population dissatisfaction if perceived as unnecessary</color>'
+    m_Localized: <color=#008000ff>+ Reduces the spread of the virus</color><br><color=#C15C00ff>-
+      Increases population dissatisfaction if perceived as unnecessary</color>
     m_Metadata:
       m_Items: []
   - m_Id: 358924207439872
@@ -585,42 +519,28 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 359077370839040
-    m_Localized: '<color=#008000ff>+ Reduces the spread of the virus</color>
-
-      <color=#C15C00ff>-
-      Increases population dissatisfaction if perceived as unnecessary</color>'
+    m_Localized: <color=#008000ff>+ Reduces the spread of the virus</color><br><color=#C15C00ff>-
+      Increases population dissatisfaction if perceived as unnecessary</color>
     m_Metadata:
       m_Items: []
   - m_Id: 359210774872064
-    m_Localized: 'Close general public shops
-
-      (except food)'
+    m_Localized: Close general public shops<br>(except food)
     m_Metadata:
       m_Items: []
   - m_Id: 359342769618944
-    m_Localized: '<color=#008000ff>+ Reduces the spread of the virus</color>
-
-      <color=#C15C00ff>-
-      Financial impact
-
-      - Increases population dissatisfaction if perceived
-      as unnecessary</color>'
+    m_Localized: <color=#008000ff>+ Reduces the spread of the virus</color><br><color=#C15C00ff>-
+      Financial impact<br>- Increases population dissatisfaction if perceived as
+      unnecessary</color>
     m_Metadata:
       m_Items: []
   - m_Id: 360231446167552
-    m_Localized: 'Reduced freedom of movement
-
-      (Exit certificate required)'
+    m_Localized: Reduced freedom of movement<br>(Exit certificate required)
     m_Metadata:
       m_Items: []
   - m_Id: 360455627522048
-    m_Localized: '<color=#008000ff>+ Reduces the spread of the virus
-
-      + Reduces
-      inter-region travel</color>
-
-      <color=#C15C00ff>- Increases population
-      dissatisfaction if perceived as unnecessary</color>'
+    m_Localized: <color=#008000ff>+ Reduces the spread of the virus<br>+ Reduces
+      inter-region travel</color><br><color=#C15C00ff>- Increases population dissatisfaction
+      if perceived as unnecessary</color>
     m_Metadata:
       m_Items: []
   - m_Id: 362086289031168
@@ -628,10 +548,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 362175430574080
-    m_Localized: '<color=#008000ff>+ Increases the number of patients and reduces
-      mortality</color>
-
-      <color=#C15C00ff>- Financial impact</color>'
+    m_Localized: <color=#008000ff>+ Increases the number of patients and reduces
+      mortality</color><br><color=#C15C00ff>- Financial impact</color>
     m_Metadata:
       m_Items: []
   - m_Id: 362330376552448
@@ -639,20 +557,13 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 362609243242496
-    m_Localized: '<color=#008000ff>+ Reduces the spread of the virus
-
-      + Reduces
-      inter-region travel</color>
-
-      <color=#C15C00ff>- Financial impact if it
-      concerns workers
-
-      - Increases population dissatisfaction if perceived
-      as unnecessary</color>'
+    m_Localized: <color=#008000ff>+ Reduces the spread of the virus<br>+ Reduces
+      inter-region travel</color><br><color=#C15C00ff>- Financial impact if it concerns
+      workers<br>- Increases population dissatisfaction if perceived as unnecessary</color>
     m_Metadata:
       m_Items: []
   - m_Id: 363179123326976
-    m_Localized: yo and
+    m_Localized: 'yo and '
     m_Metadata:
       m_Items: []
   - m_Id: 363234244870144
@@ -1047,7 +958,7 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 375906415853568
     m_Localized: R0 of the selected territory<br>R0 defines the reproduction rate
-      of the virus<br>A rate less than 1 will allow you to control the epidemic
+      of the virus<br>A rate less than 1 will allow you to control the outbreak
     m_Metadata:
       m_Items: []
   - m_Id: 376725005582336
@@ -1067,9 +978,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 377528558731264
-    m_Localized: 'Number of citizens
-
-      (in thousands)'
+    m_Localized: Number of citizens<br>(in thousands)
     m_Metadata:
       m_Items: []
   - m_Id: 377725028319232
@@ -1077,11 +986,11 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 377794070757376
-    m_Localized: Not contaminated
+    m_Localized: Not infected
     m_Metadata:
       m_Items: []
   - m_Id: 377827927179264
-    m_Localized: Contaminated
+    m_Localized: Infected
     m_Metadata:
       m_Items: []
   - m_Id: 377875519946752
@@ -1089,19 +998,19 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 377922559066112
-    m_Localized: Heal
+    m_Localized: Healed
     m_Metadata:
       m_Items: []
   - m_Id: 378129883512832
-    m_Localized: Emergency bed occupancy
+    m_Localized: ICU bed occupancy
     m_Metadata:
       m_Items: []
   - m_Id: 378187370643456
-    m_Localized: Emergency bed occupancy
+    m_Localized: ICU bed occupancy
     m_Metadata:
       m_Items: []
   - m_Id: 378228420296704
-    m_Localized: Emergency bed occupancy
+    m_Localized: ICU bed occupancy
     m_Metadata:
       m_Items: []
   - m_Id: 378430615109632
@@ -1145,11 +1054,11 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 379047756611584
-    m_Localized: "Debt (\u20AC)\n"
+    m_Localized: "Debt (\u20AC)"
     m_Metadata:
       m_Items: []
   - m_Id: 379112604745728
-    m_Localized: Day
+    m_Localized: Days
     m_Metadata:
       m_Items: []
   - m_Id: 386877788176384
@@ -1185,12 +1094,11 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 730480431513600
-    m_Localized: You have restricted the opening of borders only to world and European
-      freight
+    m_Localized: You have restricted the borders to only world and European freight
     m_Metadata:
       m_Items: []
   - m_Id: 730560970539008
-    m_Localized: You have restricted the opening of borders only to European freight
+    m_Localized: You have restricted the borders to only European freight
     m_Metadata:
       m_Items: []
   - m_Id: 730641928994816
@@ -1206,15 +1114,15 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 740701077946368
-    m_Localized: You encourage companies to set up massive home working
+    m_Localized: You encourage companies to set up massive working from home measures
     m_Metadata:
       m_Items: []
   - m_Id: 740798629068800
-    m_Localized: You no longer encourage home working
+    m_Localized: You no longer encourage working from home
     m_Metadata:
       m_Items: []
   - m_Id: 741749775581184
-    m_Localized: You open the conditions for access to partial unemployment
+    m_Localized: You allow access to partial unemployment
     m_Metadata:
       m_Items: []
   - m_Id: 741790909120512
@@ -1279,15 +1187,15 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 757613669302272
-    m_Localized: You called for civil liability
+    m_Localized: You called on civic responsibility
     m_Metadata:
       m_Items: []
   - m_Id: 757653049622528
-    m_Localized: You no longer call for civil liability
+    m_Localized: You no longer call on civil responsibility
     m_Metadata:
       m_Items: []
   - m_Id: 757718350741504
-    m_Localized: You order the closure of businesses
+    m_Localized: You order businesses to close
     m_Metadata:
       m_Items: []
   - m_Id: 757760948092928
@@ -1303,11 +1211,11 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 758171113275392
-    m_Localized: You increase the number of emergency beds in the care services
+    m_Localized: You increase the number of ICU beds within health services
     m_Metadata:
       m_Items: []
   - m_Id: 758261999648768
-    m_Localized: You stop the increase in the number of emergency beds
+    m_Localized: You stop the increase in the number of ICU beds
     m_Metadata:
       m_Items: []
   - m_Id: 761356439699456
@@ -1316,7 +1224,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 761521141628928
-    m_Localized: You no longer impose an age-related exit ban
+    m_Localized: You no longer impose an age-related lockdown
     m_Metadata:
       m_Items: []
   - m_Id: 1806894203322368
@@ -1613,6 +1521,329 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 1858191774367744
     m_Localized: '(double click: open panel)'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1806894203322360
+    m_Localized: Health Minister
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1809327595896830
+    m_Localized: So far, no cases have been detected in Europe
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1809769964945400
+    m_Localized: A report from my office indicates that we have the first death due
+      to this new coronavirus
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1810882000764920
+    m_Localized: 'The daily death count has exceeded #0#. '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1811428560519160
+    m_Localized: Don't you realize??? More than 200,000 dead today alone...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1811649982021630
+    m_Localized: It's a disaster, you will have to answer for your actions, it's
+      as if the entire population of Nanterre or Nancy was wiped off the map... in
+      a single day!!!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1811966119297020
+    m_Localized: You absolutely have to do something
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1812759169908730
+    m_Localized: The situation is very critical
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1812790341976060
+    m_Localized: The mortality curve continues to rise
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1812823917379580
+    m_Localized: The dead are piling up and our morgues are full
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1812860374269950
+    m_Localized: We have surpassed the 2020 pandemic record
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1812886852911100
+    m_Localized: You should take measures to contain the pandemic
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1813635003498490
+    m_Localized: (#0#) It seems that a first case has been detected
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1814500594597880
+    m_Localized: We should place new orders
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1814535684145150
+    m_Localized: ' and open borders'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1814606945370110
+    m_Localized: We should open the borders
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1815262456365050
+    m_Localized: We have received our first delivery of #0# doses of vaccine. We
+      begin to vaccinate the population immediately
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1816799060606970
+    m_Localized: Your goal is that <b>#0#% of the population</b> has developed antibodies
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1816838046662650
+    m_Localized: Prime Minister
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1817837255704570
+    m_Localized: Federation of hospitals
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1818128537534460
+    m_Localized: (#0#) Attention, hospitals are overwhelmed. There are too many positive
+      cases compared to the number of ICU beds
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1820649775611900
+    m_Localized: Minister of the Interior
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1820702628036600
+    m_Localized: Your incessant policy changes are perceived negatively by the population
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1820744675934200
+    m_Localized: The opposition questions your policy and its legibility
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1820838951305210
+    m_Localized: Polls show that the French are waiting for a strategy
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1822180625268730
+    m_Localized: 'Part of the population is unhappy with your policy. '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1822234618544120
+    m_Localized: They don't understand why you don't try to better control the outbreak
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1822278499352570
+    m_Localized: They don't understand why you maintain such harsh measures
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1822945905393660
+    m_Localized: 'More than #0#% of the population criticizes your choices. '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1822994211192830
+    m_Localized: They expect stricter measures to control the outbreak
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1823026113069050
+    m_Localized: They think you should loosen the restraints
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1824452860100600
+    m_Localized: 'You should adapt your measures to reassure the population. #0#%
+      of French people are unhappy. '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1824508879224830
+    m_Localized: They feel abandoned and expect stronger measures
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1824545675853820
+    m_Localized: They think your choices are too strict
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1825298805080060
+    m_Localized: Disturbances to public order are evident in several French regions.
+      If the discontentment continues to grow we are going straight to social crisis
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1825369827229690
+    m_Localized: We have passed the critical threshold. You must quickly bring the
+      discontentment of the population back below #0#%
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1826400782958590
+    m_Localized: (#0#) Attention, hospitals are overwhelmed. There are more critical
+      cases compared to the number of ICU beds
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1827402332422140
+    m_Localized: Economy Minister
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1828143382052860
+    m_Localized: The opposition is worried about the accumulation of debt!!!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1828250517159930
+    m_Localized: Will we be able to sustain this pace of restrictions for much longer?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1828287414452220
+    m_Localized: With this rate of spending, the country will take years to recover
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1828386119008250
+    m_Localized: Finally!!! A laboratory has developed an effective vaccine. We can
+      start placing orders, don't delay
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1829842905645050
+    m_Localized: Minister of Foreign Affairs
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1830880932970490
+    m_Localized: The search for a vaccine begins to be organized at the global level
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1831094527901690
+    m_Localized: The race for the vaccine between the laboratories is tough. (#0#)
+      A laboratory has started phase II immunogenicity in humans
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1831191487627260
+    m_Localized: (#0#) It seems that a laboratory is studying the benefits/risks
+      of their vaccine (Phase III). Global research is progressing, we should be
+      able to benefit from a vaccine in some time
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1832253653172220
+    m_Localized: Western Europe
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1832275010568190
+    m_Localized: North America
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1832297643032570
+    m_Localized: South America
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1832323031154680
+    m_Localized: Asia
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1832345864945660
+    m_Localized: Eastern Europe
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1857625199394810
+    m_Localized: Closure of primary schools
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1857673882681340
+    m_Localized: Closure of secondary schools
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1857711476228090
+    m_Localized: Closure of high schools
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1857750831382520
+    m_Localized: Closure of universities
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1857808213655550
+    m_Localized: Civic appeal
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1858047783911420
+    m_Localized: Exit ban between #0# and #1# years old
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1858105594003450
+    m_Localized: Boost beds
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1858191774367740
+    m_Localized: '(double click: open panel)'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8892239281569792
+    m_Localized: The whole world is struggling to find a vaccine. As soon as it is
+      validated, you will be able to place orders.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8893461795356672
+    m_Localized: Requires the discovery of a vaccine
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8893780075921408
+    m_Localized: Requires open borders globally
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8896232384806912
+    m_Localized: ' yo: '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8897104800038912
+    m_Localized: Requires the discovery of a vaccine
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8897137964400640
+    m_Localized: Requires open borders globally
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8898319374008320
+    m_Localized: 'National view<br>(click: national data)<br>(double click: open
+      panel)'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8902974967562240
+    m_Localized: You cannot share your score<br>for a custom virus
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8903883898404864
+    m_Localized: Try to carry on at all costs<br>to be able to share your score
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8907468719702016
+    m_Localized: 'Number of dead: '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8907514739605504
+    m_Localized: 'Debt due to the crisis: '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8907547312570368
+    m_Localized: 'Number of days: '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8910974352539648
+    m_Localized: year
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8911041553678336
+    m_Localized: months
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8911086281736192
+    m_Localized: days
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8911975042170880
+    m_Localized: billion euros
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8912049650450432
+    m_Localized: million euros
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8912186812579840
+    m_Localized: euros
     m_Metadata:
       m_Items: []
   references:

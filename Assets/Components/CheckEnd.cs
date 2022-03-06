@@ -31,12 +31,23 @@ public class CheckEnd : MonoBehaviour
     public TMP_InputField shareInputField;
     public Button shareButton;
 
-    private string baseNbDeadText;
+    public string shareForbidden;
+    public string tryToCarryOn;
+
+    public string baseNbDeadText;
     private string nbDeadText;
-    private string baseDebtText;
+    public string baseDebtText;
     private string debtText;
-    private string baseDaysText;
+    public string baseDaysText;
     private string daysText;
+
+    public string yearsTxt;
+    public string monthsTxt;
+    public string daysTxt;
+
+    public string billionEuros;
+    public string millionEuros;
+    public string euros;
 
     private bool disableRevolutionEnd = false;
 
@@ -50,9 +61,6 @@ public class CheckEnd : MonoBehaviour
 
     private void Start()
     {
-        baseNbDeadText = nbDead.text;
-        baseDebtText = debt.text;
-        baseDaysText = days.text;
         GameObject go_music = GameObject.Find("Music"); // Not available in scene (come from Intro scene - DontDestroyOnLoad)
         if (go_music)
         {
@@ -82,8 +90,8 @@ public class CheckEnd : MonoBehaviour
                 }
                 else  // ne pas partager le score pour un virus personnalisé
                 {
-                    shareInputField.GetComponent<TooltipContent>().text = "Vous ne pouvez partager votre score<br>pour un virus personnalisé";
-                    shareButton.GetComponent<TooltipContent>().text = "Vous ne pouvez partager votre score<br>pour un virus personnalisé";
+                    shareInputField.GetComponent<TooltipContent>().text = shareForbidden;
+                    shareButton.GetComponent<TooltipContent>().text = shareForbidden;
                 }
                 ContinueButton.gameObject.SetActive(false);
                 reviewButton.gameObject.SetActive(true);
@@ -109,13 +117,13 @@ public class CheckEnd : MonoBehaviour
                     shareButton.interactable = false;
                     if (!GameObject.Find("CustomizedVirus")) // ne pas partager le score pour un virus personnalisé
                     {
-                        shareInputField.GetComponent<TooltipContent>().text = "Tentez de poursuivre coûte que coûte<br>pour pouvoir partager votre score";
-                        shareButton.GetComponent<TooltipContent>().text = "Tentez de poursuivre coûte que coûte<br>pour pouvoir partager votre score";
+                        shareInputField.GetComponent<TooltipContent>().text = tryToCarryOn;
+                        shareButton.GetComponent<TooltipContent>().text = tryToCarryOn;
                     }
                     else
                     {
-                        shareInputField.GetComponent<TooltipContent>().text = "Vous ne pouvez partager votre score<br>pour un virus personnalisé";
-                        shareButton.GetComponent<TooltipContent>().text = "Vous ne pouvez partager votre score<br>pour un virus personnalisé";
+                        shareInputField.GetComponent<TooltipContent>().text = shareForbidden;
+                        shareButton.GetComponent<TooltipContent>().text = shareForbidden;
                     }
                     displayEnd();
                     if (music)
@@ -136,28 +144,33 @@ public class CheckEnd : MonoBehaviour
         float debtValue = finances.historySpent[finances.historySpent.Count - 1];
         int nbMilliards = (int)(debtValue / 1000000000);
         if (nbMilliards > 0)
-            debtText = nbMilliards.ToString("N0", cultureInfo) + " Milliard" + (nbMilliards > 1 ? "s" : "") + " d'euros";
+            debtText = nbMilliards.ToString("N0", cultureInfo) + " " + billionEuros;
         else
         {
             int nbMillions = (int)(debtValue / 1000000);
             if (nbMillions > 0)
-                debtText = nbMillions.ToString("N0", cultureInfo) + " Million" + (nbMillions > 1 ? "s" : "") + " d'euros";
+                debtText = nbMillions.ToString("N0", cultureInfo) + " " + millionEuros;
             else
-                debtText = debtValue.ToString("N0", cultureInfo) + " euros";
+                debtText = debtValue.ToString("N0", cultureInfo) + " " + euros;
         }
         debt.text = baseDebtText + debtText;
 
         daysText = "";
+        Debug.Log(time.daysGone);
         int nbYears = time.daysGone / 365;
         int nbMonths = (time.daysGone % 365) / 30;
         int nbDays = (time.daysGone % 365) % 30;
         if (nbYears > 0)
-            daysText += nbYears.ToString("N0", cultureInfo) + " an" + (nbYears > 1 ? "s " : " ");
+            daysText += nbYears.ToString("N0", cultureInfo) + " " + yearsTxt + " ";
+        Debug.Log(daysText);
         if (nbMonths > 0)
-            daysText += nbMonths + " mois ";
+            daysText += nbMonths.ToString("N0", cultureInfo) + " " + monthsTxt + " ";
+        Debug.Log(daysText);
         if (nbDays > 0)
-            daysText += nbDays + " jour" + (nbDays > 1 ? "s " : " ");
+            daysText += nbDays.ToString("N0", cultureInfo) + " " + daysTxt;
+        Debug.Log(daysText);
         days.text = baseDaysText + daysText;
+        Debug.Log(daysText);
 
         // stopper tous les systèmes
         foreach (FSystem sys in FSystemManager.updateSystems())

@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
+using UnityEngine.EventSystems;
 
 public class Masks : MonoBehaviour {
     // Advice: FYFY component aims to contain only public members (according to Entity-Component-System paradigm).
@@ -61,4 +62,6 @@ public class Masks : MonoBehaviour {
 
     [HideInInspector]
     public float lastOrderAmount = -1;
+
+    public BaseEventData e;
 }

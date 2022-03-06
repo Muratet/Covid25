@@ -12,18 +12,20 @@ public class PopUpBar : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     public Tooltip tooltip;
 
     private bool focused = false;
+    private Localization localization;
 
     private void Start()
     {
         sr = GetComponent<Image>();
         defaultColor = sr.color;
         tooltip = GameObject.Find("Tooltip").GetComponent<Tooltip>();
+        localization = GameObject.Find("Localization").GetComponent<Localization>();
     }
 
     private void UpdateTooltipText()
     {
         CultureInfo cultureInfo = UnityEngine.Localization.Settings.LocalizationSettings.Instance.GetSelectedLocale().Identifier.CultureInfo;
-        string tooltipContent = ageRef + " ans : ";
+        string tooltipContent = ageRef + localization.barYears;
         if (GetComponent<PopulationBar>())
             tooltipContent += MapSystem.territorySelected.popNumber[ageRef].ToString("N0", cultureInfo);
         if (GetComponent<DeathBar>())
