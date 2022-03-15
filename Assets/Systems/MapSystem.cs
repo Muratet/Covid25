@@ -40,6 +40,10 @@ public class MapSystem : FSystem {
     {
         f_territories.addEntryCallback(onNewTerritory);
 
+        GameObject countryToLoad = GameObject.Find("CountryToLoad");
+        if (countryToLoad != null)
+            rawContent = countryToLoad.GetComponent<CountryToLoad>().countryToLoad;
+
         //Load game content from the file
         Dictionary<string, RawTerriroryData> populationData = JsonConvert.DeserializeObject<Dictionary<string, RawTerriroryData>>(rawContent.text);
         // Réinitialiser les données de la nation pour être sûr de les synchroniser avec les données accumulées des régions
