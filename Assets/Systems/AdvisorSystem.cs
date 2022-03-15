@@ -38,6 +38,13 @@ public class AdvisorSystem : FSystem
     private float clickTime = 0;
     private float clickDelay = 0.5f;
 
+    public static AdvisorSystem instance;
+
+    public AdvisorSystem()
+    {
+        instance = this;
+    }
+
     protected override void onStart()
     {
         unreadMessages = chatContent.transform.GetChild(0);

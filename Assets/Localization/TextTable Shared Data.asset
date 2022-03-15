@@ -1798,6 +1798,22 @@ MonoBehaviour:
     m_Key: Game/CanvasUINavigator/MapMenu/CountryOptions_UI/MaskCommand/MaskCommand_InputField
     m_Metadata:
       m_Items: []
+  - m_Id: 10536904070184960
+    m_Key: Game/Localization 108
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10536940480937984
+    m_Key: Game/Localization 109
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10536987775909888
+    m_Key: Game/Localization 110
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10537029324685312
+    m_Key: Game/Localization 111
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

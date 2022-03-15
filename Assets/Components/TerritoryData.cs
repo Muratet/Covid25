@@ -10,6 +10,9 @@ public class TerritoryData : MonoBehaviour {
     [Tooltip("Nom du territoire")]
     public string TerritoryName;
 
+    // id du territoire
+    public int id;
+
     // Proportion de la population de cette région par rapport à la population totale du pays
     [Tooltip("Proportion de la population de cette région par rapport à la population totale du pays")]
     public float populationRatio;
@@ -51,52 +54,42 @@ public class TerritoryData : MonoBehaviour {
     [HideInInspector]
     public int[] numberOfInfectedPeoplePerDays;
 
-    public Toggle closePrimarySchool_UIMaps;
     [HideInInspector]
     public bool closePrimarySchool;
     [HideInInspector]
     public int closePrimarySchoolLastUpdate = -1;
-    public Toggle closeSecondarySchool_UIMaps;
     [HideInInspector]
     public bool closeSecondarySchool;
     [HideInInspector]
     public int closeSecondarySchoolLastUpdate = -1;
-    public Toggle closeHighSchool_UIMaps;
     [HideInInspector]
     public bool closeHighSchool;
     [HideInInspector]
     public int closeHighSchoolLastUpdate = -1;
-    public Toggle closeUniversity_UIMaps;
     [HideInInspector]
     public bool closeUniversity;
     [HideInInspector]
     public int closeUniversityLastUpdate = -1;
-    public Toggle callCivicism_UIMaps;
     [HideInInspector]
     public bool callCivicism;
     [HideInInspector]
     public int callCivicismLastUpdate = -1;
-    public Toggle closeShop_UIMaps;
     [HideInInspector]
     public bool closeShop;
     [HideInInspector]
     public int closeShopLastUpdate = -1;
     [HideInInspector]
     public float closeShopDynamic = 0f;
-    public Toggle certificateRequired_UIMaps;
     [HideInInspector]
     public bool certificateRequired;
     [HideInInspector]
     public int certificateRequiredLastUpdate = -1;
-    public Toggle ageDependent_UIMaps;
     [HideInInspector]
     public bool ageDependent;
     [HideInInspector]
     public int ageDependentLastUpdate = -1;
-    public TMP_InputField ageDependentMin_UIMaps;
     [HideInInspector]
     public string ageDependentMin;
-    public TMP_InputField ageDependentMax_UIMaps;
     [HideInInspector]
     public string ageDependentMax;
 

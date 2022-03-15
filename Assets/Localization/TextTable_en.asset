@@ -116,8 +116,8 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 19994681458688
     m_Localized: 2025...<br><br>5 years after the 2020 pandemic a new coronavirus
-      appeared. Several countries around the world already seem to be affected. France
-      is still spared for the moment.
+      appeared. Several countries around the world already seem to be affected. Our
+      country is still spared for the moment.
     m_Metadata:
       m_Items: []
   - m_Id: 20074712973312
@@ -1868,6 +1868,24 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 9034167000154112
     m_Localized: Requires open borders globally
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10536904070184960
+    m_Localized: <b>Stock of masks</b><br><color=#C15C00ff>Only available nationally</color>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10536940480937984
+    m_Localized: <b>Balance sheet</b><br><color=#C15C00ff>Only available nationally</color>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10536987775909888
+    m_Localized: <b>Public dissatisfaction</b><br>If the population's dissatisfaction
+      exceeds 80%<br>over 15 consecutive days, you lose the game<br><color=#C15C00ff>Only
+      available nationally</color>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10537029324685312
+    m_Localized: <b>Stock of vaccines</b><br><color=#C15C00ff>Only available nationally</color>
     m_Metadata:
       m_Items: []
   references:

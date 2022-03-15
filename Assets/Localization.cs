@@ -51,6 +51,11 @@ public class Localization : MonoBehaviour
     public string[] ageDependentActions;
     public string barYears;
 
+    public string maskTooltip;
+    public string financeTooltip;
+    public string revolutionTooltip;
+    public string vaccineTooltip;
+
     public string getFormatedText(string expression, params object [] data)
     {
         for (int i = 0; i < data.Length; i++)

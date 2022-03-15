@@ -117,7 +117,7 @@ MonoBehaviour:
   - m_Id: 19994681458688
     m_Localized: "2025...<br><br>5 ans apr\xE8s la pand\xE9mie de 2020 un nouveau
       coronavirus est apparu. Plusieurs pays \xE0 travers le monde semblent d\xE9j\xE0
-      touch\xE9s. La France est pour l'instant encore \xE9pargn\xE9e."
+      touch\xE9s. Notre pays est pour l'instant encore \xE9pargn\xE9e."
     m_Metadata:
       m_Items: []
   - m_Id: 20074712973312
@@ -614,8 +614,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 370590454300672
-    m_Localized: <b>Stock des masques</b><br><color=#C15C00ff>Seulement disponible
-      en national</color>
+    m_Localized: No translation found for 'Game/CanvasUINavigator/MapMenu/PanelRegions/Hauts-de-France
+      2' in TextTable
     m_Metadata:
       m_Items: []
   - m_Id: 370629067063296
@@ -708,14 +708,13 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 371025328128000
-    m_Localized: <b>Bilan financier</b><br><color=#C15C00ff>Seulement disponible
+    m_Localized: <b>Stock de vaccins</b><br><color=#C15C00ff>Seulement disponible
       en national</color>
     m_Metadata:
       m_Items: []
   - m_Id: 371077706596352
-    m_Localized: "<b>M\xE9contentement de la population</b><br>Si le m\xE9contentement
-      de la population d\xE9passe 80%<br>sur 15 jours cons\xE9cutifs, vous perdez
-      la partie<br><color=#C15C00ff>Seulement disponible en national</color>"
+    m_Localized: <b>Stock de vaccins</b><br><color=#C15C00ff>Seulement disponible
+      en national</color>
     m_Metadata:
       m_Items: []
   - m_Id: 371100070625280
@@ -1957,6 +1956,27 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 9034167000154112
     m_Localized: "Requiert une ouverture des fronti\xE8res au niveau mondial"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10536904070184960
+    m_Localized: <b>Stock des masques</b><br><color=#C15C00ff>Seulement disponible
+      en national</color>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10536940480937984
+    m_Localized: <b>Bilan financier</b><br><color=#C15C00ff>Seulement disponible
+      en national</color>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10536987775909888
+    m_Localized: "<b>M\xE9contentement de la population</b><br>Si le m\xE9contentement
+      de la population d\xE9passe 80%<br>sur 15 jours cons\xE9cutifs, vous perdez
+      la partie<br><color=#C15C00ff>Seulement disponible en national</color>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10537029324685312
+    m_Localized: <b>Stock de vaccins</b><br><color=#C15C00ff>Seulement disponible
+      en national</color>
     m_Metadata:
       m_Items: []
   references:

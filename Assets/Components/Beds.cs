@@ -13,8 +13,6 @@ public class Beds : MonoBehaviour {
     [HideInInspector]
     public int intensiveBeds_need = 0; // besoin en lits à un instant "t"
 
-    [Tooltip("UI contrôlant ce composant")]
-    public Toggle beds_UIMaps;
     [HideInInspector]
     public bool boostBeds = false;
     [HideInInspector]

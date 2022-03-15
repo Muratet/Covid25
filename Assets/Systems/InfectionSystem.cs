@@ -60,23 +60,9 @@ public class InfectionSystem : FSystem
         for (int i = 0; i < contagiousnessProbabilityPerDays.Length; i++)
             contagiousnessProbabilityPerDays[i] = (1 / (deviation * Mathf.Sqrt(2 * Mathf.PI))) * Mathf.Exp(-((i - peak) * (i - peak)) / (2 * deviation * deviation));
 
-        TerritoryData territoryData;
         foreach (GameObject territory in f_territoriesAndCountry)
-        {
-            territoryData = territory.GetComponent<TerritoryData>();
-            // Initialisation du nombre d'infectés pour chaque jour de la fenêtre
-            territoryData.numberOfInfectedPeoplePerDays = new int[virusStats.windowSize];
-            for (int day = 0; day < virusStats.windowSize; day++)
-                territoryData.numberOfInfectedPeoplePerDays[day] = 0;
-            // Initialisation du nombre d'infectés pour chaque age et pour chaque jour de la fenêtre
-            territoryData.numberOfInfectedPeoplePerAgesAndDays = new int[territoryData.popNumber.Length][];
-            for (int age = 0; age < territoryData.popNumber.Length; age++)
-            {
-                territoryData.numberOfInfectedPeoplePerAgesAndDays[age] = new int[virusStats.windowSize];
-                for (int day = 0; day < virusStats.windowSize; day++)
-                    territoryData.numberOfInfectedPeoplePerAgesAndDays[age][day] = 0;
-            }
-        }
+            initTerritoryInfectionData(territory);
+        f_territories.addEntryCallback(initTerritoryInfectionData);
 
         // Pour déterminer la contagiosité du virus on doit trouver le polynome qui passe par trois points :
         //   - si % population infecté == 0 => contagiosité par défaut du virus
@@ -147,6 +133,23 @@ public class InfectionSystem : FSystem
             polyC = virusStats.contagiosity;
             polyA = (1 + (virusStats.populationRatioImmunity - 1) * virusStats.contagiosity) / (virusStats.populationRatioImmunity * virusStats.populationRatioImmunity - virusStats.populationRatioImmunity);
             polyB = -polyC - polyA;
+        }
+    }
+
+    private void initTerritoryInfectionData(GameObject go)
+    {
+        TerritoryData territoryData = go.GetComponent<TerritoryData>();
+        // Initialisation du nombre d'infectés pour chaque jour de la fenêtre
+        territoryData.numberOfInfectedPeoplePerDays = new int[virusStats.windowSize];
+        for (int day = 0; day < virusStats.windowSize; day++)
+            territoryData.numberOfInfectedPeoplePerDays[day] = 0;
+        // Initialisation du nombre d'infectés pour chaque age et pour chaque jour de la fenêtre
+        territoryData.numberOfInfectedPeoplePerAgesAndDays = new int[territoryData.popNumber.Length][];
+        for (int age = 0; age < territoryData.popNumber.Length; age++)
+        {
+            territoryData.numberOfInfectedPeoplePerAgesAndDays[age] = new int[virusStats.windowSize];
+            for (int day = 0; day < virusStats.windowSize; day++)
+                territoryData.numberOfInfectedPeoplePerAgesAndDays[age][day] = 0;
         }
     }
 

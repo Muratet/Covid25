@@ -3,7 +3,7 @@ using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using TMPro;
 
-public class IgnoreAlpha : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
+public class IgnoreAlpha : MonoBehaviour
 {
     // Advice: FYFY component aims to contain only public members (according to Entity-Component-System paradigm).
     private Tooltip tooltip;
@@ -11,8 +11,20 @@ public class IgnoreAlpha : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
     private Animator animator;
 
     private AudioSource audioSource;
-    public AudioClip audioClip;
+    public AudioClip onEnter;
     private Localization localization;
+
+    public AudioClip onClick;
+
+    private DisableButton maskButton;
+
+    private DisableButton financeButton;
+
+    private DisableButton revolutionButton;
+
+    private DisableButton vaccineButton;
+
+    private CheckDoubleClick checkDoubleClick;
 
     void Start()
     {
@@ -22,9 +34,36 @@ public class IgnoreAlpha : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
         tooltip = GameObject.Find("TooltipUI").GetComponent<Tooltip>();
         audioSource = GameObject.Find("AudioEffects").GetComponentInParent<AudioSource>();
         localization = GameObject.Find("Localization").GetComponent<Localization>();
+        maskButton = GameObject.Find("MaskButton").GetComponent<DisableButton>();
+        financeButton = GameObject.Find("FinanceButton").GetComponent<DisableButton>();
+        revolutionButton = GameObject.Find("RevolutionButton").GetComponent<DisableButton>();
+        vaccineButton = GameObject.Find("VaccineButton").GetComponent<DisableButton>();
+        checkDoubleClick = GameObject.Find("MapMenu").GetComponent<CheckDoubleClick>();
     }
 
-    public void OnPointerEnter(PointerEventData eventData)
+    public void onSelectTerritory()
+    {
+        MapSystem.instance.selectTerritory(GetComponent<TerritoryData>());
+        audioSource.PlayOneShot(onClick);
+        maskButton.DisableButtonAndSetTooltip(localization.maskTooltip);
+        financeButton.DisableButtonAndSetTooltip(localization.financeTooltip);
+        revolutionButton.DisableButtonAndSetTooltip(localization.revolutionTooltip);
+        vaccineButton.DisableButtonAndSetTooltip(localization.vaccineTooltip);
+        AdvisorSystem.instance.ClosePanel();
+        checkDoubleClick.CheckDoubleClic(territory.id);
+    }
+
+    public void onScroll(BaseEventData data)
+    {
+        MapSystem.instance.onScroll(data);
+    }
+
+    public void onDrag(BaseEventData data)
+    {
+        MapSystem.instance.onDrag(data);
+    }
+
+    public void onPointerEnter()
     {
         string tooltipContent = "<b>"+territory.TerritoryName+"</b>";
         if (territory.closePrimarySchool)
@@ -52,10 +91,10 @@ public class IgnoreAlpha : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
         transform.SetAsLastSibling();
         if (MapSystem.territorySelected != territory)
             animator.Play("TerritoryFocused");
-        audioSource.PlayOneShot(audioClip);
+        audioSource.PlayOneShot(onEnter);
     }
 
-    public void OnPointerExit(PointerEventData eventData)
+    public void onPointerExit()
     {
         tooltip.HideTooltip();
         if (MapSystem.territorySelected != territory)
