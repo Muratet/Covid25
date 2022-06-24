@@ -3,12 +3,17 @@ using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using System.Globalization;
 
+/// <summary>
+/// This component is used to display a popup over pyramid bar on mouse over
+/// </summary>
 public class PopUpBar : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
+    /// <summary></summary>
     public int ageRef;
 
     private Image sr;
     private Color defaultColor;
+    /// <summary></summary>
     public Tooltip tooltip;
 
     private bool focused = false;
@@ -37,13 +42,20 @@ public class PopUpBar : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
         tooltip.ShowTooltip(tooltipContent);
     } 
 
+    /// <summary>
+    /// Callback when pointer enter a bar
+    /// </summary>
+    /// <param name="eventData"></param>
     public void OnPointerEnter(PointerEventData eventData)
     {
         sr.color = new Color(1, 1, 1);
         UpdateTooltipText();
         focused = true;
     }
-
+    /// <summary>
+    /// Callback chen pointer exit a bar
+    /// </summary>
+    /// <param name="eventData"></param>
     public void OnPointerExit(PointerEventData eventData)
     {
         tooltip.HideTooltip();
