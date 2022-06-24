@@ -3,4 +3,6 @@ This game puts the player in the skin of a French politician in 2025 during a ne
 
 This game is developped with [Unity 2019](https://unity.com/fr) and the [FYFY](https://github.com/Mocahteam/FYFY) library.
 
+See [documentation](https://webia.lip6.fr/~muratetm/docCovid25/)
+
 [See other projects](https://webia.lip6.fr/~muratetm/projects.php?LANG=en)
