@@ -1,6 +1,6 @@
 # Covid-25
-Ce jeu a été réalisé durant le confinement lié à la Covid 19 de mars à juin 2020. A cette époque de nombreuses personnes dans les média semblaient visiblement savoir mieux que quiconque ce qu'il aurait fallu faire pour mieux gérer cette pandémie... Et si on pouvait toucher du doigt la complexité de la réalité et jouer avec...
+This game puts the player in the skin of a French politician in 2025 during a new pandemic. The player has to set parameters and play with them over time to manage crisis. Will he close borders? Will he pay the cost of the crisis with lives or debt? How will he react to discontentement? Will he listen his/her advisors? The objective? Support the contry to reach collective immunity (60% of the population with antibodies) and avoid disorders... It's your turn: [Convid-25](http://www-ia.lip6.fr/~muratetm/covid25/).
 
-Voici donc une modeste contribution qui place le joueur dans la peau d'un décideur politique en 2025 lors d'une nouvelle pandémie. Le joueur doit définir des paramètres et les faire évoluer au cours du temps pour tenter de gérer la crise, fermera-t-il les frontières, payera-t-il le coup de la crise avec des vies humaines ou avec une dette colossale... Comment réagira-t-il face à la montée des mécontentements, écoutera-t-il ses conseillers... Son objectif ? Accompagner le pays jusqu'à atteindre l'immunité collective (60% de la population ayant développé des anticorps) mais éviter la crise sociale... A vous de jouer : [Convid-25](http://www-ia.lip6.fr/~muratetm/covid25/).
+This game is developped with [Unity 2019](https://unity.com/fr) and the [FYFY](https://github.com/Mocahteam/FYFY) library.
 
-Ce jeu a été réalisé avec [Unity 2019](https://unity.com/fr) et la bibliothèque [FYFY](https://github.com/Mocahteam/FYFY).
+[See other projects](https://webia.lip6.fr/~muratetm/projects.php?LANG=en)
