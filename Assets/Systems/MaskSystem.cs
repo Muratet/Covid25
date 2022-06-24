@@ -3,7 +3,11 @@ using UnityEngine.UI;
 using FYFY;
 using TMPro;
 
+/// <summary>
+/// This system simulated the consumption of masks
+/// </summary>
 public class MaskSystem : FSystem {
+    /// <summary></summary>
     public GameObject countrySimData;
     private TimeScale time;
     private TerritoryData countryPopData;
@@ -13,29 +17,34 @@ public class MaskSystem : FSystem {
     private Finances finances;
     private FrontierPermeability frontierPermeability;
 
+    /// <summary></summary>
     public TMP_InputField UI_InputFieldCommand;
+    /// <summary></summary>
     public Button UI_ButtonCommand;
+    /// <summary></summary>
     public TMP_Text UI_UnitPriceValue;
+    /// <summary></summary>
     public TMP_Text UI_PendingCommand;
     private int lastMasksDelivery = 0;
 
+    /// <summary></summary>
     public Localization localization;
 
     protected override void onStart()
     {
-        // Récupération de l'échelle de temps
+        // Recovery of the time scale
         time = countrySimData.GetComponent<TimeScale>();
-        // Récupération des données de la population
+        // Recovery population data
         countryPopData = countrySimData.GetComponent<TerritoryData>();
-        // Récupération des stats du virus
+        // Recovery of virus data
         virusStats = countrySimData.GetComponent<VirusStats>();
-        // Récupération des masques
+        // Recovery masks data
         masks = countrySimData.GetComponent<Masks>();
-        // Récupération de risque de révolution
+        // Recovery of dissatisfaction data
         revolution = countrySimData.GetComponent<Revolution>();
-        // Récupération des finances
+        // Recovery of financial data
         finances = countrySimData.GetComponent<Finances>();
-        // Récupération de données de la frontière
+        // Recovery of border restrictions data
         frontierPermeability = countrySimData.GetComponent<FrontierPermeability>();
     }
 
@@ -44,34 +53,34 @@ public class MaskSystem : FSystem {
     {
         if (time.newDay)
         {
-            // Mise à jour de la capacité de production
+            // Update of the production capacity
             if (masks.boostProduction)
-                masks.nationalProductionPerDay_current += (masks.nationalProductionPerDay_high - masks.nationalProductionPerDay_current) / 20; // Le 20 permet de ralentir la croissance de la production (le temps de construire d'autres lignes, de lancer des startup...)
+                masks.nationalProductionPerDay_current += (masks.nationalProductionPerDay_high - masks.nationalProductionPerDay_current) / 20; // The 20 allows to slow down the growth of the production (the time to build other lines, to launch startups...)
             else
-                masks.nationalProductionPerDay_current -= (masks.nationalProductionPerDay_current - masks.nationalProductionPerDay_low) / 2; // arrêt beaucoup plus rapide que le démarrage de la production
+                masks.nationalProductionPerDay_current -= (masks.nationalProductionPerDay_current - masks.nationalProductionPerDay_low) / 2; // much faster shutdown than production start-up
 
-            // calcul de la consommation de masque
-            // nombre de personne actuellement infectées
+            // calculation of mask consumption
+            // number of people currently infected
             int currentlyInfected = Mathf.Max(0, countryPopData.nbInfected - countryPopData.nbTreated - countryPopData.nbDeath);
-            // On considère que le nombre de masque requis correspond au nombre de cas sérieux * 5. En gros chaque patient mobilise également des soignants qui doivent changer réguliairement leur masque donc un malade sérieux génère l'utilisation de 5 masques par jours. Avec ce paramètre le stock de masques de la réserve d'état est mangé en 1 mois
+            // We consider that the number of masks required corresponds to the number of serious cases * 5. Basically, each patient also mobilizes caregivers who must regularly change their mask, so one serious patient generates the use of 5 masks per day. In french context, with this parameter, the national stock of masks is used in 1 month
             masks.medicalRequirementPerDay_current = Mathf.Max(masks.medicalRequirementPerDay_low, currentlyInfected * virusStats.seriousRatio * 5);
 
-            // Prise en compte du non réquisitionnement, le stress augmente la consommation, les masques artisanaux réduisent la consommation
+            // Consideration of non-requisitioning, stress increases consumption, artisanal masks reduce consumption
             if (!masks.requisition)
                 masks.medicalRequirementPerDay_current += (revolution.nationalInfectionIsCritic ? (Mathf.Max(0, revolution.stress-revolution.currentStressOnCriticToggled))/100 : 0) * (countryPopData.nbPopulation - countryPopData.nbTreated - countryPopData.nbDeath) * (masks.selfProtectionPromoted ? (float)2/3 : 1);
 
             masks.nationalStock = masks.nationalStock - masks.medicalRequirementPerDay_current + masks.nationalProductionPerDay_current;
 
-            // Achat des masques du jour de la production nationale
+            // Purchase of masks of the day from the national production
             finances.dailySpending += (masks.medicalRequirementPerDay_current- masks.medicalRequirementPerDay_low) * masks.maskMinPrice;
 
-            masks.nationalStock = (masks.nationalStock < 0) ? 0 : masks.nationalStock; // borner à 0
+            masks.nationalStock = (masks.nationalStock < 0) ? 0 : masks.nationalStock; // limit to 0
 
-            // Simulation de la livraison des masques
+            // Simulation of mask delivery
             masks.nextDelivery--;
             if (masks.nextDelivery <= 0 && masks.commands > 0 && frontierPermeability.currentState < 2) {
-                masks.nextDelivery = masks.deliveryTime + Random.Range(-2, 3); // ajout d'aléatoire dans la livraison plus ou moins 2 jours
-                float incomingMasks = Mathf.Min(masks.maxDeliveryPack*Random.Range(0.75f, 1.25f), masks.commands); // Reception d'une commande à plus ou moins 25% de la valeur de référence
+                masks.nextDelivery = masks.deliveryTime + Random.Range(-2, 3); // random addition in the delivery plus or minus 2 days
+                float incomingMasks = Mathf.Min(masks.maxDeliveryPack*Random.Range(0.75f, 1.25f), masks.commands); // Receipt of an order at plus or minus 25% of the reference value
                 masks.nationalStock += incomingMasks;
                 masks.commands -= incomingMasks;
                 // Update UI
@@ -81,11 +90,11 @@ public class MaskSystem : FSystem {
 
             masks.historyStock.Add(masks.nationalStock);
 
-            // vérifier si le stock est à 0 sur les 8 derniers jours
+            // check if the stock is at 0 over the last 8 days
             bool emptyStock = true;
             for (int i = masks.historyStock.Count - 1; i >= 0 && i >= masks.historyStock.Count - 8 && emptyStock; i--)
                 emptyStock = masks.historyStock[i] == 0;
-            // afficher une notification si le stock est vide alors qu'on a déjà reçu une commande
+            // display a notification if the stock is empty when an order has already been received
             if (lastMasksDelivery != -1 && emptyStock)
             {
                 string msgBody = localization.advisorHealthTexts[14];
@@ -103,32 +112,44 @@ public class MaskSystem : FSystem {
                 lastMasksDelivery = -1;
             }
 
-            // Simulation la fluctuation des prix des masques
+            // Simulation of the price fluctuation of masks
             float newPrice = masks.maskPrice + Random.Range(-1, 2) * Random.Range(0f, 0.1f);
             masks.maskPrice = Mathf.Max(masks.maskMinPrice, Mathf.Min(masks.maskMaxPrice, newPrice));
-            UI_UnitPriceValue.text = masks.maskPrice.ToString("C", UnityEngine.Localization.Settings.LocalizationSettings.Instance.GetSelectedLocale().Identifier.CultureInfo); // style monétaire
+            UI_UnitPriceValue.text = masks.maskPrice.ToString("C", UnityEngine.Localization.Settings.LocalizationSettings.Instance.GetSelectedLocale().Identifier.CultureInfo); // monetary style
 
         }
     }
 
+    /// <summary>
+    /// Callback when mask requisition is toggled
+    /// </summary>
+    /// <param name="newState"></param>
     public void OnMaskRequisitionChange(bool newState)
     {
         masks.requisition = newState;
         masks.lastRequisitionUpdate = time.daysGone;
     }
 
+    /// <summary>
+    /// Callback when production boosting is toggled
+    /// </summary>
+    /// <param name="newState"></param>
     public void OnBoostProductionChange(bool newState)
     {
         masks.boostProduction = newState;
         masks.lastBoostProductionUpdate = time.daysGone;
     }
 
+    /// <summary>
+    /// when a new order is placed
+    /// </summary>
+    /// <param name="newState">The amount of the new order</param>
     public void NewCommand(TMP_InputField input)
     {
         if (input.text != "")
         {
             if (masks.commands == 0)
-                masks.nextDelivery = masks.deliveryTime + Random.Range(-2, 3); // ajout d'aléatoire dans la livraison plus ou moins 2 jours
+                masks.nextDelivery = masks.deliveryTime + Random.Range(-2, 3); // random addition in the delivery plus or minus 2 days
             float newCommand = float.Parse(input.text);
             input.text = "";
             finances.dailySpending += newCommand * masks.maskPrice;
@@ -139,6 +160,10 @@ public class MaskSystem : FSystem {
         }
     }
 
+    /// <summary>
+    /// Callback when artisanal production is toggled
+    /// </summary>
+    /// <param name="newState"></param>
     public void OnArtisanalProductionChange(bool newState)
     {
         masks.selfProtectionPromoted = newState;
@@ -146,11 +171,19 @@ public class MaskSystem : FSystem {
         SyncUISystem.needUpdate = true;
     }
 
+    /// <summary>
+    /// Call to update notional stock on UI
+    /// </summary>
+    /// <param name="textUI"></param>
     public void UpdateMasksUI(TMPro.TMP_Text textUI)
     {
-        SyncUISystem.formatStringUI(textUI, masks.nationalStock);
+        SyncUISystem.formatStringUI(textUI, masks.nationalStock, localization);
     }
 
+    /// <summary>
+    /// Callback when border restriction is toggled
+    /// </summary>
+    /// <param name="newState"></param>
     public void OnFrontierChange(ItemSelector newValue)
     {
         UI_InputFieldCommand.interactable = newValue.currentItem == 0 || newValue.currentItem == 1;

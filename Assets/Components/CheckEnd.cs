@@ -8,52 +8,87 @@ using TMPro;
 using FYFY;
 using System.Runtime.InteropServices;
 
+/// <summary>
+/// This component enables to trigger the end of the game
+/// </summary>
 public class CheckEnd : MonoBehaviour
 {
-    public TimeScale time;
-    public TerritoryData countryPopData;
-    public VirusStats virusStats;
-    public Revolution revolution;
-    public Finances finances;
 
+    /// <summary></summary>
+    public TimeScale time;
+    /// <summary></summary>
+    public TerritoryData countryPopData;
+    /// <summary></summary>
+    public VirusStats virusStats;
+    /// <summary></summary>
+    public Revolution revolution;
+    /// <summary></summary>
+    public Finances finances;
+    /// <summary></summary>
+
+    /// <summary></summary>
     public TMP_Text immunityEnd;
+    /// <summary></summary>
     public TMP_Text revolutionEnd;
 
+    /// <summary></summary>
     public TMP_Text nbDead;
+    /// <summary></summary>
     public TMP_Text debt;
+    /// <summary></summary>
     public TMP_Text days;
 
+    /// <summary></summary>
     public Toggle PauseButton;
+    /// <summary></summary>
     public Button ContinueButton;
+    /// <summary></summary>
     public Button reviewButton;
+    /// <summary></summary>
     public Button returnToEndScreen;
+    /// <summary></summary>
 
+    /// <summary></summary>
     public TMP_InputField shareInputField;
+    /// <summary></summary>
     public Button shareButton;
 
+    /// <summary></summary>
     public string shareForbidden;
+    /// <summary></summary>
     public string tryToCarryOn;
 
+    /// <summary></summary>
     public string baseNbDeadText;
     private string nbDeadText;
+    /// <summary></summary>
     public string baseDebtText;
     private string debtText;
+    /// <summary></summary>
     public string baseDaysText;
     private string daysText;
 
+    /// <summary></summary>
     public string yearsTxt;
+    /// <summary></summary>
     public string monthsTxt;
+    /// <summary></summary>
     public string daysTxt;
 
+    /// <summary></summary>
     public string billionEuros;
+    /// <summary></summary>
     public string millionEuros;
+    /// <summary></summary>
     public string euros;
 
     private bool disableRevolutionEnd = false;
 
     private AudioSource music = null;
 
+    /// <summary></summary>
     public AudioClip successEnd;
+    /// <summary></summary>
     public AudioClip failEnd;
     private AudioClip defaultTheme;
 
@@ -75,7 +110,7 @@ public class CheckEnd : MonoBehaviour
     {
         if (time.newDay)
         {
-            // Vérifier la fin en cas d'immunité collective : seuil d'immunité collective rapproché + 95% des personnes infectées soignées
+            // Check the end in case of herd immunity: achieve herd immunity threshold + 95% of infected people treated
             if ((float)countryPopData.nbInfected / countryPopData.nbPopulation > (virusStats.populationRatioImmunity - 0.05f) && (float)countryPopData.nbTreated / (countryPopData.nbInfected - countryPopData.nbDeath) > 0.95f)
             {
                 transform.GetChild(0).gameObject.SetActive(true);
@@ -88,7 +123,7 @@ public class CheckEnd : MonoBehaviour
                     shareButton.interactable = true;
                     shareButton.GetComponent<TooltipContent>().enabled = false;
                 }
-                else  // ne pas partager le score pour un virus personnalisé
+                else  // do not share score for a customized virus
                 {
                     shareInputField.GetComponent<TooltipContent>().text = shareForbidden;
                     shareButton.GetComponent<TooltipContent>().text = shareForbidden;
@@ -102,7 +137,7 @@ public class CheckEnd : MonoBehaviour
                     music.Play();
                 }
             }
-            else if (!disableRevolutionEnd) // Vérifier la fin en cas de révolution : Stress supérieur à 80% sur les 15 derniers jours
+            else if (!disableRevolutionEnd) // Check the end in case of dissatisfaction: upper than 80% during 15 consécutive days
             {
                 bool lessThanThreshold = false;
                 for (int i = revolution.historyStress.Count - 1; i >= 0 && i >= revolution.historyStress.Count - 15 && !lessThanThreshold; i--)
@@ -115,7 +150,7 @@ public class CheckEnd : MonoBehaviour
                     isRevolution = true;
                     shareInputField.interactable = false;
                     shareButton.interactable = false;
-                    if (!GameObject.Find("CustomizedVirus")) // ne pas partager le score pour un virus personnalisé
+                    if (!GameObject.Find("CustomizedVirus")) // do not share score for a customized virus
                     {
                         shareInputField.GetComponent<TooltipContent>().text = tryToCarryOn;
                         shareButton.GetComponent<TooltipContent>().text = tryToCarryOn;
@@ -156,28 +191,27 @@ public class CheckEnd : MonoBehaviour
         debt.text = baseDebtText + debtText;
 
         daysText = "";
-        Debug.Log(time.daysGone);
         int nbYears = time.daysGone / 365;
         int nbMonths = (time.daysGone % 365) / 30;
         int nbDays = (time.daysGone % 365) % 30;
         if (nbYears > 0)
             daysText += nbYears.ToString("N0", cultureInfo) + " " + yearsTxt + " ";
-        Debug.Log(daysText);
         if (nbMonths > 0)
             daysText += nbMonths.ToString("N0", cultureInfo) + " " + monthsTxt + " ";
-        Debug.Log(daysText);
         if (nbDays > 0)
             daysText += nbDays.ToString("N0", cultureInfo) + " " + daysTxt;
-        Debug.Log(daysText);
         days.text = baseDaysText + daysText;
-        Debug.Log(daysText);
 
-        // stopper tous les systèmes
+        // stop all systems
         foreach (FSystem sys in FSystemManager.updateSystems())
             if (sys != BarsSystem.instance && sys != CurvesSystem.instance)
                 sys.Pause = true;
         this.enabled = false;
     }
+
+    /// <summary>
+    /// Reload main menu of the game (the first screen)
+    /// </summary>
     public void BackToMainMenu()
     {
         GameObject music = GameObject.Find("Music");
@@ -189,6 +223,9 @@ public class CheckEnd : MonoBehaviour
         SceneManager.LoadScene("Intro");
     }
 
+    /// <summary>
+    /// Leave end screen and come back in game to continue to play
+    /// </summary>
     public void ContinueToPlay()
     {
         disableRevolutionEnd = true;
@@ -198,13 +235,13 @@ public class CheckEnd : MonoBehaviour
         foreach (FSystem sys in FSystemManager.updateSystems())
             sys.Pause = false;
 
-        // Forcer le bouton en pause
+        // Force pause button
         PauseButton.isOn = false;
         PauseButton.isOn = true;
 
         this.enabled = true;
         transform.GetChild(0).GetComponent<Animator>().Play("ContinueToPlay");
-        Invoke("DisableChild", 0.25f); // Après que l'animation soit terminée, il faut désactiver le fils pour qu'il soit proprement réactivé lors de la fin du jeu
+        Invoke("DisableChild", 0.25f); // After animation is over, we have to disable the child that it will be properly enabled again ate the end of the game
 
         if (music)
         {
@@ -219,8 +256,11 @@ public class CheckEnd : MonoBehaviour
     }
 
     [DllImport("__Internal")]
-    private static extern void OpenURL(string url); // voir fichier Assets/Plugins/OpenURL.jslib
+    private static extern void OpenURL(string url); // see file Assets/Plugins/OpenURL.jslib
 
+    /// <summary>
+    /// Open web page to see high scores
+    /// </summary>
     public void ViewHighScores()
     {
         if (Application.platform == RuntimePlatform.WebGLPlayer)
@@ -233,6 +273,9 @@ public class CheckEnd : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Send player score to the web server
+    /// </summary>
     public void SendScores()
     {
         if (shareInputField != null && shareInputField.text != "")

@@ -1,33 +1,49 @@
 ﻿using UnityEngine;
 
+/// <summary>
+/// This component models impact of player choice on infection
+/// </summary>
 public class InfectionImpact : MonoBehaviour {
     // Advice: FYFY component aims to contain only public members (according to Entity-Component-System paradigm).
-
-    // Donne l'impact de base sur la contagiosité de la fermeture des écoles (par défaut réduit la contagiosité de 20%). Cette donnée est modérée en fontion de l'age des élèves. Si on ferme les Universités par exemple on ne touche pas toute la tranche d'age des 18-23 ans car un bon nombre est déjà sur le marcher de l'emploie et donc non sensible à cette mesure
-    [Tooltip("Donne l'impact de base sur le R0 de la fermeture des écoles. Cette donnée est modérée en fontion de l'age des élèves. Si on ferme les Universités par exemple on ne touche pas toute la tranche d'age des 18-23 ans car un bon nombre est déjà sur le marcher de l'emploie et donc non sensible à cette mesure")]
+    /// <summary>
+    /// Gives the baseline impact on contagiousness of closing schools. This data is moderated by the age of the students. For example, closing universities does not affect the entire 18-23 year old age group because many are already employed and therefore not sensitive to this measure.
+    /// </summary>
+    [Tooltip("Gives the baseline impact on R0 of closing schools. This data is moderated by the age of the students. For example, closing universities does not affect the entire 18-23 year old age group because many are already employed and therefore not sensitive to this measure.")]
     public float schoolImpact = 0.25f;
 
-    // Donne l'impact de base sur la contagiosité de l'appel civique à respecter les gestes barrières. 
-    [Tooltip("Donne l'impact de base sur le R0 de l'appel civique à respecter les gestes barrières")]
+    /// <summary>
+    /// Gives the baseline impact on the contagiousness of the civic responsability call.
+    /// </summary>
+    [Tooltip("Gives the baseline impact on R0 of the civic responsability call")]
     public float civicismImpact = 0.15f;
 
-    // Donne l'impact de base sur la contagiosité de la fermeture des commerces (par défaut réduit la contagiosité de 10%). 
-    [Tooltip("Donne l'impact de base sur le R0 de la fermeture des commerces")]
+    /// <summary>
+    /// Gives the baseline impact on contagiousness of closing general public shops. 
+    /// </summary>
+    [Tooltip("Gives the baseline impact on R0 of closing general public shops")]
     public float shopImpact = 0.2f;
 
-    // Donne l'impact de base sur la contagiosité de l'attestation (par défaut réduit la contagiosité de 15%). 
-    [Tooltip("Donne l'impact de base sur le R0 de l'attestation")]
+    /// <summary>
+    /// Gives the baseline impact on contagiousness of reducing freedom of movements. 
+    /// </summary>
+    [Tooltip("Gives the baseline impact on R0 of reducing freedom of movements")]
     public float attestationImpact = 0.25f;
 
-    // Donne l'impact de base sur la contagiosité de la restriction sur l'age (par défaut réduit la contagiosité de 70%). 
-    [Tooltip("Donne l'impact de base sur le R0 de la restriction sur l'age")]
+    /// <summary>
+    /// Gives the baseline impact on contagiousness of exit ban depending on age restriction 
+    /// </summary>
+    [Tooltip("Gives the baseline impact on R0 of exit ban depending on age restriction")]
     public float ageRestrictionImpact = 0.7f;
 
-    // Donne l'impact de base sur la contagiosité d'inciter au télétravail
-    [Tooltip("Donne l'impact de base sur le R0 d'inciter au télétravail")]
+    /// <summary>
+    /// Gives the baseline impact on contagiousness of encouraging working from home
+    /// </summary>
+    [Tooltip("Gives the baseline impact on R0 of encouraging working from home")]
     public float remoteWorkingImpact = 0.13f;
 
-    // Donne l'impact de base sur la contagiosité de promouvoir les masques artisanaux
-    [Tooltip("Donne l'impact de base sur le R0 de promouvoir les masques artisanaux")]
+    /// <summary>
+    /// Gives the baseline impact on contagiousness of encouraging the homemade production of masks
+    /// </summary>
+    [Tooltip("Gives the baseline impact on R0 of encouraging the homemade production of masks")]
     public float selfProtectionImpact = 0.12f;
 }

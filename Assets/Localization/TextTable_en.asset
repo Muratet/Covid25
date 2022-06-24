@@ -1888,5 +1888,53 @@ MonoBehaviour:
     m_Localized: <b>Stock of vaccines</b><br><color=#C15C00ff>Only available nationally</color>
     m_Metadata:
       m_Items: []
+  - m_Id: 48729902780452864
+    m_Localized: (in billions)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 48729963736272896
+    m_Localized: (in millions)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 48730048675123200
+    m_Localized: (in thousands)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 48737969664364544
+    m_Localized: '% of people infected<br>for the selected territory'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 48738062547226624
+    m_Localized: Number of people who died today<br>for the selected territory
+    m_Metadata:
+      m_Items: []
+  - m_Id: 48738153832058880
+    m_Localized: Cumulative deceased<br>for the selected territory
+    m_Metadata:
+      m_Items: []
+  - m_Id: 48738218432729088
+    m_Localized: Number of masks in stock<br>at the national level
+    m_Metadata:
+      m_Items: []
+  - m_Id: 48738285969412096
+    m_Localized: Number of vaccine doses in stock<br>at the national level
+    m_Metadata:
+      m_Items: []
+  - m_Id: 48738340541501440
+    m_Localized: National debt due to the crisis
+    m_Metadata:
+      m_Items: []
+  - m_Id: 48738430790340608
+    m_Localized: '% of people dissatisfied at the national leveleau national'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 48773927143149568
+    m_Localized: K
+    m_Metadata:
+      m_Items: []
+  - m_Id: 48773942284587008
+    m_Localized: B
+    m_Metadata:
+      m_Items: []
   references:
     version: 1

@@ -2,12 +2,20 @@
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
+/// <summary>
+/// Used inside tutorial to select automatically a territory
+/// </summary>
 public class SelectTerritory : MonoBehaviour
 {
+    /// <summary></summary>
     public GameObject territories;
+    /// <summary></summary>
     public int territoryNum;
+    /// <summary></summary>
     public Image targetHighlight;
+    /// <summary></summary>
     private EventTrigger trigger;
+    /// <summary></summary>
     public Button button;
 
 

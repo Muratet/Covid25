@@ -2,17 +2,25 @@
 using UnityEngine.UI;
 using FYFY;
 
+/// <summary>
+/// This component is used configure game when tutorial is closed
+/// </summary>
 public class TutoEnd : MonoBehaviour
 {
+    /// <summary></summary>
     public Button button;
+    /// <summary></summary>
     public Animator territoryPannel;
+    /// <summary></summary>
     public Animator countryPannel;
+    /// <summary></summary>
     public VirusStats virusStats;
+    /// <summary></summary>
     public Localization localization;
 
     private void OnDisable()
     {
-        // simuler un double click
+        // simulate a double click
         territoryPannel.SetTrigger("Close");
         countryPannel.SetTrigger("Close");
         button.onClick.Invoke();

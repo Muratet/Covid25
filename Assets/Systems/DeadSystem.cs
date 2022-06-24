@@ -1,8 +1,10 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using FYFY;
-using System.Globalization;
 
+/// <summary>
+/// This system calculates the number of deaths each day
+/// </summary>
 public class DeadSystem : FSystem
 {
     private Family f_territories = FamilyManager.getFamily(new AllOfComponents(typeof(TerritoryData), typeof(Beds), typeof(Image)));
@@ -18,13 +20,20 @@ public class DeadSystem : FSystem
     // give deadliness probability for each age
     private float[] deadlinessPerAges;
 
+    /// <summary>
+    /// Singleton reference of this system
+    /// </summary>
     public static DeadSystem instance;
 
     private bool firstDead = false;
     private int nextDeathNotification = 100;
 
+    /// <summary></summary>
     public Localization localization;
 
+    /// <summary>
+    /// Construct this system
+    /// </summary>
     public DeadSystem()
     {
         instance = this;
@@ -32,80 +41,80 @@ public class DeadSystem : FSystem
 
     protected override void onStart()
     {
-        // Récupération des stats du virus
+        // Recovery virus data
         virusStats = countrySimData.GetComponent<VirusStats>();
-        // Récupération des données de la population
+        // Recovery population data
         countryPopData = countrySimData.GetComponent<TerritoryData>();
-        // Récupération de l'échelle de temps
+        // Recovery of the time scale
         time = countrySimData.GetComponent<TimeScale>();
 
-        // calcul de la courbe de mortalité pour une fenêtre de jours
+        // calculation of the mortality curve for a window of days
         deadlinessPerDays = new float[virusStats.windowSize];
         float peak = virusStats.deadlinessPeak;
         float deviation = virusStats.deadlinessDeviation;
         for (int i = 0; i < deadlinessPerDays.Length; i++)
             deadlinessPerDays[i] = (1 / (deviation * Mathf.Sqrt(2 * Mathf.PI))) * Mathf.Exp(-((i - peak) * (i - peak)) / (2 * deviation * deviation));
 
-        // Calcul de la mortalité en fonction de l'age
+        // Calculation of mortality according to age
         deadlinessPerAges = new float[101];
-        // Calcul de la valeur de l'exponentielle pour le premier age à partir duquel des morts peuvent arriver
+        // Calculation of the value of the exponential for the first age from which deaths can occur
         float minAgeExpo = Mathf.Exp(virusStats.curveStrenght * ((float)virusStats.firstSensitiveAge / 100 - 1));
-        // Calcul de la valeur maximale de l'exponentielle pour l'age le plus avancé
+        // Calculation of the maximum value of the exponential for the oldest age
         float maxExpo = 1 - minAgeExpo;
-        // lissage de la mortalité pour quelle soit à 0 au premier age sensible et à sa valeur maximale pour l'age le plus avancé
+        // smoothing of mortality so that it is at 0 at the first sensitive age and at its maximum value for the oldest age
         for (int age = 0; age < deadlinessPerAges.Length; age++)
             deadlinessPerAges[age] = Mathf.Max(0f, (Mathf.Exp(virusStats.curveStrenght * ((float)age / 100 - 1)) - minAgeExpo) / maxExpo);
     }
 
     // Use to process your families.
     protected override void onProcess(int familiesUpdateCount) {
-        // Vérifier s'il faut générer une nouvelle journée
+        // Check if a new day should be generated
         if (time.newDay)
         {
-            // Traiter chaque territoire
+            // Treating each territory
             TerritoryData territoryData;
             foreach (GameObject territory in f_territories)
             {
                 territoryData = territory.GetComponent<TerritoryData>();
 
-                // Comptabilisation du nombre de personne qui devraient pouvoir accéder à des lits de réanimation, on prend un fenêtre de 9 jours autour du pic de mortalité (même calcul fait dans BedsSystem)
+                // Counting the number of people who should be able to access ICU beds, we take a window of 9 days around the peak of mortality (same calculation done in BedsSystem)
                 int criticAmount = 0;
                 for (int day = Mathf.Max(0, (int)virusStats.deadlinessPeak - 4); day < Mathf.Min(virusStats.deadlinessPeak + 5, territoryData.numberOfInfectedPeoplePerDays.Length); day++)
                     criticAmount = (int)(territoryData.numberOfInfectedPeoplePerDays[day] * virusStats.seriousRatio);
-                // Calcul du malus dû à l'occupation des lits
-                // Le Max entre 1 et le log permet de commencer à ajouter du malus (plus de mortalité) dès que le nombre de lit de réanimation commence à être dépassé
+                // Calculation of the penalty due to bed occupancy
+                // The maximum between 1 and log allows to start adding malus (more mortality) as soon as the number of resuscitation beds starts to be exceeded
                 float bedMalus = Mathf.Max(1f, Mathf.Log10((float)criticAmount / territory.GetComponent<Beds>().intensiveBeds_current) + 1);
 
                 //////////////////////////////////////
-                // MORTALITE
+                // MORTALITY
                 //////////////////////////////////////
                 for (int age = 0; age < territoryData.numberOfInfectedPeoplePerAgesAndDays.Length; age++)
                 {
-                    for (int day = territoryData.numberOfInfectedPeoplePerAgesAndDays[age].Length - 1; day >= 0; day--) // parcours des jours en sens inverse pour traiter d'abord ceux qui sont malades depuis le plus longtemps
+                    for (int day = territoryData.numberOfInfectedPeoplePerAgesAndDays[age].Length - 1; day >= 0; day--) // reverse the days to treat those who have been sick the longest first
                     {
-                        // récupérer combien de personnes sont infectées pour cette tranche d'age et pour le jour courant
+                        // recover how many people are infected for this age group and for the current day
                         int infectedNumber = territoryData.numberOfInfectedPeoplePerAgesAndDays[age][day];
-                        // Caculer le nombre de mort en fonction du nombre d'infectés, de la mortalité de l'age, du risque de mortalité du jour et du manque éventuel de lit de réanimation
-                        // On applique les taux par défaut pour le nombre de lit de réanimation disponible
+                        // Calculate the number of deaths according to the number of infected, the age mortality, the risk of day mortality and the possible lack of ICU beds
+                        // Default rates for the number of available ICU beds are applied
                         float nbDead_float = infectedNumber * deadlinessPerAges[age] * deadlinessPerDays[day] * bedMalus;
                         int nbDead = Mathf.RoundToInt(nbDead_float);
-                        // récupération et accumulation de la partie flotante
+                        // recovery and accumulation of the floating part
                         territoryData.popPartialDeath[age] += nbDead_float - (int)nbDead_float;
-                        // ajout d'un mort supplémentaire si les accumulations précédentes dépassent l'unité
+                        // addition of an extra dead person if the previous accumulations exceed the unit
                         int cumulatedDeath = (int)territoryData.popPartialDeath[age];
-                        // prise en compte de l'éventuel mort supplémentaire
+                        // taking into account the possible additional death
                         nbDead += cumulatedDeath;
-                        // retirer de l'accumulation l'éventuel mort supplémentaire
+                        // remove from the accumulation the possible additional death
                         territoryData.popPartialDeath[age] -= cumulatedDeath;
 
                         if (nbDead > 0)
                         {
-                            // retirer ces morts du territoire
+                            // remove these deaths from the territory
                             territoryData.nbDeath += nbDead;
                             territoryData.numberOfInfectedPeoplePerAgesAndDays[age][day] -= nbDead;
                             territoryData.popDeath[age] += nbDead;
                             territoryData.numberOfInfectedPeoplePerDays[day] -= nbDead;
-                            // retirer ces morts au niveau national
+                            // remove these deaths at the national level
                             countryPopData.nbDeath += nbDead;
                             countryPopData.numberOfInfectedPeoplePerAgesAndDays[age][day] -= nbDead;
                             countryPopData.popDeath[age] += nbDead;
@@ -113,14 +122,14 @@ public class DeadSystem : FSystem
                         }
                     }
                 }
-                // Comptabilisation de l'historique des nouveaux décés pour la région
+                // Recording for the history of new deaths for the region
                 territoryData.cumulativeDeath.Add(territoryData.nbDeath);
                 if (territoryData.cumulativeDeath.Count > 1)
                     territoryData.historyDeath.Add(territoryData.nbDeath - territoryData.cumulativeDeath[territoryData.cumulativeDeath.Count - 2]);
                 else
                     territoryData.historyDeath.Add(territoryData.nbDeath);
             }
-            // Comptabilisation de l'historique des nouveaux décés pour la nation
+            // Recording for the history of new deaths for the nation
             countryPopData.cumulativeDeath.Add(countryPopData.nbDeath);
             if (countryPopData.cumulativeDeath.Count > 1)
                 countryPopData.historyDeath.Add(countryPopData.nbDeath - countryPopData.cumulativeDeath[countryPopData.cumulativeDeath.Count - 2]);
@@ -161,19 +170,27 @@ public class DeadSystem : FSystem
         }
     }
 
+    /// <summary>
+    /// update of the number of deaths in the UI
+    /// </summary>
+    /// <param name="textUI">New value</param>
     public void UpdateDailyDeadUI (TMPro.TMP_Text textUI)
     {
         int dailyDead = 0;
         if (MapSystem.territorySelected.historyDeath.Count > 1)
             dailyDead = MapSystem.territorySelected.historyDeath[MapSystem.territorySelected.historyDeath.Count - 1];
-        SyncUISystem.formatStringUI(textUI, dailyDead);
+        SyncUISystem.formatStringUI(textUI, dailyDead, localization);
     }
 
+    /// <summary>
+    /// update of the number of cumulative deaths in the UI
+    /// </summary>
+    /// <param name="textUI">New value</param>
     public void UpdateCumulDeadUI(TMPro.TMP_Text textUI)
     {
         int cumulDead = 0;
         if (MapSystem.territorySelected.cumulativeDeath.Count > 1)
             cumulDead = MapSystem.territorySelected.cumulativeDeath[MapSystem.territorySelected.cumulativeDeath.Count - 1];
-        SyncUISystem.formatStringUI(textUI, cumulDead);
+        SyncUISystem.formatStringUI(textUI, cumulDead, localization);
     }
 }

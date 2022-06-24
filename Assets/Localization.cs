@@ -56,6 +56,14 @@ public class Localization : MonoBehaviour
     public string revolutionTooltip;
     public string vaccineTooltip;
 
+    public string unitThousands;
+    public string unitMillions;
+    public string unitBillions;
+
+    public string unitThousandsShort;
+    public string unitMillionsShort;
+    public string unitBillionsShort;
+
     public string getFormatedText(string expression, params object [] data)
     {
         for (int i = 0; i < data.Length; i++)

@@ -1979,5 +1979,54 @@ MonoBehaviour:
       en national</color>
     m_Metadata:
       m_Items: []
+  - m_Id: 48729902780452864
+    m_Localized: (en Milliards)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 48729963736272896
+    m_Localized: (en Millions)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 48730048675123200
+    m_Localized: (en milliers)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 48737969664364544
+    m_Localized: "% de personnes infect\xE9es<br>pour le territoire s\xE9lectionn\xE9"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 48738062547226624
+    m_Localized: "Nombre de personnes d\xE9c\xE9d\xE9es aujourd'hui<br>pour le territoire
+      s\xE9lectionn\xE9"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 48738153832058880
+    m_Localized: "Cumul des personnes d\xE9c\xE9d\xE9es<br>pour le territoire s\xE9lectionn\xE9"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 48738218432729088
+    m_Localized: Nombre de masques en stock<br>au niveau national
+    m_Metadata:
+      m_Items: []
+  - m_Id: 48738285969412096
+    m_Localized: Nombre de doses de vaccin en stock<br>au niveau national
+    m_Metadata:
+      m_Items: []
+  - m_Id: 48738340541501440
+    m_Localized: "Dette nationale due \xE0 la crise"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 48738430790340608
+    m_Localized: "% de personnes m\xE9contentes au niveau national"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 48773927143149568
+    m_Localized: k
+    m_Metadata:
+      m_Items: []
+  - m_Id: 48773942284587008
+    m_Localized: Md
+    m_Metadata:
+      m_Items: []
   references:
     version: 1

@@ -311,7 +311,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 9114910477180829607}
         m_TargetAssemblyTypeName: ItemSelector, Assembly-CSharp
-        m_MethodName: nextLanguage
+        m_MethodName: nextItem
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -463,7 +463,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 9114910477180829607}
         m_TargetAssemblyTypeName: ItemSelector, Assembly-CSharp
-        m_MethodName: prevLanguage
+        m_MethodName: prevItem
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

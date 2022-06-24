@@ -1814,6 +1814,54 @@ MonoBehaviour:
     m_Key: Game/Localization 111
     m_Metadata:
       m_Items: []
+  - m_Id: 48729902780452864
+    m_Key: Game/Localization 112
+    m_Metadata:
+      m_Items: []
+  - m_Id: 48729963736272896
+    m_Key: Game/Localization 113
+    m_Metadata:
+      m_Items: []
+  - m_Id: 48730048675123200
+    m_Key: Game/Localization 114
+    m_Metadata:
+      m_Items: []
+  - m_Id: 48737969664364544
+    m_Key: Game/CanvasUINavigator/UpMenu/PyramidText (TMP)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 48738062547226624
+    m_Key: Game/CanvasUINavigator/UpMenu/DeathText (TMP)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 48738153832058880
+    m_Key: Game/CanvasUINavigator/UpMenu/CumulativeText (TMP)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 48738218432729088
+    m_Key: Game/CanvasUINavigator/UpMenu/MaskText (TMP)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 48738285969412096
+    m_Key: Game/CanvasUINavigator/UpMenu/VaccineText (TMP)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 48738340541501440
+    m_Key: Game/CanvasUINavigator/UpMenu/FInanceText (TMP)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 48738430790340608
+    m_Key: Game/CanvasUINavigator/UpMenu/RevolutionText (TMP)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 48773927143149568
+    m_Key: Game/Localization 115
+    m_Metadata:
+      m_Items: []
+  - m_Id: 48773942284587008
+    m_Key: Game/Localization 116
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

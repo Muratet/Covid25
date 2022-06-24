@@ -9543,7 +9543,7 @@ PrefabInstance:
     - target: {fileID: 8885153913726410275, guid: 5080ce6f37899774e95030fae561002f,
         type: 3}
       propertyPath: m_Name
-      value: LanguageCountry
+      value: CountrySelector
       objectReference: {fileID: 0}
     - target: {fileID: 8885153914220435018, guid: 5080ce6f37899774e95030fae561002f,
         type: 3}

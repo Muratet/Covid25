@@ -1,12 +1,15 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using FYFY;
-using System.Globalization;
 
+/// <summary>
+/// This system calculates the debt each day
+/// </summary>
 public class FinanceSystem : FSystem
 {
     private Family f_territories = FamilyManager.getFamily(new AllOfComponents(typeof(TerritoryData), typeof(Image)));
 
+    /// <summary></summary>
     public GameObject countrySimData;
     private TimeScale time;
     private FrontierPermeability frontierPermeability;
@@ -17,6 +20,7 @@ public class FinanceSystem : FSystem
     private Tax tax;
     private Beds beds;
 
+    /// <summary></summary>
     public Localization localization;
 
     private float taxProgress = 0f;
@@ -27,21 +31,21 @@ public class FinanceSystem : FSystem
 
     protected override void onStart()
     {
-        // Récupération de l'échelle de temps
+        // Recovery of the time scale
         time = countrySimData.GetComponent<TimeScale>();
-        // Récupération des données de la population
+        // Recovery population data
         countryPopData = countrySimData.GetComponent<TerritoryData>();
-        // Récupération de données de la frontière
+        // Recovery borders permeability
         frontierPermeability = countrySimData.GetComponent<FrontierPermeability>();
-        // Récupération des finances
+        // Recovery of financial data
         finances = countrySimData.GetComponent<Finances>();
-        // Récupération de données du télétravail
+        // Recovery of homeworking data
         remoteworking = countrySimData.GetComponent<Remoteworking>();
-        // Récupération de données du chômage partiel
+        // Recovery of partial unemployment data
         shortTimeWorking = countrySimData.GetComponent<ShortTimeWorking>();
-        // Récupération de données des impôts de entreprises
+        // Recovery of business charges
         tax = countrySimData.GetComponent<Tax>();
-        // Récupération de données des lits de réanimation
+        // Recovery of ICU beds
         beds = countrySimData.GetComponent<Beds>();
         finances.historySpent.Add(0);
     }
@@ -49,57 +53,57 @@ public class FinanceSystem : FSystem
     // Use to process your families.
     protected override void onProcess(int familiesUpdateCount)
     {
-        // Vérifier s'il faut générer une nouvelle journée
+        // Check if a new day should be generated
         if (time.newDay)
         {
             float newSpent = 0;
 
-            // Gestion de la fermeture des frontières
+            // Border closure management
             if (frontierPermeability.currentState >= 1)
-                newSpent += Random.Range(50000f, 150000f); // 100 000 € de perte en moyenne du à l'arrêt du tourisme
+                newSpent += Random.Range(50000f, 150000f); // 100 000 € of loss on average due to the stop of tourism
             if (frontierPermeability.currentState >= 2)
-                newSpent += Random.Range(500000f, 1500000f); // 1 000 000 € de perte supplémentaire en moyenne du à l'arrêt du commerce hors zone europe
+                newSpent += Random.Range(500000f, 1500000f); // 1 000 000 € of additional loss on average due to the stop of the trade outside the European zone
             if (frontierPermeability.currentState >= 3)
-                newSpent += Random.Range(200000f, 600000f); // 400 000 € de perte supplémentaire en moyenne du au confinement total
+                newSpent += Random.Range(200000f, 600000f); // 400 000 € of additional loss on average due to total confinement
 
-            float remoteworkingImpact = (remoteworking.currentState ? 0.75f : 1f); // si activation du télétravail baisse l'impact financier dû à une activité à domicile
-            float shortTimeWorkingImpact = (shortTimeWorking.currentState ? 100f : 1f); // si activation du chômage partiel fait exploser l'impact financier dû aux charges sociales
+            float remoteworkingImpact = (remoteworking.currentState ? 0.75f : 1f); // if home working is enabled, the financial impact of working from home is reduced
+            float shortTimeWorkingImpact = (shortTimeWorking.currentState ? 100f : 1f); // if partial unemployment is activated, the financial impact due to social charges explodes
 
             foreach (GameObject territory in f_territories)
             {
                 TerritoryData territoryData = territory.GetComponent<TerritoryData>();
-                // Chiffres INSEE : 30Md en 2 mois pour un scénario avec télétravail (0.75f) + chômage partiel (10f) => donc par jour ça donne : 30Md / 2 mois / 30 jours / (100 * 0.75) = 6 666 666 € => arrondi à 6 000 000 € et à pondérer en fonction de la proportion de la population dans la région
+                // French INSEE figures : 30 Billions in 2 months for a scenario with homeworking (0.75f) + partial unemployment (10f) => so per day it gives : 30 Billions / 2 months / 30 days / (100 * 0.75) = 6 666 666 € => rounded to 6 000 000 € and to be weighted according to the proportion of the population in the region
 
-                // Gestion de la fermeture des boutiques
+                // Management of the closing of the stores
                 if (territoryData.closeShop)
                 {
                     territoryData.closeShopDynamic = Mathf.Min(1, territoryData.closeShopDynamic + 0.1f);
-                    newSpent += territoryData.closeShopDynamic * territoryData.populationRatio * Random.Range(4000000f, 8000000f) * remoteworkingImpact * shortTimeWorkingImpact; // 6 Million de perte par jour dû au ralentissement de l'économie modulé par les actions sociales. 
+                    newSpent += territoryData.closeShopDynamic * territoryData.populationRatio * Random.Range(4000000f, 8000000f) * remoteworkingImpact * shortTimeWorkingImpact; // 6 Million loss per day due to economic downturn modulated by social actions. 
                 } else
                     territoryData.closeShopDynamic = Mathf.Max(0, territoryData.closeShopDynamic - 0.1f);
 
-                // Gestion du confinement par age (si la tranche d'age concerne des travailleurs)
+                // Containment management by age (if the age range concerns workers)
                 if (territoryData.ageDependent && territoryData.ageDependentMin != "" && territoryData.ageDependentMax != "" && int.Parse(territoryData.ageDependentMin) < 62 && int.Parse(territoryData.ageDependentMax) >= 62)
                 {
                     int ageMin = int.Parse(territoryData.ageDependentMin);
                     int ageMax = int.Parse(territoryData.ageDependentMax);
-                    // Une partie de la population en confinement total est en age de travailler => Calcul de la proportion de la population de la région concernée
+                    // A part of the population in total confinement is of working age => Calculation of the proportion of the population of the region concerned
                     int workerConfined = 0;
                     for (int age = ageMin; age <= ageMax && age < 62; age++)
                         workerConfined += territoryData.popNumber[age] - territoryData.popDeath[age];
-                    newSpent += workerConfined / (countryPopData.nbPopulation - countryPopData.nbDeath) * Random.Range(500000f, 1500000f) * remoteworkingImpact * shortTimeWorkingImpact; // 1 Million de perte par jour dû au ralentissement de l'économie modulé par les actions sociales
+                    newSpent += workerConfined / (countryPopData.nbPopulation - countryPopData.nbDeath) * Random.Range(500000f, 1500000f) * remoteworkingImpact * shortTimeWorkingImpact; // 1 Million loss per day due to economic downturn modulated by social actions
                 }
             }
 
-            // Gestion des impôts des entreprises
+            // Corporate tax management
             if (tax.currentState)
             {
                 taxProgress = Mathf.Min(1, taxProgress + 0.1f);
-                newSpent += taxProgress * Random.Range(100000000f, 7000000000f); // 42 Milliards en deux mois (chiffre INSEE) => 700 Millions par jour max
+                newSpent += taxProgress * Random.Range(100000000f, 7000000000f); // 42 Billion in two months (French INSEE figure) => 700 Million per day max
             } else
                 taxProgress = Mathf.Max(0, taxProgress - 0.1f);
 
-            // Calcul du coup financier d'une journée d'un lit de réa
+            // Calculation of the financial cost of a day in a ICU bed
             newSpent += Mathf.Min(beds.intensiveBeds_need, beds.intensiveBeds_current) * finances.oneDayReanimationCost;
             if (!bedsNotif && beds.intensiveBeds_need > 0)
             {
@@ -108,7 +112,7 @@ public class FinanceSystem : FSystem
             }
 
 
-            // prise en compte des financement extérieurs à ce système (achats de masques et de vaccins en l'occurence)
+            // taking into account the external financing of this system (purchase of masks and vaccines in this case)
             newSpent += finances.dailySpending;
             finances.dailySpending = 0;
 
@@ -140,11 +144,15 @@ public class FinanceSystem : FSystem
         }
     }
 
+    /// <summary>
+    /// update of the debt in the UI
+    /// </summary>
+    /// <param name="textUI">New value</param>
     public void UpdateFinanceUI(TMPro.TMP_Text textUI)
     {
         float financeAmount = 0;
         if (finances.historySpent.Count > 1)
             financeAmount = finances.historySpent[finances.historySpent.Count - 1];
-        SyncUISystem.formatStringUI(textUI, financeAmount);
+        SyncUISystem.formatStringUI(textUI, financeAmount, localization);
     }
 }

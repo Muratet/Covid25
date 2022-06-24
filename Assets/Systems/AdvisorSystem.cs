@@ -3,11 +3,17 @@ using UnityEngine.UI;
 using FYFY;
 using TMPro;
 
+/// <summary>
+/// This system is in charge to display messages provided by advisors in the advisor panel
+/// </summary>
 public class AdvisorSystem : FSystem
 {
     private Family f_territories = FamilyManager.getFamily(new AllOfComponents(typeof(TerritoryData)));
     private Family f_chatMessage = FamilyManager.getFamily(new AllOfComponents(typeof(ChatMessage)));
 
+    /// <summary>
+    /// The panel that contains advisors messages
+    /// </summary>
     public GameObject chatContent;
     private Transform unreadMessages;
     private GameObject playerMessagePrefab;
@@ -15,6 +21,7 @@ public class AdvisorSystem : FSystem
     private Animator panelAnimator;
     private ScrollRect scrollRect;
 
+    /// <summary></summary>
     public GameObject simulationData;
     private TimeScale time;
     private FrontierPermeability frontierPermeability;
@@ -24,10 +31,13 @@ public class AdvisorSystem : FSystem
     private Masks masks;
     private Vaccine vaccine;
 
+    /// <summary></summary>
     public TMP_Text newChatNotif;
 
+    /// <summary></summary>
     public AudioSource audioEffect;
 
+    /// <summary></summary>
     public Localization localization;
 
     private bool isOpen = false;
@@ -38,8 +48,14 @@ public class AdvisorSystem : FSystem
     private float clickTime = 0;
     private float clickDelay = 0.5f;
 
+    /// <summary>
+    /// Singleton reference of this system
+    /// </summary>
     public static AdvisorSystem instance;
 
+    /// <summary>
+    /// Construct this system
+    /// </summary>
     public AdvisorSystem()
     {
         instance = this;
@@ -53,19 +69,19 @@ public class AdvisorSystem : FSystem
         panelAnimator = chatContent.GetComponentInParent<Animator>();
         scrollRect = chatContent.GetComponentInParent<ScrollRect>();
 
-        // Récupération de l'échelle de temps
+        // Recovery of the time scale
         time = simulationData.GetComponent<TimeScale>();
-        // Récupération de données de la frontière
+        // Recovery of the border restrictions
         frontierPermeability = simulationData.GetComponent<FrontierPermeability>();
-        // Récupération de données des impôts de entreprises
+        // Recovery of the company restrictions
         tax = simulationData.GetComponent<Tax>();
-        // Récupération de données du télétravail
+        // Recovery of home working restrictions
         remoteworking = simulationData.GetComponent<Remoteworking>();
-        // Récupération de données du chômage partiel
+        // Recovery of partial unemployment restrictions
         shortTimeWorking = simulationData.GetComponent<ShortTimeWorking>();
-        // Récupération des masques
+        // Recovery of mask data
         masks = simulationData.GetComponent<Masks>();
-        // Récupération des données du vaccin
+        // Recovery of vaccine data
         vaccine = simulationData.GetComponent<Vaccine>();
 
         f_chatMessage.addEntryCallback(OnNewMessage);
@@ -111,10 +127,10 @@ public class AdvisorSystem : FSystem
 
         if (time.newDay)
         {
-            //---------------------------------------
-            // Gestion des actions au niveau national
-            //---------------------------------------
-            // Gestion des frontières
+            //--------------------------------------------
+            // Management of actions at the national level
+            //--------------------------------------------
+            // Border management
             if (frontierPermeability.lastUpdate >= 0 && frontierPermeability.lastUpdate == time.daysGone - 1)
             {
                 GameObject newMessage = Object.Instantiate(playerMessagePrefab);
@@ -124,7 +140,7 @@ public class AdvisorSystem : FSystem
                 newMessage.transform.localScale = new Vector3(1, 1, 1);
             }
 
-            // Gestion des aides aux entreprises
+            // Management of aid to companies
             if (tax.lastUpdate >= 0 && tax.lastUpdate == time.daysGone - 1)
             {
                 GameObject newMessage = Object.Instantiate(playerMessagePrefab);
@@ -134,7 +150,7 @@ public class AdvisorSystem : FSystem
                 newMessage.transform.localScale = new Vector3(1, 1, 1);
             }
 
-            // Gestion du télétravail
+            // Management of home working
             if (remoteworking.lastUpdate >= 0 && remoteworking.lastUpdate == time.daysGone - 1)
             {
                 GameObject newMessage = Object.Instantiate(playerMessagePrefab);
@@ -144,7 +160,7 @@ public class AdvisorSystem : FSystem
                 newMessage.transform.localScale = new Vector3(1, 1, 1);
             }
 
-            // Gestion du chômage partiel
+            // Management of partial unemployment
             if (shortTimeWorking.lastUpdate >= 0 && shortTimeWorking.lastUpdate == time.daysGone - 1)
             {
                 GameObject newMessage = Object.Instantiate(playerMessagePrefab);
@@ -154,7 +170,7 @@ public class AdvisorSystem : FSystem
                 newMessage.transform.localScale = new Vector3(1, 1, 1);
             }
 
-            // Gestion de la réquisition des masques
+            // Management of the mask requisition
             if (masks.lastRequisitionUpdate >= 0 && masks.lastRequisitionUpdate == time.daysGone - 1)
             {
                 GameObject newMessage = Object.Instantiate(playerMessagePrefab);
@@ -164,7 +180,7 @@ public class AdvisorSystem : FSystem
                 newMessage.transform.localScale = new Vector3(1, 1, 1);
             }
 
-            // Gestion du boost de la production de masques
+            // Management of the mask production boost
             if (masks.lastBoostProductionUpdate >= 0 && masks.lastBoostProductionUpdate == time.daysGone - 1)
             {
                 GameObject newMessage = Object.Instantiate(playerMessagePrefab);
@@ -174,7 +190,7 @@ public class AdvisorSystem : FSystem
                 newMessage.transform.localScale = new Vector3(1, 1, 1);
             }
 
-            // Gestion de la production artisanale de masques
+            // Management of the artisanal production of masks
             if (masks.lastArtisanalProductionUpdate >= 0 && masks.lastArtisanalProductionUpdate == time.daysGone - 1)
             {
                 GameObject newMessage = Object.Instantiate(playerMessagePrefab);
@@ -184,7 +200,7 @@ public class AdvisorSystem : FSystem
                 newMessage.transform.localScale = new Vector3(1, 1, 1);
             }
 
-            // Gestion de la commande de masques
+            // Mask order management
             if (masks.lastOrderPlaced >= 0 && masks.lastOrderPlaced == time.daysGone - 1)
             {
                 GameObject newMessage = Object.Instantiate(playerMessagePrefab);
@@ -194,7 +210,7 @@ public class AdvisorSystem : FSystem
                 newMessage.transform.localScale = new Vector3(1, 1, 1);
             }
 
-            // Gestion de la commande de vaccins
+            // Vaccine order management
             if (vaccine.lastOrderPlaced >= 0 && vaccine.lastOrderPlaced == time.daysGone - 1)
             {
                 GameObject newMessage = Object.Instantiate(playerMessagePrefab);
@@ -204,13 +220,13 @@ public class AdvisorSystem : FSystem
                 newMessage.transform.localScale = new Vector3(1, 1, 1);
             }
 
-            //------------------------------------------------
-            // Gestion des actions au niveau régional/national
-            //------------------------------------------------
+            //-------------------------------------------------
+            // Management of actions at regional/national level
+            //-------------------------------------------------
             foreach (GameObject territory_go in f_territories)
             {
                 TerritoryData territory = territory_go.GetComponent<TerritoryData>();
-                // Fermeture des écoles
+                // Primary schools closure
                 if (territory.closePrimarySchoolLastUpdate >= 0 && territory.closePrimarySchoolLastUpdate == time.daysGone - 1)
                 {
                     GameObject newMessage = Object.Instantiate(playerMessagePrefab);
@@ -219,7 +235,7 @@ public class AdvisorSystem : FSystem
                     newMessage.transform.SetParent(chatContent.transform);
                     newMessage.transform.localScale = new Vector3(1, 1, 1);
                 }
-                // Fermeture des collèges
+                // Middle schools closure
                 if (territory.closeSecondarySchoolLastUpdate >= 0 && territory.closeSecondarySchoolLastUpdate == time.daysGone - 1)
                 {
                     GameObject newMessage = Object.Instantiate(playerMessagePrefab);
@@ -228,7 +244,7 @@ public class AdvisorSystem : FSystem
                     newMessage.transform.SetParent(chatContent.transform);
                     newMessage.transform.localScale = new Vector3(1, 1, 1);
                 }
-                // Fermeture des lycées
+                // High schools closure
                 if (territory.closeHighSchoolLastUpdate >= 0 && territory.closeHighSchoolLastUpdate == time.daysGone - 1)
                 {
                     GameObject newMessage = Object.Instantiate(playerMessagePrefab);
@@ -237,7 +253,7 @@ public class AdvisorSystem : FSystem
                     newMessage.transform.SetParent(chatContent.transform);
                     newMessage.transform.localScale = new Vector3(1, 1, 1);
                 }
-                // Fermeture des universités
+                // Universities closure
                 if (territory.closeUniversityLastUpdate >= 0 && territory.closeUniversityLastUpdate == time.daysGone - 1)
                 {
                     GameObject newMessage = Object.Instantiate(playerMessagePrefab);
@@ -246,7 +262,7 @@ public class AdvisorSystem : FSystem
                     newMessage.transform.SetParent(chatContent.transform);
                     newMessage.transform.localScale = new Vector3(1, 1, 1);
                 }
-                // Appel civique
+                // Call for civic responsibility
                 if (territory.callCivicismLastUpdate >= 0 && territory.callCivicismLastUpdate == time.daysGone - 1)
                 {
                     GameObject newMessage = Object.Instantiate(playerMessagePrefab);
@@ -255,7 +271,7 @@ public class AdvisorSystem : FSystem
                     newMessage.transform.SetParent(chatContent.transform);
                     newMessage.transform.localScale = new Vector3(1, 1, 1);
                 }
-                // Fermeture des commerces
+                // shops closure
                 if (territory.closeShopLastUpdate >= 0 && territory.closeShopLastUpdate == time.daysGone - 1)
                 {
                     GameObject newMessage = Object.Instantiate(playerMessagePrefab);
@@ -264,7 +280,7 @@ public class AdvisorSystem : FSystem
                     newMessage.transform.SetParent(chatContent.transform);
                     newMessage.transform.localScale = new Vector3(1, 1, 1);
                 }
-                // Attestation de sortie
+                // Exit certificate required
                 if (territory.certificateRequiredLastUpdate >= 0 && territory.certificateRequiredLastUpdate == time.daysGone - 1)
                 {
                     GameObject newMessage = Object.Instantiate(playerMessagePrefab);
@@ -273,7 +289,7 @@ public class AdvisorSystem : FSystem
                     newMessage.transform.SetParent(chatContent.transform);
                     newMessage.transform.localScale = new Vector3(1, 1, 1);
                 }
-                // Boost lit réanimation
+                // Boost the number of intensive care beds
                 Beds beds = territory.GetComponent<Beds>();
                 if (beds.boostBedsLastUpdate >= 0 && beds.boostBedsLastUpdate == time.daysGone - 1)
                 {
@@ -283,7 +299,7 @@ public class AdvisorSystem : FSystem
                     newMessage.transform.SetParent(chatContent.transform);
                     newMessage.transform.localScale = new Vector3(1, 1, 1);
                 }
-                // Restriction age
+                // Age restriction
                 if (territory.ageDependentLastUpdate >= 0 && territory.ageDependentLastUpdate == time.daysGone - 1)
                 {
                     GameObject newMessage = Object.Instantiate(playerMessagePrefab);
@@ -301,6 +317,9 @@ public class AdvisorSystem : FSystem
         }
     }
 
+    /// <summary>
+    /// Open/Close the advisor panel
+    /// </summary>
     public void TogglePanel()
     {
         if (isOpen)
@@ -314,6 +333,9 @@ public class AdvisorSystem : FSystem
         }
     }
 
+    /// <summary>
+    /// Close the advisor panel if it is openned
+    /// </summary>
     public void ClosePanel()
     {
         if (isOpen)

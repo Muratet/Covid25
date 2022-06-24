@@ -1,21 +1,34 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using FYFY;
-using System.Globalization;
 
+/// <summary>
+/// Manage all (death, infected and trated) pyramid bars
+/// </summary>
 public class BarsSystem : FSystem {
     private Family f_updateBars = FamilyManager.getFamily(new AllOfComponents(typeof(PopUpBar)), new AnyOfComponents(typeof(DeathBar), typeof(InfectedBar), typeof(TreatedBar), typeof(PopulationBar)), new AnyOfProperties(PropertyMatcher.PROPERTY.ACTIVE_IN_HIERARCHY));
     private PopUpBar tmpBar;
     private int[] data;
+    /// <summary></summary>
     public GameObject barsContainer;
+    /// <summary></summary>
     public GameObject barPrefab;
+    /// <summary></summary>
     public Transform xAxis;
 
+    /// <summary></summary>
     public GameObject countrySimData;
     private TimeScale time;
     private TerritoryData countryPopData;
 
+    /// <summary>
+    /// Singleton reference of this system
+    /// </summary>
     public static BarsSystem instance;
+
+    /// <summary>
+    /// Construct this system
+    /// </summary>
     public BarsSystem()
     {
         instance = this;
@@ -23,9 +36,9 @@ public class BarsSystem : FSystem {
 
     protected override void onStart()
     {
-        // Récupération de l'échelle de temps
+        // Recovery of the time scale
         time = countrySimData.GetComponent<TimeScale>();
-        // Récupération des données de la population
+        // Recovery population data
         countryPopData = countrySimData.GetComponent<TerritoryData>();
 
         // Create bars
@@ -57,7 +70,7 @@ public class BarsSystem : FSystem {
 	// Use to process your families.
 	protected override void onProcess(int familiesUpdateCount) {
 
-        // Vérifier s'il faut rafraîchir le diagramme
+        // Check if the diagram needs to be refreshed
         if (time.newDay || SyncUISystem.needUpdate)
         {
             foreach (GameObject go in f_updateBars)
@@ -71,7 +84,7 @@ public class BarsSystem : FSystem {
                     data = MapSystem.territorySelected.popInfected;
                 else if (go.GetComponent<TreatedBar>())
                 {
-                    // ajout des personnes décédés qui ne sont pas prise en compte dans le décompte des personnes infectées mais qui l'est dans les personnes guéries
+                    // addition of deceased persons who are not included in the count of infected persons but are included in the count of cured persons
                     data = new int[MapSystem.territorySelected.popDeath.Length];
                     for (int age = 0; age < MapSystem.territorySelected.popDeath.Length; age++)
                         data[age] = MapSystem.territorySelected.popTreated[age] + MapSystem.territorySelected.popDeath[age];
@@ -81,7 +94,7 @@ public class BarsSystem : FSystem {
                 go.transform.localPosition = new Vector3((barWidth - 1) * 500, go.transform.localPosition.y, go.transform.localPosition.z);
                 go.transform.localScale = new Vector3(barWidth * 10, 1, 1);
             }
-            // mise à jour de l'abscisse
+            // update of the x-axis
             int unit = 0;
             for (int child = 0; child < xAxis.childCount; child++)
             {

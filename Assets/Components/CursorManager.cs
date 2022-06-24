@@ -1,10 +1,13 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
+/// <summary>
+/// This component manage the mouse cursor in order the finger is oriented toward the center of the screen
+/// </summary>
 public class CursorManager : MonoBehaviour
 {
+    /// <summary></summary>
     public Texture2D cursorRight;
+    /// <summary></summary>
     public Texture2D cursorLeft;
 
     private int offset = 0;
@@ -14,7 +17,7 @@ public class CursorManager : MonoBehaviour
     {
         Vector3 mousePos = Input.mousePosition;
 
-        // recaller la position du tooltip pour qu'il soit dirigé vers le centre de l'écran
+        // set tooltip positionin order it is oriented toward the center of the screen
         if (mousePos.x + offset > Screen.width / 2)
         {
             offset = 0;

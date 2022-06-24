@@ -27,9 +27,9 @@ public class VaccineSystem_wrapper : BaseWrapper
 		MainLoop.callAppropriateSystemMethod (system, "_OnFrontierChange", newValue);
 	}
 
-	public void UpdateMasksUI(TMPro.TMP_Text textUI)
+	public void UpdateVaccineUI(TMPro.TMP_Text textUI)
 	{
-		MainLoop.callAppropriateSystemMethod (system, "UpdateMasksUI", textUI);
+		MainLoop.callAppropriateSystemMethod (system, "UpdateVaccineUI", textUI);
 	}
 
 }

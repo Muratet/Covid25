@@ -1,5 +1,8 @@
 ﻿using UnityEngine;
 
+/// <summary>
+/// This component is use to transfert customized virus data to the <see cref="VirusStats"/> component
+/// </summary>
 public class LoadCustomizedVirus : MonoBehaviour
 {
     // Start is called before the first frame update

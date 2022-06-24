@@ -1,46 +1,76 @@
 ﻿using UnityEngine;
 
+/// <summary>
+/// This component is used to store virus data
+/// </summary>
 public class VirusStats : MonoBehaviour {
     // Advice: FYFY component aims to contain only public members (according to Entity-Component-System paradigm).
 
-    // Viser en moyenne 3 infections par personne sur les X jours de contagiosité. Donc pour un cluster de 10 personnes sur les 10 jours il faut environ contaminer 30 autres personnes.
-    [Tooltip("Modélise le R0 courrant du virus")]
+    /// <summary>
+    /// Models the current R0 of the virus. For example, if equal to 3 it means on average that each person contaminates 3 other persons on X days of contagiousness. So for a cluster of 10 persons over 10 days 30 other persons will be contaminated.
+    /// </summary>
+    [Tooltip("Models the current R0 of the virus")]
     public float contagiosity = 3f;
-    // Taux de population infectée à partir duquel la pandémie se résorbe par elle même sans mesure particulière
-    [Tooltip("Taux de population infectée à partir duquel la pandémie se résorbe par elle même sans mesure particulière")]
+    /// <summary>
+    /// Rate of infected population at which the pandemic is self-limiting without any specific action
+    /// </summary>
+    [Tooltip("Rate of infected population at which the pandemic is self-limiting without any specific action")]
     public float populationRatioImmunity = 0.67f;
 
-    // Taille de la fenêtre glissante pour stocker le nombre de personnes infectées
-    [Tooltip("Taille de la fenêtre glissante pour stocker le nombre de personnes infectées")]
+    /// <summary>
+    /// Size of the sliding window to store the number of infected people
+    /// </summary>
+    [Tooltip("Size of the sliding window to store the number of infected people")]
     public int windowSize = 21;
-    // Données pour calculer la gaussienne sur la taille de la fenêtre glissante
-    // ... pour la contagiosité
-    [Tooltip("Moyenne du pic d'apparition des symptomes")]
-    public float contagiousnessPeak = 10; // Moyenne du pic d'apparition des symptomes
-    [Tooltip("Ecart type d'apparition des symptomes")]
+
+    // Data to calculate the Gaussian on the sliding window size
+    // ... for contagiousness
+    /// <summary>
+    /// Average peak symptom onset
+    /// </summary>
+    [Tooltip("Average peak symptom onset")]
+    public float contagiousnessPeak = 10;
+    /// <summary>
+    /// Standard deviation of symptom onset
+    /// </summary>
+    [Tooltip("Standard deviation of symptom onset")]
     public float contagiousnessDeviation = 3f;
-    // ... pour la létalité
-    [Tooltip("Moyenne du pic de mortalité")]
-    public float deadlinessPeak = 12; // Décallé de 2 jours après la moyenne de l'apparition des premiers symptomes...
-    [Tooltip("Ecart type de mortalité")]
+    // ... for lethality
+    /// <summary>
+    /// Average peak mortality
+    /// </summary>
+    [Tooltip("Average peak mortality")]
+    public float deadlinessPeak = 12; // Staggered by 2 days after the average appearance of the first symptoms...
+    /// <summary>
+    /// Standard deviation of mortality
+    /// </summary>
+    [Tooltip("Standard deviation of mortality")]
     public float deadlinessDeviation = 1.8f;
 
-    [Tooltip("Taux de cas sérieux")]
-    public float seriousRatio = 0.138f; // 13.8% des cas sont sérieux
+    /// <summary>
+    /// Rate of serious cases
+    /// </summary>
+    [Tooltip("Rate of serious cases")]
+    public float seriousRatio = 0.138f;
 
-    // Indique l'age à partir duquel on peut commencer à avoir des morts
-    [Tooltip("Age à partir duquel on peut commencer à avoir des morts")]
+    /// <summary>
+    /// Age at which you can start having deaths
+    /// </summary>
+    [Tooltip("Age at which you can start having deaths")]
     public int firstSensitiveAge = 30;
-    // Permet de contrôler la courbure de l'exponentielle
-    // 1 => exponentielle classique
-    // < 1 => accelération plus rapide
-    // > 1 => accelération plus lente
-    [Tooltip("Contrôle de la courbure de l'exponentielle, 1 => exponentielle classique, < 1 => accelération plus rapide, > 1 => accelération plus lente")]
+    /// <summary>
+    /// Control of the curvature of the exponential, 1 => classic exponential, < 1 => faster acceleration, > 1 => slower acceleration
+    /// </summary>
+    [Tooltip("Control of the curvature of the exponential, 1 => classic exponential, < 1 => faster acceleration, > 1 => slower acceleration")]
     public int curveStrenght = 12;
-    // Taux de mortalité maximum pour la tranche d'age la plus agée
-    [Tooltip("Taux de mortalité maximum pour la tranche d'age la plus agée")]
+    /// <summary>
+    /// Maximum mortality rate for the oldest age group
+    /// </summary>
+    [Tooltip("Maximum mortality rate for the oldest age group")]
     public float maxDeadlinessRatio = 0.148f;
-
-    [Tooltip("Nombre de mois requis pour découvrir le vaccin")]
-    public int vaccineMounthDelay = 18; // 18 mois
+    /// <summary>
+    /// Number of months required to discover the vaccine
+    /// </summary>
+    [Tooltip("Number of months required to discover the vaccine")]
+    public int vaccineMounthDelay = 18;
 }

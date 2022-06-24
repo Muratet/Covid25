@@ -2,66 +2,117 @@
 using System.Collections.Generic;
 using UnityEngine.EventSystems;
 
+/// <summary>
+/// This component contains all the data related to the management of masks
+/// </summary>
 public class Masks : MonoBehaviour {
     // Advice: FYFY component aims to contain only public members (according to Entity-Component-System paradigm).
-    [Tooltip("Réserve nationale de masques au début de la crise")]
-    public float nationalStock = 140000000; // réserve nationale au début de la crise : 140 Milions de masques
 
-    [Tooltip("Nombre de masques consommés journalièrement hors situation de crise")]
-    public float medicalRequirementPerDay_low = 429000; // consomation régulaire : 3 Millions / semaine. Pour info : consomation au pic de la crise : 40 Millions / semaine
+    /// <summary>
+    /// National reserve of masks at the beginning of the crisis
+    /// </summary>
+    [Tooltip("National reserve of masks at the beginning of the crisis")]
+    public float nationalStock = 140000000;
+
+    /// <summary>
+    /// Number of masks consumed daily outside of crisis situations
+    /// </summary>
+    [Tooltip("Number of masks consumed daily outside of crisis situations")]
+    public float medicalRequirementPerDay_low = 429000; // In France - regular consumption: 3 Millions / week. For information: consumption at the peak of the crisis : 40 Millions / week
+    /// <summary>
+    /// The required amount of masks to satisfy daily consumption
+    /// </summary>
     [HideInInspector]
     public float medicalRequirementPerDay_current = 429000;
 
-    [Tooltip("Production nationale de masques par défaut")]
-    public float nationalProductionPerDay_low = 429000; // production régulaire : 3 millions / semaine
+    /// <summary>
+    /// Default national production of masks
+    /// </summary>
+    [Tooltip("Default national production of masks")]
+    public float nationalProductionPerDay_low = 429000; // In France - regular production: 3 millions / week
+    /// <summary>
+    /// The current national production of masks
+    /// </summary>
     [HideInInspector]
     public float nationalProductionPerDay_current = 429000;
-    [Tooltip("Production nationale maximale de masques si production boostée")]
-    public float nationalProductionPerDay_high = 2429000; // production boostée : 17 millions / semaine
+    /// <summary>
+    /// Maximum national production of masks if production is boosted
+    /// </summary>
+    [Tooltip("Maximum national production of masks if production is boosted")]
+    public float nationalProductionPerDay_high = 2429000; // In France - boosted production: 17 millions / week
 
-    [Tooltip("Délai moyen entre deux livraisons")]
+    /// <summary>
+    /// Average time between shipments
+    /// </summary>
+    [Tooltip("Average time between shipments")]
     public int deliveryTime = 8;
-    [Tooltip("Estimation du nombre de masques par livraison")]
-    public float maxDeliveryPack = 67000000; // estimation du nombre de masque par livraison avec 67 Millions de masque livré tout les 8 jours on atteind les 1 Milliards de masques commandés à la chine et livré en 4 mois.
+    /// <summary>
+    /// Estimated number of masks per shipments
+    /// </summary>
+    [Tooltip("Estimated number of masks per shipments")]
+    public float maxDeliveryPack = 67000000; // In France - estimation of the number of masks per delivery with 67 Millions of masks delivered every 8 days we reach the 1 Billion masks ordered to China and delivered in 4 months.
 
-    [Tooltip("Prix minimal d'un masque sur le marché")]
+    /// <summary>
+    /// Minimum price of a mask on the market
+    /// </summary>
+    [Tooltip("Minimum price of a mask on the market")]
     public float maskMinPrice = 0.06f;
-    [Tooltip("Prix courrant d'un masque sur le marché")]
-    public float maskPrice = 0.06f; // en centimes, varie entre 6 et 40 centimes l'unité
-    [Tooltip("Prix maximal d'un masque sur le marché")]
+    /// <summary>
+    /// Current price of a mask on the market
+    /// </summary>
+    [Tooltip("Current price of a mask on the market")]
+    public float maskPrice = 0.06f;
+    /// <summary>
+    /// Maximum price of a mask on the market
+    /// </summary>
+    [Tooltip("Maximum price of a mask on the market")]
     public float maskMaxPrice = 0.4f;
 
+    /// <summary>
+    /// The history of masks stock
+    /// </summary>
     public List<float> historyStock = new List<float>();
 
+    /// <summary></summary>
     [HideInInspector]
     public bool selfProtectionPromoted = false;
 
+    /// <summary></summary>
     [HideInInspector]
     public float commands = 0;
 
+    /// <summary></summary>
     [HideInInspector]
     public int nextDelivery = 0;
 
+    /// <summary></summary>
     [HideInInspector]
     public bool boostProduction = false;
 
+    /// <summary></summary>
     [HideInInspector]
     public bool requisition = false;
 
+    /// <summary></summary>
     [HideInInspector]
     public int lastRequisitionUpdate = -1;
 
+    /// <summary></summary>
     [HideInInspector]
     public int lastBoostProductionUpdate = -1;
 
+    /// <summary></summary>
     [HideInInspector]
     public int lastArtisanalProductionUpdate = -1;
 
+    /// <summary></summary>
     [HideInInspector]
     public int lastOrderPlaced = -1;
 
+    /// <summary></summary>
     [HideInInspector]
     public float lastOrderAmount = -1;
 
+    /// <summary></summary>
     public BaseEventData e;
 }

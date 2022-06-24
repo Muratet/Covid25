@@ -1,20 +1,30 @@
 ﻿using UnityEngine;
 using FYFY;
 using TMPro;
-using System.Globalization;
 
+/// <summary>
+/// This system is in charge to manage ICU bed occupancy
+/// </summary>
 public class BedsSystem : FSystem
 {
     private Family f_beds = FamilyManager.getFamily(new AllOfComponents(typeof(TerritoryData), typeof(Beds)));
 
+    /// <summary></summary>
     public GameObject countrySimData;
     private TimeScale time;
     private VirusStats virusStats;
 
+    /// <summary></summary>
     public Localization localization;
 
+    /// <summary>
+    /// Singleton reference of this system
+    /// </summary>
     public static BedsSystem instance;
 
+    /// <summary>
+    /// Construct this system
+    /// </summary>
     public BedsSystem()
     {
         instance = this;
@@ -22,9 +32,9 @@ public class BedsSystem : FSystem
 
     protected override void onStart()
     {
-        // Récupération de l'échelle de temps
+        // Recovery of the time scale
         time = countrySimData.GetComponent<TimeScale>();
-        // Récupération des stats du virus
+        // Recovery of virus data
         virusStats = countrySimData.GetComponent<VirusStats>();
     }
 
@@ -39,18 +49,18 @@ public class BedsSystem : FSystem
 
                 if (beds.boostBeds)
                 {
-                    int newBeds = (beds.intensiveBeds_high - beds.intensiveBeds_current) / 8; // Le 8 permet de ralentir la croissance de la production (le temps de construire/acheter des respirateurs de réorganiser les services, de réquisitionner les hôpitaux et clinique privées...)
+                    int newBeds = (beds.intensiveBeds_high - beds.intensiveBeds_current) / 8; // The 8 allows to slow down the growth of the production (the time to build/buy respirators, to reorganize the services, to requisition the hospitals and private clinics...)
                     beds.intensiveBeds_current += newBeds;
                 }
 
-                // calcul du nombre de lits utilisés : comptabilisation du nombre de personne qui devraient pouvoir accéder à des lits de réanimation, on prend un fenêtre de 9 jours autour du pic de mortalité (même calcul fait dans DeadSystem)
+                // calculation of the number of used beds: counting of the number of people who should be able to access ICU beds, we take a window of 9 days around the peak of mortality (same calculation done in DeadSystem)
                 int criticAmount = 0;
                 for (int day = Mathf.Max(0, (int)virusStats.deadlinessPeak - 4); day < Mathf.Min(virusStats.deadlinessPeak + 5, territory.numberOfInfectedPeoplePerDays.Length); day++)
                     criticAmount = (int)(territory.numberOfInfectedPeoplePerDays[day] * virusStats.seriousRatio);
 
                 beds.intensiveBeds_need = criticAmount;
 
-                if (beds.intensiveBeds_need > beds.intensiveBeds_current && beds.advisorNotification == -1 && territory.TerritoryName != "France")
+                if (beds.intensiveBeds_need > beds.intensiveBeds_current && beds.advisorNotification == -1 && territory.TerritoryName != countrySimData.GetComponent<TerritoryData>().TerritoryName)
                 {
                     GameObjectManager.addComponent<ChatMessage>(beds.gameObject, new { sender = localization.advisorTitleHospital, timeStamp = "" + time.daysGone, messageBody = localization.getFormatedText(localization.advisorHospitalTexts[0], territory.TerritoryName) });
                     beds.advisorNotification = 0;
@@ -64,11 +74,15 @@ public class BedsSystem : FSystem
         }
 	}
 
+    /// <summary>
+    /// Update UI text of ICU bed occupancy
+    /// </summary>
+    /// <param name="textUI"></param>
     public void UpdateBedsUI(TMP_Text textUI)
     {
         Beds beds = MapSystem.territorySelected.GetComponent<Beds>();
 
-        // Mise à jour du texte et de la couleur de l'utilisation des lits
+        // Updated text and color of bed use
         textUI.text = beds.intensiveBeds_need.ToString("N0", UnityEngine.Localization.Settings.LocalizationSettings.Instance.GetSelectedLocale().Identifier.CultureInfo) + " / " + beds.intensiveBeds_current.ToString("N0", UnityEngine.Localization.Settings.LocalizationSettings.Instance.GetSelectedLocale().Identifier.CultureInfo);
         textUI.color = new Color(2 * (float)beds.intensiveBeds_need / beds.intensiveBeds_current, 2 * (1f - (float)beds.intensiveBeds_need / beds.intensiveBeds_current), 0f);
     }

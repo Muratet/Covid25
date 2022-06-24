@@ -2,6 +2,9 @@
 using UnityEngine.UI;
 using TMPro;
 
+/// <summary>
+/// This component is used to display a tooltip near from the mouse cursor
+/// </summary>
 public class Tooltip : MonoBehaviour
 {
     private TMP_Text tooltipText;
@@ -17,11 +20,18 @@ public class Tooltip : MonoBehaviour
         tooltipText.enabled = false;
     }
 
+    /// <summary>
+    /// </summary>
+    /// <returns>True if the tootltip is shown and false else</returns>
     public bool IsShown()
     {
         return backgroundImg.enabled && tooltipText.enabled;
     }
 
+    /// <summary>
+    /// Show the tooltip
+    /// </summary>
+    /// <param name="tooltipString">The new content of the tooltip</param>
     public void ShowTooltip(string tooltipString)
     {
         backgroundImg.enabled = true;
@@ -33,6 +43,9 @@ public class Tooltip : MonoBehaviour
         backgroundRectTransform.sizeDelta = backgroundSize;
     }
 
+    /// <summary>
+    /// Hide the tooltip
+    /// </summary>
     public void HideTooltip()
     {
         backgroundImg.enabled = false;
@@ -43,7 +56,7 @@ public class Tooltip : MonoBehaviour
     {
         Vector3 mousePos = Input.mousePosition;
 
-        // recaller la position du tooltip pour qu'il soit dirigé vers le centre de l'écran
+        // reposition the tooltip so that it points to the center of the screen
         if (mousePos.x > Screen.width / 2)
             mousePos.x -= (10 + backgroundRectTransform.sizeDelta.x / 2) * ((float)Screen.width / 1920);
         else if (mousePos.x < Screen.width / 2)

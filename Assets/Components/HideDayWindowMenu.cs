@@ -1,7 +1,8 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
+/// <summary>
+/// This component is used to play animation in order to hide day filters when game start
+/// </summary>
 public class HideDayWindowMenu : MonoBehaviour
 {
     // Start is called before the first frame update

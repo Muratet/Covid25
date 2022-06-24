@@ -839,6 +839,7 @@ GameObject:
   - component: {fileID: 32377250}
   - component: {fileID: 32377249}
   - component: {fileID: 32377248}
+  - component: {fileID: 32377252}
   m_Layer: 5
   m_Name: VaccineText (TMP)
   m_TagString: Untagged
@@ -895,8 +896,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1655764999}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: UpdateMasksUI
+        m_TargetAssemblyTypeName: VaccineSystem_wrapper, Assembly-CSharp
+        m_MethodName: UpdateVaccineUI
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 32377250}
@@ -1003,6 +1004,48 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 32377246}
   m_CullTransparentMesh: 0
+--- !u!114 &32377252
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 32377246}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69beb381e244f92449b8c4cf954630e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_TrackedObjects:
+  - id: 0
+  references:
+    version: 1
+    00000000:
+      type: {class: TrackedMonoBehaviourObject, ns: UnityEngine.Localization.PropertyVariants.TrackedObjects,
+        asm: Unity.Localization}
+      data:
+        m_Target: {fileID: 32377248}
+        m_TrackedProperties:
+          items:
+          - id: 1
+        m_UpdateType: 0
+        m_Changed:
+          m_PersistentCalls:
+            m_Calls: []
+    00000001:
+      type: {class: LocalizedStringProperty, ns: UnityEngine.Localization.PropertyVariants.TrackedProperties,
+        asm: Unity.Localization}
+      data:
+        m_Localized:
+          m_TableReference:
+            m_TableCollectionName: GUID:99e640af2988d7e449b5329219e50244
+          m_TableEntryReference:
+            m_KeyId: 48738285969412096
+            m_Key: 
+          m_FallbackState: 0
+          m_WaitForCompletion: 0
+          m_LocalVariables: []
+        m_PropertyPath: text
 --- !u!1 &37070076
 GameObject:
   m_ObjectHideFlags: 0
@@ -12801,7 +12844,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 630761824}
   m_HandleRect: {fileID: 630761823}
   m_Direction: 0
-  m_Value: 1
+  m_Value: 0
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -19711,7 +19754,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -525.00006, y: -51.000122}
+  m_AnchoredPosition: {x: -525, y: -51.000122}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &486345372
@@ -20567,7 +20610,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -525.00006, y: -51.000122}
+  m_AnchoredPosition: {x: -525, y: -51.000122}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &512303568
@@ -33394,6 +33437,7 @@ GameObject:
   - component: {fileID: 835560290}
   - component: {fileID: 835560292}
   - component: {fileID: 835560293}
+  - component: {fileID: 835560294}
   m_Layer: 5
   m_Name: RevolutionText (TMP)
   m_TagString: Untagged
@@ -33558,6 +33602,48 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   text: "% de personnes m\xE9contentes au niveau national"
   audioClip: {fileID: 0}
+--- !u!114 &835560294
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 835560288}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69beb381e244f92449b8c4cf954630e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_TrackedObjects:
+  - id: 0
+  references:
+    version: 1
+    00000000:
+      type: {class: TrackedMonoBehaviourObject, ns: UnityEngine.Localization.PropertyVariants.TrackedObjects,
+        asm: Unity.Localization}
+      data:
+        m_Target: {fileID: 835560293}
+        m_TrackedProperties:
+          items:
+          - id: 1
+        m_UpdateType: 0
+        m_Changed:
+          m_PersistentCalls:
+            m_Calls: []
+    00000001:
+      type: {class: LocalizedStringProperty, ns: UnityEngine.Localization.PropertyVariants.TrackedProperties,
+        asm: Unity.Localization}
+      data:
+        m_Localized:
+          m_TableReference:
+            m_TableCollectionName: GUID:99e640af2988d7e449b5329219e50244
+          m_TableEntryReference:
+            m_KeyId: 48738430790340608
+            m_Key: 
+          m_FallbackState: 0
+          m_WaitForCompletion: 0
+          m_LocalVariables: []
+        m_PropertyPath: text
 --- !u!1 &841424425
 GameObject:
   m_ObjectHideFlags: 0
@@ -36762,6 +36848,7 @@ GameObject:
   - component: {fileID: 904548557}
   - component: {fileID: 904548559}
   - component: {fileID: 904548560}
+  - component: {fileID: 904548561}
   m_Layer: 5
   m_Name: DeathText (TMP)
   m_TagString: Untagged
@@ -36927,6 +37014,48 @@ MonoBehaviour:
   text: "Nombre de personnes d\xE9c\xE9d\xE9es aujourd'hui<br>pour le territoire
     s\xE9lectionn\xE9"
   audioClip: {fileID: 0}
+--- !u!114 &904548561
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 904548555}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69beb381e244f92449b8c4cf954630e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_TrackedObjects:
+  - id: 0
+  references:
+    version: 1
+    00000000:
+      type: {class: TrackedMonoBehaviourObject, ns: UnityEngine.Localization.PropertyVariants.TrackedObjects,
+        asm: Unity.Localization}
+      data:
+        m_Target: {fileID: 904548560}
+        m_TrackedProperties:
+          items:
+          - id: 1
+        m_UpdateType: 0
+        m_Changed:
+          m_PersistentCalls:
+            m_Calls: []
+    00000001:
+      type: {class: LocalizedStringProperty, ns: UnityEngine.Localization.PropertyVariants.TrackedProperties,
+        asm: Unity.Localization}
+      data:
+        m_Localized:
+          m_TableReference:
+            m_TableCollectionName: GUID:99e640af2988d7e449b5329219e50244
+          m_TableEntryReference:
+            m_KeyId: 48738062547226624
+            m_Key: 
+          m_FallbackState: 0
+          m_WaitForCompletion: 0
+          m_LocalVariables: []
+        m_PropertyPath: text
 --- !u!1 &905907879
 GameObject:
   m_ObjectHideFlags: 0
@@ -39812,6 +39941,7 @@ GameObject:
   - component: {fileID: 978333483}
   - component: {fileID: 978333485}
   - component: {fileID: 978333486}
+  - component: {fileID: 978333487}
   m_Layer: 5
   m_Name: CumulativeText (TMP)
   m_TagString: Untagged
@@ -39976,6 +40106,48 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   text: "Cumul des personnes d\xE9c\xE9d\xE9es<br>pour le territoire s\xE9lectionn\xE9"
   audioClip: {fileID: 0}
+--- !u!114 &978333487
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 978333481}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69beb381e244f92449b8c4cf954630e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_TrackedObjects:
+  - id: 0
+  references:
+    version: 1
+    00000000:
+      type: {class: TrackedMonoBehaviourObject, ns: UnityEngine.Localization.PropertyVariants.TrackedObjects,
+        asm: Unity.Localization}
+      data:
+        m_Target: {fileID: 978333486}
+        m_TrackedProperties:
+          items:
+          - id: 1
+        m_UpdateType: 0
+        m_Changed:
+          m_PersistentCalls:
+            m_Calls: []
+    00000001:
+      type: {class: LocalizedStringProperty, ns: UnityEngine.Localization.PropertyVariants.TrackedProperties,
+        asm: Unity.Localization}
+      data:
+        m_Localized:
+          m_TableReference:
+            m_TableCollectionName: GUID:99e640af2988d7e449b5329219e50244
+          m_TableEntryReference:
+            m_KeyId: 48738153832058880
+            m_Key: 
+          m_FallbackState: 0
+          m_WaitForCompletion: 0
+          m_LocalVariables: []
+        m_PropertyPath: text
 --- !u!1 &978530910
 GameObject:
   m_ObjectHideFlags: 0
@@ -44905,7 +45077,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -525.00006, y: -51.000122}
+  m_AnchoredPosition: {x: -525, y: -51.000122}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1074341967
@@ -49026,6 +49198,11 @@ MonoBehaviour:
           - id: 110
           - id: 111
           - id: 112
+          - id: 113
+          - id: 114
+          - id: 115
+          - id: 116
+          - id: 117
         m_UpdateType: 1
         m_Changed:
           m_PersistentCalls:
@@ -50598,6 +50775,76 @@ MonoBehaviour:
           m_WaitForCompletion: 0
           m_LocalVariables: []
         m_PropertyPath: vaccineTooltip
+    00000071:
+      type: {class: LocalizedStringProperty, ns: UnityEngine.Localization.PropertyVariants.TrackedProperties,
+        asm: Unity.Localization}
+      data:
+        m_Localized:
+          m_TableReference:
+            m_TableCollectionName: GUID:99e640af2988d7e449b5329219e50244
+          m_TableEntryReference:
+            m_KeyId: 48729902780452864
+            m_Key: 
+          m_FallbackState: 0
+          m_WaitForCompletion: 0
+          m_LocalVariables: []
+        m_PropertyPath: unitBillions
+    00000072:
+      type: {class: LocalizedStringProperty, ns: UnityEngine.Localization.PropertyVariants.TrackedProperties,
+        asm: Unity.Localization}
+      data:
+        m_Localized:
+          m_TableReference:
+            m_TableCollectionName: GUID:99e640af2988d7e449b5329219e50244
+          m_TableEntryReference:
+            m_KeyId: 48729963736272896
+            m_Key: 
+          m_FallbackState: 0
+          m_WaitForCompletion: 0
+          m_LocalVariables: []
+        m_PropertyPath: unitMillions
+    00000073:
+      type: {class: LocalizedStringProperty, ns: UnityEngine.Localization.PropertyVariants.TrackedProperties,
+        asm: Unity.Localization}
+      data:
+        m_Localized:
+          m_TableReference:
+            m_TableCollectionName: GUID:99e640af2988d7e449b5329219e50244
+          m_TableEntryReference:
+            m_KeyId: 48730048675123200
+            m_Key: 
+          m_FallbackState: 0
+          m_WaitForCompletion: 0
+          m_LocalVariables: []
+        m_PropertyPath: unitThousands
+    00000074:
+      type: {class: LocalizedStringProperty, ns: UnityEngine.Localization.PropertyVariants.TrackedProperties,
+        asm: Unity.Localization}
+      data:
+        m_Localized:
+          m_TableReference:
+            m_TableCollectionName: GUID:99e640af2988d7e449b5329219e50244
+          m_TableEntryReference:
+            m_KeyId: 48773927143149568
+            m_Key: 
+          m_FallbackState: 0
+          m_WaitForCompletion: 0
+          m_LocalVariables: []
+        m_PropertyPath: unitThousandsShort
+    00000075:
+      type: {class: LocalizedStringProperty, ns: UnityEngine.Localization.PropertyVariants.TrackedProperties,
+        asm: Unity.Localization}
+      data:
+        m_Localized:
+          m_TableReference:
+            m_TableCollectionName: GUID:99e640af2988d7e449b5329219e50244
+          m_TableEntryReference:
+            m_KeyId: 48773942284587008
+            m_Key: 
+          m_FallbackState: 0
+          m_WaitForCompletion: 0
+          m_LocalVariables: []
+        m_PropertyPath: unitBillionsShort
 --- !u!114 &1193111354
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -50772,6 +51019,12 @@ MonoBehaviour:
     partie<br><color=#C15C00ff>Seulement disponible en national</color>"
   vaccineTooltip: <b>Stock de vaccins</b><br><color=#C15C00ff>Seulement disponible
     en national</color>
+  unitThousands: (en milliers)
+  unitMillions: (en Millions)
+  unitBillions: (en Milliards)
+  unitThousandsShort: k
+  unitMillionsShort: M
+  unitBillionsShort: Md
 --- !u!4 &1193111355
 Transform:
   m_ObjectHideFlags: 0
@@ -54712,6 +54965,7 @@ GameObject:
   - component: {fileID: 1294830847}
   - component: {fileID: 1294830849}
   - component: {fileID: 1294830850}
+  - component: {fileID: 1294830851}
   m_Layer: 5
   m_Name: MaskText (TMP)
   m_TagString: Untagged
@@ -54876,6 +55130,48 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   text: Nombre de masques en stock<br>au niveau national
   audioClip: {fileID: 0}
+--- !u!114 &1294830851
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1294830845}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69beb381e244f92449b8c4cf954630e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_TrackedObjects:
+  - id: 0
+  references:
+    version: 1
+    00000000:
+      type: {class: TrackedMonoBehaviourObject, ns: UnityEngine.Localization.PropertyVariants.TrackedObjects,
+        asm: Unity.Localization}
+      data:
+        m_Target: {fileID: 1294830850}
+        m_TrackedProperties:
+          items:
+          - id: 1
+        m_UpdateType: 0
+        m_Changed:
+          m_PersistentCalls:
+            m_Calls: []
+    00000001:
+      type: {class: LocalizedStringProperty, ns: UnityEngine.Localization.PropertyVariants.TrackedProperties,
+        asm: Unity.Localization}
+      data:
+        m_Localized:
+          m_TableReference:
+            m_TableCollectionName: GUID:99e640af2988d7e449b5329219e50244
+          m_TableEntryReference:
+            m_KeyId: 48738218432729088
+            m_Key: 
+          m_FallbackState: 0
+          m_WaitForCompletion: 0
+          m_LocalVariables: []
+        m_PropertyPath: text
 --- !u!1 &1296196660
 GameObject:
   m_ObjectHideFlags: 0
@@ -57320,7 +57616,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -525.00006, y: -51.000122}
+  m_AnchoredPosition: {x: -525, y: -51.000122}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &1350076610
@@ -67526,7 +67822,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -523.00006, y: -51.000122}
+  m_AnchoredPosition: {x: -523, y: -51.000122}
   m_SizeDelta: {x: -6, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &1645303627
@@ -68258,6 +68554,7 @@ GameObject:
   - component: {fileID: 1655598835}
   - component: {fileID: 1655598837}
   - component: {fileID: 1655598838}
+  - component: {fileID: 1655598839}
   m_Layer: 5
   m_Name: FInanceText (TMP)
   m_TagString: Untagged
@@ -68422,6 +68719,48 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   text: "Dette nationale due \xE0 la crise"
   audioClip: {fileID: 0}
+--- !u!114 &1655598839
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1655598833}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69beb381e244f92449b8c4cf954630e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_TrackedObjects:
+  - id: 0
+  references:
+    version: 1
+    00000000:
+      type: {class: TrackedMonoBehaviourObject, ns: UnityEngine.Localization.PropertyVariants.TrackedObjects,
+        asm: Unity.Localization}
+      data:
+        m_Target: {fileID: 1655598838}
+        m_TrackedProperties:
+          items:
+          - id: 1
+        m_UpdateType: 0
+        m_Changed:
+          m_PersistentCalls:
+            m_Calls: []
+    00000001:
+      type: {class: LocalizedStringProperty, ns: UnityEngine.Localization.PropertyVariants.TrackedProperties,
+        asm: Unity.Localization}
+      data:
+        m_Localized:
+          m_TableReference:
+            m_TableCollectionName: GUID:99e640af2988d7e449b5329219e50244
+          m_TableEntryReference:
+            m_KeyId: 48738340541501440
+            m_Key: 
+          m_FallbackState: 0
+          m_WaitForCompletion: 0
+          m_LocalVariables: []
+        m_PropertyPath: text
 --- !u!1 &1655764988
 GameObject:
   m_ObjectHideFlags: 0
@@ -68661,6 +69000,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   countrySimData: {fileID: 1700381217}
+  localization: {fileID: 1193111354}
 --- !u!114 &1655764998
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -70391,6 +70731,7 @@ GameObject:
   - component: {fileID: 1696713952}
   - component: {fileID: 1696713954}
   - component: {fileID: 1696713955}
+  - component: {fileID: 1696713956}
   m_Layer: 5
   m_Name: PyramidText (TMP)
   m_TagString: Untagged
@@ -70555,6 +70896,48 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   text: "% de personnes infect\xE9es<br>pour le territoire s\xE9lectionn\xE9"
   audioClip: {fileID: 0}
+--- !u!114 &1696713956
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1696713950}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69beb381e244f92449b8c4cf954630e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_TrackedObjects:
+  - id: 0
+  references:
+    version: 1
+    00000000:
+      type: {class: TrackedMonoBehaviourObject, ns: UnityEngine.Localization.PropertyVariants.TrackedObjects,
+        asm: Unity.Localization}
+      data:
+        m_Target: {fileID: 1696713955}
+        m_TrackedProperties:
+          items:
+          - id: 1
+        m_UpdateType: 0
+        m_Changed:
+          m_PersistentCalls:
+            m_Calls: []
+    00000001:
+      type: {class: LocalizedStringProperty, ns: UnityEngine.Localization.PropertyVariants.TrackedProperties,
+        asm: Unity.Localization}
+      data:
+        m_Localized:
+          m_TableReference:
+            m_TableCollectionName: GUID:99e640af2988d7e449b5329219e50244
+          m_TableEntryReference:
+            m_KeyId: 48737969664364544
+            m_Key: 
+          m_FallbackState: 0
+          m_WaitForCompletion: 0
+          m_LocalVariables: []
+        m_PropertyPath: text
 --- !u!1 &1700381217
 GameObject:
   m_ObjectHideFlags: 0
@@ -79351,7 +79734,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -525.00006, y: -51.000122}
+  m_AnchoredPosition: {x: -525, y: -51.000122}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &1958988435
@@ -84053,7 +84436,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -525.00006, y: -51.000122}
+  m_AnchoredPosition: {x: -525, y: -51.000122}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &2084999509
@@ -86471,7 +86854,7 @@ GameObject:
   - component: {fileID: 2193835970809941034}
   - component: {fileID: 1964361707234340272}
   m_Layer: 5
-  m_Name: LanguageSelector
+  m_Name: FrontierRestriction
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -86883,7 +87266,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2193835970809941034}
         m_TargetAssemblyTypeName: ItemSelector, Assembly-CSharp
-        m_MethodName: nextLanguage
+        m_MethodName: nextItem
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -87032,7 +87415,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2193835970809941034}
         m_TargetAssemblyTypeName: ItemSelector, Assembly-CSharp
-        m_MethodName: prevLanguage
+        m_MethodName: prevItem
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

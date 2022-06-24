@@ -1,8 +1,10 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
-using TMPro;
 
+/// <summary>
+/// This component is used on map to enable territory selection even if territory is under another but visible due to alpha
+/// </summary>
 public class IgnoreAlpha : MonoBehaviour
 {
     // Advice: FYFY component aims to contain only public members (according to Entity-Component-System paradigm).
@@ -11,9 +13,17 @@ public class IgnoreAlpha : MonoBehaviour
     private Animator animator;
 
     private AudioSource audioSource;
-    public AudioClip onEnter;
+
     private Localization localization;
 
+    /// <summary>
+    /// Sound to play when mouse enter this
+    /// </summary>
+    public AudioClip onEnter;
+
+    /// <summary>
+    /// Sound to play when mouse click this
+    /// </summary>
     public AudioClip onClick;
 
     private DisableButton maskButton;
@@ -41,6 +51,9 @@ public class IgnoreAlpha : MonoBehaviour
         checkDoubleClick = GameObject.Find("MapMenu").GetComponent<CheckDoubleClick>();
     }
 
+    /// <summary>
+    /// Used to manages available monitoring data and action panels depending on selected territory
+    /// </summary>
     public void onSelectTerritory()
     {
         MapSystem.instance.selectTerritory(GetComponent<TerritoryData>());
@@ -53,16 +66,27 @@ public class IgnoreAlpha : MonoBehaviour
         checkDoubleClick.CheckDoubleClic(territory.id);
     }
 
+    /// <summary>
+    /// Used to zoom in/out on the map
+    /// </summary>
+    /// <param name="data"></param>
     public void onScroll(BaseEventData data)
     {
         MapSystem.instance.onScroll(data);
     }
 
+    /// <summary>
+    /// Used to move the map
+    /// </summary>
+    /// <param name="data"></param>
     public void onDrag(BaseEventData data)
     {
         MapSystem.instance.onDrag(data);
     }
 
+    /// <summary>
+    /// Display tooltip of this territory that resumes the choices done on this territory
+    /// </summary>
     public void onPointerEnter()
     {
         string tooltipContent = "<b>"+territory.TerritoryName+"</b>";
@@ -94,6 +118,9 @@ public class IgnoreAlpha : MonoBehaviour
         audioSource.PlayOneShot(onEnter);
     }
 
+    /// <summary>
+    /// Hide information tooltip
+    /// </summary>
     public void onPointerExit()
     {
         tooltip.HideTooltip();

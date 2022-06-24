@@ -2,13 +2,16 @@
 using UnityEngine.UI;
 using FYFY;
 using System.Collections.Generic;
-using System.Globalization;
 
+/// <summary>
+/// This system calculates the infection between peoples
+/// </summary>
 public class InfectionSystem : FSystem
 {
     private Family f_territoriesAndCountry = FamilyManager.getFamily(new AllOfComponents(typeof(TerritoryData)));
     private Family f_territories = FamilyManager.getFamily(new AllOfComponents(typeof(TerritoryData), typeof(Image)));
 
+    /// <summary></summary>
     public GameObject countrySimData;
     private VirusStats virusStats;
     private TerritoryData countryPopData;
@@ -18,6 +21,7 @@ public class InfectionSystem : FSystem
     private Masks masks;
     private InfectionImpact confinementImpact;
 
+    /// <summary></summary>
     public Localization localization;
 
     // model contagiousness during X days
@@ -27,10 +31,16 @@ public class InfectionSystem : FSystem
     private float polyB;
     private float polyC;
 
+    /// <summary>
+    /// Singleton reference of this system
+    /// </summary>
     public static InfectionSystem instance;
 
     private bool firstInfection = false;
 
+    /// <summary>
+    /// Construct this system
+    /// </summary>
     public InfectionSystem()
     {
         instance = this;
@@ -38,22 +48,22 @@ public class InfectionSystem : FSystem
 
     protected override void onStart()
     {
-        // Récupération des stats du virus
+        // Recovery of virus data
         virusStats = countrySimData.GetComponent<VirusStats>();
-        // Récupération des données de la population
+        // Recovery population data
         countryPopData = countrySimData.GetComponent<TerritoryData>();
-        // Récupération de l'échelle de temps
+        // Recovery of the time scale
         time = countrySimData.GetComponent<TimeScale>();
-        // Récupération des masques
+        // Recovery masks data
         masks = countrySimData.GetComponent<Masks>();
-        // Récupération de l'impact du confinement
+        // Recovery of infection impact data
         confinementImpact = countrySimData.GetComponent<InfectionImpact>();
-        // Récupération de données de la frontière
+        // Recovery borders permeability
         frontierPermeability = countrySimData.GetComponent<FrontierPermeability>();
-        // Récupération de données du télétravail
+        // Recovery of homeworking data
         remoteworking = countrySimData.GetComponent<Remoteworking>();
 
-        // calcul de la courbe de contagiosité pour une fenêtre de jours
+        // calculation of the contagiousness curve for a window of days
         contagiousnessProbabilityPerDays = new float[virusStats.windowSize];
         float peak = virusStats.contagiousnessPeak;
         float deviation = virusStats.contagiousnessDeviation;
@@ -64,12 +74,12 @@ public class InfectionSystem : FSystem
             initTerritoryInfectionData(territory);
         f_territories.addEntryCallback(initTerritoryInfectionData);
 
-        // Pour déterminer la contagiosité du virus on doit trouver le polynome qui passe par trois points :
-        //   - si % population infecté == 0 => contagiosité par défaut du virus
-        //   - si % population infecté == % d'immunité => contagiosité == 1
-        //   - si % population infecté == 1 => contagiosité == 0
-        // On doit donc trouver les valeurs a, b et c du polynome aX²+bX+c=Y avec X <=> % de population infecté et Y la contagiosité finale
-        // Donc on doit résoudre le système
+        // To determine the contagiousness of the virus, we must find the polynomial that passes through three points:
+        //   - if % population infected == 0 => contagiousness by default of the virus
+        //   - if % population infected == % immunity => contagiousness == 1
+        //   - if % population infected == 1 => contagiousness == 0
+        // We have to find the values a, b and c of the polynomial aX²+bX + c = Y with X <=> % infected population and Y the final contagiousness
+        // So we have to solve the system
         //   --
         //   | a*0² + b*0 + c = contagVirus
         //   | a*immu² + b*immu + c = 1
@@ -115,7 +125,7 @@ public class InfectionSystem : FSystem
         //   | a = (1 + (immu - 1) * contagVirus) / (immu² - immu)
         //   | b = -contagVirus - a
         //   --
-        // Prise en compte des cas limites
+        // Consideration of borderline cases
         if (virusStats.populationRatioImmunity <= 0)
         {
             polyA = 0;
@@ -139,11 +149,11 @@ public class InfectionSystem : FSystem
     private void initTerritoryInfectionData(GameObject go)
     {
         TerritoryData territoryData = go.GetComponent<TerritoryData>();
-        // Initialisation du nombre d'infectés pour chaque jour de la fenêtre
+        // Initialization of the number of infected for each day of the window
         territoryData.numberOfInfectedPeoplePerDays = new int[virusStats.windowSize];
         for (int day = 0; day < virusStats.windowSize; day++)
             territoryData.numberOfInfectedPeoplePerDays[day] = 0;
-        // Initialisation du nombre d'infectés pour chaque age et pour chaque jour de la fenêtre
+        // Initialization of the number of infected for each age and for each day of the window
         territoryData.numberOfInfectedPeoplePerAgesAndDays = new int[territoryData.popNumber.Length][];
         for (int age = 0; age < territoryData.popNumber.Length; age++)
         {
@@ -155,10 +165,10 @@ public class InfectionSystem : FSystem
 
     // Use to process your families.
     protected override void onProcess(int familiesUpdateCount) {
-        // Vérifier s'il faut générer une nouvelle journée
+        // Check if a new day should be generated
         if (time.newDay)
         {
-            // Traiter chaque territoire
+            // Process each territory
             TerritoryData territoryData;
 
             foreach (GameObject territory in f_territories)
@@ -167,8 +177,8 @@ public class InfectionSystem : FSystem
                 //////////////////////////////////////
                 // EMERGENCE
                 //////////////////////////////////////
-                // Calcul de la probabilité d'apparition d'un nouveau patient zéro => dépend de l'ouverture des frontières et de la densité de chaque région mais impossible de le faire descendre à 0
-                // Déterminer combien de nouveau citoyen arrivent infectés de l'étranger
+                // Calculation of the probability of occurrence of a new first patient => depends on the opening of the borders and the density of each region but impossible to make it go down to 0
+                // Determine how many new citizens arrive infected from abroad
                 float incomingCitizen = Random.Range(0f, 1f);
                 if (incomingCitizen < frontierPermeability.permeability * territoryData.populationRatio)
                     AddNewInfections(territoryData, 1);
@@ -176,8 +186,8 @@ public class InfectionSystem : FSystem
                 //////////////////////////////////////
                 // INFECTION
                 //////////////////////////////////////
-                // Parcourir chaque "cluster" contagieux et déterminer le nombre de personnes contaminées
-                // Calcul du nombre de taux de personnes infectées
+                // Walk through each contagious "cluster" and determine the number of infected people
+                // Calculation of the number of infected persons
                 int livingInfected = territoryData.nbInfected - territoryData.nbDeath;
                 int livingPop = territoryData.nbPopulation - territoryData.nbDeath;
                 float infectedRatio = (float)livingInfected / livingPop;
@@ -186,17 +196,17 @@ public class InfectionSystem : FSystem
 
                 if (newContagiosity > 0)
                 {
-                    // Détermination du nombre de nouveaux infectés
+                    // Determining the number of new infections
                     float newInfect = 0;
-                    // On calcule les infections faites donc on regarde combien on a de personne infectée pour chaque jour de la fenêtre
+                    // We calculate the infections made so we see how many people are infected for each day of the window
                     for (int age = 0; age < territoryData.numberOfInfectedPeoplePerAgesAndDays.Length; age++)
                     {
-                        // calcule le nouveau R0 (application de bonus et malus) du territoire en fonction de l'age et de la contagiosité théorique
+                        // calculates the new R0 (application of bonus and penalties) of the territory according to the age and the theoretical contagiousness
                         float ageR0 = ComputeAgeR0(territoryData, age, newContagiosity);
-                        for (int day = 1; day < territoryData.numberOfInfectedPeoplePerAgesAndDays[age].Length; day++) // on saute volontairement le premier élément puisqu'on est en train de le construire
+                        for (int day = 1; day < territoryData.numberOfInfectedPeoplePerAgesAndDays[age].Length; day++) // we voluntarily skip the first element since we are building it
                         {
-                            // Calcul effectif du nombre de nouveaux infectés :
-                            // R0 en fonction de l'age * le nombre de personne infecté pour l'age et le jour courrant * la probabilité de diffusion pour le jour courrant
+                            // Actual calculation of the number of newly infected:
+                            // R0 of the age * the number of infected persons for the age and the current day * the probability of diffusion for the current day
                             newInfect += ageR0 * territoryData.numberOfInfectedPeoplePerAgesAndDays[age][day] * contagiousnessProbabilityPerDays[day];
                         }
                     }
@@ -204,28 +214,28 @@ public class InfectionSystem : FSystem
                 }
 
                 //////////////////////////////////////
-                // TRANSFERTS INTER-REGIONS
+                // INTER-REGIONAL TRANSFERS
                 //////////////////////////////////////
-                // Calcul du nombre de personnes actuellement infectées
+                // Calculating the number of people currently infected
                 int currentlyInfected = 0;
                 for (int day = 0; day < territoryData.numberOfInfectedPeoplePerDays.Length; day++)
                     currentlyInfected += territoryData.numberOfInfectedPeoplePerDays[day];
-                // Détermination de la région cible
+                // Determination of the target region
                 TerritoryData targetTerritory = f_territories.getAt(Random.Range(0, f_territories.Count)).GetComponent<TerritoryData>();
-                // Calcul du nombre de personne qui change de région => dépend du type de confinement de la région de départ et de la région d'arrivée
-                int movingPeoples = Mathf.Min((int)(Random.Range(0f, 0.001f) * currentlyInfected * (targetTerritory.certificateRequired ? 0.1f : 1f) * (territoryData.certificateRequired ? 0.1f : 1f)), 500); // 0.1% des personnes infectées bougent pour un maximum de 500
+                // Calculation of the number of people changing regions => depends on the type of containment in the region of departure and the region of arrival
+                int movingPeoples = Mathf.Min((int)(Random.Range(0f, 0.001f) * currentlyInfected * (targetTerritory.certificateRequired ? 0.1f : 1f) * (territoryData.certificateRequired ? 0.1f : 1f)), 500); // 0.1% of infected persons move for a maximum of 500
                 if (movingPeoples > 0)
                 {
-                    // retirer le nombre de personne de la région de départ
+                    // remove the number of people from the starting region
                     territoryData.nbInfected -= movingPeoples;
                     territoryData.nbPopulation -= movingPeoples;
                     targetTerritory.nbInfected += movingPeoples;
                     targetTerritory.nbPopulation += movingPeoples;
-                    // détermination des ages possibles pour le transfert
+                    // determination of the possible ages for the transfer
                     List<int> availableAges = new List<int>();
                     for (int age = 0; age < territoryData.popNumber.Length; age++)
                     {
-                        // Vérifier s'il y a bien des personnes infectées pour cette tranche d'age et que cet age n'est pas concerné par une interdiction de sortie
+                        // Check to see if there are any infected people in this age group and that this age group is not affected by an exit ban
                         if (territoryData.popInfected[age] > 0 && !(territoryData.ageDependent && territoryData.ageDependentMin != "" && territoryData.ageDependentMax != "" && age >= int.Parse(territoryData.ageDependentMin) && age <= int.Parse(territoryData.ageDependentMax)))
                             availableAges.Add(age);
                     }
@@ -234,7 +244,7 @@ public class InfectionSystem : FSystem
                     {
                         int age = availableAges[Random.Range(0, availableAges.Count)];
                         int day = Random.Range(0, territoryData.numberOfInfectedPeoplePerAgesAndDays[age].Length);
-                        int movingStep = Random.Range(0, Mathf.Min(new int[4] { territoryData.popInfected[age], movingPeoples, territoryData.numberOfInfectedPeoplePerAgesAndDays[age][day], 50 }) + 1); // Maximum de 50 affecté à chaque tirage pour éviter d'avoir trop de personnes d'une même classe d'age qui bouge... pas réaliste
+                        int movingStep = Random.Range(0, Mathf.Min(new int[4] { territoryData.popInfected[age], movingPeoples, territoryData.numberOfInfectedPeoplePerAgesAndDays[age][day], 50 }) + 1); // Maximum of 50 affected at each draw to avoid having too many people of the same age group traveling... not realistic
                         territoryData.popInfected[age] -= movingStep;
                         territoryData.popNumber[age] -= movingStep;
                         territoryData.numberOfInfectedPeoplePerDays[day] -= movingStep;
@@ -245,7 +255,7 @@ public class InfectionSystem : FSystem
                         targetTerritory.numberOfInfectedPeoplePerAgesAndDays[age][day] += movingStep;
                         movingPeoples -= movingStep;
 
-                        // mise à jour des ages disponibles
+                        // update of available ages
                         availableAges.Clear();
                         for (int i = 0; i < territoryData.popNumber.Length; i++)
                             if (territoryData.popInfected[i] > 0)
@@ -260,77 +270,77 @@ public class InfectionSystem : FSystem
     {
 
         float contextBonus = 1;
-        // prise en compte du confinement des écoles
+        // consideration of school containment
         if (territoryData.closePrimarySchool || territoryData.closeSecondarySchool || territoryData.closeHighSchool || territoryData.closeUniversity)
         {
             float schoolImpact = 1;
             if (territoryData.closePrimarySchool && age >= 3 && age <= 11)
-                schoolImpact *= (!remoteworking.currentState ? 0.5f : 1f); // 100% d'une classe d'age va à l'école primaire mais pour les petits dépend aussi des mesures sociales, sans quoi l'effet est minoré dû à la nécessite de recourir à des gardes collectives => 50% des enfants auront des problèmes de garde
+                schoolImpact *= (!remoteworking.currentState ? 0.5f : 1f); // 100% of a class of age goes to primary school but for the little ones depends also on social measures, without which the effect is reduced due to the need to resort to collective care => 50% of the children will have problems of care
             else if (territoryData.closeSecondarySchool && age > 11 && age <= 15)
-                schoolImpact *= (!remoteworking.currentState ? 0.8f : 1f); // 100% d'une classe d'age va au collège mais pour les pré ados dépend aussi des mesures sociales, sans quoi l'effet est minoré dû à la nécessite de recourir à des gardes collectives => 20% des enfants auront des problèmes de garde (moins que pour l'école car on peut considérer que certains collégiens peuvent se garder seuls)
+                schoolImpact *= (!remoteworking.currentState ? 0.8f : 1f); // 100% of an age group goes to middle school, but for pre-adolescents it also depends on social measures, otherwise the effect is reduced due to the need for collective childcare => 20% of children will have childcare problems (less than for school, because it can be considered that some middle school students can look after themselves)
             else if (territoryData.closeHighSchool && age > 15 && age <= 18)
-                schoolImpact *= 0.7f; // 70% d'une classe d'age va au lycée
+                schoolImpact *= 0.7f; // 70% of an age group goes to high school
             else if (territoryData.closeUniversity && age > 18 && age <= 20)
-                schoolImpact *= 0.5f; // 50% d'une classe d'age a un bac+2
+                schoolImpact *= 0.5f; // 50% of a class of age has a baccalaureate+2
             else if (territoryData.closeUniversity && age > 20 && age <= 23)
-                schoolImpact *= 0.3f; // 30% d'une classe d'age a plus d'un bac+2
+                schoolImpact *= 0.3f; // 30% of the age group has more than 2 years of higher education
             else
-                schoolImpact = 0; // age non concerné => pas de bonus dû à la fermetures des écoles
+                schoolImpact = 0; // age not concerned => no bonus due to school closure
             contextBonus -= confinementImpact.schoolImpact * schoolImpact;
         }
 
-        // Prise en compte de l'appel civique
+        // Consideration of the civic call
         if (territoryData.callCivicism)
-            contextBonus -= confinementImpact.civicismImpact * Mathf.Min(1, (float)age / 25); // modérer l'impact en fonction de l'age : progression linéaire de 0% d'efficacité pour les tous petits jusqu'à 100% à partir de 25 ans
+            contextBonus -= confinementImpact.civicismImpact * Mathf.Min(1, (float)age / 25); // moderating the impact according to age: linear progression from 0% efficiency for the very young to 100% from 25 years old
 
-        // Prise en compte de la fermeture des commerces
+        // Consideration of shop closures
         if (territoryData.closeShop)
-            contextBonus -= confinementImpact.shopImpact * Mathf.Min(1, (float)age / 16); // modérer l'impact en fonction de l'age : progression linéaire de 0% d'efficacité pour les tous petits jusqu'à 100% à partir de 16 ans
+            contextBonus -= confinementImpact.shopImpact * Mathf.Min(1, (float)age / 16); // moderating the impact according to age: linear progression from 0% effectiveness for the very young to 100% from age 16
 
-        // Prise en compte de l'attestation
+        // Consideration of the certificate
         if (territoryData.certificateRequired)
             contextBonus -= confinementImpact.attestationImpact;
 
-        // prise en compte de la restriction d'age
+        // consideration of age restriction
         if (territoryData.ageDependent && territoryData.ageDependentMin != "" && territoryData.ageDependentMax != "" && territoryData.ageDependentMin != "--" && territoryData.ageDependentMax != "--" && age >= int.Parse(territoryData.ageDependentMin) && age <= int.Parse(territoryData.ageDependentMax))
             contextBonus -= confinementImpact.ageRestrictionImpact;
 
-        // IMPACT DES MESURES NATIONALES
+        // IMPACT OF NATIONAL MEASURES
 
-        // Prise en compte de la disponibilité des masques
-        // Pour le personnel hospitalier => si pénurie: malus
+        // Taking into account the availability of masks
+        // For hospital staff => if shortage: penalty
         if (masks.medicalRequirementPerDay_current > masks.nationalStock)
             contextBonus += 1f - 1 / (masks.medicalRequirementPerDay_current - masks.nationalStock);
 
-        // prise en compte du télétravail
+        // consideration of home working
         if (remoteworking.currentState && age > 18 && age < 62)
             contextBonus -= confinementImpact.remoteWorkingImpact;
 
-        // Production artisanale de masques
+        // Artisanal production of masks
         if (masks.selfProtectionPromoted)
-            contextBonus -= confinementImpact.selfProtectionImpact * Mathf.Min(1, 0.1f + (float)age / 10); // modérer l'impact en fonction de l'age : progression linéaire de 10% d'efficacité pour les tous petits jusqu'à 100% à partir de 8 ans
+            contextBonus -= confinementImpact.selfProtectionImpact * Mathf.Min(1, 0.1f + (float)age / 10); // moderating the impact according to age: linear progression from 10% efficiency for the very young to 100% from 8 years old
 
         return theoriticalR0 * contextBonus;
     }
 
-    // Calcule le R0 d'un territoire
+    // Calculates the R0 of a territory
     private float ComputeR0(TerritoryData territoryData)
     {
-        // Calcul du ratio de personnes infectés parmis les vivants
+        // Calculation of the ratio of infected persons among the living
         int livingInfected = territoryData.nbInfected - territoryData.nbDeath;
         int livingPop = territoryData.nbPopulation - territoryData.nbDeath;
         float infectedRatio = (float)livingInfected / livingPop;
-        // Calcul du R0 théorique
+        // Calculation of the theoretical R0
         float theoreticalR0 = polyA * infectedRatio * infectedRatio + polyB * infectedRatio + polyC;
 
         if (theoreticalR0 > 0)
         {
             float r0Cumul = 0;
-            // calcule le nouveau R0 (application de bonus et malus) du territoire en fonction de l'age et de la contagiosité théorique
+            // calculates the new R0 (application of bonus and penalty) of the territory according to the age and the theoretical contagiousness
             for (int age = 0; age < territoryData.numberOfInfectedPeoplePerAgesAndDays.Length; age++)
-                // aggréger la valeur du R0 pondéré par le nombre de personnes vivante pour l'age considéré
+                // Aggregate the value of the R0 weighted by the number of living persons for the age considered
                 r0Cumul += ComputeAgeR0(territoryData, age, theoreticalR0) * (territoryData.popNumber[age] - territoryData.popDeath[age]);
-            // retourne la moyenne de R0 pour le territoire
+            // returns the average of R0 for the territory
             return Mathf.Max(0, r0Cumul / livingPop);
         }
         else
@@ -344,41 +354,40 @@ public class InfectionSystem : FSystem
             GameObjectManager.addComponent<ChatMessage>(countryPopData.gameObject, new { sender = localization.advisorTitleHealth, timeStamp = "" + time.daysGone, messageBody = localization.getFormatedText(localization.advisorHealthTexts[13], territory.TerritoryName) });
             firstInfection = true;
         }
-        // Calcul du nombre total de pesonnes non infectées
+        // Calculation of the total number of uninfected persons
         int totalLivingAndNotInfected = 0;
         List<int> availableAges = new List<int>();
         for (int age = 0; age < territory.popNumber.Length; age++)
         {
-            // Vérifier si il reste des personnes non infectées pour cette tranche d'age
+            // Check to see if there are any uninfected people in this age group
             int notInfected = territory.popNumber[age] - territory.popInfected[age];
             if (notInfected > 0) {
                 totalLivingAndNotInfected += notInfected;
                 availableAges.Add(age);
             }
         }
-        // Répartir le capital de personnes infectées sur les différentes tranches d'ages disponible. Faire ça tant qu'il reste des infections à répartir ET qu'il y a des personnes non infectées disponibles
+        // Distribute the pool of infected people to the different age groups available. Do this as long as there are infections to be distributed AND there are uninfected people available
         while (amountOfNewInfections > 0 && totalLivingAndNotInfected > 0 && availableAges.Count > 0)
         {
             int age = availableAges[Random.Range(0, availableAges.Count)];
             int notInfected = territory.popNumber[age] - territory.popInfected[age];
-            int gapInfected = 0;
 
-            // croissance de 2% des personnes qui n'ont pas encore été en contact avec le virus avec un maximum proportionnel à la représentativité de la tranche d'age
-            gapInfected = Mathf.Max((int)Mathf.Round(Mathf.Min(notInfected * 0.02f, 1000*territory.popNumber[age]/territory.maxNumber)), 1); // être sûr d'avoir au moins un nouvel infecté
-            // Le nombre réel de personnes infectées et donc un tirage aléatoire entre 0 et le minimum de gapInfected, amountOfNewInfection, totalLivingAndNotInfected et notInfected
+            // 2% increase in people who have not yet been in contact with the virus, with a maximum proportional to the representativeness of the age group
+            int gapInfected = Mathf.Max((int)Mathf.Round(Mathf.Min(notInfected * 0.02f, 1000*territory.popNumber[age]/territory.maxNumber)), 1); // be sure to have at least one new infected person
+            // The actual number of infected people is a random draw between 0 and the minimum of gapInfected, amountOfNewInfection, totalLivingAndNotInfected and notInfected
             int newInfected = Random.Range(0, Mathf.Min(gapInfected, amountOfNewInfections, totalLivingAndNotInfected, notInfected) +1);
 
-            // Prise en compte de la protection
+            // Consideration of protection
             float protection = 1f - GetProtection(age, territory);
             int ignoredInfections = Mathf.RoundToInt(newInfected * (1f - protection));
             newInfected = Mathf.RoundToInt(newInfected * protection);
 
-            // Prise en compte des infections au niveau du territoire
+            // Consideration of infections at the territory level
             territory.nbInfected += newInfected;
             territory.popInfected[age] += newInfected;
             territory.numberOfInfectedPeoplePerDays[0] += newInfected;
             territory.numberOfInfectedPeoplePerAgesAndDays[age][0] += newInfected;
-            // Prise en compte des infections au niveau national
+            // Consideration of infections at the national level
             countryPopData.nbInfected += newInfected;
             countryPopData.popInfected[age] += newInfected;
             countryPopData.numberOfInfectedPeoplePerDays[0] += newInfected;
@@ -386,7 +395,7 @@ public class InfectionSystem : FSystem
 
             amountOfNewInfections -= newInfected + ignoredInfections;
             totalLivingAndNotInfected -= newInfected;
-            // mise à jour des ages disponibles
+            // update of available ages
             availableAges.Clear();
             for (int age2 = 0; age2 < territory.popNumber.Length; age2++)
                 if (territory.popNumber[age2] - territory.popInfected[age2] > 0)
@@ -396,26 +405,35 @@ public class InfectionSystem : FSystem
 
     private float GetProtection(int age, TerritoryData territory)
     {
-        if (territory.closePrimarySchool && age <= 11 || // Vérifier écoles confinées
-            territory.closeSecondarySchool && age > 11 && age <= 15) // Vérifier collèges confinés
+        if (territory.closePrimarySchool && age <= 11 || // Check confined primary schools
+            territory.closeSecondarySchool && age > 11 && age <= 15) // Check confined middle schools
             return 0.8f;
-        else if (territory.closeHighSchool && age > 15 && age <= 18) // Vérifier lycées confinés 
-            return 0.7f; // 70 % des lycéens => certains ont déjà quitté le circuit scolaire
-        else if (territory.closeUniversity && age > 18 && age <= 20) // Vérifier universités confinées
-            return 0.5f; // 50 % d'une classe d'age a un bac+2
-        else if (territory.closeUniversity && age > 20 && age <= 23) // Vérifier universités confinées
-            return 0.3f; // 30% d'une classe d'age a plus d'un bac+2
+        else if (territory.closeHighSchool && age > 15 && age <= 18) // Check confined high schools
+            return 0.7f; // 70% of high school students => some have already left school
+        else if (territory.closeUniversity && age > 18 && age <= 20) // Check confined universities
+            return 0.5f; // 50 % of a class of age has a baccalaureate+2
+        else if (territory.closeUniversity && age > 20 && age <= 23) // Check confined universities
+            return 0.3f; // 30% of the age group has more than 2 years of higher education
         else if (territory.ageDependent && territory.ageDependentMin != "" && territory.ageDependentMax != "" && age >= int.Parse(territory.ageDependentMin) && age <= int.Parse(territory.ageDependentMax))
             return 0.8f;
         else
             return 0;
     }
 
+    /// <summary>
+    /// Updates in the IU the percentage of population that has been infected by the virus
+    /// </summary>
+    /// <param name="textUI"></param>
     public void UpdatePopRatioInfectedUI(TMPro.TMP_Text textUI)
     {
         textUI.text = (100f * MapSystem.territorySelected.nbInfected / MapSystem.territorySelected.nbPopulation).ToString("N0") + "%";
     }
 
+
+    /// <summary>
+    /// Updates in the IU the R0
+    /// </summary>
+    /// <param name="textUI"></param>
     public void UpdateR0UI(TMPro.TMP_Text textUI)
     {
         float R0 = 0;

@@ -1,5 +1,8 @@
 ﻿using UnityEngine;
 
+/// <summary>
+/// This component enables to manage double click on the map
+/// </summary>
 public class CheckDoubleClick : MonoBehaviour
 {
     private bool firstClick = false;
@@ -16,11 +19,16 @@ public class CheckDoubleClick : MonoBehaviour
         animatorTerritoryPopUp = transform.GetChild(1).GetComponent<Animator>();
     }
 
+    /// <summary>
+    /// Check if a double click occurs on a territory and open player panels accordingly
+    /// </summary>
+    /// <param name="territoryId">The territory id on which checking double click</param>
     public void CheckDoubleClic(int territoryId)
     {
-        // Vérifier si un click a déjà eu lieu sur ce territoire dans un délai court
+        // Check if another click occurs on this territory in a short delay
         if (firstClick && lastTerritorySelected == territoryId && Time.time - clickTime < clickDelay)
         {
+            // here we have a double click
             animatorTerritoryPopUp.SetTrigger("Toggle");
             if (territoryId == -1) // National
             {
@@ -34,9 +42,11 @@ public class CheckDoubleClick : MonoBehaviour
         }
         else 
         {
+            // here we have a first click 
             firstClick = true;
             clickTime = Time.time;
             lastTerritorySelected = territoryId;
+            
             if (territoryId == -1 && animatorTerritoryPopUp.GetCurrentAnimatorClipInfo(0).Length > 0 && animatorTerritoryPopUp.GetCurrentAnimatorClipInfo(0)[0].clip.name == "TerritoryPopUp_in" && !animatorCountryPopUp.GetBool("Close"))
                 animatorCountryPopUp.SetTrigger("Open");
             else
