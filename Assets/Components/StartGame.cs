@@ -14,7 +14,9 @@ public class StartGame : MonoBehaviour
 
     private void OnEnable()
     {
-        countryToLoad.GetComponent<CountryToLoad>().countryToLoad = Resources.Load<TextAsset>(countrySelected.text + "/Population");
+        CountryToLoad ctl = countryToLoad.GetComponent<CountryToLoad>();
+        ctl.territoriesData = Resources.Load<TextAsset>(countrySelected.text + "/Population");
+        ctl.countryData = Resources.Load<TextAsset>(countrySelected.text + "/CountryData");
         DontDestroyOnLoad(countryToLoad);
         SceneManager.LoadScene("Game");
     }

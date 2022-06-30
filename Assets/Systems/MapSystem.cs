@@ -18,16 +18,19 @@ public class MapSystem : FSystem {
     /// <summary></summary>
     public TMP_Text territoryName;
     /// <summary></summary>
-    public TimeScale time;
+    public GameObject simulationData;
+    private TimeScale time;
     /// <summary></summary>
-    public TextAsset rawContent;
+    public TextAsset rawPopulationData;
+    /// <summary></summary>
+    public TextAsset rawCountryData;
 
     /// <summary></summary>
     public GameObject territoryPrefab;
     /// <summary></summary>
     public Transform territoriesParent;
 
-    private TerritoryData countryData;
+    private TerritoryData territoriesData;
     private Vector3 targetScale;
 
     /// <summary>
@@ -43,6 +46,23 @@ public class MapSystem : FSystem {
         public int [] agePyramid;
     }
 
+    private struct RawCountryData
+    {
+        public string money;
+        public float icuBed_CostDay;
+        public float borders_TravellerFreightRatio;
+        public float borders_CostLostTourismPerDay;
+        public float borders_CostLostFreightPerDay;
+        public float mask_NationalStock;
+        public float mask_DailyMedicalIntake;
+        public float mask_DailyNationalProduction;
+        public float mask_MaxNationalProduction;
+        public float mask_MaxDeliveryPack;
+        public float vaccine_MeanDeliveryPack;
+        public float vaccine_trust;
+        public float tax_CompensateTaxesCanceledPerDay;
+    }
+
     /// <summary>
     /// Construct this system
     /// </summary>
@@ -53,21 +73,29 @@ public class MapSystem : FSystem {
 
     protected override void onStart()
     {
+        // Recovery of the time scale
+        time = simulationData.GetComponent<TimeScale>();
+
         f_territories.addEntryCallback(onNewTerritory);
 
         GameObject countryToLoad = GameObject.Find("CountryToLoad");
         if (countryToLoad != null)
-            rawContent = countryToLoad.GetComponent<CountryToLoad>().countryToLoad;
+        {
+            rawPopulationData = countryToLoad.GetComponent<CountryToLoad>().territoriesData;
+            rawCountryData = countryToLoad.GetComponent<CountryToLoad>().countryData;
+        }
 
         // Load game content from the file
-        Dictionary<string, RawTerriroryData> populationData = JsonConvert.DeserializeObject<Dictionary<string, RawTerriroryData>>(rawContent.text);
+        Dictionary<string, RawTerriroryData> populationData = JsonConvert.DeserializeObject<Dictionary<string, RawTerriroryData>>(rawPopulationData.text);
+        RawCountryData countryData = JsonConvert.DeserializeObject<RawCountryData>(rawCountryData.text);
+
         // Reset the nation's data to make sure it is synchronized with the regions' accumulated data
-        countryData = time.GetComponent<TerritoryData>();
-        for (int age = 0; age < countryData.popNumber.Length; age++)
-            countryData.popNumber[age] = 0;
-        countryData.id = -1;
-        countryData.populationRatio = 1;
-        countryData.nbPopulation = 0;
+        territoriesData = time.GetComponent<TerritoryData>();
+        for (int age = 0; age < territoriesData.popNumber.Length; age++)
+            territoriesData.popNumber[age] = 0;
+        territoriesData.id = -1;
+        territoriesData.populationRatio = 1;
+        territoriesData.nbPopulation = 0;
         Beds countryBeds = time.GetComponent<Beds>();
         countryBeds.intensiveBeds_default = 0;
         countryBeds.intensiveBeds_high = 0;
@@ -77,7 +105,7 @@ public class MapSystem : FSystem {
         foreach (KeyValuePair<string, RawTerriroryData> entry in populationData)
         {
             if (entry.Value.id == -1)
-                countryData.TerritoryName = entry.Key;
+                territoriesData.TerritoryName = entry.Key;
             else
             {
                 GameObject newTerritory = GameObject.Instantiate(territoryPrefab, territoriesParent);
@@ -94,10 +122,10 @@ public class MapSystem : FSystem {
                     total += territoryData.popNumber[age];
                     max = Mathf.Max(max, territoryData.popNumber[age]);
                     // accumulation at the national level
-                    countryData.popNumber[age] += territoryData.popNumber[age];
+                    territoriesData.popNumber[age] += territoryData.popNumber[age];
                 }
                 territoryData.nbPopulation = total;
-                countryData.nbPopulation += total;
+                territoriesData.nbPopulation += total;
                 // Calculation of the power of 10 immediately above the maximum
                 territoryData.maxNumber = max - (max % 1000) + 1000;
                 // loading of bed data
@@ -107,19 +135,36 @@ public class MapSystem : FSystem {
                 countryBeds.intensiveBeds_default += entry.Value.bedsDefault;
                 countryBeds.intensiveBeds_high += entry.Value.bedsHigh;
                 // Loading images
-                newTerritory.GetComponent<Image>().sprite = Resources.Load<Sprite>(countryData.TerritoryName + "/Regions/" + territoryData.TerritoryName);
-                newTerritory.transform.GetChild(0).GetComponent<Image>().sprite = Resources.Load<Sprite>(countryData.TerritoryName + "/Regions/" + territoryData.TerritoryName + "_focused");
+                newTerritory.GetComponent<Image>().sprite = Resources.Load<Sprite>(territoriesData.TerritoryName + "/Regions/" + territoryData.TerritoryName);
+                newTerritory.transform.GetChild(0).GetComponent<Image>().sprite = Resources.Load<Sprite>(territoriesData.TerritoryName + "/Regions/" + territoryData.TerritoryName + "_focused");
             }
         }
 
         max = 0;
-        for (int age = 0; age < countryData.popNumber.Length; age++)
-            max = Mathf.Max(max, countryData.popNumber[age]);
-        countryData.maxNumber = max - (max % 1000) + 1000;
+        for (int age = 0; age < territoriesData.popNumber.Length; age++)
+            max = Mathf.Max(max, territoriesData.popNumber[age]);
+        territoriesData.maxNumber = max - (max % 1000) + 1000;
 
-        territorySelected = countryData;
+        territorySelected = territoriesData;
         territoryName.text = territorySelected.TerritoryName;
         targetScale = territoriesParent.transform.localScale;
+
+        Finances finances = simulationData.GetComponent<Finances>();
+        finances.money = countryData.money;
+        finances.oneDayReanimationCost = countryData.icuBed_CostDay;
+        simulationData.GetComponent<FrontierPermeability>().travellerRatio = countryData.borders_TravellerFreightRatio;
+        finances.costLostTourismPerDay = countryData.borders_CostLostTourismPerDay;
+        finances.costLostFreightPerDay = countryData.borders_CostLostFreightPerDay;
+        Masks masks = simulationData.GetComponent<Masks>();
+        masks.nationalStock = countryData.mask_NationalStock;
+        masks.medicalRequirementPerDay_low = countryData.mask_DailyMedicalIntake;
+        masks.nationalProductionPerDay_low = countryData.mask_DailyNationalProduction;
+        masks.nationalProductionPerDay_high = countryData.mask_MaxNationalProduction;
+        masks.maxDeliveryPack = countryData.mask_MaxDeliveryPack;
+        Vaccine vaccine = simulationData.GetComponent<Vaccine>();
+        vaccine.meanDeliveryPack = countryData.vaccine_MeanDeliveryPack;
+        vaccine.vaccineTrust = countryData.vaccine_trust;
+        simulationData.GetComponent<Tax>().compensateTaxesCanceled = countryData.tax_CompensateTaxesCanceledPerDay;
     }
 
     // Use to process your families.
@@ -155,7 +200,7 @@ public class MapSystem : FSystem {
     public void onNewTerritory(GameObject newTerritory)
     {
         TerritoryData territoryData = newTerritory.GetComponent<TerritoryData>();
-        territoryData.populationRatio = (float)territoryData.nbPopulation / countryData.nbPopulation;
+        territoryData.populationRatio = (float)territoryData.nbPopulation / territoriesData.nbPopulation;
     }
 
     /// <summary>

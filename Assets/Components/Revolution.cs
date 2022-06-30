@@ -104,12 +104,7 @@ public class Revolution : MonoBehaviour {
     [Tooltip("if masks requisition without stock then add penalty")]
     public float maskRequisitionPenalty = 0.4f;
     /// <summary>
-    /// Minimum mask stock at which there is a shortage
-    /// </summary>
-    [Tooltip("Minimum mask stock at which there is a shortage")]
-    public float maskStockThreshold = 30000000f;
-    /// <summary>
-    /// If mask production boosted during crisis then add nobus
+    /// If mask production boosted during crisis then add bonus
     /// </summary>
     [Tooltip("If mask production boosted during crisis then add nobus")]
     public float maskBoostProdBonus = 0.05f;

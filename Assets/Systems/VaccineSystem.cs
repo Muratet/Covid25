@@ -111,7 +111,7 @@ public class VaccineSystem : FSystem {
                     if (!firstVaccineDelivered)
                     {
                         firstVaccineDelivered = true;
-                        GameObjectManager.addComponent<ChatMessage>(vaccine.gameObject, new { sender = localization.advisorTitleHealth, timeStamp = "" + time.daysGone, messageBody = localization.getFormatedText(localization.advisorHealthTexts[18], incomingVaccines.ToString("N0", cultureInfo)) });
+                        GameObjectManager.addComponent<ChatMessage>(vaccine.gameObject, new { sender = localization.advisorTitleHealth, timeStamp = "" + time.daysGone, messageBody = localization.getFormatedText(localization.advisorHealthTexts[17], incomingVaccines.ToString("N0", cultureInfo)) });
                     }
                     lastVaccineDelivery = time.daysGone;
                 }
@@ -168,16 +168,16 @@ public class VaccineSystem : FSystem {
             // display a notification if the stock is empty when an order has already been received
             if (lastVaccineDelivery != -1 && emptyStock)
             {
-                string msgBody = localization.advisorHealthTexts[19];
+                string msgBody = localization.advisorHealthTexts[18];
                 if (vaccine.commands == 0)
                 {
-                    msgBody += localization.advisorHealthTexts[15];
+                    msgBody += localization.advisorHealthTexts[14];
                     if (frontierPermeability.currentState >= 2)
-                        msgBody += localization.advisorHealthTexts[16];
+                        msgBody += localization.advisorHealthTexts[15];
                 }
                 else
                     if (frontierPermeability.currentState >= 2)
-                        msgBody += localization.advisorHealthTexts[17];
+                        msgBody += localization.advisorHealthTexts[16];
 
                 GameObjectManager.addComponent<ChatMessage>(vaccine.gameObject, new { sender = localization.advisorTitleHealth, timeStamp = "" + time.daysGone, messageBody = msgBody });
                 lastVaccineDelivery = -1;

@@ -12,6 +12,12 @@ public class Tax : MonoBehaviour {
     [HideInInspector]
     public int lastUpdate = -1;
 
+    /// <summary>
+    /// The cost of canceling taxes per day
+    /// </summary>
+    [Tooltip("The cost of canceling taxes per day")]
+    public float compensateTaxesCanceled = 700000000; // 42 Billion in two months (French INSEE figure) => 700 Million per day max
+
     private TimeScale time;
 
     /// <summary>

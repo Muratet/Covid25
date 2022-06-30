@@ -47,6 +47,10 @@ public class CurvesSystem : FSystem {
         finances = countrySimData.GetComponent<Finances>();
         // Recovery of dissatisfaction data
         revolution = countrySimData.GetComponent<Revolution>();
+
+        foreach (GameObject curve in f_displayedCurves)
+            if (curve.CompareTag("FinanceCurve"))
+                curve.transform.parent.Find("Money").GetComponent<TMP_Text>().text = "(" + finances.money + ")";
     }
 
     /// <summary>

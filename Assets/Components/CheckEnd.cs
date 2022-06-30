@@ -76,11 +76,9 @@ public class CheckEnd : MonoBehaviour
     public string daysTxt;
 
     /// <summary></summary>
-    public string billionEuros;
+    public string billion;
     /// <summary></summary>
-    public string millionEuros;
-    /// <summary></summary>
-    public string euros;
+    public string million;
 
     private bool disableRevolutionEnd = false;
 
@@ -179,14 +177,14 @@ public class CheckEnd : MonoBehaviour
         float debtValue = finances.historySpent[finances.historySpent.Count - 1];
         int nbMilliards = (int)(debtValue / 1000000000);
         if (nbMilliards > 0)
-            debtText = nbMilliards.ToString("N0", cultureInfo) + " " + billionEuros;
+            debtText = nbMilliards.ToString("N0", cultureInfo) + " " + billion + " " + finances.money;
         else
         {
             int nbMillions = (int)(debtValue / 1000000);
             if (nbMillions > 0)
-                debtText = nbMillions.ToString("N0", cultureInfo) + " " + millionEuros;
+                debtText = nbMillions.ToString("N0", cultureInfo) + " " + million + " " + finances.money;
             else
-                debtText = debtValue.ToString("N0", cultureInfo) + " " + euros;
+                debtText = debtValue.ToString("N0", cultureInfo) + " " + finances.money;
         }
         debt.text = baseDebtText + debtText;
 
@@ -252,7 +250,7 @@ public class CheckEnd : MonoBehaviour
 
     private void DisableChild()
     {
-        transform.GetChild(0).gameObject.SetActive(false);
+        GameObjectManager.setGameObjectState(transform.GetChild(0).gameObject, false);
     }
 
     [DllImport("__Internal")]

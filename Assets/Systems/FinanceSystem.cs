@@ -60,11 +60,9 @@ public class FinanceSystem : FSystem
 
             // Border closure management
             if (frontierPermeability.currentState >= 1)
-                newSpent += Random.Range(50000f, 150000f); // 100 000 € of loss on average due to the stop of tourism
+                newSpent += Random.Range(finances.costLostTourismPerDay*0.7f, finances.costLostTourismPerDay*1.3f);
             if (frontierPermeability.currentState >= 2)
-                newSpent += Random.Range(500000f, 1500000f); // 1 000 000 € of additional loss on average due to the stop of the trade outside the European zone
-            if (frontierPermeability.currentState >= 3)
-                newSpent += Random.Range(200000f, 600000f); // 400 000 € of additional loss on average due to total confinement
+                newSpent += Random.Range(finances.costLostFreightPerDay*0.7f, finances.costLostFreightPerDay*1.3f);
 
             float remoteworkingImpact = (remoteworking.currentState ? 0.75f : 1f); // if home working is enabled, the financial impact of working from home is reduced
             float shortTimeWorkingImpact = (shortTimeWorking.currentState ? 100f : 1f); // if partial unemployment is activated, the financial impact due to social charges explodes
@@ -99,7 +97,7 @@ public class FinanceSystem : FSystem
             if (tax.currentState)
             {
                 taxProgress = Mathf.Min(1, taxProgress + 0.1f);
-                newSpent += taxProgress * Random.Range(100000000f, 7000000000f); // 42 Billion in two months (French INSEE figure) => 700 Million per day max
+                newSpent += taxProgress * Random.Range(tax.compensateTaxesCanceled*0.7f, tax.compensateTaxesCanceled*1.3f); 
             } else
                 taxProgress = Mathf.Max(0, taxProgress - 0.1f);
 
@@ -108,7 +106,7 @@ public class FinanceSystem : FSystem
             if (!bedsNotif && beds.intensiveBeds_need > 0)
             {
                 bedsNotif = true;
-                GameObjectManager.addComponent<ChatMessage>(finances.gameObject, new { sender = localization.advisorTitleHospital, timeStamp = "" + time.daysGone, messageBody = localization.getFormatedText(localization.advisorHospitalTexts[1], finances.oneDayReanimationCost.ToString("N0", UnityEngine.Localization.Settings.LocalizationSettings.Instance.GetSelectedLocale().Identifier.CultureInfo)) });
+                GameObjectManager.addComponent<ChatMessage>(finances.gameObject, new { sender = localization.advisorTitleHospital, timeStamp = "" + time.daysGone, messageBody = localization.getFormatedText(localization.advisorHospitalTexts[1], finances.oneDayReanimationCost.ToString("N0", UnityEngine.Localization.Settings.LocalizationSettings.Instance.GetSelectedLocale().Identifier.CultureInfo)+finances.money) });
             }
 
 
@@ -126,7 +124,7 @@ public class FinanceSystem : FSystem
                 switch(Random.Range(0, 4))
                 {
                     case 0: messageChosen = localization.advisorEconomyTexts[0]; break;
-                    case 1: messageChosen = localization.getFormatedText(localization.advisorEconomyTexts[1], newDebt.ToString("N0", UnityEngine.Localization.Settings.LocalizationSettings.Instance.GetSelectedLocale().Identifier.CultureInfo)); break;
+                    case 1: messageChosen = localization.getFormatedText(localization.advisorEconomyTexts[1], newDebt.ToString("N0", UnityEngine.Localization.Settings.LocalizationSettings.Instance.GetSelectedLocale().Identifier.CultureInfo)+finances.money); break;
                     case 2: messageChosen = localization.advisorEconomyTexts[2]; break;
                     case 3: messageChosen = localization.advisorEconomyTexts[3]; break;
                 }

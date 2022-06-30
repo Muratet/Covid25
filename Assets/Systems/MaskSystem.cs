@@ -97,16 +97,16 @@ public class MaskSystem : FSystem {
             // display a notification if the stock is empty when an order has already been received
             if (lastMasksDelivery != -1 && emptyStock)
             {
-                string msgBody = localization.advisorHealthTexts[14];
+                string msgBody = localization.advisorHealthTexts[13];
                 if (masks.commands == 0)
                 {
-                    msgBody += localization.advisorHealthTexts[15];
+                    msgBody += localization.advisorHealthTexts[14];
                     if (frontierPermeability.currentState >= 2)
-                        msgBody += localization.advisorHealthTexts[16];
+                        msgBody += localization.advisorHealthTexts[15];
                 }
                 else
                     if (frontierPermeability.currentState >= 2)
-                        msgBody += localization.advisorHealthTexts[17];
+                        msgBody += localization.advisorHealthTexts[16];
 
                 GameObjectManager.addComponent<ChatMessage>(masks.gameObject, new { sender = localization.advisorTitleHealth, timeStamp = "" + time.daysGone, messageBody = msgBody });
                 lastMasksDelivery = -1;

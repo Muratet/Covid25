@@ -142,12 +142,12 @@ MonoBehaviour:
   - m_Id: 21325316014080
     m_Localized: "Dans la partie sup\xE9rieure vous pourrez consulter de nombreuses
       informations comme la progression de l'infection par \xE2ge, la triste \xE9volution
-      des d\xE9c\xE8s... malheureusement comme en 2020 une nouvelle catastrophe s'annonce.<br><br>Bref,
-      vous aurez aussi des informations sur l'\xE9volution du stock des masques,
-      des vaccins et une estimation du co\xFBt financier de vos actions.<br><br>Enfin
-      portez une attention toute particuli\xE8re au m\xE9contentement des citoyens.
-      Il ne doit pas concerner plus de 80% de la population auquel cas votre strat\xE9gie
-      de gestion de la crise pourrait \xEAtre remise en cause..."
+      des d\xE9c\xE8s... <b>Malheureusement comme en 2020 une nouvelle catastrophe
+      s'annonce</b>.<br><br>Bref, vous aurez aussi des informations sur l'\xE9volution
+      du stock des masques, des vaccins et une estimation du co\xFBt financier de
+      vos actions.<br><br>Enfin portez une attention toute particuli\xE8re au m\xE9contentement
+      des citoyens. Il ne doit pas concerner plus de 80% de la population auquel
+      cas votre strat\xE9gie de gestion de la crise pourrait \xEAtre remise en cause..."
     m_Metadata:
       m_Items: []
   - m_Id: 21501829103616
@@ -541,7 +541,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 360231446167552
-    m_Localized: "R\xE9duction des libert\xE9s de d\xE9placement (Attestation de
+    m_Localized: "R\xE9duction des libert\xE9s de d\xE9placement (attestation de
       sortie requise)"
     m_Metadata:
       m_Items: []
@@ -1119,7 +1119,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 379047756611584
-    m_Localized: "Dette (\u20AC)"
+    m_Localized: Dette
     m_Metadata:
       m_Items: []
   - m_Id: 379112604745728
@@ -1159,13 +1159,11 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 730480431513600
-    m_Localized: "Vous avez restreint l'ouverture des fronti\xE8res seulement au
-      fret mondial et europ\xE9en"
+    m_Localized: "Vous avez ferm\xE9 les fronti\xE8res aux civils (fret autoris\xE9)"
     m_Metadata:
       m_Items: []
   - m_Id: 730560970539008
-    m_Localized: "Vous avez restreint l'ouverture des fronti\xE8res seulement au
-      fret europ\xE9en"
+    m_Localized: "Vous avez ferm\xE9 totalement les fronti\xE8res (fret et civil)"
     m_Metadata:
       m_Items: []
   - m_Id: 730641928994816
@@ -1323,8 +1321,8 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 1811649982021632
     m_Localized: "C'est une catastrophe, vous devrez r\xE9pondre de vos actes, c'est
-      comme si toute la population de Nanterre ou de Nancy \xE9tait ray\xE9 de la
-      carte... en une seule journ\xE9e !!!"
+      comme si toute la population d'une ville de 100 000 habitants \xE9tait ray\xE9
+      de la carte... en une seule journ\xE9e !!!"
     m_Metadata:
       m_Items: []
   - m_Id: 1811826759352320
@@ -1348,41 +1346,41 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 1812860374269952
-    m_Localized: "Nous avons d\xE9pass\xE9 le record de la pand\xE9mie de 2020"
-    m_Metadata:
-      m_Items: []
-  - m_Id: 1812886852911104
     m_Localized: "Vous devriez prendre des mesures pour contenir la pand\xE9mie"
     m_Metadata:
       m_Items: []
-  - m_Id: 1812929546731520
+  - m_Id: 1812886852911104
     m_Localized: "Faites attention \xE0 ce que le nombre de morts ne s'embale pas"
     m_Metadata:
       m_Items: []
-  - m_Id: 1813635003498496
+  - m_Id: 1812929546731520
     m_Localized: "(#0#) Il semblerait qu'un premier cas a \xE9t\xE9 d\xE9tect\xE9"
     m_Metadata:
       m_Items: []
-  - m_Id: 1814461642096640
+  - m_Id: 1813635003498496
     m_Localized: 'Cela fait plus d''une semaine que nous n''avons plus de stock de
       masques. '
     m_Metadata:
       m_Items: []
-  - m_Id: 1814500594597888
+  - m_Id: 1814461642096640
     m_Localized: Nous devrions passer de nouvelles commandes
     m_Metadata:
       m_Items: []
-  - m_Id: 1814535684145152
+  - m_Id: 1814500594597888
     m_Localized: "et ouvrir les fronti\xE8res"
     m_Metadata:
       m_Items: []
-  - m_Id: 1814606945370112
+  - m_Id: 1814535684145152
     m_Localized: "Nous devrions ouvrir les fronti\xE8res"
     m_Metadata:
       m_Items: []
-  - m_Id: 1815262456365056
+  - m_Id: 1814606945370112
     m_Localized: "Nous avons re\xE7u notre premi\xE8re livraison de #0# doses de
       vaccin. Nous commen\xE7ons \xE0 vacciner la population sur le champs"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1815262456365056
+    m_Localized: 'Cela fait plus d''une semaine que nous ne recevons plus de vaccins. '
     m_Metadata:
       m_Items: []
   - m_Id: 1816087605985280
@@ -1421,12 +1419,12 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 1820790049914880
-    m_Localized: "Il vous faut faire des choix et vous y tenir, les fran\xE7ais ne
-      comprennent pas votre politique"
+    m_Localized: Il vous faut faire des choix et vous y tenir, les citoyens ne comprennent
+      pas votre politique
     m_Metadata:
       m_Items: []
   - m_Id: 1820838951305216
-    m_Localized: "Les sondages montrent que les fran\xE7ais attendent un cap"
+    m_Localized: Les sondages montrent que les citoyens attendent un cap
     m_Metadata:
       m_Items: []
   - m_Id: 1822180625268736
@@ -1457,7 +1455,7 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 1824452860100608
     m_Localized: "Vous devriez adapter vos mesures pour rassurer la population. #0#%
-      des Fran\xE7ais sont m\xE9contents. "
+      des citoyens sont m\xE9contents. "
     m_Metadata:
       m_Items: []
   - m_Id: 1824508879224832
@@ -1470,8 +1468,8 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 1825298805080064
     m_Localized: "Des troubles \xE0 l'ordre public se manifestent dans plusieurs
-      r\xE9gions fran\xE7aises. Si le m\xE9contentement continue \xE0 cro\xEEtre
-      nous allons droit \xE0 la crise sociale"
+      r\xE9gions. Si le m\xE9contentement continue \xE0 cro\xEEtre nous allons droit
+      \xE0 la crise sociale"
     m_Metadata:
       m_Items: []
   - m_Id: 1825369827229696
@@ -1480,8 +1478,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 1826400782958592
-    m_Localized: "Une journ\xE9e de r\xE9animation co\xFBte #0#\u20AC pour chaque
-      patient"
+    m_Localized: "Une journ\xE9e de r\xE9animation co\xFBte #0# pour chaque patient"
     m_Metadata:
       m_Items: []
   - m_Id: 1827402332422144
@@ -1493,7 +1490,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 1828201154396160
-    m_Localized: "La dette du pays d\xFB \xE0 la crise atteind #0#\u20AC. Pour information
+    m_Localized: "La dette du pays d\xFB \xE0 la crise atteind #0#. Pour information
       la dette nationale avant la crise \xE9tait de 2 500 Md\u20AC."
     m_Metadata:
       m_Items: []
@@ -1526,7 +1523,7 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 1830990261698560
     m_Localized: "(#0#) Un laboratoire d\xE9clare avoir commenc\xE9 \xE0 tester l'innocuit\xE9
-      d'un vaccin chez l'homme (Phase I)"
+      d'un vaccin chez l'homme (phase I)"
     m_Metadata:
       m_Items: []
   - m_Id: 1831094527901696
@@ -1536,7 +1533,7 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 1831191487627264
     m_Localized: "(#0#) Il s'emblerait qu'un laboratoire \xE9tudie les b\xE9n\xE9fices/risques
-      de leur vaccin (Phase III). La recherche mondiale progresse, nous devrions
+      de leur vaccin (phase III). La recherche mondiale progresse, nous devrions
       pouvoir b\xE9n\xE9ficier d'un vaccin d'ici quelques temps"
     m_Metadata:
       m_Items: []
@@ -1752,8 +1749,8 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 1825298805080060
     m_Localized: "Des troubles \xE0 l'ordre public se manifestent dans plusieurs
-      r\xE9gions fran\xE7aises. Si le m\xE9contentement continue \xE0 cro\xEEtre
-      nous allons droit \xE0 la crise sociale"
+      r\xE9gions. Si le m\xE9contentement continue \xE0 cro\xEEtre nous allons droit
+      \xE0 la crise sociale"
     m_Metadata:
       m_Items: []
   - m_Id: 1825369827229690
@@ -1803,7 +1800,7 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 1831191487627260
     m_Localized: "(#0#) Il s'emblerait qu'un laboratoire \xE9tudie les b\xE9n\xE9fices/risques
-      de leur vaccin (Phase III). La recherche mondiale progresse, nous devrions
+      de leur vaccin (phase III). La recherche mondiale progresse, nous devrions
       pouvoir b\xE9n\xE9ficier d'un vaccin d'ici quelques temps"
     m_Metadata:
       m_Items: []
@@ -1939,11 +1936,11 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 9029479425032192
-    m_Localized: "Seul fret mondial/europ\xE9en"
+    m_Localized: "Seul fret autoris\xE9"
     m_Metadata:
       m_Items: []
   - m_Id: 9029519673573376
-    m_Localized: "Seul fret europ\xE9en"
+    m_Localized: Total (fret et civil)
     m_Metadata:
       m_Items: []
   - m_Id: 9029559867588608
@@ -2026,6 +2023,46 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 48773942284587008
     m_Localized: Md
+    m_Metadata:
+      m_Items: []
+  - m_Id: 49945376683921408
+    m_Localized: milliard(s)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 51086339586330624
+    m_Localized: "R\xE9initialiser"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 51097043534024704
+    m_Localized: Annuler
+    m_Metadata:
+      m_Items: []
+  - m_Id: 51097496552411136
+    m_Localized: Quitter
+    m_Metadata:
+      m_Items: []
+  - m_Id: 51104375991111680
+    m_Localized: Pause
+    m_Metadata:
+      m_Items: []
+  - m_Id: 51104444706394112
+    m_Localized: Simulation x2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 51104468517457920
+    m_Localized: Simulation x4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 51104532996493312
+    m_Localized: Menu
+    m_Metadata:
+      m_Items: []
+  - m_Id: 51111594644148224
+    m_Localized: Suivant
+    m_Metadata:
+      m_Items: []
+  - m_Id: 51112067610644480
+    m_Localized: Passer le tutoriel
     m_Metadata:
       m_Items: []
   references:

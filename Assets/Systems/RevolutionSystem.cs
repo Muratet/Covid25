@@ -144,7 +144,7 @@ public class RevolutionSystem : FSystem
 
             // requisition of masks
             if (masks.requisition && revolution.nationalInfectionIsCritic)
-                newStress += Random.Range(0f, revolution.maskRequisitionPenalty) * timeMalus * (2f - Mathf.Min(masks.nationalStock / revolution.maskStockThreshold, 1));
+                newStress += Random.Range(0f, revolution.maskRequisitionPenalty) * timeMalus * (2f - Mathf.Min(masks.nationalStock / (masks.medicalRequirementPerDay_current / 7), 1)); // 7 is for: do we have enough mask for one week
             if (masks.boostProduction && revolution.nationalInfectionIsCritic)
                 newStress -= Random.Range(0f, revolution.maskBoostProdBonus);
             if (masks.selfProtectionPromoted && !revolution.nationalInfectionIsCritic)

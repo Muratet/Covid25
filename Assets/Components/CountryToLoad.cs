@@ -6,7 +6,11 @@ using UnityEngine;
 public class CountryToLoad : MonoBehaviour
 {
     /// <summary>
-    /// The data to load
+    /// The territories data to load
     /// </summary>
-    public TextAsset countryToLoad;
+    public TextAsset territoriesData;
+    /// <summary>
+    /// The country data to load
+    /// </summary>
+    public TextAsset countryData;
 }

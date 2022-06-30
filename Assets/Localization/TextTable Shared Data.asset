@@ -1862,6 +1862,47 @@ MonoBehaviour:
     m_Key: Game/Localization 116
     m_Metadata:
       m_Items: []
+  - m_Id: 49945376683921408
+    m_Key: Game/CanvasUINavigator/EndScreen 11
+    m_Metadata:
+      m_Items: []
+  - m_Id: 51086339586330624
+    m_Key: Intro/Canvas/PanelCustomize/Buttons/ResetBt/Text (TMP)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 51097043534024704
+    m_Key: Game/CanvasUINavigator/EndScreen/Panel/returnToEndScreen/Text (TMP)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 51097496552411136
+    m_Key: Game/CanvasUINavigator/EndScreen/Panel/Cancel/Text (TMP)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 51104375991111680
+    m_Key: Game/CanvasUINavigator/TimeMenu/Pause
+    m_Metadata:
+      m_Items: []
+  - m_Id: 51104444706394112
+    m_Key: Game/CanvasUINavigator/TimeMenu/x2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 51104468517457920
+    m_Key: Game/CanvasUINavigator/TimeMenu/x4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 51104532996493312
+    m_Key: Game/CanvasUINavigator/TimeMenu/Menu
+    m_Metadata:
+      m_Items: []
+  - m_Id: 51111594644148224
+    m_Key: Game/CanvasUINavigator/Tutorial/Step4/Background/Buttons/Next/Text (TMP)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 51112067610644480
+    m_Key: Game/CanvasUINavigator/Tutorial/Step4/Background/Buttons/CloseTuto/Text
+      (TMP)
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

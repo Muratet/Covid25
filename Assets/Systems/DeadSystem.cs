@@ -157,12 +157,10 @@ public class DeadSystem : FSystem
                     msgBody += localization.advisorHealthTexts[8];
                 else if (nextDeathNotification > 3000)
                     msgBody += localization.advisorHealthTexts[9];
-                else if (nextDeathNotification > 1500)
-                    msgBody += localization.advisorHealthTexts[10];
                 else if (nextDeathNotification > 750)
-                    msgBody += localization.advisorHealthTexts[11];
+                    msgBody += localization.advisorHealthTexts[10];
                 else if (nextDeathNotification > 325)
-                    msgBody += localization.advisorHealthTexts[12];
+                    msgBody += localization.advisorHealthTexts[11];
 
                 GameObjectManager.addComponent<ChatMessage>(countryPopData.gameObject, new { sender = localization.advisorTitleHealth, timeStamp = "" + time.daysGone, messageBody = msgBody });
                 nextDeathNotification *= 2;

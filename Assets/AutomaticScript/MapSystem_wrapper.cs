@@ -4,16 +4,18 @@ using FYFY;
 public class MapSystem_wrapper : BaseWrapper
 {
 	public TMPro.TMP_Text territoryName;
-	public TimeScale time;
-	public UnityEngine.TextAsset rawContent;
+	public UnityEngine.GameObject simulationData;
+	public UnityEngine.TextAsset rawPopulationData;
+	public UnityEngine.TextAsset rawCountryData;
 	public UnityEngine.GameObject territoryPrefab;
 	public UnityEngine.Transform territoriesParent;
 	private void Start()
 	{
 		this.hideFlags = HideFlags.NotEditable;
 		MainLoop.initAppropriateSystemField (system, "territoryName", territoryName);
-		MainLoop.initAppropriateSystemField (system, "time", time);
-		MainLoop.initAppropriateSystemField (system, "rawContent", rawContent);
+		MainLoop.initAppropriateSystemField (system, "simulationData", simulationData);
+		MainLoop.initAppropriateSystemField (system, "rawPopulationData", rawPopulationData);
+		MainLoop.initAppropriateSystemField (system, "rawCountryData", rawCountryData);
 		MainLoop.initAppropriateSystemField (system, "territoryPrefab", territoryPrefab);
 		MainLoop.initAppropriateSystemField (system, "territoriesParent", territoriesParent);
 	}

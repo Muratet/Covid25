@@ -73,4 +73,19 @@ public class LoadGame : MonoBehaviour
 
         LoadGameScene();
     }
+
+    public void ResetVirus()
+    {
+        Contagiosity.value = customizedStats.contagiosity;
+        WindowSize.value = customizedStats.windowSize;
+        ContagiousnessPeak.value = customizedStats.contagiousnessPeak;
+        ContagiousnessDeviation.value = customizedStats.contagiousnessDeviation;
+        DeadlinessPeak.value = customizedStats.deadlinessPeak;
+        DeadlinessDeviation.value = customizedStats.deadlinessDeviation;
+        SeriousRatio.value = customizedStats.seriousRatio;
+        FirstSensitiveAge.value = customizedStats.firstSensitiveAge;
+        CurveStrength.value = customizedStats.curveStrenght;
+        MaxDeadlinessRatio.value = customizedStats.maxDeadlinessRatio;
+        VaccineMounth.value = customizedStats.vaccineMounthDelay;
+    }
 }

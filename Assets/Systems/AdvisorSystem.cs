@@ -330,6 +330,7 @@ public class AdvisorSystem : FSystem
             isOpen = true;
             clickTime = Time.time;
             scrollRect.verticalNormalizedPosition = 0;
+            newMessages = 0;
         }
     }
 

@@ -13,10 +13,27 @@ public class Finances : MonoBehaviour {
     public float dailySpending = 0;
 
     /// <summary>
+    /// The money of the country
+    /// </summary>
+    public string money = "€";
+
+    /// <summary>
     /// Price of one day of ICU bed occupency
     /// </summary>
     [Tooltip("Price of one day of ICU bed occupency")]
-    public int oneDayReanimationCost = 4628;
+    public float oneDayReanimationCost = 4628;
+
+    /// <summary>
+    /// Losses due to borders closing per day (tourism)
+    /// </summary>
+    [Tooltip("Losses due to borders closing per day (tourism)")]
+    public float costLostTourismPerDay = 100000;
+
+    /// <summary>
+    /// Losses due to borders closing per day (freight)
+    /// </summary>
+    [Tooltip("Losses due to borders closing per day (freight)")]
+    public float costLostFreightPerDay = 1400000;
 
     /// <summary>
     /// The history of spent

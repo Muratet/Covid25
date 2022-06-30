@@ -142,8 +142,8 @@ MonoBehaviour:
   - m_Id: 21325316014080
     m_Localized: In the upper part you will be able to consult a lot of information
       such as the progression of the infection by age, the sad evolution of deaths...
-      unfortunately, as in 2020, a new disaster is on the way.<br><br>In short, you
-      will also have information on the evolution of the stock of masks, vaccines
+      <b>Unfortunately, as in 2020, a new disaster is on the way</b>.<br><br>In short,
+      you will also have information on the evolution of the stock of masks, vaccines
       and an estimate of the financial cost of your actions.<br><br>Finally, pay
       particular attention to the dissatisfaction of the citizens. It must not concern
       more than 80% of the population, in which case your crisis management strategy
@@ -534,7 +534,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 360231446167552
-    m_Localized: Reduced freedom of movement<br>(Exit certificate required)
+    m_Localized: Reduced freedom of movement<br>(exit certificate required)
     m_Metadata:
       m_Items: []
   - m_Id: 360455627522048
@@ -1054,7 +1054,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 379047756611584
-    m_Localized: "Debt (\u20AC)"
+    m_Localized: Debt
     m_Metadata:
       m_Items: []
   - m_Id: 379112604745728
@@ -1094,11 +1094,11 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 730480431513600
-    m_Localized: You have restricted the borders to only world and European freight
+    m_Localized: You have closed the borders for civilian (freight allowed)
     m_Metadata:
       m_Items: []
   - m_Id: 730560970539008
-    m_Localized: You have restricted the borders to only European freight
+    m_Localized: You have completely closed the borders (freight and civilian)
     m_Metadata:
       m_Items: []
   - m_Id: 730641928994816
@@ -1250,8 +1250,8 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 1811649982021632
     m_Localized: It's a disaster, you will have to answer for your actions, it's
-      as if the entire population of Nanterre or Nancy was wiped off the map... in
-      a single day!!!
+      as if the entire population of a city of 100,000 citizen was wiped off the
+      map... in a single day!!!
     m_Metadata:
       m_Items: []
   - m_Id: 1811826759352320
@@ -1275,40 +1275,40 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 1812860374269952
-    m_Localized: We have surpassed the 2020 pandemic record
-    m_Metadata:
-      m_Items: []
-  - m_Id: 1812886852911104
     m_Localized: You should take measures to contain the pandemic
     m_Metadata:
       m_Items: []
-  - m_Id: 1812929546731520
+  - m_Id: 1812886852911104
     m_Localized: Be careful the death count doesn't get out of hand
     m_Metadata:
       m_Items: []
-  - m_Id: 1813635003498496
+  - m_Id: 1812929546731520
     m_Localized: (#0#) It seems that a first case has been detected
     m_Metadata:
       m_Items: []
-  - m_Id: 1814461642096640
+  - m_Id: 1813635003498496
     m_Localized: 'It''s been over a week since we''ve had any stock of masks. '
     m_Metadata:
       m_Items: []
-  - m_Id: 1814500594597888
+  - m_Id: 1814461642096640
     m_Localized: We should place new orders
     m_Metadata:
       m_Items: []
-  - m_Id: 1814535684145152
+  - m_Id: 1814500594597888
     m_Localized: ' and open borders'
     m_Metadata:
       m_Items: []
-  - m_Id: 1814606945370112
+  - m_Id: 1814535684145152
     m_Localized: We should open the borders
     m_Metadata:
       m_Items: []
-  - m_Id: 1815262456365056
+  - m_Id: 1814606945370112
     m_Localized: We have received our first delivery of #0# doses of vaccine. We
       begin to vaccinate the population immediately
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1815262456365056
+    m_Localized: 'It has been more than a week since we received any more vaccines. '
     m_Metadata:
       m_Items: []
   - m_Id: 1816087605985280
@@ -1345,12 +1345,12 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 1820790049914880
-    m_Localized: You have to make choices and stick to them, the French don't understand
+    m_Localized: You have to make choices and stick to them, the citizen don't understand
       your politics
     m_Metadata:
       m_Items: []
   - m_Id: 1820838951305216
-    m_Localized: Polls show that the French are waiting for a course
+    m_Localized: Polls show that the citizen are waiting for a course
     m_Metadata:
       m_Items: []
   - m_Id: 1822180625268736
@@ -1379,7 +1379,7 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 1824452860100608
     m_Localized: 'You should adapt your measures to reassure the population. #0#%
-      of French people are unhappy. '
+      of citizen people are unhappy. '
     m_Metadata:
       m_Items: []
   - m_Id: 1824508879224832
@@ -1391,8 +1391,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 1825298805080064
-    m_Localized: Disturbances to public order are evident in several French regions.
-      If the discontent continues to grow we are going straight to the social crisis
+    m_Localized: Disturbances to public order are evident in several regions. If
+      the discontent continues to grow we are going straight to the social crisis
     m_Metadata:
       m_Items: []
   - m_Id: 1825369827229696
@@ -1401,7 +1401,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 1826400782958592
-    m_Localized: "An emergency day costs #0#\u20AC for each patient"
+    m_Localized: An emergency day costs #0# for each patient
     m_Metadata:
       m_Items: []
   - m_Id: 1827402332422144
@@ -1413,7 +1413,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 1828201154396160
-    m_Localized: "The country's debt due to the crisis reaches #0#\u20AC. For information,
+    m_Localized: "The country's debt due to the crisis reaches #0#. For information,
       the national debt before the crisis was \u20AC2,500 billion."
     m_Metadata:
       m_Items: []
@@ -1445,7 +1445,7 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 1830990261698560
     m_Localized: (#0#) A laboratory says it has started testing vaccine safety in
-      humans (Phase I)
+      humans (phase I)
     m_Metadata:
       m_Items: []
   - m_Id: 1831094527901696
@@ -1455,7 +1455,7 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 1831191487627264
     m_Localized: (#0#) It seems that a laboratory is studying the benefits/risks
-      of their vaccine (Phase III). Global research is progressing, we should be
+      of their vaccine (phase III). Global research is progressing, we should be
       able to benefit from a vaccine in some time
     m_Metadata:
       m_Items: []
@@ -1666,8 +1666,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 1825298805080060
-    m_Localized: Disturbances to public order are evident in several French regions.
-      If the discontentment continues to grow we are going straight to social crisis
+    m_Localized: Disturbances to public order are evident in several regions. If
+      the discontentment continues to grow we are going straight to social crisis
     m_Metadata:
       m_Items: []
   - m_Id: 1825369827229690
@@ -1716,7 +1716,7 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 1831191487627260
     m_Localized: (#0#) It seems that a laboratory is studying the benefits/risks
-      of their vaccine (Phase III). Global research is progressing, we should be
+      of their vaccine (phase III). Global research is progressing, we should be
       able to benefit from a vaccine in some time
     m_Metadata:
       m_Items: []
@@ -1851,11 +1851,11 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 9029479425032192
-    m_Localized: Only global/European freight
+    m_Localized: Only freight allowed
     m_Metadata:
       m_Items: []
   - m_Id: 9029519673573376
-    m_Localized: Only European freight
+    m_Localized: All (freight and civilian)
     m_Metadata:
       m_Items: []
   - m_Id: 9029559867588608
@@ -1934,6 +1934,46 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 48773942284587008
     m_Localized: B
+    m_Metadata:
+      m_Items: []
+  - m_Id: 49945376683921408
+    m_Localized: billion(s)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 51086339586330624
+    m_Localized: Reset
+    m_Metadata:
+      m_Items: []
+  - m_Id: 51097043534024704
+    m_Localized: Cancel
+    m_Metadata:
+      m_Items: []
+  - m_Id: 51097496552411136
+    m_Localized: Exit
+    m_Metadata:
+      m_Items: []
+  - m_Id: 51104375991111680
+    m_Localized: Pause
+    m_Metadata:
+      m_Items: []
+  - m_Id: 51104444706394112
+    m_Localized: Simulation x2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 51104468517457920
+    m_Localized: Simulation x4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 51104532996493312
+    m_Localized: Menu
+    m_Metadata:
+      m_Items: []
+  - m_Id: 51111594644148224
+    m_Localized: Next
+    m_Metadata:
+      m_Items: []
+  - m_Id: 51112067610644480
+    m_Localized: Close tutorial
     m_Metadata:
       m_Items: []
   references:

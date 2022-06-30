@@ -351,7 +351,7 @@ public class InfectionSystem : FSystem
     {
         if (amountOfNewInfections >= 1 && !firstInfection)
         {
-            GameObjectManager.addComponent<ChatMessage>(countryPopData.gameObject, new { sender = localization.advisorTitleHealth, timeStamp = "" + time.daysGone, messageBody = localization.getFormatedText(localization.advisorHealthTexts[13], territory.TerritoryName) });
+            GameObjectManager.addComponent<ChatMessage>(countryPopData.gameObject, new { sender = localization.advisorTitleHealth, timeStamp = "" + time.daysGone, messageBody = localization.getFormatedText(localization.advisorHealthTexts[12], territory.TerritoryName) });
             firstInfection = true;
         }
         // Calculation of the total number of uninfected persons
