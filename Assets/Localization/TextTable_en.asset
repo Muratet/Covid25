@@ -140,14 +140,21 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 21325316014080
-    m_Localized: In the upper part you will be able to consult a lot of information
+    m_Localized: 'In the upper part you will be able to consult a lot of information
       such as the progression of the infection by age, the sad evolution of deaths...
-      <b>Unfortunately, as in 2020, a new disaster is on the way</b>.<br><br>In short,
-      you will also have information on the evolution of the stock of masks, vaccines
-      and an estimate of the financial cost of your actions.<br><br>Finally, pay
-      particular attention to the dissatisfaction of the citizens. It must not concern
-      more than 80% of the population, in which case your crisis management strategy
-      could be called into question...
+      <b>Unfortunately, as in 2020, a new disaster is on the way</b>.
+
+
+      You
+      are the person responsible for setting up a response strategy in the attempt
+      to mitigate the outbreak. You will have information on the evolution of the
+      stock of masks, vaccines and an estimate of the financial cost of your actions.
+
+
+      But
+      pay particular attention to the dissatisfaction of the citizens. It must not
+      concern more than 80% of the population, in which case your crisis management
+      strategy could be called into question...'
     m_Metadata:
       m_Items: []
   - m_Id: 21501829103616

@@ -218,6 +218,9 @@ public class CheckEnd : MonoBehaviour
         GameObject customizedVirus = GameObject.Find("CustomizedVirus");
         if (customizedVirus)
             Destroy(customizedVirus);
+        GameObject countryToLoad = GameObject.Find("CountryToLoad");
+        if (countryToLoad)
+            Destroy(countryToLoad);
         SceneManager.LoadScene("Intro");
     }
 

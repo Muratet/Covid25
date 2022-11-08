@@ -8,6 +8,7 @@ using UnityEngine.EventSystems;
 
 /// <summary>
 /// This system manage the map (zoom, moving, territory color)
+/// Must be define before MaskSystem, VaccineSystem and FinanceSystem
 /// </summary>
 public class MapSystem : FSystem {
     private Family f_territories = FamilyManager.getFamily(new AllOfComponents(typeof(TerritoryData), typeof(Image)));

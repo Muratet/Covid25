@@ -44,6 +44,8 @@ public class VaccineSystem : FSystem {
         revolution = countrySimData.GetComponent<Revolution>();
         // Recovery population data
         countryPopData = countrySimData.GetComponent<TerritoryData>();
+
+        simulateVaccinePrice();
     }
 
     // Use to process your families.
@@ -92,12 +94,10 @@ public class VaccineSystem : FSystem {
             
             if (vaccine.UI_researchBar.value >= 100)
             {
-                CultureInfo cultureInfo = UnityEngine.Localization.Settings.LocalizationSettings.Instance.GetSelectedLocale().Identifier.CultureInfo;
                 // Simulation of the fluctuation of vaccine prices
-                int newPrice = vaccine.vaccinePrice + Random.Range(-1, 2) * Random.Range(0, 4);
-                vaccine.vaccinePrice = Mathf.Max(vaccine.vaccineMinPrice, Mathf.Min(vaccine.vaccineMaxPrice, newPrice));
-                vaccine.UI_vaccineUnitPrice.text = vaccine.vaccinePrice.ToString("C0", cultureInfo); // monetary style
+                simulateVaccinePrice();
 
+                CultureInfo cultureInfo = UnityEngine.Localization.Settings.LocalizationSettings.Instance.GetSelectedLocale().Identifier.CultureInfo;
                 // Vaccine delivery simulation
                 vaccine.nextDelivery--;
                 if (vaccine.nextDelivery <= 0 && vaccine.commands > 0 && frontierPermeability.currentState < 2)
@@ -183,6 +183,20 @@ public class VaccineSystem : FSystem {
                 lastVaccineDelivery = -1;
             }
         }
+    }
+
+    private void simulateVaccinePrice()
+    {
+        int newPrice = vaccine.vaccinePrice + Random.Range(-1, 2) * Random.Range(0, 4);
+        vaccine.vaccinePrice = Mathf.Max(vaccine.vaccineMinPrice, Mathf.Min(vaccine.vaccineMaxPrice, newPrice));
+        vaccine.UI_vaccineUnitPrice.text = vaccine.vaccinePrice.ToString("C0", UnityEngine.Localization.Settings.LocalizationSettings.Instance.GetSelectedLocale().Identifier.CultureInfo); // monetary style
+        //override money
+        foreach (CultureInfo cur in CultureInfo.GetCultures(CultureTypes.AllCultures))
+            if (vaccine.UI_vaccineUnitPrice.text.Contains(cur.NumberFormat.CurrencySymbol))
+            {
+                vaccine.UI_vaccineUnitPrice.text = vaccine.UI_vaccineUnitPrice.text.Replace(cur.NumberFormat.CurrencySymbol, finances.money);
+                break;
+            }
     }
 
     /// <summary>

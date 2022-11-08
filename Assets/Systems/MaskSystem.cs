@@ -2,6 +2,7 @@
 using UnityEngine.UI;
 using FYFY;
 using TMPro;
+using System.Globalization;
 
 /// <summary>
 /// This system simulated the consumption of masks
@@ -46,6 +47,8 @@ public class MaskSystem : FSystem {
         finances = countrySimData.GetComponent<Finances>();
         // Recovery of border restrictions data
         frontierPermeability = countrySimData.GetComponent<FrontierPermeability>();
+
+        simulateMaskPrice();
     }
 
     // Use to process your families.
@@ -113,11 +116,22 @@ public class MaskSystem : FSystem {
             }
 
             // Simulation of the price fluctuation of masks
-            float newPrice = masks.maskPrice + Random.Range(-1, 2) * Random.Range(0f, 0.1f);
-            masks.maskPrice = Mathf.Max(masks.maskMinPrice, Mathf.Min(masks.maskMaxPrice, newPrice));
-            UI_UnitPriceValue.text = masks.maskPrice.ToString("C", UnityEngine.Localization.Settings.LocalizationSettings.Instance.GetSelectedLocale().Identifier.CultureInfo); // monetary style
-
+            simulateMaskPrice();
         }
+    }
+
+    private void simulateMaskPrice()
+    {
+        float newPrice = masks.maskPrice + Random.Range(-1, 2) * Random.Range(0f, 0.1f);
+        masks.maskPrice = Mathf.Max(masks.maskMinPrice, Mathf.Min(masks.maskMaxPrice, newPrice));
+        UI_UnitPriceValue.text = masks.maskPrice.ToString("C", UnityEngine.Localization.Settings.LocalizationSettings.Instance.GetSelectedLocale().Identifier.CultureInfo); // monetary style
+        //override money
+        foreach (CultureInfo cur in CultureInfo.GetCultures(CultureTypes.AllCultures))
+            if (UI_UnitPriceValue.text.Contains(cur.NumberFormat.CurrencySymbol))
+            {
+                UI_UnitPriceValue.text = UI_UnitPriceValue.text.Replace(cur.NumberFormat.CurrencySymbol, finances.money);
+                break;
+            }
     }
 
     /// <summary>

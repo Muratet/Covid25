@@ -10146,12 +10146,12 @@ PrefabInstance:
     - target: {fileID: 9114910477180829607, guid: 5080ce6f37899774e95030fae561002f,
         type: 3}
       propertyPath: items.Array.data[0]
-      value: France
+      value: USA
       objectReference: {fileID: 0}
     - target: {fileID: 9114910477180829607, guid: 5080ce6f37899774e95030fae561002f,
         type: 3}
       propertyPath: items.Array.data[1]
-      value: USA
+      value: France
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5080ce6f37899774e95030fae561002f, type: 3}

@@ -2,14 +2,14 @@
 	"money": "$",
 	"icuBed_CostDay": 4628,
 	"borders_TravellerFreightRatio": 0.7,
-	"borders_CostLostTourismPerDay": 100000,
-	"borders_CostLostFreightPerDay": 1400000,
-	"mask_NationalStock": 140000000,
-	"mask_DailyMedicalIntake": 429000,
-	"mask_DailyNationalProduction": 429000,
-	"mask_MaxNationalProduction": 2429000,
-	"mask_MaxDeliveryPack": 67000000,
-	"vaccine_MeanDeliveryPack": 400000,
+	"borders_CostLostTourismPerDay": 500000,
+	"borders_CostLostFreightPerDay": 7000000,
+	"mask_NationalStock": 700000000,
+	"mask_DailyMedicalIntake": 2145000,
+	"mask_DailyNationalProduction": 2145000,
+	"mask_MaxNationalProduction": 12145000,
+	"mask_MaxDeliveryPack": 335000000,
+	"vaccine_MeanDeliveryPack": 2000000,
 	"vaccine_trust": 0.8,
-	"tax_CompensateTaxesCanceledPerDay": 700000000
+	"tax_CompensateTaxesCanceledPerDay": 3500000000
 }
