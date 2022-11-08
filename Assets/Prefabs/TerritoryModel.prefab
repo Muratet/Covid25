@@ -188,6 +188,38 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+  - eventID: 13
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 2621698312664478858}
+          m_TargetAssemblyTypeName: IgnoreAlpha, Assembly-CSharp
+          m_MethodName: onBeginDrag
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 14
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 2621698312664478858}
+          m_TargetAssemblyTypeName: IgnoreAlpha, Assembly-CSharp
+          m_MethodName: onEndDrag
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!114 &2621698312664478856
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -315,34 +347,24 @@ MonoBehaviour:
   - 0
   - 0
   numberOfInfectedPeoplePerDays: 
-  closePrimarySchool_UIMaps: {fileID: 0}
   closePrimarySchool: 0
   closePrimarySchoolLastUpdate: -1
-  closeSecondarySchool_UIMaps: {fileID: 0}
   closeSecondarySchool: 0
   closeSecondarySchoolLastUpdate: -1
-  closeHighSchool_UIMaps: {fileID: 0}
   closeHighSchool: 0
   closeHighSchoolLastUpdate: -1
-  closeUniversity_UIMaps: {fileID: 0}
   closeUniversity: 0
   closeUniversityLastUpdate: -1
-  callCivicism_UIMaps: {fileID: 0}
   callCivicism: 0
   callCivicismLastUpdate: -1
-  closeShop_UIMaps: {fileID: 0}
   closeShop: 0
   closeShopLastUpdate: -1
   closeShopDynamic: 0
-  certificateRequired_UIMaps: {fileID: 0}
   certificateRequired: 0
   certificateRequiredLastUpdate: -1
-  ageDependent_UIMaps: {fileID: 0}
   ageDependent: 0
   ageDependentLastUpdate: -1
-  ageDependentMin_UIMaps: {fileID: 0}
   ageDependentMin: 
-  ageDependentMax_UIMaps: {fileID: 0}
   ageDependentMax: 
   cumulativeDeath: 
   historyDeath: 
@@ -362,7 +384,6 @@ MonoBehaviour:
   intensiveBeds_current: 438
   intensiveBeds_high: 1186
   intensiveBeds_need: 0
-  beds_UIMaps: {fileID: 0}
   boostBeds: 0
   boostBedsLastUpdate: -1
   advisorNotification: 0

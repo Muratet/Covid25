@@ -56,14 +56,17 @@ public class IgnoreAlpha : MonoBehaviour
     /// </summary>
     public void onSelectTerritory()
     {
-        MapSystem.instance.selectTerritory(GetComponent<TerritoryData>());
-        audioSource.PlayOneShot(onClick);
-        maskButton.DisableButtonAndSetTooltip(localization.maskTooltip);
-        financeButton.DisableButtonAndSetTooltip(localization.financeTooltip);
-        revolutionButton.DisableButtonAndSetTooltip(localization.revolutionTooltip);
-        vaccineButton.DisableButtonAndSetTooltip(localization.vaccineTooltip);
-        AdvisorSystem.instance.ClosePanel();
-        checkDoubleClick.CheckDoubleClic(territory.id);
+        if (!MapSystem.instance.isDragging)
+        {
+            MapSystem.instance.selectTerritory(GetComponent<TerritoryData>());
+            audioSource.PlayOneShot(onClick);
+            maskButton.DisableButtonAndSetTooltip(localization.maskTooltip);
+            financeButton.DisableButtonAndSetTooltip(localization.financeTooltip);
+            revolutionButton.DisableButtonAndSetTooltip(localization.revolutionTooltip);
+            vaccineButton.DisableButtonAndSetTooltip(localization.vaccineTooltip);
+            AdvisorSystem.instance.ClosePanel();
+            checkDoubleClick.CheckDoubleClic(territory.id);
+        }
     }
 
     /// <summary>
@@ -89,33 +92,36 @@ public class IgnoreAlpha : MonoBehaviour
     /// </summary>
     public void onPointerEnter()
     {
-        string tooltipContent = "<b>"+territory.TerritoryName+"</b>";
-        if (territory.closePrimarySchool)
-            tooltipContent += "<br>  * "+localization.territoriesTooltip[0];
-        if (territory.closeSecondarySchool)
-            tooltipContent += "<br>  * " + localization.territoriesTooltip[1];
-        if (territory.closeHighSchool)
-            tooltipContent += "<br>  * " + localization.territoriesTooltip[2];
-        if (territory.closeUniversity)
-            tooltipContent += "<br>  * " + localization.territoriesTooltip[3];
-        if (territory.callCivicism)
-            tooltipContent += "<br>  * " + localization.territoriesTooltip[4];
-        if (territory.closeShop)
-            tooltipContent += "<br>  * " + localization.territoriesTooltip[5];
-        if (territory.certificateRequired)
-            tooltipContent += "<br>  * " + localization.territoriesTooltip[6];
-        if (territory.ageDependent && territory.ageDependentMin != "" && territory.ageDependentMax != "")
-            tooltipContent += "<br>  * " + localization.getFormatedText(localization.territoriesTooltip[7], territory.ageDependentMin, territory.ageDependentMax);
-        if (territory.GetComponent<Beds>().boostBeds)
-            tooltipContent += "<br>  * " + localization.territoriesTooltip[8];
+        if (!MapSystem.instance.isDragging)
+        {
+            string tooltipContent = "<b>" + territory.TerritoryName + "</b>";
+            if (territory.closePrimarySchool)
+                tooltipContent += "<br>  * " + localization.territoriesTooltip[0];
+            if (territory.closeSecondarySchool)
+                tooltipContent += "<br>  * " + localization.territoriesTooltip[1];
+            if (territory.closeHighSchool)
+                tooltipContent += "<br>  * " + localization.territoriesTooltip[2];
+            if (territory.closeUniversity)
+                tooltipContent += "<br>  * " + localization.territoriesTooltip[3];
+            if (territory.callCivicism)
+                tooltipContent += "<br>  * " + localization.territoriesTooltip[4];
+            if (territory.closeShop)
+                tooltipContent += "<br>  * " + localization.territoriesTooltip[5];
+            if (territory.certificateRequired)
+                tooltipContent += "<br>  * " + localization.territoriesTooltip[6];
+            if (territory.ageDependent && territory.ageDependentMin != "" && territory.ageDependentMax != "")
+                tooltipContent += "<br>  * " + localization.getFormatedText(localization.territoriesTooltip[7], territory.ageDependentMin, territory.ageDependentMax);
+            if (territory.GetComponent<Beds>().boostBeds)
+                tooltipContent += "<br>  * " + localization.territoriesTooltip[8];
 
-        tooltipContent += "<br>" + localization.territoriesTooltip[9];
-        tooltipContent += "<br>" + localization.territoriesTooltip[10];
-        tooltip.ShowTooltip(tooltipContent);
-        transform.SetAsLastSibling();
-        if (MapSystem.territorySelected != territory)
-            animator.Play("TerritoryFocused");
-        audioSource.PlayOneShot(onEnter);
+            tooltipContent += "<br>" + localization.territoriesTooltip[9];
+            tooltipContent += "<br>" + localization.territoriesTooltip[10];
+            tooltip.ShowTooltip(tooltipContent);
+            transform.SetAsLastSibling();
+            if (MapSystem.territorySelected != territory)
+                animator.Play("TerritoryFocused");
+            audioSource.PlayOneShot(onEnter);
+        }
     }
 
     /// <summary>
@@ -123,8 +129,22 @@ public class IgnoreAlpha : MonoBehaviour
     /// </summary>
     public void onPointerExit()
     {
-        tooltip.HideTooltip();
-        if (MapSystem.territorySelected != territory)
-            animator.Play("TerritoryIdle");
+        if (!MapSystem.instance.isDragging)
+        {
+            tooltip.HideTooltip();
+            if (MapSystem.territorySelected != territory)
+                animator.Play("TerritoryIdle");
+        }
     }
+
+    public void onBeginDrag()
+    {
+        MapSystem.instance.onBeginDrag();
+    }
+
+    public void onEndDrag()
+    {
+        MapSystem.instance.onEndDrag();
+    }
+
 }

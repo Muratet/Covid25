@@ -5,6 +5,7 @@ using TMPro;
 using System.Collections.Generic;
 using Newtonsoft.Json;
 using UnityEngine.EventSystems;
+using System.Collections;
 
 /// <summary>
 /// This system manage the map (zoom, moving, territory color)
@@ -30,6 +31,9 @@ public class MapSystem : FSystem {
     public GameObject territoryPrefab;
     /// <summary></summary>
     public Transform territoriesParent;
+
+    /// <summary></summary>
+    public bool isDragging;
 
     private TerritoryData territoriesData;
     private Vector3 targetScale;
@@ -192,6 +196,7 @@ public class MapSystem : FSystem {
                 targetScale = territoriesParent.transform.localScale;
             }
         }
+        Debug.Log(isDragging);
     }
 
     /// <summary>
@@ -220,7 +225,7 @@ public class MapSystem : FSystem {
     }
 
     /// <summary>
-    /// Zoom in/out
+    /// Zoom in/out with scroll
     /// </summary>
     /// <param name="data"></param>
     public void onScroll(BaseEventData data)
@@ -257,5 +262,30 @@ public class MapSystem : FSystem {
             // The image moves with the pivot so always keep it in [0, 0, 0]
             rectTr.localPosition = new Vector3(0, 0, 0);
         }
+    }
+    public void onBeginDrag()
+    {
+        isDragging = true;
+    }
+
+    public void onEndDrag()
+    {
+        Debug.Log("onEndDrag");
+        MainLoop.instance.StartCoroutine(delayEndDrag());
+    }
+
+    private IEnumerator delayEndDrag()
+    {
+        yield return new WaitForSeconds(.1f);
+        isDragging = false;
+    }
+
+    /// <summary>
+    /// Zoom in/out with UI buttons
+    /// </summary>
+    /// <param name="amount"></param>
+    public void zoom(float amount)
+    {
+        targetScale = new Vector3(territoriesParent.transform.localScale.x + amount / (3 / territoriesParent.transform.localScale.x), territoriesParent.transform.localScale.y + amount / (3 / territoriesParent.transform.localScale.y), territoriesParent.transform.localScale.z);
     }
 }

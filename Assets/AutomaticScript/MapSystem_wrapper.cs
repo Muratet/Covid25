@@ -9,6 +9,7 @@ public class MapSystem_wrapper : BaseWrapper
 	public UnityEngine.TextAsset rawCountryData;
 	public UnityEngine.GameObject territoryPrefab;
 	public UnityEngine.Transform territoriesParent;
+	public System.Boolean isDragging;
 	private void Start()
 	{
 		this.hideFlags = HideFlags.NotEditable;
@@ -18,6 +19,7 @@ public class MapSystem_wrapper : BaseWrapper
 		MainLoop.initAppropriateSystemField (system, "rawCountryData", rawCountryData);
 		MainLoop.initAppropriateSystemField (system, "territoryPrefab", territoryPrefab);
 		MainLoop.initAppropriateSystemField (system, "territoriesParent", territoriesParent);
+		MainLoop.initAppropriateSystemField (system, "isDragging", isDragging);
 	}
 
 	public void onNewTerritory(UnityEngine.GameObject newTerritory)
@@ -38,6 +40,21 @@ public class MapSystem_wrapper : BaseWrapper
 	public void onDrag(UnityEngine.EventSystems.BaseEventData data)
 	{
 		MainLoop.callAppropriateSystemMethod (system, "onDrag", data);
+	}
+
+	public void onBeginDrag()
+	{
+		MainLoop.callAppropriateSystemMethod (system, "onBeginDrag", null);
+	}
+
+	public void onEndDrag()
+	{
+		MainLoop.callAppropriateSystemMethod (system, "onEndDrag", null);
+	}
+
+	public void zoom(System.Single amount)
+	{
+		MainLoop.callAppropriateSystemMethod (system, "zoom", amount);
 	}
 
 }
