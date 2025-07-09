@@ -196,7 +196,6 @@ public class MapSystem : FSystem {
                 targetScale = territoriesParent.transform.localScale;
             }
         }
-        Debug.Log(isDragging);
     }
 
     /// <summary>

@@ -266,11 +266,11 @@ public class CheckEnd : MonoBehaviour
     {
         if (Application.platform == RuntimePlatform.WebGLPlayer)
         {
-            OpenURL("http://www-ia.lip6.fr/~muratetm/covid25/viewHighScore.php");
+            OpenURL("https://perso.lip6.fr/Mathieu.Muratet/covid25/viewHighScore.php");
         }
         else
         {
-            Application.OpenURL("http://www-ia.lip6.fr/~muratetm/covid25/viewHighScore.php");
+            Application.OpenURL("https://perso.lip6.fr/Mathieu.Muratet/covid25/viewHighScore.php");
         }
     }
 
@@ -290,7 +290,7 @@ public class CheckEnd : MonoBehaviour
     private IEnumerator Upload()
     {
         CultureInfo cultureInfo = UnityEngine.Localization.Settings.LocalizationSettings.Instance.GetSelectedLocale().Identifier.CultureInfo;
-        UnityWebRequest www = UnityWebRequest.Get("http://www-ia.lip6.fr/~muratetm/covid25/addScore.php?pseudo=" + shareInputField.text + "&death=" + countryPopData.nbDeath.ToString("N0", cultureInfo) + "&debt=" + finances.historySpent[finances.historySpent.Count - 1].ToString("N0", cultureInfo) + "&days=" + time.daysGone.ToString("N0", cultureInfo) + "&revolution=" + isRevolution);
+        UnityWebRequest www = UnityWebRequest.Get("https://perso.lip6.fr/Mathieu.Muratet/covid25/addScore.php?pseudo=" + shareInputField.text + "&death=" + countryPopData.nbDeath.ToString("N0", cultureInfo) + "&debt=" + finances.historySpent[finances.historySpent.Count - 1].ToString("N0", cultureInfo) + "&days=" + time.daysGone.ToString("N0", cultureInfo) + "&revolution=" + isRevolution);
 
         yield return www.SendWebRequest();
     }
